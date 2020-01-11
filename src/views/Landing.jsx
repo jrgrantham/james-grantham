@@ -21,12 +21,13 @@ export default function Landing() {
 }
 
 const LandingStyle = styled.div`
-  height: 100vh
+  height: 80vh
+  padding-top: 30px
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // border: 1px solid red
+  border: 1px solid red
 
   h1 {
     padding: 1rem 0
