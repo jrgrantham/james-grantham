@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { personalInformation } from "./personalInformation";
+import { work } from "../data/work";
 import styled from "styled-components";
 
-export default function WorkExperience() {
-  const [data, setData] = useState(personalInformation);
+export default function Work() {
+  const [data, setData] = useState(work);
 
   function isDisplayed(receivedSubject) {
     setData(

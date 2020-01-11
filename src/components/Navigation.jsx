@@ -35,7 +35,7 @@ const StyledNavigation = styled.div`
 
   a {
     font-size: 1rem
-    margin: 0.25rem
+    margin: 0.25rem 0.5rem
     min-width: 70px
     padding: .5rem .7rem
     border: 1px solid lightblue

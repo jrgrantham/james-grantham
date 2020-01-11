@@ -1,14 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
 import Landing from "./views/Landing";
 import Professional from './views/Professional'
+import Login from './views/Login'
+import PhoneNumbers from './views/PhoneNumbers'
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(false)
+
+  // const location = window.location.pathname
+  // console.log(location);
+  
   return (
     <StyledApp className="App">
       <Route exact path="/" component={Landing} />
       <Route path="/professional" component={Professional}/>
+      <Route
+        path='/login'
+        render={props => <Login {...props}
+        setIsLoading={setIsLoading} 
+        isLoading={isLoading} />}
+      />
+      <Route path="/personal/phonenumbers" component={PhoneNumbers}/>
     </StyledApp>
   );
 }

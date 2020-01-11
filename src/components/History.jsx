@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { personalInformation } from "./personalInformation";
+import { history } from "../data/history";
 import styled from "styled-components";
 
-export default function Background() {
-  const [data, setData] = useState(personalInformation);
+export default function History() {
+  const [data, setData] = useState(history);
 
   function isDisplayed(receivedSubject) {
     setData(
@@ -20,7 +20,6 @@ export default function Background() {
 
   return (
     <div>
-      <h2>Background</h2>
       {data.map((subject, index) => (
         <Component
           key={index}

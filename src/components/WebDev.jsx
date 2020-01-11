@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { personalInformation } from "./personalInformation";
+import { webDev } from "../data/webDev";
 import styled from "styled-components";
 
 export default function WebDev() {
-  const [data, setData] = useState(personalInformation);
+  const [data, setData] = useState(webDev);
 
   function isDisplayed(receivedSubject) {
     setData(
@@ -20,7 +20,6 @@ export default function WebDev() {
 
   return (
     <div>
-      <h2>WebDev</h2>
       {data.map((subject, index) => (
         <Component
           key={index}

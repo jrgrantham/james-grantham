@@ -1,11 +1,4 @@
-const empty = {
-  title: '',
-  introduction: '',
-  contents: [''],
-  display: false
-}
-
-export const personalInformation = [
+export const work = [
   {
     title: 'Summary',
     introduction: 'Qualified Engineer with twenty-years industry experience in both onshore and offshore topsides Oil and Gas integrity services.',

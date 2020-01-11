@@ -13,7 +13,7 @@ export default function Landing() {
         <h4>Mechanical Engineer</h4>
       </DisplayFlex>
       <DisplayFlex>
-        <Link to="/personal">Personal</Link>
+        <Link to="/login">Personal</Link>
         <Link to="/professional/work">Professional</Link>
       </DisplayFlex>
     </LandingStyle>
