@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import axios from "axios";
 import styled from "styled-components";
 import url from "../helpers/url";
-import Spinner from '../components/Spinner'
+import Spinner from "../components/Spinner";
 
 const loginApi = url() + "api/auth/login";
 
@@ -14,41 +14,39 @@ const initialLoginForm = {
 
 export default function LoginForm(props) {
   if (props.isLoading) {
-    return (
-        <Spinner/>
-    )
+    return <Spinner />;
   } else {
-  return (
-    <Formik
-      initialValues={initialLoginForm}
-      onSubmit={(values, actions) => {
-        const user = {
-          username: values.username,
-          password: values.password
-        };
-        props.setIsLoading(true);
-        actions.setSubmitting(true);
-        axios
-          .post(loginApi, user)
-          .then(response => {
-            actions.resetForm();
-            actions.setSubmitting(false);
-            props.setIsLoading(false);
-            props.history.push("/personal/phonenumbers");
-            localStorage.setItem("token", response.data.token);
-          })
-          .catch(error => {
-            console.log(error);
-            // toast.error(error.response.statusText);
-            actions.resetForm();
-            actions.setSubmitting(false);
-            props.setIsLoading(false);
-          });
-      }}
-    >
-      {({ values, handleBlur, handleChange, handleSubmit, isSubmitting }) => (
-        <StyledForm onSubmit={handleSubmit}>
-          {/* <div> */}
+    return (
+      <Formik
+        initialValues={initialLoginForm}
+        onSubmit={(values, actions) => {
+          const user = {
+            username: values.username,
+            password: values.password
+          };
+          props.setIsLoading(true);
+          actions.setSubmitting(true);
+          axios
+            .post(loginApi, user)
+            .then(response => {
+              actions.resetForm();
+              actions.setSubmitting(false);
+              props.setIsLoading(false);
+              props.history.push("/personal/phonenumbers");
+              localStorage.setItem("token", response.data.token);
+            })
+            .catch(error => {
+              console.log(error);
+              // toast.error(error.response.statusText);
+              actions.resetForm();
+              actions.setSubmitting(false);
+              props.setIsLoading(false);
+            });
+        }}
+      >
+        {({ values, handleBlur, handleChange, handleSubmit, isSubmitting }) => (
+          <StyledForm onSubmit={handleSubmit}>
+            {/* <div> */}
             <div className="inputField">
               <label htmlFor="username" />
               <input
@@ -92,12 +90,13 @@ export default function LoginForm(props) {
                 "text-align": "center"
               }}
             /> */}
-          {/* </div> */}
-        </StyledForm>
-      )}
-    </Formik>
-  );
-}}
+            {/* </div> */}
+          </StyledForm>
+        )}
+      </Formik>
+    );
+  }
+}
 
 const StyledForm = styled.form`
   margin-top: 50px

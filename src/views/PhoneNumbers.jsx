@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import axiosWithAuth from '../authentication/axiosWithAuth'
 import url from '../helpers/url'
+import Spinner from '../components/Spinner'
 
 const numberApi = `${url()}api/users/numbers`
-// console.log(numberApi);
 
 export default function PhoneNumbers(props) {
   const [numbers, setNumbers] = useState([])
   const getNumbers = () => {
+    props.setIsLoading(true);
     axiosWithAuth()
     .get(numberApi)
     .then(res => {
-      const apiNumbers = res.data
-      // console.log(apiNumbers)
-      setNumbers(apiNumbers)
+      setNumbers(res.data)
+      props.setIsLoading(false);
     })
     .catch(err => {
-      // console.log(err.message)
+      props.setIsLoading(false);
       props.history.push('/login')
     })
   }
@@ -30,6 +30,11 @@ export default function PhoneNumbers(props) {
     getNumbers()
   }, [])
   
+  if (props.isLoading) {
+    return (
+        <Spinner/>
+    )
+  } else {
     return (
       <Container>
         {numbers.map(number => (
@@ -40,7 +45,7 @@ export default function PhoneNumbers(props) {
         ))}
       </Container>
     )
-
+        }
 }
 
 const Container = styled.div`
@@ -48,7 +53,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 40px auto
+  margin: 20px auto
   // height: 80vh
   // border: 1px solid red
 `

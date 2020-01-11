@@ -23,7 +23,12 @@ function App() {
         setIsLoading={setIsLoading} 
         isLoading={isLoading} />}
       />
-      <Route path="/personal/phonenumbers" component={PhoneNumbers}/>
+      <Route 
+        path="/personal/phonenumbers" 
+        render={props => <PhoneNumbers {...props}
+        setIsLoading={setIsLoading} 
+        isLoading={isLoading} />}
+      />
     </StyledApp>
   );
 }
