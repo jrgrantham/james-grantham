@@ -34,8 +34,8 @@ export default function PhoneNumbers() {
       <Container>
         {numbers.map(number => (
           <Card onClick={() => callNumber(number.phoneNumber)} key={number.id}>
-            <h3>{number.name}</h3>
-            <h3>{number.phoneNumber}</h3>
+            <h4>{number.name}</h4>
+            <h4>{number.phoneNumber}</h4>
           </Card>
         ))}
       </Container>
@@ -50,12 +50,14 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh
+  margin: 40px auto
+  // height: 80vh
+  // border: 1px solid red
 `
 
 const Card = styled.div`
   margin: 20px
-  padding: 5px;
+  padding: 15px;
   min-width: 300px
 
   border: 1px solid lightblue;
