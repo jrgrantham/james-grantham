@@ -13,7 +13,7 @@ export default function Landing() {
         <h4>Mechanical Engineer</h4>
       </DisplayFlex>
       <DisplayFlex>
-        <Link to="/login">Personal</Link>
+        <Link to="/personal/phonenumbers">Personal</Link>
         <Link to="/professional/work">Professional</Link>
       </DisplayFlex>
     </LandingStyle>
@@ -36,7 +36,7 @@ const LandingStyle = styled.div`
     padding: 1rem 0
   }
   a {
-    font-size: 1.5rem
+    font-size: 1.4rem
     width: 8rem
     border: 2px solid lightblue
     border-radius: 8px

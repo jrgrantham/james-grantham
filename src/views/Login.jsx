@@ -75,7 +75,7 @@ export default function LoginForm(props) {
             </div>
 
             <button type="submit" disabled={isSubmitting}>
-              Submit
+              Login
             </button>
 
             {/* <ToastContainer

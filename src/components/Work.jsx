@@ -70,10 +70,10 @@ function Article(props) {
 }
 
 const Component = styled.div`
-  margin: 1rem
+  margin: 1rem 0.5rem
   // max-width: 800px
-  padding: 1rem
-  border: 1px solid lightblue
+  padding: 0.5rem
+  border: 0.5px solid lightblue
   border-radius: 5px
   cursor: pointer
 `;

@@ -4,20 +4,21 @@ import axiosWithAuth from '../authentication/axiosWithAuth'
 import url from '../helpers/url'
 
 const numberApi = `${url()}api/users/numbers`
-console.log(numberApi);
+// console.log(numberApi);
 
-export default function PhoneNumbers() {
+export default function PhoneNumbers(props) {
   const [numbers, setNumbers] = useState([])
   const getNumbers = () => {
     axiosWithAuth()
     .get(numberApi)
     .then(res => {
       const apiNumbers = res.data
-      console.log(apiNumbers)
+      // console.log(apiNumbers)
       setNumbers(apiNumbers)
     })
     .catch(err => {
-      console.log(err)
+      // console.log(err.message)
+      props.history.push('/login')
     })
   }
   
@@ -29,7 +30,6 @@ export default function PhoneNumbers() {
     getNumbers()
   }, [])
   
-  if (numbers) {
     return (
       <Container>
         {numbers.map(number => (
@@ -40,9 +40,7 @@ export default function PhoneNumbers() {
         ))}
       </Container>
     )
-  } else {
-    return <h2>Please wait...</h2>
-  }
+
 }
 
 const Container = styled.div`

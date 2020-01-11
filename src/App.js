@@ -47,21 +47,20 @@ h2 {
   font-size: 2rem;
 }
 h3 {
-  margin: 1rem 1rem
   font-size: 1.7rem;
 }
 h4 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 h5 {
   font-size: 1.2rem;
 }
 p {
-  padding-top: 1rem;
   text-align: left;
+  font-size: 1rem;
+  padding: 0.5rem 0
 }
 a {
-  font-size: 1rem;
   color: lightblue
   text-decoration: none
 }
