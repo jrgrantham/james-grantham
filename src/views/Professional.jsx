@@ -44,16 +44,15 @@ export default function Professional() {
 
       <ButtonContainer>
         {categoryButtons.map((title, index) => (
-          <div
+          <StyledButton
+            className={selected === title ? "selected" : null}
             key={index}
             onClick={() => {
               setCategory(title, index);
             }}
           >
-            <h5 className={selected===title ? "selected" : null}>
-              {title}
-            </h5>
-          </div>
+            {title}
+          </StyledButton>
         ))}
       </ButtonContainer>
 
@@ -70,11 +69,11 @@ export default function Professional() {
             {article.display ? "" : ".."}
           </p>
           {article.display ? (
-            <div>
+            <>
               {article.contents.map((content, index) => (
                 <p key={index}>{content}</p>
               ))}
-            </div>
+            </>
           ) : (
             ""
           )}
@@ -85,41 +84,46 @@ export default function Professional() {
 }
 
 const StyledProfessional = styled.div`
-margin-bottom: 50px
-color: lightgrey
-
+  margin-bottom: 50px
+  color: lightgrey
   h3 {
     color: lightgrey
     margin: 15px;
   }
 `;
 const ButtonContainer = styled.div`
+  margin: 1rem 0.5rem
   display: flex
   flex-direction: column;
-
-  @media (min-width: 370px) {
-    flex-direction: row;
-    justify-content: space-evenly
-  }
+  // border: 0.5px solid lightgrey
+  // border-radius: 5px
 
   .selected {
     border: 2px solid lightgrey
   }
-
-  h5 {
-    margin: 0.25rem 0.4rem
-    padding: .5rem .7rem
-    border: 0.5px solid lightgrey
-    border-radius: 5px
-    cursor: pointer
-
-    @media (min-width: 370px) {
-      min-width: 80px
-    }
   
-    @media (min-width: 550px) {
-      width: 120px
-    }
+  @media (min-width: 370px) {
+    flex-direction: row;
+    justify-content: space-between
+  }
+  
+  @media (min-width: 550px) {
+    margin: 1rem 1rem
+    justify-content: space-evenly
+
+  }
+`;
+
+const StyledButton = styled.div`
+  margin: 0.25rem 0
+  padding: .5rem 0
+  border: 0.5px solid lightgrey
+  border-radius: 5px
+  cursor: pointer
+  
+  @media (min-width: 370px) {
+    width: 32%
+    max-width: 150px
   }
 `;
 
