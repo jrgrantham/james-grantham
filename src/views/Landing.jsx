@@ -14,7 +14,7 @@ export default function Landing() {
       </DisplayFlex>
       <DisplayFlex>
         <Link to="/personal/phonenumbers">Personal</Link>
-        <Link to="/professional/work">Professional</Link>
+        <Link to="/professional">Professional</Link>
       </DisplayFlex>
     </LandingStyle>
   );
