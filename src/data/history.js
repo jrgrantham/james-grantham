@@ -28,7 +28,7 @@ export const history = [
     contents: [
       'To be comeleted'
     ],
-    display: false
+    display: true
   },
   {
     title: "University of Loughborough",

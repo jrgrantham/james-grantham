@@ -7,7 +7,7 @@ import { history } from "../data/history";
 import { webDev } from "../data/webDev";
 
 export default function Professional() {
-  const [content, setContent] = useState(work);
+  const [content, setContent] = useState(history);
   const [selected, setSelected] = useState("Work");
   const categoryButtons = ["History", "Work", "Web-Dev"];
 
@@ -85,7 +85,11 @@ export default function Professional() {
 }
 
 const StyledProfessional = styled.div`
+
+color: lightgrey
+
   h3 {
+    color: lightgrey
     margin: 15px;
   }
 `;
@@ -99,13 +103,13 @@ const ButtonContainer = styled.div`
   }
 
   .selected {
-    border: 2px solid lightblue
+    border: 2px solid lightgrey
   }
 
   h5 {
     margin: 0.25rem 0.5rem
     padding: .5rem .7rem
-    border: 0.5px solid lightblue
+    border: 0.5px solid lightgrey
     border-radius: 5px
     cursor: pointer
 
@@ -122,7 +126,7 @@ const ButtonContainer = styled.div`
 const Article = styled.div`
   margin: 1rem 0.5rem
   padding: 0.5rem
-  border: 0.5px solid lightblue
+  border: 0.5px solid lightgrey
   border-radius: 5px
   cursor: pointer
 
