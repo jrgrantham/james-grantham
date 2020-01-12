@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import styled from "styled-components";
@@ -76,6 +77,8 @@ export default function LoginForm(props) {
               Login
             </button>
 
+            <Link style={{color: 'lightgrey'}}>Return to home page</Link>
+
             {/* <ToastContainer
               position="top-center"
               autoClose={2000}
@@ -133,7 +136,7 @@ const StyledForm = styled.form`
   }
 
   button {
-    margin: 40px;
+    margin: 40px 40px 80px 40px;
     background-color: green;
     color: white;
     border: none;
