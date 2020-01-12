@@ -80,9 +80,10 @@ export default function Professional() {
 }
 
 const StyledProfessional = styled.div`
-h3 {
-  margin: 15px
-}
+  margin-bottom: 30px 
+  h3 {
+    margin: 15px;
+  }
 `;
 const StyledCategory = styled.div`
   display: flex

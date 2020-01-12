@@ -40,7 +40,7 @@ export const work = [
       'Monthly / quarterly / annual',
       'During my recent career I have reviewed hundreds of reports, written dozens of summaries and presented these findings, along with project progress and financial / budget status to the client.'
     ],
-    display: true
+    display: false
   },
   {
     title: "Personal skills",
