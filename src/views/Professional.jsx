@@ -85,7 +85,7 @@ export default function Professional() {
 }
 
 const StyledProfessional = styled.div`
-
+margin-bottom: 50px
 color: lightgrey
 
   h3 {
