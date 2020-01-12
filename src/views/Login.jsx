@@ -77,7 +77,9 @@ export default function LoginForm(props) {
               Login
             </button>
 
-            <Link to='/' style={{color: 'lightgrey', 'font-size': '1.2rem'}}>Return to home page</Link>
+            <Link to="/" style={{ color: "lightgrey", "font-size": "1.2rem" }}>
+              Return to home page
+            </Link>
 
             {/* <ToastContainer
               position="top-center"

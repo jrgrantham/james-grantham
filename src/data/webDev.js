@@ -9,19 +9,19 @@ export const webDev = [
     display: false
   },
   {
-    title: "Full Stack Web-Developer",
-    introduction: "An engineer who can handle all the work of databases, servers, systems engineering, and clients.",
+    title: "Section 2",
+    introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     contents: [
-      "Familiar with HTML, CSS and JavaScript", 
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
       "to be completed"
     ],
     display: false
   },
   {
-    title: "Full Stack Web-Developer",
-    introduction: "An engineer who can handle all the work of databases, servers, systems engineering, and clients.",
+    title: "Section 3",
+    introduction: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     contents: [
-      "Familiar with HTML, CSS and JavaScript", 
+      "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
       "to be completed"
     ],
     display: false
