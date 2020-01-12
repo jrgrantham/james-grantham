@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import axiosWithAuth from '../authentication/axiosWithAuth'
-import url from '../helpers/url'
-import Spinner from '../components/Spinner'
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import axiosWithAuth from "../authentication/axiosWithAuth";
+import url from "../helpers/url";
+import Spinner from "../components/Spinner";
 
-const numberApi = `${url()}api/users/numbers`
+const numberApi = `${url()}api/users/numbers`;
 
 export default function PhoneNumbers(props) {
-  const [numbers, setNumbers] = useState([])
+  const [numbers, setNumbers] = useState([]);
+
   const getNumbers = () => {
     props.setIsLoading(true);
     axiosWithAuth()
-    .get(numberApi)
-    .then(res => {
-      setNumbers(res.data)
-      props.setIsLoading(false);
-    })
-    .catch(err => {
-      props.setIsLoading(false);
-      props.history.push('/login')
-    })
-  }
-  
+      .get(numberApi)
+      .then(res => {
+        setNumbers(res.data);
+        props.setIsLoading(false);
+      })
+      .catch(err => {
+        props.setIsLoading(false);
+        props.history.push("/login");
+      });
+  };
+
   function callNumber(number) {
-    window.location = `tel:${number}`
+    window.location = `tel:${number}`;
   }
-  
+
   useEffect(() => {
-    getNumbers()
-  }, [])
-  
+    getNumbers();
+  }, []);
+
   if (props.isLoading) {
-    return (
-        <Spinner/>
-    )
+    return <Spinner />;
   } else {
     return (
       <Container>
+        <h2>{localStorage.getItem("user")}</h2>
         {numbers.map(number => (
           <Card onClick={() => callNumber(number.phoneNumber)} key={number.id}>
             <h4>{number.name}</h4>
@@ -44,8 +44,8 @@ export default function PhoneNumbers(props) {
           </Card>
         ))}
       </Container>
-    )
-        }
+    );
+  }
 }
 
 const Container = styled.div`
@@ -53,15 +53,15 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px auto
+  margin: 20px auto;
   // height: 80vh
   // border: 1px solid red
-`
+`;
 
 const Card = styled.div`
   margin: 20px
   padding: 15px;
-  min-width: 300px
+  min-width: 250px
 
   border: 1px solid lightblue;
   border-radius: 10px;
@@ -75,4 +75,4 @@ const Card = styled.div`
     color: red;
     border-color: red
 }
-`
+`;

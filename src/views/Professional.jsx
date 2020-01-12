@@ -8,31 +8,30 @@ import { webDev } from "../data/webDev";
 
 export default function Professional() {
   const [content, setContent] = useState(work);
-  const [selected, setSelected] = useState('Work')
+  const [selected, setSelected] = useState("Work");
   const categoryButtons = ["History", "Work", "Web-Dev"];
 
   function setCategory(title) {
+    setSelected(title);
+
     if (title === "Work") {
       setContent(work);
-      setSelected("Work")
     } else if (title === "History") {
       setContent(history);
-      setSelected("History")
     } else if (title === "Web-Dev") {
       setContent(webDev);
-      setSelected("Web-Dev")
     }
   }
 
-  function isExpanded(receivedSubject) {
+  function isExpanded(receivedArticle) {
     setContent(
-      content.map(subject => {
-        if (subject.title === receivedSubject) {
+      content.map(article => {
+        if (article.title === receivedArticle) {
           return {
-            ...subject,
-            display: !subject.display
+            ...article,
+            display: !article.display
           };
-        } else return subject;
+        } else return article;
       })
     );
   }
@@ -43,7 +42,7 @@ export default function Professional() {
         <h3>James Grantham</h3>
       </Link>
 
-      <StyledCategory>
+      <ButtonContainer>
         {categoryButtons.map((title, index) => (
           <div
             key={index}
@@ -51,45 +50,46 @@ export default function Professional() {
               setCategory(title, index);
             }}
           >
-            <h5 className={(selected === title) ? 'selected' : null} id={index} >{title}</h5>
+            <h5 className={selected===title ? "selected" : null}>
+              {title}
+            </h5>
           </div>
         ))}
-      </StyledCategory>
+      </ButtonContainer>
 
-      {content.map((subject, index) => (
-        <MainContent
+      {content.map((article, index) => (
+        <Article
           key={index}
           onClick={e => {
-            isExpanded(subject.title);
+            isExpanded(article.title);
           }}
         >
-          <h5>{subject.title}</h5>
+          <h5>{article.title}</h5>
           <p>
-            {subject.introduction}
-            {subject.display ? "" : ".."}
+            {article.introduction}
+            {article.display ? "" : ".."}
           </p>
-          {subject.display ? (
+          {article.display ? (
             <div>
-              {subject.contents.map((content, index) => (
+              {article.contents.map((content, index) => (
                 <p key={index}>{content}</p>
               ))}
             </div>
           ) : (
             ""
           )}
-        </MainContent>
+        </Article>
       ))}
     </StyledProfessional>
   );
 }
 
 const StyledProfessional = styled.div`
-  padding-bottom: 30px 
   h3 {
     margin: 15px;
   }
 `;
-const StyledCategory = styled.div`
+const ButtonContainer = styled.div`
   display: flex
   flex-direction: column;
 
@@ -119,7 +119,7 @@ const StyledCategory = styled.div`
   }
 `;
 
-const MainContent = styled.div`
+const Article = styled.div`
   margin: 1rem 0.5rem
   padding: 0.5rem
   border: 0.5px solid lightblue
