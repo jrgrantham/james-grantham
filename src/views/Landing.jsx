@@ -5,29 +5,28 @@ import styled from "styled-components";
 export default function Landing() {
   return (
     <LandingStyle>
-      <DisplayFlex>
+      <div>
         <h2>James Grantham</h2>
-      </DisplayFlex>
-      <DisplayFlex>
+      </div>
+      <div>
         <h4>Full-stack Web Developer</h4>
         <h4>Mechanical Engineer</h4>
-      </DisplayFlex>
-      <DisplayFlex>
+      </div>
+      <div style={{display: 'flex', 'flexDirection': 'column'}}>
         <Link to="/personal/phonenumbers">Personal</Link>
         <Link to="/professional">Professional</Link>
-      </DisplayFlex>
+      </div>
     </LandingStyle>
   );
 }
 
 const LandingStyle = styled.div`
-  // height: 80vh
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  // border: 1px solid red
-  padding: 100px 0
+  // border: 1px solid red;
+  height: 80vh
 
   @media (min-width: 1000px) {
     margin: 100px 0
@@ -38,20 +37,23 @@ const LandingStyle = styled.div`
     border: 1px solid lightblue
     border-radius: 10px
   }
+  
+  h2 {
+    // border: 1px solid red
+  }
 
-  h1 {
-    padding: 1rem 0
-  }
   h4 {
-    padding: 1rem 0
+    margin: 1rem 0
+    // border: 1px solid red
   }
+
   a {
+    margin: 0.5rem 0
     font-size: 1.4rem
-    width: 8rem
+    padding: 1rem 3rem
+    min-width: 15rem
     border: 1px solid lightblue
     border-radius: 8px
-    padding: 1rem 3rem
-    margin: 0.5rem 0
 
     &:hover {
       color: black;
@@ -59,12 +61,3 @@ const LandingStyle = styled.div`
     }
   }
 `;
-
-const DisplayFlex = styled.div`
-  margin: 1rem
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // border: 1px solid red
-`
