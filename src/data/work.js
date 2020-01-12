@@ -3,13 +3,14 @@ export const work = [
     title: 'Summary',
     introduction: 'Qualified Engineer with twenty-years industry experience in both onshore and offshore topsides Oil and Gas integrity services.',
     contents: [
-      'Competent at guiding and leading others, managing work loads, handling objections and conflict resolution. an effective communicator, with the ability to adapt and thrive in many work environments.'
+      'Competent at guiding and leading others, managing work loads, handling objections and conflict resolution. an effective communicator, with the ability to adapt and thrive in many work environments.',
+      'Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks.'
     ],
     display: false
   },
   {
     title: "Project Management",
-    introduction: "Oversaw daily operations of the topsides integrity services contract for offshore installations. Managed the inspection project £1.8m for the kittiwake oil platform.",
+    introduction: "Oversaw daily operations of the topsides integrity services contract (£1.8m) for offshore installations.",
     contents: [
       "Responsible for managing workloads, prioritising and scheduling inspection activities and completing the inspection scope on time and within budget.",
 
@@ -21,7 +22,7 @@ export const work = [
   },
   {
     title: "Financial",
-    introduction: 'Introduction required.',
+    introduction: 'Budget management and costing experience for the Oil and Gas integrity services division.',
     contents: [
       "Produced engineering quotations for additional inspection services for the client when specialist work was required, costing personnel, equipment and transportation.",
 
@@ -31,15 +32,15 @@ export const work = [
   },
   {
     title: 'Data management',
-    introduction: 'Introduction required.',
+    introduction: 'Experienced at managing and reviewing large volumes of inspection reports and data.',
     contents: [
+      'Inspection services generates a considerable number of reports and large quantities of data that require meticulous scrutiny and diligent record keeping.',
+      'In order to manage this critical data, new systems and process were introduced to log and track the status of each report and ensure that each one had been reviewed and signed off.',
       'Report registers, daily reports, anomaly ranking and top 10.',
-
       'Monthly / quarterly / annual',
-      
       'During my recent career I have reviewed hundreds of reports, written dozens of summaries and presented these findings, along with project progress and financial / budget status to the client.'
     ],
-    display: false
+    display: true
   },
   {
     title: "Personal skills",
@@ -51,12 +52,4 @@ export const work = [
     ],
     display: false
   },
-  {
-    title: 'Background',
-    introduction: 'Introduction required.',
-    contents: [
-      'Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks…'
-    ],
-    display: false
-  }
 ];
