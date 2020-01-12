@@ -21,11 +21,9 @@ export const experience = [
     display: false
   },
   {
-    title: "Personal skills",
-    introduction: 'Introduction required.',
+    title: "Interpersonal skills",
+    introduction: 'Work collaboratively, communicate effectively and have positive relationships with customers and co-workers.',
     contents: [
-      "Held technical briefings for staff mobilising offshore to ensure the work was understood prior to deployment.",
-
       "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner"
     ],
     display: false
