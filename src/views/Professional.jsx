@@ -125,4 +125,9 @@ const Article = styled.div`
   border: 0.5px solid lightblue
   border-radius: 5px
   cursor: pointer
+
+  @media (min-width: 550px) {
+    margin: 1rem 1rem
+    padding: 0.5rem 1rem
+  }
 `;

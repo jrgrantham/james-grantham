@@ -54,6 +54,11 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 20px auto;
+
+  h2 {
+    margin: 10px
+  }
+
   // height: 80vh
   // border: 1px solid red
 `;
