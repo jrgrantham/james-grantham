@@ -9,9 +9,6 @@ import PhoneNumbers from './views/PhoneNumbers'
 function App() {
 
   const [isLoading, setIsLoading] = useState(false)
-
-  // const location = window.location.pathname
-  // console.log(location);
   
   return (
     <StyledApp className="App">

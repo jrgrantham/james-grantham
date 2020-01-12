@@ -22,7 +22,7 @@ export default function Landing() {
 
 const LandingStyle = styled.div`
   height: 80vh
-  padding-top: 25px
+  // padding-top: 25px
   display: flex;
   flex-direction: column;
   justify-content: center;

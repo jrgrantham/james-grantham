@@ -21,7 +21,7 @@ export const work = [
   },
   {
     title: "Financial",
-    introduction: 'Introduction required',
+    introduction: 'Introduction required.',
     contents: [
       "Produced engineering quotations for additional inspection services for the client when specialist work was required, costing personnel, equipment and transportation.",
 
@@ -31,7 +31,7 @@ export const work = [
   },
   {
     title: 'Data management',
-    introduction: 'Introduction required',
+    introduction: 'Introduction required.',
     contents: [
       'Report registers, daily reports, anomaly ranking and top 10.',
 
@@ -43,7 +43,7 @@ export const work = [
   },
   {
     title: "Personal skills",
-    introduction: 'Introduction required',
+    introduction: 'Introduction required.',
     contents: [
       "Held technical briefings for staff mobilising offshore to ensure the work was understood prior to deployment.",
 
@@ -53,7 +53,7 @@ export const work = [
   },
   {
     title: 'Background',
-    introduction: 'Introduction required',
+    introduction: 'Introduction required.',
     contents: [
       'Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks…'
     ],
