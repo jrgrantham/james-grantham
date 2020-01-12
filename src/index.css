@@ -89,16 +89,6 @@ video {
   background-color: #252525;
 }
 
-html {
-  height: 100%;
-  background-color: #252525;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -112,9 +102,6 @@ menu,
 nav,
 section {
   display: block;
-}
-body {
-  line-height: 1.4;
 }
 ol,
 ul {
@@ -135,7 +122,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+html {
+  height: 100%;
+  background-color: #252525;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body {
+  height: 100%;
+  line-height: 1.4;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

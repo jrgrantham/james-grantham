@@ -1,4 +1,4 @@
-export const webDev = [
+export const web = [
   {
     title: "Full Stack Web-Developer",
     introduction: "An engineer who can handle all the work of databases, servers, systems engineering, and clients.",

@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+// import Footer from '../components/Footer'
 import { career } from "../data/career";
 import { experience } from "../data/experience";
-import { webDev } from "../data/webDev";
+import { web } from "../data/web";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
-  const categoryButtons = ["Career", "Experience", "Web-Dev"];
+  const categoryButtons = ["Career", "Experience", "Web"];
 
   function setCategory(title) {
     setSelected(title);
@@ -18,8 +19,8 @@ export default function Professional() {
       setContent(career);
     } else if (title === "Experience") {
       setContent(experience);
-    } else if (title === "Web-Dev") {
-      setContent(webDev);
+    } else if (title === "Web") {
+      setContent(web);
     }
   }
 
@@ -79,6 +80,7 @@ export default function Professional() {
           )}
         </Article>
       ))}
+      {/* <Footer /> */}
     </StyledProfessional>
   );
 }

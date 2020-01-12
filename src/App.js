@@ -37,13 +37,19 @@ export default App;
 
 const StyledApp = styled.div`
 
-// display: flex
-// flex-direction: column
+height: 100%
 max-width: 800px
 margin: auto
 
 text-align: center
 color: lightblue
+
+// @media (min-width: 1400px) {
+//   max-width: 1200px
+//   padding: 50px 200px
+//   border-left: 1px solid lightgrey
+//   border-right: 1px solid lightgrey
+// }
 
 h1 {
   font-size: 2.5rem

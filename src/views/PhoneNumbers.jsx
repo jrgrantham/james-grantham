@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
-import Spinner from "../components/Spinner";
+import Spinner from '../components/Spinner'
 
 const numberApi = `${url()}api/users/numbers`;
 

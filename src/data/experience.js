@@ -3,8 +3,10 @@ export const experience = [
     title: 'Summary',
     introduction: 'Qualified Engineer with nearly twenty-years industry experience in both onshore and offshore topsides Oil and Gas integrity services.',
     contents: [
+      'Experienced Inspection Engineer started working in the Oil and Gas Industry in 2001. Worked at Lloyds Register for 11 years prior to joining Oceaneering, gaining experience offshore, visiting all BP SNS assests and satellite platforms (18 at the time).',
+
       'Competent at guiding and leading others, managing work loads, handling objections and conflict resolution, an effective communicator with the ability to adapt and thrive in many work environments.',
-      
+
       'Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks.'
     ],
     display: false
@@ -22,7 +24,7 @@ export const experience = [
     display: false
   },
   {
-    title: "Interpersonal skills",
+    title: "Interpersonal Skills",
     introduction: 'Work collaboratively, communicate effectively and have positive relationships with customers and co-workers.',
     contents: [
       "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner"

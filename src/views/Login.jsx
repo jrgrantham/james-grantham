@@ -4,10 +4,9 @@ import { Formik } from "formik";
 import axios from "axios";
 import styled from "styled-components";
 import url from "../helpers/url";
-import Spinner from "../components/Spinner";
+import Spinner from '../components/Spinner'
 
 const loginApi = url() + "api/auth/login";
-
 const initialLoginForm = {
   username: "",
   password: ""
