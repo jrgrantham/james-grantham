@@ -1,4 +1,4 @@
-export const work = [
+export const experience = [
   {
     title: 'Summary',
     introduction: 'Qualified Engineer with twenty-years industry experience in both onshore and offshore topsides Oil and Gas integrity services.',
@@ -21,6 +21,16 @@ export const work = [
     display: false
   },
   {
+    title: "Personal skills",
+    introduction: 'Introduction required.',
+    contents: [
+      "Held technical briefings for staff mobilising offshore to ensure the work was understood prior to deployment.",
+
+      "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner"
+    ],
+    display: false
+  },
+  {
     title: "Financial",
     introduction: 'Budget management and costing experience for the Oil and Gas integrity services division.',
     contents: [
@@ -39,16 +49,6 @@ export const work = [
       'Report registers, daily reports, anomaly ranking and top 10.',
       'Monthly / quarterly / annual',
       'During my recent career I have reviewed hundreds of reports, written dozens of summaries and presented these findings, along with project progress and financial / budget status to the client.'
-    ],
-    display: false
-  },
-  {
-    title: "Personal skills",
-    introduction: 'Introduction required.',
-    contents: [
-      "Held technical briefings for staff mobilising offshore to ensure the work was understood prior to deployment.",
-
-      "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner"
     ],
     display: false
   },

@@ -1,4 +1,4 @@
-export const history = [
+export const career = [
   {
     title: "Lambda School",
     introduction: "Training to be a Full Stack Web-Developer.",

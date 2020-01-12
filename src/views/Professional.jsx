@@ -2,22 +2,22 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { work } from "../data/work";
-import { history } from "../data/history";
+import { career } from "../data/career";
+import { experience } from "../data/experience";
 import { webDev } from "../data/webDev";
 
 export default function Professional() {
-  const [content, setContent] = useState(history);
-  const [selected, setSelected] = useState("Work");
-  const categoryButtons = ["History", "Work", "Web-Dev"];
+  const [content, setContent] = useState(experience);
+  const [selected, setSelected] = useState("Experience");
+  const categoryButtons = ["Career", "Experience", "Web-Dev"];
 
   function setCategory(title) {
     setSelected(title);
 
-    if (title === "Work") {
-      setContent(work);
-    } else if (title === "History") {
-      setContent(history);
+    if (title === "Career") {
+      setContent(career);
+    } else if (title === "Experience") {
+      setContent(experience);
     } else if (title === "Web-Dev") {
       setContent(webDev);
     }
@@ -107,7 +107,7 @@ const ButtonContainer = styled.div`
   }
 
   h5 {
-    margin: 0.25rem 0.5rem
+    margin: 0.25rem 0.4rem
     padding: .5rem .7rem
     border: 0.5px solid lightgrey
     border-radius: 5px
