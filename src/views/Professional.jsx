@@ -8,15 +8,19 @@ import { webDev } from "../data/webDev";
 
 export default function Professional() {
   const [content, setContent] = useState(work);
+  const [selected, setSelected] = useState('Work')
   const categoryButtons = ["History", "Work", "Web-Dev"];
 
   function setCategory(title) {
     if (title === "Work") {
       setContent(work);
+      setSelected("Work")
     } else if (title === "History") {
       setContent(history);
+      setSelected("History")
     } else if (title === "Web-Dev") {
       setContent(webDev);
+      setSelected("Web-Dev")
     }
   }
 
@@ -44,10 +48,10 @@ export default function Professional() {
           <div
             key={index}
             onClick={() => {
-              setCategory(title);
+              setCategory(title, index);
             }}
           >
-            <h5>{title}</h5>
+            <h5 className={(selected === title) ? 'selected' : null} id={index} >{title}</h5>
           </div>
         ))}
       </StyledCategory>
@@ -80,7 +84,7 @@ export default function Professional() {
 }
 
 const StyledProfessional = styled.div`
-  margin-bottom: 30px 
+  padding-bottom: 30px 
   h3 {
     margin: 15px;
   }
@@ -92,6 +96,10 @@ const StyledCategory = styled.div`
   @media (min-width: 370px) {
     flex-direction: row;
     justify-content: space-evenly
+  }
+
+  .selected {
+    border: 2px solid lightblue
   }
 
   h5 {
