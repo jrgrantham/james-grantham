@@ -15,9 +15,9 @@ export const career = [
     introduction: "Managed the day to day operations of the integrity contract for the Kittiwake Oil Platform.",
     contents: [
       "Senior Inspection Engineer, 2011 - 2019:",
-      "Responsible for managing workloads, prioritising and scheduling inspection activities and completing the inspection scope on time and within budget. Anomaly reviews, repair recommendations, inspection summaries, team briefs, budget tracking and forecast",
+      "Responsible for managing workloads, prioritising and scheduling inspection activities and completing the inspection scope on time and within budget. Anomaly reviews, repair recommendations, inspection summaries, team briefs, and budget tracking and forecasting.",
       "Re-structured the project, developing new systems and processes to better manage the large amount of data generated. This increased project efficiency turning a once struggling project, performing poorly for Oceaneering, into the benchmark against which other projects were compared.",
-      "These new approach helped to manage and track our workload and budget, giving thorough visibility and therefore the opportunity to focus on the areas that were failing.",
+      "The new approach helped to manage and track our workload and budget simply and effectively, providing thorough visibility and therefore the opportunity to focus on the areas that were failing.",
       "Managed the development of an internal company project to convert the monthly presentation into a website accessible by client, supplying live data available any time (the catalyst for this career change)",
     ],
     display: false
