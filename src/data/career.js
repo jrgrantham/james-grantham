@@ -26,7 +26,7 @@ export const career = [
     title: "Lloyd's Register",
     introduction: "Project Engineer.",
     contents: [
-      'To be comeleted'
+      'To be completed'
     ],
     display: true
   },

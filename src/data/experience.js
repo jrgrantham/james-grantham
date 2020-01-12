@@ -3,7 +3,7 @@ export const experience = [
     title: 'Summary',
     introduction: 'Qualified Engineer with twenty-years industry experience in both onshore and offshore topsides Oil and Gas integrity services.',
     contents: [
-      'Competent at guiding and leading others, managing work loads, handling objections and conflict resolution. an effective communicator, with the ability to adapt and thrive in many work environments.',
+      'Competent at guiding and leading others, managing work loads, handling objections and conflict resolution, an effective communicator with the ability to adapt and thrive in many work environments.',
       'Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks.'
     ],
     display: false
