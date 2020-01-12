@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { work } from "../data/work";
 import styled from "styled-components";
 
-export default function Work() {
-  const [data, setData] = useState(work);
-
+export default function Content(props) {
+  const [data, setData] = useState(props.content);
+  
   function isDisplayed(receivedSubject) {
     setData(
       data.map(subject => {

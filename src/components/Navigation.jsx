@@ -1,34 +1,50 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { work } from "../data/work";
+import { history } from "../data/history";
+import { webDev } from "../data/webDev";
+
+function setData(props, title) {
+  if (title === 'Work') {
+    console.log(title)
+    props.setContent(work)
+    console.log(props.content)
+  } else if (title === 'History') {
+    console.log(title)
+    props.setContent(history)
+    console.log(props.content)
+  }
+}
+
 export default function Navigation(props) {
+  const category = ["History", "Work", "Web-Dev"];
   return (
     <>
       <Link to="/">
         <StyledH3>James Grantham</StyledH3>
       </Link>
+
       <StyledNavigation>
-        <NavLink activeClassName="activeLink" to="/professional/background">
-          History
-        </NavLink>
-        <NavLink activeClassName="activeLink" to="/professional/Work">
-          Work
-        </NavLink>
-        <NavLink
-          activeClassName="activeLink"
-          to="/professional/web-development"
-        >
-          Web-Dev
-        </NavLink>
+        {category.map((title, index) => (
+          <div
+            key={index}
+            onClick={() => {
+              setData(props, title);
+            }}
+          >
+            <h5>{title}</h5>
+          </div>
+        ))}
       </StyledNavigation>
     </>
   );
 }
 
 const StyledH3 = styled.h3`
-  margin-top: 1rem
-`
+  margin-top: 1rem;
+`;
 
 const StyledNavigation = styled.div`
 
@@ -46,7 +62,7 @@ const StyledNavigation = styled.div`
     color: #252525
   }
 
-  a {
+  h5 {
     font-size: 1rem
     margin: 0.25rem 0.5rem
     min-width: 70px
