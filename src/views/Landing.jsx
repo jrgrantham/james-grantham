@@ -3,7 +3,15 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import james from "../../src/images/james.jpg";
 
+const color ='lightblue'
+const background = '#303030'
+const appColor = '#202020'
+
 export default function Landing() {
+
+  document.body.style.background = appColor;
+  document.getElementById("root").style.background = appColor
+
   return (
     <LandingStyle>
       <div>
@@ -37,8 +45,8 @@ const LandingStyle = styled.div`
   }
 
   @media (min-width: 1200px) {
-    margin: 100px 0
-    border: 1px solid lightblue
+    // margin: 100px 0
+    border: 1px solid ${color}
     border-radius: 10px
   }
 
@@ -61,12 +69,12 @@ const LandingStyle = styled.div`
     font-size: 1.4rem
     padding: 1rem 3rem
     min-width: 15rem
-    border: 1px solid lightblue
+    border: 1px solid ${color}
     border-radius: 8px
 
     &:hover {
       color: black;
-      background-color: lightblue;
+      background-color: ${color};
     }
   }
 `;

@@ -10,7 +10,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <StyledApp className="App">
+    <StyledApp id="App" className="App">
       <Route exact path="/" component={Landing} />
       <Route path="/professional" component={Professional} />
       <Route
