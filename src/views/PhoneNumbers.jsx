@@ -62,9 +62,13 @@ const Container = styled.div`
   align-items: center;
 
   h2,
-  h3,
-  a {
+  h3 {
     margin-top: 25px;
+  }
+
+  a {
+    padding: 30px 0
+    // margin-top: 15px;
   }
 `;
 
