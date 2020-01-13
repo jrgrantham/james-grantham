@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import james from "../../src/images/james.jpg";
 
-const color ='lightblue'
-const background = '#303030'
-const appColor = '#202020'
+// const color ='lightblue'
+// const background = '#202020'
+// const appColor = '#202020'
+
+const appColor = "#F5F5F5";
+const backgroundColor = "#F5F5F5";
+const color = "#202020";
 
 export default function Landing() {
-
   document.body.style.background = appColor;
-  document.getElementById("root").style.background = appColor
+  document.getElementById("root").style.background = appColor;
 
   return (
     <LandingStyle>
@@ -25,14 +28,19 @@ export default function Landing() {
         <h4>Mechanical Engineer</h4>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Link to="/personal/phonenumbers">Personal</Link>
-        <Link to="/professional">Professional</Link>
+        <Link to="/personal/phonenumbers"><h5>
+          Personal
+        </h5></Link>
+        <Link to="/professional"><h5>
+          Professional
+        </h5></Link>
       </div>
     </LandingStyle>
   );
 }
 
 const LandingStyle = styled.div`
+  background-color: ${backgroundColor}
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -41,7 +49,7 @@ const LandingStyle = styled.div`
   height: 80vh
 
   @media (min-width: 1000px) {
-    margin: 100px 0
+    // margin: 100px 0
   }
 
   @media (min-width: 1200px) {
@@ -56,24 +64,26 @@ const LandingStyle = styled.div`
   }
   
   h2 {
+    color: ${color}
     // border: 1px solid red
   }
 
   h4 {
-    margin: 1rem 0
-    // border: 1px solid red
+    color: ${color}
+    padding: 1rem 0
   }
 
-  a {
+  h5 {
+    color: ${color}
     margin: 0.5rem 0
+    padding: 1rem 0
     font-size: 1.4rem
-    padding: 1rem 3rem
     min-width: 15rem
     border: 1px solid ${color}
     border-radius: 8px
 
     &:hover {
-      color: black;
+      color: ${backgroundColor};
       background-color: ${color};
     }
   }

@@ -86,7 +86,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  background-color: #202020;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -124,7 +123,6 @@ table {
 }
 html {
   height: 100%;
-  /* background-color: #202020; */
   box-sizing: border-box;
 }
 *, *:before, *:after {

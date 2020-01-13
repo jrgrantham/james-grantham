@@ -103,12 +103,12 @@ export default function Professional() {
 
 const StyledProfessional = styled.div`
   background-color: ${appColor}
-  margin-bottom: 50px
+  padding-bottom: 50px
   color: ${color}
   h3 {
     background-color: ${appColor}
     color: ${color}
-    padding-top: 15px
+    padding-top: 18px
   @media (min-width: 1800px) {
     margin-top: 100px
   }
