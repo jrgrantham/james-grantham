@@ -14,8 +14,8 @@ export default function Professional() {
   const [selected, setSelected] = useState("Experience");
   const categoryButtons = ["Career", "Experience", "Web"];
 
-  document.body.style.background = appColor;
-  document.getElementById("root").style.background = appColor;
+  // document.body.style.background = appColor;
+  // document.getElementById("root").style.background = appColor;
 
   function setCategory(title) {
     setSelected(title);
@@ -44,10 +44,11 @@ export default function Professional() {
 
   return (
     <StyledProfessional>
-      <Link to="/">
-        <h3>James Grantham</h3>
-      </Link>
-
+      <StyledHeader>
+        <Link to="/">
+          <h3>James Grantham</h3>
+        </Link>
+      </StyledHeader>
       <ButtonContainer>
         {categoryButtons.map((title, index) => (
           <StyledButton
@@ -94,14 +95,20 @@ const StyledProfessional = styled.div`
   background-color: ${appColor}
   padding-bottom: 50px
   color: ${color}
-  h3 {
-    background-color: ${appColor}
-    color: ${color}
-    padding-top: 18px
-  // @media (min-width: 1800px) {
-  //   margin-top: 100px
-  // }
 `;
+
+const StyledHeader = styled.div`
+  display: flex
+  justify-content: center
+  h3 {
+    margin-top: 20px
+    padding: 5px
+    background-color: ${backgroundColor}
+    color: ${color}
+    border-radius: 10px
+    width: 300px
+`
+
 const ButtonContainer = styled.div`
   background-color: ${appColor}
   margin: 1rem 0.5rem
