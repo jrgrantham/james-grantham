@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import james from "../../src/images/james.jpg";
 
 export default function Landing() {
   return (
@@ -9,10 +10,13 @@ export default function Landing() {
         <h2>James Grantham</h2>
       </div>
       <div>
+        <img src={james} alt="" />
+      </div>
+      <div>
         <h4>Full-stack Web Developer</h4>
         <h4>Mechanical Engineer</h4>
       </div>
-      <div style={{display: 'flex', 'flexDirection': 'column'}}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <Link to="/personal/phonenumbers">Personal</Link>
         <Link to="/professional">Professional</Link>
       </div>
@@ -36,6 +40,10 @@ const LandingStyle = styled.div`
     margin: 100px 0
     border: 1px solid lightblue
     border-radius: 10px
+  }
+
+  img {
+    width: 375px
   }
   
   h2 {
