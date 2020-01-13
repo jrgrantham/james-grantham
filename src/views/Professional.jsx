@@ -119,7 +119,7 @@ const ButtonContainer = styled.div`
 const StyledButton = styled.div`
   margin: 0.25rem 0
   padding: .5rem 0
-  background-color: #404040
+  background-color: #303030
   // border: 0.5px solid whitesmoke
   border-radius: 10px
   cursor: pointer
@@ -133,13 +133,13 @@ const StyledButton = styled.div`
 const Article = styled.div`
   margin: 1rem 0.5rem
   padding: 0.5rem
-  background-color: #404040
+  background-color: #303030
   // border: 0.5px solid whitesmoke
   border-radius: 10px
   cursor: pointer
 
   h5, p {
-    background-color: #404040
+    background-color: #303030
   }
 
   @media (min-width: 550px) {
