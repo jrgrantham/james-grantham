@@ -43,7 +43,7 @@ const LandingStyle = styled.div`
   }
 
   img {
-    width: 375px
+    width: 300px
   }
   
   h2 {
