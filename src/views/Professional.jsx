@@ -2,31 +2,20 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import { appColor, backgroundColor, color } from "./styling";
+
 // import Footer from '../components/Footer'
 import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
 
-const appColor = '#F5F5F5'
-const backgroundColor = '#DCDCDC'
-const color = '#202020'
-
-// const appColor = '#202020'
-// const backgroundColor = '#303030'
-// const color = '#F5F5F5'
-
 export default function Professional() {
-  
-
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
   const categoryButtons = ["Career", "Experience", "Web"];
-  
-  // function setBackGround() {
-    document.body.style.background = appColor;
-    document.getElementById("root").style.background = appColor
-  // }
-  // setBackGround()
+
+  document.body.style.background = appColor;
+  document.getElementById("root").style.background = appColor;
 
   function setCategory(title) {
     setSelected(title);
@@ -109,15 +98,15 @@ const StyledProfessional = styled.div`
     background-color: ${appColor}
     color: ${color}
     padding-top: 18px
-  @media (min-width: 1800px) {
-    margin-top: 100px
-  }
+  // @media (min-width: 1800px) {
+  //   margin-top: 100px
+  // }
 `;
 const ButtonContainer = styled.div`
   background-color: ${appColor}
   margin: 1rem 0.5rem
   display: flex
-  flex-direction: column;
+  flex-direction: column
 
   .selected {
     border: 1px solid ${color}

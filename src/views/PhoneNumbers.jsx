@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
+
 import Spinner from '../components/Spinner'
+import { color } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -68,7 +70,7 @@ const Card = styled.div`
   padding: 15px;
   min-width: 250px
 
-  border: 1px solid lightblue;
+  border: 1px solid ${color};
   border-radius: 10px;
 
   display: flex;

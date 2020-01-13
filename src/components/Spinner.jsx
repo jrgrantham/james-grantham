@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { color } from "../views/styling";
+
 export default function Spinner() {
   return (
     <IsLoading>
@@ -18,6 +20,9 @@ export default function Spinner() {
 }
 
 const IsLoading = styled.div`
+  h4 {
+    color: ${color}
+  }
   margin: 100px
   display: flex
   flex-direction: column
@@ -26,7 +31,7 @@ const IsLoading = styled.div`
   height: 200px
   
   @media (min-width: 500px) {
-    border: 1px solid lightblue
+    border: 1px solid ${color}
     border-radius: 10px
   }
 `
@@ -49,7 +54,7 @@ const SpinnerContainer = styled.div`
     display: block;
     width: 25%;
     height: 25%;
-    background-color: lightblue;
+    background-color: ${color};
     border-radius: 100%;
     animation: sk-chase-dot-before 2s infinite ease-in-out both;
   }

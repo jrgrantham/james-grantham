@@ -4,7 +4,9 @@ import { Formik } from "formik";
 import axios from "axios";
 import styled from "styled-components";
 import url from "../helpers/url";
+
 import Spinner from '../components/Spinner'
+import { appColor, backgroundColor, color } from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -77,7 +79,7 @@ export default function LoginForm(props) {
               Login
             </button>
 
-            <Link to="/" style={{ color: "lightgrey", "font-size": "1.2rem" }}>
+            <Link to="/" style={{ color: color, "font-size": "1.2rem" }}>
               Return to home page
             </Link>
 
@@ -104,18 +106,17 @@ export default function LoginForm(props) {
 }
 
 const StyledForm = styled.form`
-  margin-top: 50px
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center
   padding: 50px
   
-  @media (min-width: 800px) {
-    margin: 150px 100px 0 100px
-    border: 1px solid lightgrey
-    border-radius: 10px
-  }
+  // @media (min-width: 800px) {
+  //   margin: 150px 100px 0 100px
+  //   border: 1px solid lightgrey
+  //   border-radius: 10px
+  // }
 
   .inputField {
     display: flex;

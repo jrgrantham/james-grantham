@@ -42,7 +42,6 @@ max-width: 800px
 margin: auto
 
 text-align: center
-color: lightblue
 
 // @media (min-width: 1400px) {
 //   max-width: 1200px
@@ -72,7 +71,6 @@ p {
   padding: 0.5rem 0
 }
 a {
-  color: lightblue
   text-decoration: none
 }
 `;
