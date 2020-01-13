@@ -3,7 +3,7 @@ export const career = [
     title: "Lambda School",
     introduction: "Why train to be a Full Stack Web-Developer.",
     contents: [
-      "The Oil industry is an interesting and often exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of this). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in extreme and remote environments.",
+      "The Oil industry is an interesting and often exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in extreme and remote environments.",
       "One of my responsibilities was to manage and oversee a project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time.",
       "To ensure the project delivered as expected, I became involved in the coding and setting-up of the site. This prevented re-writing code and sped the process up significantly, delivering a well presented product that contained all the data our client was hoping for.",
       "The logical and technical challenges faced during the development were at times difficult, but the reward of completing the work was particularly satisfying.",
