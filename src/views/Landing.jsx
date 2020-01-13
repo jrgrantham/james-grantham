@@ -44,6 +44,7 @@ const LandingStyle = styled.div`
 
   img {
     width: 300px
+    border-radius: 10px
   }
   
   h2 {
