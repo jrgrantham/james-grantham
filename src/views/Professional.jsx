@@ -87,9 +87,9 @@ export default function Professional() {
 
 const StyledProfessional = styled.div`
   margin-bottom: 50px
-  color: lightgrey
+  color: whitesmoke
   h3 {
-    color: lightgrey
+    color: whitesmoke
     margin: 15px;
   }
 `;
@@ -97,11 +97,11 @@ const ButtonContainer = styled.div`
   margin: 1rem 0.5rem
   display: flex
   flex-direction: column;
-  // border: 0.5px solid lightgrey
+  // border: 0.5px solid whitesmoke
   // border-radius: 5px
 
   .selected {
-    border: 2px solid lightgrey
+    border: 0.5px solid whitesmoke
   }
   
   @media (min-width: 370px) {
@@ -119,7 +119,8 @@ const ButtonContainer = styled.div`
 const StyledButton = styled.div`
   margin: 0.25rem 0
   padding: .5rem 0
-  border: 0.5px solid lightgrey
+  background-color: #404040
+  // border: 0.5px solid whitesmoke
   border-radius: 5px
   cursor: pointer
   
@@ -132,9 +133,14 @@ const StyledButton = styled.div`
 const Article = styled.div`
   margin: 1rem 0.5rem
   padding: 0.5rem
-  border: 0.5px solid lightgrey
+  background-color: #404040
+  // border: 0.5px solid whitesmoke
   border-radius: 5px
   cursor: pointer
+
+  h5, p {
+    background-color: #404040
+  }
 
   @media (min-width: 550px) {
     margin: 1rem 1rem
