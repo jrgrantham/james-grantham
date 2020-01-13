@@ -5,7 +5,8 @@ import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import { color } from "./styling";
+import { appColor, backgroundColor, color } from "./styling";
+import Footer from "../components/Footer";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -58,7 +59,6 @@ export default function PhoneNumbers(props) {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   h2,
@@ -67,7 +67,7 @@ const Container = styled.div`
   }
 
   a {
-    padding: 30px 0
+    padding: 30px 0 50px 0
     // margin-top: 15px;
   }
 `;
@@ -79,6 +79,7 @@ const Card = styled.div`
 
   border: 1px solid ${color};
   border-radius: 10px;
+  background-color: ${backgroundColor}
 
   display: flex;
   flex-direction: column;

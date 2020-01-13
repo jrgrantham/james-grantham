@@ -8,6 +8,7 @@ import { appColor, backgroundColor, color } from "./styling";
 import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
+import Footer from "../components/Footer";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
@@ -86,7 +87,6 @@ export default function Professional() {
           )}
         </Article>
       ))}
-      {/* <Footer /> */}
     </StyledProfessional>
   );
 }

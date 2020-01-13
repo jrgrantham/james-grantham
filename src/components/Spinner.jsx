@@ -5,38 +5,48 @@ import { color } from "../views/styling";
 
 export default function Spinner() {
   return (
-    <IsLoading>
-    <h4>Loading...</h4>
-      <SpinnerContainer>
-        <div className="sk-chase-dot"></div>
-        <div className="sk-chase-dot"></div>
-        <div className="sk-chase-dot"></div>
-        <div className="sk-chase-dot"></div>
-        <div className="sk-chase-dot"></div>
-        <div className="sk-chase-dot"></div>
-      </SpinnerContainer>
-    </IsLoading>
+    <Position>
+      <Container>
+      <h4>Loading...</h4>
+        <Animation>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+          <div className="sk-chase-dot"></div>
+        </Animation>
+      </Container>
+    </Position>
   );
 }
 
-const IsLoading = styled.div`
+const Position = styled.div`
+  height: 80vh
+  display: flex
+  justify-content: center
+  align-items: center
+  // border: 1px solid red
+`
+
+const Container = styled.div`
   h4 {
     color: ${color}
   }
-  margin: 100px
+  width: 500px
+  height: 200px
   display: flex
   flex-direction: column
   justify-content: space-evenly
   align-items: center
-  height: 200px
   
-  @media (min-width: 500px) {
+  @media (min-width: 650px) {
     border: 1px solid ${color}
     border-radius: 10px
   }
 `
 
-const SpinnerContainer = styled.div`
+const Animation = styled.div`
   width: 40px;
   height: 40px;
   position: relative;
