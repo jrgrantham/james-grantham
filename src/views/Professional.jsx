@@ -108,6 +108,7 @@ const StyledProfessional = styled.div`
   h3 {
     background-color: ${appColor}
     color: ${color}
+    padding-top: 15px
   @media (min-width: 1800px) {
     margin-top: 100px
   }
@@ -119,7 +120,7 @@ const ButtonContainer = styled.div`
   flex-direction: column;
 
   .selected {
-    border: 0.5px solid ${color}
+    border: 1px solid ${color}
   }
   
   @media (min-width: 370px) {
