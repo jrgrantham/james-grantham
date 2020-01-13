@@ -121,7 +121,7 @@ const StyledButton = styled.div`
   padding: .5rem 0
   background-color: #404040
   // border: 0.5px solid whitesmoke
-  border-radius: 5px
+  border-radius: 10px
   cursor: pointer
   
   @media (min-width: 370px) {
@@ -135,7 +135,7 @@ const Article = styled.div`
   padding: 0.5rem
   background-color: #404040
   // border: 0.5px solid whitesmoke
-  border-radius: 5px
+  border-radius: 10px
   cursor: pointer
 
   h5, p {
