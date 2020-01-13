@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
-import Spinner from '../components/Spinner'
+import Spinner from "../components/Spinner";
 import { color } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
@@ -38,13 +39,17 @@ export default function PhoneNumbers(props) {
   } else {
     return (
       <Container>
-        <h2>{localStorage.getItem("user")}</h2>
+        <h2>Hi, {localStorage.getItem("user")}</h2>
+        <h3>Here are your numbers...</h3>
         {numbers.map(number => (
           <Card onClick={() => callNumber(number.phoneNumber)} key={number.id}>
             <h4>{number.name}</h4>
             <h4>{number.phoneNumber}</h4>
           </Card>
         ))}
+        <Link to="/" style={{ color: color, "font-size": "1.2rem" }}>
+          Return to home page
+        </Link>
       </Container>
     );
   }
@@ -55,18 +60,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
 
-  h2 {
-    margin: 10px
+  h2,
+  h3,
+  a {
+    margin-top: 25px;
   }
-
-  // height: 80vh
-  // border: 1px solid red
 `;
 
 const Card = styled.div`
-  margin: 20px
+  margin-top: 25px
   padding: 15px;
   min-width: 250px
 
@@ -77,9 +80,4 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    color: red;
-    border-color: red
-}
 `;
