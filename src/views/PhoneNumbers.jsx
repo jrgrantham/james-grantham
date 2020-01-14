@@ -5,8 +5,7 @@ import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import { appColor, backgroundColor, color } from "./styling";
-import Footer from "../components/Footer";
+import { backgroundColor, color } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 

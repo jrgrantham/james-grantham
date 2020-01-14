@@ -6,7 +6,7 @@ import styled from "styled-components";
 import url from "../helpers/url";
 
 import Spinner from '../components/Spinner'
-import { appColor, backgroundColor, color } from "./styling";
+import { appColor, color } from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
