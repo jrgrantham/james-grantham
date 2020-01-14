@@ -5,6 +5,7 @@ import { appColor, color, width } from "./styling";
 import { experience } from "../data/experience";
 
 import NameHeader from "../components/NameHeader";
+
 import ContentButtons from "../components/ContentButtons";
 import MainContent from "../components/MainContent";
 import Footer from '../components/Footer'
@@ -27,7 +28,7 @@ export default function Professional() {
         setSelected={setSelected}
       />
       <MainContent content={content} setContent={setContent} />
-      <HiddenDiv hidden={hidden} setHidden={setHidden} />
+      {/* <HiddenDiv hidden={hidden} setHidden={setHidden} /> */}
       <Footer />
     </StyledProfessional>
   );
@@ -36,7 +37,6 @@ export default function Professional() {
 const StyledProfessional = styled.div`
   width: ${width}
   background-color: ${appColor}
-  padding-bottom: 50px
   color: ${color}
 
   @media (min-height: 850px) {
