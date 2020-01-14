@@ -1,90 +1,25 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, color, transition } from "./styling";
+import { appColor, color } from "./styling";
 
-import { career } from "../data/career";
 import { experience } from "../data/experience";
-import { web } from "../data/web";
+import NameHeader from "../components/professional/NameHeader";
+import Buttons from "../components/professional/Buttons";
+import MainContent from "../components/professional/MainContent"
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
-  const categoryButtons = ["Career", "Experience", "Web"];
 
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
 
-  function setCategory(title) {
-    setSelected(title);
-
-    if (title === "Career") {
-      setContent(career);
-    } else if (title === "Experience") {
-      setContent(experience);
-    } else if (title === "Web") {
-      setContent(web);
-    }
-  }
-
-  function isExpanded(receivedArticle) {
-    setContent(
-      content.map(article => {
-        if (article.title === receivedArticle) {
-          return {
-            ...article,
-            display: !article.display
-          };
-        } else return article;
-      })
-    );
-  }
-
   return (
     <StyledProfessional>
-      <StyledHeader>
-        <Link to="/">
-          <h4>James Grantham</h4>
-        </Link>
-      </StyledHeader>
-      <ButtonContainer>
-        {categoryButtons.map((title, index) => (
-          <StyledButton
-            className={selected === title ? "selected" : null}
-            key={index}
-            onClick={() => {
-              setCategory(title, index);
-            }}
-          >
-            {title}
-          </StyledButton>
-        ))}
-      </ButtonContainer>
-
-      {content.map((article, index) => (
-        <Article
-          key={index}
-          onClick={e => {
-            isExpanded(article.title);
-          }}
-        >
-          <h5>{article.title}</h5>
-          <p>
-            {article.introduction}
-            {article.display ? "" : ".."}
-          </p>
-          {article.display ? (
-            <>
-              {article.contents.map((content, index) => (
-                <p key={index}>{content}</p>
-              ))}
-            </>
-          ) : (
-            ""
-          )}
-        </Article>
-      ))}
+      <NameHeader />
+      <Buttons setContent={setContent} selected={selected} setSelected={setSelected} />
+      <MainContent content={content} setContent={setContent} />
     </StyledProfessional>
   );
 }
@@ -93,86 +28,4 @@ const StyledProfessional = styled.div`
   background-color: ${appColor}
   padding-bottom: 50px
   color: ${color}
-`;
-
-const StyledHeader = styled.div`
-  display: flex
-  justify-content: center
-
-  h4 {
-    margin-top: 20px
-    padding: 5px
-    background-color: ${backgroundColor}
-    color: ${color}
-    border-radius: 10px
-    width: 300px
-
-    &:hover {
-      color: ${appColor};
-      background-color: ${color};
-      transition: background-color ${transition}
-    }
-`
-
-const ButtonContainer = styled.div`
-  background-color: ${appColor}
-  margin: 1rem 0.5rem
-  display: flex
-  flex-direction: column
-
-  .selected {
-    border: 1px solid ${color}
-  }
-  
-  @media (min-width: 370px) {
-    flex-direction: row;
-    justify-content: space-between
-  }
-  
-  @media (min-width: 550px) {
-    margin: 1rem 1rem
-    justify-content: space-evenly
-  }
-`;
-
-const StyledButton = styled.div`
-  margin: 0.25rem 0
-  padding: .5rem 0
-  background-color: ${backgroundColor}
-  // border: 0.5px solid ${color}
-  border-radius: 10px
-  cursor: pointer
-
-  &:hover {
-    color: ${appColor};
-    background-color: ${color};
-    transition: background-color ${transition}
-  }
-  
-  @media (min-width: 370px) {
-    width: 32%
-    max-width: 150px
-  }
-`;
-
-const Article = styled.div`
-  margin: 1rem 0.5rem
-  padding: 0.5rem
-  background-color: ${backgroundColor}
-  // border: 0.5px solid ${color}
-  border-radius: 10px
-  cursor: pointer
-
-  &:hover {
-    background-color: ${color};
-    h5, p {
-      color: ${appColor};
-    }
-    transition: background-color ${transition}
-  }
-
-  @media (min-width: 550px) {
-    margin: 1rem 1rem
-    padding: 0.5rem 1rem
-  }
 `;
