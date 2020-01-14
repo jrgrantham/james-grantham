@@ -26,7 +26,7 @@ export default function Professional() {
         setSelected={setSelected}
       />
       <MainContent content={content} setContent={setContent} />
-      <HiddenDiv />
+      {/* <HiddenDiv /> */}
       <Footer />
     </StyledProfessional>
   );
