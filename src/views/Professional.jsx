@@ -47,7 +47,7 @@ export default function Professional() {
     <StyledProfessional>
       <StyledHeader>
         <Link to="/">
-          <h3>James Grantham</h3>
+          <h4>James Grantham</h4>
         </Link>
       </StyledHeader>
       <ButtonContainer>
@@ -100,7 +100,7 @@ const StyledProfessional = styled.div`
 const StyledHeader = styled.div`
   display: flex
   justify-content: center
-  h3 {
+  h4 {
     margin-top: 20px
     padding: 5px
     background-color: ${backgroundColor}
