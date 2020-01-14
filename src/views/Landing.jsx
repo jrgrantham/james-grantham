@@ -74,7 +74,6 @@ const Buttons = styled.div`
 
   h5 {
     padding: 1rem 0
-    font-size: 1.4rem
     min-width: 15rem
     border: 1px solid ${color}
     border-radius: 8px

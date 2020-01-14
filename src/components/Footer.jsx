@@ -6,7 +6,7 @@ import { appColor, backgroundColor, color } from "../views/styling";
 export default function Footer(props) {
   return (
     <StyledFooter>
-      <Link to="/" style={{ color: color, "font-size": "1.2rem" }} >
+      <Link to="/" style={{ color: color, "fontSize": "1.2rem" }} >
         Return to home page
       </Link>
     </StyledFooter>
