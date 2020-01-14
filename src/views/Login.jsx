@@ -6,7 +6,8 @@ import styled from "styled-components";
 import url from "../helpers/url";
 
 import Spinner from '../components/Spinner'
-import { appColor, color } from "./styling";
+import { appColor, color, transition } from "./styling";
+import Footer from "../components/Footer";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -85,7 +86,7 @@ export default function LoginForm(props) {
                   Return to home page
                 </p>
               </Link>
-  
+              {/* <Footer /> */}
               {/* <ToastContainer
                 position="top-center"
                 autoClose={2000}
@@ -149,6 +150,7 @@ const StyledForm = styled.form`
     &:hover{
       background-color: white;
       color: green;
+      transition: background-color ${transition}
     }
   }
 

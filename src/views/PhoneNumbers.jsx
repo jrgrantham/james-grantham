@@ -5,7 +5,7 @@ import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import { backgroundColor, color } from "./styling";
+import { backgroundColor, appColor, color, transition } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -42,12 +42,12 @@ export default function PhoneNumbers(props) {
         <h2>Hi, {localStorage.getItem("user")}</h2>
         <h3>Here are your numbers...</h3>
         {numbers.map(number => (
-          <Card onClick={() => callNumber(number.phoneNumber)} key={number.id}>
+          <NumberCard onClick={() => callNumber(number.phoneNumber)} key={number.id}>
             <h4>{number.name}</h4>
             <h4>{number.phoneNumber}</h4>
-          </Card>
+          </NumberCard>
         ))}
-        <Link to="/" style={{ color: color, "font-size": "1.2rem" }}>
+        <Link to="/" style={{ color: color, "fontSize": "1.2rem" }}>
           Return to home page
         </Link>
       </Container>
@@ -71,7 +71,7 @@ const Container = styled.div`
   }
 `;
 
-const Card = styled.div`
+const NumberCard = styled.div`
   margin-top: 25px
   padding: 15px;
   min-width: 250px
@@ -84,4 +84,12 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: ${color};
+    h4 {
+      color: ${appColor};
+    }
+    transition: ${transition}
+  }
 `;

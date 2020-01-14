@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, color } from "./styling";
+import { appColor, backgroundColor, color, transition } from "./styling";
 
 import { career } from "../data/career";
 import { experience } from "../data/experience";
@@ -98,6 +98,7 @@ const StyledProfessional = styled.div`
 const StyledHeader = styled.div`
   display: flex
   justify-content: center
+
   h4 {
     margin-top: 20px
     padding: 5px
@@ -105,6 +106,12 @@ const StyledHeader = styled.div`
     color: ${color}
     border-radius: 10px
     width: 300px
+
+    &:hover {
+      color: ${appColor};
+      background-color: ${color};
+      transition: background-color ${transition}
+    }
 `
 
 const ButtonContainer = styled.div`
@@ -135,6 +142,12 @@ const StyledButton = styled.div`
   // border: 0.5px solid ${color}
   border-radius: 10px
   cursor: pointer
+
+  &:hover {
+    color: ${appColor};
+    background-color: ${color};
+    transition: background-color ${transition}
+  }
   
   @media (min-width: 370px) {
     width: 32%
@@ -150,8 +163,12 @@ const Article = styled.div`
   border-radius: 10px
   cursor: pointer
 
-  h5, p {
-    background-color: ${backgroundColor}
+  &:hover {
+    background-color: ${color};
+    h5, p {
+      color: ${appColor};
+    }
+    transition: background-color ${transition}
   }
 
   @media (min-width: 550px) {
