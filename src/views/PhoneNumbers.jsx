@@ -90,11 +90,13 @@ const NumberCard = styled.div`
   justify-content: center;
   align-items: center;
 
-  &:hover {
-    background-color: ${color};
-    h4 {
-      color: ${appColor};
+  @media (pointer:fine) {
+    &:hover {
+      background-color: ${color};
+      h4 {
+        color: ${appColor};
+      }
+      transition: ${transition}
     }
-    transition: ${transition}
   }
 `;

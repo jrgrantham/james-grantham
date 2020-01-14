@@ -78,10 +78,12 @@ const Buttons = styled.div`
     border: 1px solid ${color}
     border-radius: 8px
 
-    &:hover {
-      color: ${appColor};
-      background-color: ${color};
-      transition: background-color ${transition}
+    @media (pointer:fine) {
+      &:hover {
+        color: ${appColor};
+        background-color: ${color};
+        transition: background-color ${transition}
+      }
     }
   }
 `;

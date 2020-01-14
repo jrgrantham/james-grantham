@@ -26,9 +26,11 @@ const StyledHeader = styled.div`
     border-radius: 10px
     width: 300px
 
-    &:hover {
-      color: ${appColor};
-      background-color: ${color};
-      transition: background-color ${transition}
+    @media (pointer:fine) {
+      &:hover {
+        color: ${appColor};
+        background-color: ${color};
+        transition: background-color ${transition}
+      }
     }
 `;

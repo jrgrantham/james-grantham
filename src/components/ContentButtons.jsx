@@ -68,17 +68,14 @@ const StyledButton = styled.div`
   border-radius: 10px
   cursor: pointer
 
-  &:hover {
-    color: ${appColor};
-    background-color: ${color};
-    transition: background-color ${transition}
+  @media (pointer:fine) {
+    &:hover {
+      color: ${appColor};
+      background-color: ${color};
+      transition: background-color ${transition}
+    }
   }
-  
-  html.can-touch:hover {
-    color: none;
-    background-color: none;
-  }
-  
+
   @media (min-width: 370px) {
     width: 32%
     max-width: 150px

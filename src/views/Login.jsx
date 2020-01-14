@@ -124,10 +124,12 @@ const StyledForm = styled.form`
     padding: 0.6rem 0rem;
     width: 200px
 
-    &:hover{
-      background-color: white;
-      color: green;
-      transition: background-color ${transition}
+    @media (pointer:fine) {
+      &:hover{
+        background-color: white;
+        color: green;
+        transition: background-color ${transition}
+      }
     }
   }
 

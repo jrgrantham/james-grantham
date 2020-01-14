@@ -55,12 +55,14 @@ const Article = styled.div`
   border-radius: 10px
   cursor: pointer
 
-  &:hover {
-    background-color: ${color};
-    h5, p {
-      color: ${appColor};
+  @media (pointer:fine) {
+    &:hover {
+      background-color: ${color};
+      h5, p {
+        color: ${appColor};
+      }
+      transition: background-color ${transition}
     }
-    transition: background-color ${transition}
   }
 
   @media (min-width: 550px) {
