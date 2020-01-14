@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { appColor, color } from "./styling";
-
 import { experience } from "../data/experience";
+
 import NameHeader from "../components/professional/NameHeader";
 import Buttons from "../components/professional/Buttons";
-import MainContent from "../components/professional/MainContent"
+import MainContent from "../components/professional/MainContent";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
@@ -18,7 +18,11 @@ export default function Professional() {
   return (
     <StyledProfessional>
       <NameHeader />
-      <Buttons setContent={setContent} selected={selected} setSelected={setSelected} />
+      <Buttons
+        setContent={setContent}
+        selected={selected}
+        setSelected={setSelected}
+      />
       <MainContent content={content} setContent={setContent} />
     </StyledProfessional>
   );
