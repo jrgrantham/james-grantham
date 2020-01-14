@@ -48,86 +48,86 @@ export default function LoginForm(props) {
         }}
       >
         {({ values, handleBlur, handleChange, handleSubmit, isSubmitting }) => (
-          <StyledForm onSubmit={handleSubmit}>
-            {/* <div> */}
-            <div className="inputField">
-              <label htmlFor="username" />
-              <input
-                name="username"
-                type="text"
-                placeholder="Enter username"
-                id="username"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.username}
-              />
-            </div>
-            <div className="inputField">
-              <label htmlFor="password" />
-              <input
-                name="password"
-                type="password"
-                placeholder="Enter password"
-                id="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />
-            </div>
-
-            <button type="submit" disabled={isSubmitting}>
-              Login
-            </button>
-
-            <Link to="/" style={{ color: color, "font-size": "1.2rem" }}>
-              Return to home page
-            </Link>
-
-            {/* <ToastContainer
-              position="top-center"
-              autoClose={2000}
-              hideProgressBar
-              pauseOnVisibilityChange
-              draggable
-              pauseOnHover
-              closeButton={false}
-              style={{
-                "font-size": "1.5rem",
-                width: "400px",
-                "text-align": "center"
-              }}
-            /> */}
-            {/* </div> */}
-          </StyledForm>
+          <Position>
+            <StyledForm onSubmit={handleSubmit}>
+              {/* <div> */}
+              <div >
+                <label htmlFor="username" />
+                <input
+                  name="username"
+                  type="text"
+                  placeholder="Enter username"
+                  id="username"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.username}
+                />
+              </div>
+              <div >
+                <label htmlFor="password" />
+                <input
+                  name="password"
+                  type="password"
+                  placeholder="Enter password"
+                  id="password"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
+                />
+              </div>
+  
+              <button type="submit" disabled={isSubmitting}>
+                Login
+              </button>
+  
+              <Link to="/" style={{ color: color, "font-size": "1.2rem" }}>
+                <p>
+                  Return to home page
+                </p>
+              </Link>
+  
+              {/* <ToastContainer
+                position="top-center"
+                autoClose={2000}
+                hideProgressBar
+                pauseOnVisibilityChange
+                draggable
+                pauseOnHover
+                closeButton={false}
+                style={{
+                  "font-size": "1.5rem",
+                  width: "400px",
+                  "text-align": "center"
+                }}
+              /> */}
+              {/* </div> */}
+            </StyledForm>
+          </Position>
         )}
       </Formik>
     );
   }
 }
 
+const Position = styled.div`
+  display: flex
+  flex-direction: column
+
+  @media (min-height: 850px) {
+    min-height: 100vh
+    justify-content: center
+  }
+`;
+
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
-  padding: 50px
-  
-  // @media (min-width: 800px) {
-  //   margin: 150px 100px 0 100px
-  //   border: 1px solid lightgrey
-  //   border-radius: 10px
-  // }
-
-  .inputField {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-  }
-
-  label {
-    font-size: 1.2rem;
-    padding: 15px 0 10px 0
-  }
+  justify-content: space-evenly
+  margin: auto
+  padding: 100px 0
+  height: 600px
+  // border: 1px solid red
 
   input {
     font-size: 1.2rem;
@@ -139,10 +139,8 @@ const StyledForm = styled.form`
   }
 
   button {
-    margin: 40px 40px 80px 40px;
     background-color: green;
-    color: white;
-    border: none;
+    color: ${appColor};
     border-radius: 5px;
     font-size: 1.5rem;
     padding: 0.6rem 0rem;
@@ -152,5 +150,9 @@ const StyledForm = styled.form`
       background-color: white;
       color: green;
     }
+  }
+
+  p {
+    padding-top: 30px
   }
 `;
