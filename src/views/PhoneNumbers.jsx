@@ -96,7 +96,7 @@ const NumberCard = styled.div`
       h4 {
         color: ${appColor};
       }
-      transition: ${transition}
+      transition: ${transition}s ease-out
     }
   }
 `;
