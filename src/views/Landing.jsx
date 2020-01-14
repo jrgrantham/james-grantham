@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import james from "../../src/images/james.jpg";
 
-import { backgroundColor, color } from "./styling";
+import { appColor, color } from "./styling";
 
 export default function Landing() {
   // document.body.style.background = appColor;
@@ -80,7 +80,7 @@ const Buttons = styled.div`
     border-radius: 8px
 
     &:hover {
-      color: ${backgroundColor};
+      color: ${appColor};
       background-color: ${color};
     }
   }
