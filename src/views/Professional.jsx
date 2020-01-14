@@ -13,6 +13,7 @@ import HiddenDiv from "../components/HiddenDiv";
 export default function Professional() {
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
+  const [hidden, setHidden] = useState(true)
 
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
@@ -26,7 +27,7 @@ export default function Professional() {
         setSelected={setSelected}
       />
       <MainContent content={content} setContent={setContent} />
-      <HiddenDiv />
+      <HiddenDiv hidden={hidden} setHidden={setHidden} />
       <Footer />
     </StyledProfessional>
   );
