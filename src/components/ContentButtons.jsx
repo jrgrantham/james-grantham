@@ -74,6 +74,11 @@ const StyledButton = styled.div`
     transition: background-color ${transition}
   }
   
+  html.can-touch:hover {
+    color: none;
+    background-color: none;
+  }
+  
   @media (min-width: 370px) {
     width: 32%
     max-width: 150px

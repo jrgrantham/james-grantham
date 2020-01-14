@@ -7,6 +7,7 @@ import { experience } from "../data/experience";
 import NameHeader from "../components/NameHeader";
 import ContentButtons from "../components/ContentButtons";
 import MainContent from "../components/MainContent";
+import Footer from '../components/Footer'
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
@@ -24,6 +25,7 @@ export default function Professional() {
         setSelected={setSelected}
       />
       <MainContent content={content} setContent={setContent} />
+      <Footer />
     </StyledProfessional>
   );
 }

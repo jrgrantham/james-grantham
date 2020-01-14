@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 import { backgroundColor, appColor, color, transition } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
@@ -27,13 +26,13 @@ export default function PhoneNumbers(props) {
       });
   };
 
-  function callNumber(number) {
-    window.location = `tel:${number}`;
-  }
-
   useEffect(() => {
     getNumbers();
   }, []);
+
+  function callNumber(number) {
+    window.location = `tel:${number}`;
+  }
 
   if (props.isLoading) {
     return <Spinner />;
@@ -43,14 +42,14 @@ export default function PhoneNumbers(props) {
         <h2>Hi, {localStorage.getItem("user")}</h2>
         <h3>Here are your numbers...</h3>
         {numbers.map(number => (
-          <NumberCard onClick={() => callNumber(number.phoneNumber)} key={number.id}>
+          <NumberCard
+            onClick={() => callNumber(number.phoneNumber)}
+            key={number.id}
+          >
             <h4>{number.name}</h4>
             <h4>{number.phoneNumber}</h4>
           </NumberCard>
         ))}
-        <Link to="/" style={{ color: color, "fontSize": "1.2rem" }}>
-          Return to home page
-        </Link>
         <Footer />
       </Container>
     );
@@ -63,7 +62,7 @@ const Container = styled.div`
   align-items: center;
 
   @media (min-height: 850px) {
-    justify-content: center
+    justify-content: center;
   }
 
   h2,
@@ -71,10 +70,10 @@ const Container = styled.div`
     margin-top: 25px;
   }
 
-  a {
-    padding: 30px 0 50px 0
-    // margin-top: 15px;
-  }
+  // a {
+  //   padding: 30px 0 50px 0
+  //   margin-top: 15px;
+  // }
 `;
 
 const NumberCard = styled.div`

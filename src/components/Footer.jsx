@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { appColor, backgroundColor, color } from "../views/styling";
+import { color } from "../views/styling";
 
 export default function Footer(props) {
   return (
     <StyledFooter>
-      <Link to="/" style={{ color: color, "fontSize": "1.2rem" }} >
+      <Link to="/" style={{ color: color }} >
         Return to home page
       </Link>
     </StyledFooter>
@@ -15,8 +15,8 @@ export default function Footer(props) {
 
 const StyledFooter = styled.div`
 a {
-  height: 100px
-  padding: 30px
-  margin-top: 15px;
+  display: block
+  margin: 25px 0 50px 0
+  padding: 20px
 }
 `

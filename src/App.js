@@ -11,6 +11,16 @@ import { appColor, color } from "./views/styling";
 export default function App() {
   document.getElementById("root").style.height = "100%";
 
+  document.addEventListener(
+    "touchstart",
+    function addtouchclass(e) {
+      // first time user touches the screen
+      document.documentElement.classList.add("can-touch"); // add "can-touch" class to document root using classList API
+      document.removeEventListener("touchstart", addtouchclass, false); // de-register touchstart event
+    },
+    false
+  );
+
   const [isLoading, setIsLoading] = useState(false);
 
   return (
