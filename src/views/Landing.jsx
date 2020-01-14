@@ -10,28 +10,42 @@ export default function Landing() {
   // document.getElementById("root").style.background = appColor;
 
   return (
-    <LandingStyle>
-      <div>
-        <h2>James Grantham</h2>
-      </div>
-      <div>
-        <img src={james} alt="" />
-      </div>
-      <div>
-        <h4>Full-stack Web Developer</h4>
-        <h4>Mechanical Engineer</h4>
-      </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <Link to="/personal/phonenumbers">
-          <h5>Personal</h5>
-        </Link>
-        <Link to="/professional">
-          <h5>Professional</h5>
-        </Link>
-      </div>
-    </LandingStyle>
+    <Position>
+      <LandingStyle>
+        <div>
+          <h2>James Grantham</h2>
+        </div>
+        <div>
+          <img src={james} alt="" />
+        </div>
+        <div>
+          <h4>Full-stack Web Developer</h4>
+          <h4>Mechanical Engineer</h4>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <Link to="/personal/phonenumbers">
+            <h5>Personal</h5>
+          </Link>
+          <Link to="/professional">
+            <h5>Professional</h5>
+          </Link>
+        </div>
+      </LandingStyle>
+    </Position>
   );
 }
+
+const Position = styled.div`
+  // --------
+  // border: 3px solid blue;
+
+  display: flex
+  flex-direction: column
+  @media (min-height: 850px) {
+    min-height: 100vh
+    justify-content: center
+  }
+`;
 
 const LandingStyle = styled.div`
   height: 600px
@@ -41,25 +55,6 @@ const LandingStyle = styled.div`
   align-items: center;
   // --------
   // border: 1px solid red;
-
-  div {
-  // --------
-  // border: 1px solid red
-  }
-
-  @media (min-width: 1000px) {
-    // height: 100vh
-    // padding: 200px
-    // border-left: 1px solid ${color}
-    // border-right: 1px solid ${color}
-
-  }
-
-  // @media (min-width: 1200px) {
-  //   // margin: 100px 0
-  //   border: 1px solid ${color}
-  //   border-radius: 10px
-  // }
 
   img {
     width: 300px

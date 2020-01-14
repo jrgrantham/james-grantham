@@ -127,7 +127,6 @@ const ButtonContainer = styled.div`
   @media (min-width: 550px) {
     margin: 1rem 1rem
     justify-content: space-evenly
-
   }
 `;
 
