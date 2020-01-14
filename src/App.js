@@ -45,4 +45,8 @@ const StyledApp = styled.div`
   text-align: center;
   // --------
   // border: 2px solid blue;
+
+  h1, h2, h3, h4, h5, p, a {
+    color: ${color}
+  }
 `;

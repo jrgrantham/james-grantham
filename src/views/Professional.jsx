@@ -4,11 +4,9 @@ import styled from "styled-components";
 
 import { appColor, backgroundColor, color } from "./styling";
 
-// import Footer from '../components/Footer'
 import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
-import Footer from "../components/Footer";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
