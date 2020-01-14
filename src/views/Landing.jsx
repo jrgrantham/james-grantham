@@ -34,12 +34,14 @@ export default function Landing() {
 }
 
 const Position = styled.div`
+  height: 100%
   display: flex
   flex-direction: column
+  justify-content: center
+  // border: 2px solid red
 
   @media (min-height: 850px) {
     min-height: 100vh
-    justify-content: center
   }
 `;
 
@@ -49,6 +51,7 @@ const LandingStyle = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  // border: 2px solid green
 
   img {
     width: 300px

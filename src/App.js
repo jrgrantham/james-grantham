@@ -6,7 +6,7 @@ import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 
-import { appColor, backgroundColor, color } from "./views/styling";
+import { appColor, color } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
