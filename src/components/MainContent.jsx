@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { appColor, backgroundColor, color, transition } from "../views/styling";
 
 export default function MainContent(props) {
-
   function isExpanded(receivedArticle) {
     props.setContent(
       props.content.map(article => {
@@ -32,20 +31,46 @@ export default function MainContent(props) {
             {article.introduction}
             {article.display ? "" : ".."}
           </p>
-          {article.display ? (
-            <>
-              {article.contents.map((content, index) => (
-                <p key={index}>{content}</p>
-              ))}
-            </>
-          ) : (
-            ""
-          )}
+          {/* {article.display ? ( */}
+
+          <StyledDetails style={article.display ? closedDetails : null}>
+            {article.contents.map((content, index) => (
+              <p key={index}>{content}</p>
+            ))}
+          </StyledDetails>
+
+          {/* ) : ( */}
+          {/* "" */}
+          {/* )} */}
         </Article>
       ))}
     </div>
   );
 }
+
+// const Article = styled.div`
+//   margin: 1rem 0.5rem
+//   padding: 0.5rem
+//   background-color: ${backgroundColor}
+//   // border: 0.5px solid ${color}
+//   border-radius: 10px
+//   cursor: pointer
+
+//   @media (pointer:fine) {
+//     &:hover {
+//       background-color: ${color};
+//       h5, p {
+//         color: ${appColor};
+//       }
+//       transition: background-color ${transition}
+//     }
+//   }
+
+//   @media (min-width: 550px) {
+//     margin: 1rem 1rem
+//     padding: 0.5rem 1rem
+//   }
+// `;
 
 const Article = styled.div`
   margin: 1rem 0.5rem
@@ -70,3 +95,15 @@ const Article = styled.div`
     padding: 0.5rem 1rem
   }
 `;
+
+const StyledDetails = styled.div`
+
+max-height: 0px
+overflow: hidden
+transition: max-height ${transition}
+`;
+
+const closedDetails = {
+  'max-height': "1000px",
+  overflow: "hidden"
+};
