@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, color, transition } from "../../views/styling";
+import { appColor, backgroundColor, color, transition } from "../views/styling";
 
-import { career } from "../../data/career";
-import { experience } from "../../data/experience";
-import { web } from "../../data/web";
+import { career } from "../data/career";
+import { experience } from "../data/experience";
+import { web } from "../data/web";
 
-export default function Buttons(props) {
+export default function ContentButtons(props) {
   const categoryButtons = ["Career", "Experience", "Web"];
 
   function setCategory(title) {

@@ -15,8 +15,8 @@ export default function Footer(props) {
 
 const StyledFooter = styled.div`
 a {
-  // height: 100px
+  height: 100px
   padding: 30px
-  // margin-top: 15px;
+  margin-top: 15px;
 }
 `

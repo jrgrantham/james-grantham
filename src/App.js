@@ -38,9 +38,11 @@ export default function App() {
 }
 
 const StyledApp = styled.div`
-  max-width: 800px
+  max-width: 1000px
   min-height: 100%
   margin: auto
+  display: flex
+  justify-content: center
   background-color: ${appColor}
   text-align: center;
   // --------

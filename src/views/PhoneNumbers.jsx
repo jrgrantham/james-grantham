@@ -5,6 +5,7 @@ import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
+import Footer from '../components/Footer'
 import { backgroundColor, appColor, color, transition } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
@@ -50,6 +51,7 @@ export default function PhoneNumbers(props) {
         <Link to="/" style={{ color: color, "fontSize": "1.2rem" }}>
           Return to home page
         </Link>
+        <Footer />
       </Container>
     );
   }
@@ -59,6 +61,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-height: 850px) {
+    justify-content: center
+  }
 
   h2,
   h3 {

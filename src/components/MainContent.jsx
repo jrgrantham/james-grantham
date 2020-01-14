@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, color, transition } from "../../views/styling";
+import { appColor, backgroundColor, color, transition } from "../views/styling";
 
 export default function MainContent(props) {
 
@@ -19,7 +19,7 @@ export default function MainContent(props) {
   }
 
   return (
-    <>
+    <div>
       {props.content.map((article, index) => (
         <Article
           key={index}
@@ -43,7 +43,7 @@ export default function MainContent(props) {
           )}
         </Article>
       ))}
-    </>
+    </div>
   );
 }
 

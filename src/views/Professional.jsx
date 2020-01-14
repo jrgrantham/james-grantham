@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { appColor, color } from "./styling";
+import { appColor, color, width } from "./styling";
 import { experience } from "../data/experience";
 
-import NameHeader from "../components/professional/NameHeader";
-import Buttons from "../components/professional/Buttons";
-import MainContent from "../components/professional/MainContent";
+import NameHeader from "../components/NameHeader";
+import ContentButtons from "../components/ContentButtons";
+import MainContent from "../components/MainContent";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
@@ -18,7 +18,7 @@ export default function Professional() {
   return (
     <StyledProfessional>
       <NameHeader />
-      <Buttons
+      <ContentButtons
         setContent={setContent}
         selected={selected}
         setSelected={setSelected}
@@ -29,7 +29,12 @@ export default function Professional() {
 }
 
 const StyledProfessional = styled.div`
+  width: ${width}
   background-color: ${appColor}
   padding-bottom: 50px
   color: ${color}
+
+  @media (min-height: 850px) {
+    margin-top:100px
+  }
 `;

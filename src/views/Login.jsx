@@ -7,7 +7,6 @@ import url from "../helpers/url";
 
 import Spinner from '../components/Spinner'
 import { appColor, color, transition } from "./styling";
-import Footer from "../components/Footer";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -81,7 +80,7 @@ export default function LoginForm(props) {
                 Login
               </button>
   
-              <Link to="/" style={{ color: color, "font-size": "1.2rem" }}>
+              <Link to="/" style={{ color: color, "fontSize": "1.2rem" }}>
                 <p>
                   Return to home page
                 </p>
