@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import james from "../../src/images/james.jpg";
+import jamesPhoto from "../../src/images/james.jpg";
 
 import { appColor, color, transition } from "./styling";
 
@@ -14,7 +14,7 @@ export default function Landing() {
       <LandingStyle>
         <h2>James Grantham</h2>
         <div>
-          <img src={james} alt="" />
+          <img src={jamesPhoto} alt="" />
         </div>
         <Career>
           <h4>Full-stack Web Developer</h4>
