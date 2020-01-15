@@ -10,7 +10,7 @@ import { personal } from "../data/personal";
 // import HiddenDiv from "./HiddenDiv";
 
 export default function ContentButtons(props) {
-  const categoryButtons = ["Career", "Experience", "Web", "Personal"];
+  const categoryButtons = ["Experience", "Career", "Web", "Personal"];
   const [hidden, setHidden] = useState(true);
   const menuButtonContent = props.selected;
 

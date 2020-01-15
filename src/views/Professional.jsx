@@ -5,25 +5,22 @@ import { appColor, color, width } from "./styling";
 import { experience } from "../data/experience";
 
 import NameHeader from "../components/NameHeader";
-
-import ContentButtons from "../components/ContentButtons";
+import Menu from "../components/Menu";
 import MainContent from "../components/MainContent";
-import Footer from '../components/Footer'
-import HiddenDiv from "../components/HiddenDiv";
+import Footer from "../components/Footer";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
-  const [hidden, setHidden] = useState(true)
+  const [hidden, setHidden] = useState(true);
 
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
 
   return (
     <StyledProfessional>
-      {/* <NameHeader /> */}
-      <HiddenDiv hidden={hidden} setHidden={setHidden} />
-      <ContentButtons
+      <NameHeader hidden={hidden} setHidden={setHidden} />
+      <Menu
         setContent={setContent}
         selected={selected}
         setSelected={setSelected}
