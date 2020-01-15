@@ -31,6 +31,7 @@ export default function PhoneNumbers(props) {
   }, []);
 
   function callNumber(number) {
+    localStorage.clear()
     window.location = `tel:${number}`;
   }
 
@@ -39,7 +40,7 @@ export default function PhoneNumbers(props) {
   } else {
     return (
       <Container>
-        <h3>Hi, {localStorage.getItem("user")}</h3>
+        <h3>Hi {localStorage.getItem("user")}!</h3>
         <h4>Here are your numbers...</h4>
         {numbers.map(number => (
           <NumberCard
