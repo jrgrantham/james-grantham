@@ -22,7 +22,7 @@ export default function Landing() {
         </Career>
         <Buttons>
           <Link to="/personal/phonenumbers">
-            <h5>Personal</h5>
+            <h5>Social</h5>
           </Link>
           <Link to="/professional">
             <h5>Professional</h5>

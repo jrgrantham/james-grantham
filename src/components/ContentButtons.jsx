@@ -6,9 +6,10 @@ import { appColor, backgroundColor, color, transition } from "../views/styling";
 import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
+import { personal } from "../data/personal";
 
 export default function ContentButtons(props) {
-  const categoryButtons = ["Career", "Experience", "Web"];
+  const categoryButtons = ["Career", "Experience", "Web", "Personal"];
 
   function setCategory(title) {
     props.setSelected(title);
@@ -19,6 +20,8 @@ export default function ContentButtons(props) {
       props.setContent(experience);
     } else if (title === "Web") {
       props.setContent(web);
+    } else if (title === "Personal") {
+      props.setContent(personal);
     }
   }
 
