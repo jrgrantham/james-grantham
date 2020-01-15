@@ -5,7 +5,7 @@ import { transition, appColor, backgroundColor, color } from "../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
-  const contact = hidden ? "contact..." : "hide email form...";
+  const contact = hidden ? "contact..." : "hide menu...";
 
   return (
     <Container>
@@ -17,7 +17,7 @@ export default function Header(props) {
         <h4>James Grantham</h4>
         {contact}
       </StyledHeader>
-      <StyledHiddenDiv style={!hidden ? null : openDiv}>
+      <StyledHiddenDiv style={hidden ? null : openDiv}>
         <StyledButton>
           <a href="https://github.com/jrgrantham">GitHub</a>
         </StyledButton>
