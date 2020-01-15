@@ -17,9 +17,16 @@ export default function Header(props) {
         <h4>James Grantham</h4>
         {contact}
       </StyledHeader>
-      <StyledHiddenDiv style={hidden ? null : openDiv}>
-        <a href="https://github.com/jrgrantham">GitHub</a>
-        <a href="https://www.linkedin.com/in/j-grantham/">linkedin</a>
+      <StyledHiddenDiv style={!hidden ? null : openDiv}>
+        <StyledButton>
+          <a href="https://github.com/jrgrantham">GitHub</a>
+        </StyledButton>
+        <StyledButton>
+          <h5>e-mail</h5>
+        </StyledButton>
+        <StyledButton>
+          <a href="https://www.linkedin.com/in/j-grantham/">LinkedIn</a>
+        </StyledButton>
       </StyledHiddenDiv>
     </Container>
   );
@@ -33,7 +40,7 @@ border-radius: 10px
 `;
 
 const StyledHeader = styled.div`
-  margin: 0.25rem 0
+  // margin: 0.25rem 0
   padding: .5rem 0
   width: 300px
   background-color: ${backgroundColor}
@@ -55,13 +62,11 @@ const StyledHeader = styled.div`
 const StyledHiddenDiv = styled.div`
   display: flex
   flex-direction: columm
-  justify-content: center
+  justify-content: space-evenly
   align-items: center
-  background-color: ${backgroundColor}
-  background-color: red
-  // margin-top: 10px
+  background-color: blue
   height: 0px;
-  width: 90%
+  width: 80%
   max-width: 700px
   overflow: hidden;
 
@@ -69,7 +74,29 @@ const StyledHiddenDiv = styled.div`
   `;
 
 const openDiv = {
-  height: "100px",
+  height: "80px",
   borderRadius: "10px"
 };
 
+const StyledButton = styled.div`
+  margin: 0.25rem 0rem
+  padding: 10px 0
+  background-color: ${backgroundColor}
+  border-radius: 10px
+  cursor: pointer
+  width: 100%
+
+  // border: 1px solid red
+  
+  @media (pointer:fine) {
+    &:hover {
+      color: ${appColor};
+      background-color: ${color};
+      transition: background-color ${transition}
+    }
+  }
+
+  @media (min-width: 650px) {
+    width: 150px
+  }
+`;

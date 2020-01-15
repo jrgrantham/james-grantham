@@ -91,7 +91,7 @@ export default function ContentButtons(props) {
 }
 
 const ButtonContainer = styled.div`
-  margin-top: 12px;
+  margin-top: 12px
 `;
 
 const HorizontalMenu = styled.div`

@@ -42,7 +42,7 @@ export default function MainContent(props) {
 }
 
 const Article = styled.div`
-  margin: 1rem 0
+  margin: 0.5rem 0
   padding: 0.5rem
   background-color: ${backgroundColor}
   // border: 0.5px solid ${color}
@@ -60,7 +60,6 @@ const Article = styled.div`
   }
 
   @media (min-width: 550px) {
-    margin: 1rem 0
     padding: 0.5rem 1rem
   }
 `;
