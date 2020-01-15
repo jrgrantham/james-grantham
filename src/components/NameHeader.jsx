@@ -19,7 +19,6 @@ const StyledHeader = styled.div`
   justify-content: center
 
   h4 {
-    margin-top: 20px
     padding: 5px
     background-color: ${backgroundColor}
     color: ${color}

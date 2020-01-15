@@ -21,14 +21,14 @@ export default function Professional() {
 
   return (
     <StyledProfessional>
-      <NameHeader />
+      {/* <NameHeader /> */}
+      <HiddenDiv hidden={hidden} setHidden={setHidden} />
       <ContentButtons
         setContent={setContent}
         selected={selected}
         setSelected={setSelected}
       />
       <MainContent content={content} setContent={setContent} />
-      {/* <HiddenDiv hidden={hidden} setHidden={setHidden} /> */}
       <Footer />
     </StyledProfessional>
   );
@@ -38,6 +38,13 @@ const StyledProfessional = styled.div`
   width: ${width}
   background-color: ${appColor}
   color: ${color}
+  
+  border: 1px solid red
+  padding: 1.5rem 0.5rem
+
+  @media (min-width: 550px) {
+    padding: 1.5rem 1rem
+  }
 
   @media (min-height: 850px) {
     margin-top:100px

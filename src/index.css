@@ -152,7 +152,8 @@ h3 {
 h4 {
   font-size: 1.5rem;
 }
-h5 {
+/* need to be the same (phone numbers) */
+h5, h6 {
   font-size: 1.2rem;
 }
 p {
