@@ -40,8 +40,6 @@ const StyledProfessional = styled.div`
   width: ${width}
   background-color: ${appColor}
   color: ${color}
-  
-  border: 1px solid red
   padding: 1.5rem 0.5rem
 
   @media (min-width: 550px) {
