@@ -51,7 +51,7 @@ const StyledHiddenDiv = styled.div`
 
 const openDiv = {
   height: "100px",
-  "border-radius": "10px"
+  "borderRadius": "10px"
 };
 
 const StyledButton = styled.div`
