@@ -128,7 +128,7 @@ const StyledForm = styled.form`
       &:hover{
         background-color: white;
         color: green;
-        transition: background-color ${transition}s ease-out
+        transition: background-color ${transition}
       }
     }
   }

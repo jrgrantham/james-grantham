@@ -55,7 +55,7 @@ const Article = styled.div`
       h5, p {
         color: ${appColor};
       }
-      transition: background-color ${transition}s ease-out
+      transition: background-color ${transition}
     }
   }
 
@@ -69,7 +69,7 @@ const StyledDetails = styled.div`
 
 max-height: 0px
 overflow: hidden
-transition: max-height ${transition * 2}s ease-out
+transition: max-height ${transition}
 `;
 
 const closedDetails = {

@@ -72,7 +72,7 @@ const StyledButton = styled.div`
     &:hover {
       color: ${appColor};
       background-color: ${color};
-      transition: background-color ${transition}s ease-out
+      transition: background-color ${transition}
     }
   }
 

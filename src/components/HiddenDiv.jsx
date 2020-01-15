@@ -46,7 +46,7 @@ const StyledHiddenDiv = styled.div`
   max-width: 700px
   overflow: hidden;
 
-  transition height 1s
+  transition height ${transition}
   `;
 
 const openDiv = {
@@ -69,7 +69,7 @@ const StyledButton = styled.div`
         color: ${appColor}
       }
       background-color: ${color};
-      transition: background-color ${transition}s ease-in-out
+      transition: background-color ${transition}
     }
   }
 `;

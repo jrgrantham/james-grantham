@@ -1,4 +1,4 @@
-export const transition = 1
+export const transition = '0.3s ease-in-out'
 
 export const appColor = '#F5F5F5'
 export const backgroundColor = '#DCDCDC'
