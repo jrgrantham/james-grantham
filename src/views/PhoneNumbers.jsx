@@ -39,15 +39,15 @@ export default function PhoneNumbers(props) {
   } else {
     return (
       <Container>
-        <h2>Hi, {localStorage.getItem("user")}</h2>
-        <h3>Here are your numbers...</h3>
+        <h3>Hi, {localStorage.getItem("user")}</h3>
+        <h4>Here are your numbers...</h4>
         {numbers.map(number => (
           <NumberCard
             onClick={() => callNumber(number.phoneNumber)}
             key={number.id}
           >
-            <h4>{number.name}</h4>
-            <h4>{number.phoneNumber}</h4>
+            <h6>{number.name}</h6>
+            <h6>{number.phoneNumber}</h6>
           </NumberCard>
         ))}
         <Footer />
@@ -61,25 +61,24 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  h3 {
+    margin-top: 40px
+  }
+  h4 {
+    margin-top: 20px
+    margin-bottom: 10px
+  }
+
   @media (min-height: 850px) {
     justify-content: center;
   }
-
-  h2,
-  h3 {
-    margin-top: 25px;
-  }
-
-  // a {
-  //   padding: 30px 0 50px 0
-  //   margin-top: 15px;
-  // }
 `;
 
 const NumberCard = styled.div`
   margin-top: 25px
   padding: 15px;
-  min-width: 250px
+  width: 250px
+  height: 100px
 
   border: 1px solid ${color};
   border-radius: 10px;
@@ -87,7 +86,7 @@ const NumberCard = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
   @media (pointer:fine) {

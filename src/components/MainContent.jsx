@@ -42,7 +42,7 @@ export default function MainContent(props) {
 }
 
 const Article = styled.div`
-  margin: 1rem 0.5rem
+  margin: 1rem 0
   padding: 0.5rem
   background-color: ${backgroundColor}
   // border: 0.5px solid ${color}
@@ -60,7 +60,7 @@ const Article = styled.div`
   }
 
   @media (min-width: 550px) {
-    margin: 1rem 1rem
+    margin: 1rem 0
     padding: 0.5rem 1rem
   }
 `;
@@ -69,9 +69,9 @@ const StyledDetails = styled.div`
 
 max-height: 0px
 overflow: hidden
+transition: max-height ${transition * 2}s ease-out
 `;
 
 const closedDetails = {
   'maxHeight': "1000px",
-  transition: `max-height ${transition * 2}s ease-out`
 };

@@ -46,10 +46,11 @@ const Position = styled.div`
 `;
 
 const LandingStyle = styled.div`
-  height: 600px
+  margin: 40px
+  height: 520px
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   // border: 2px solid green
 
