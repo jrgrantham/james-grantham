@@ -31,6 +31,7 @@ export default function PhoneNumbers(props) {
   }, []);
 
   function callNumber(number) {
+    localStorage.clear()
     window.location = `tel:${number}`;
   }
 
