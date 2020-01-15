@@ -17,7 +17,7 @@ export default function HiddenDiv(props) {
         <h4>James Grantham</h4>
         {contact}
       </StyledButton>
-      <StyledHiddenDiv style={!hidden ? null : openDiv}>
+      <StyledHiddenDiv style={hidden ? null : openDiv}>
         <h3>
           email form goes here
         </h3>
