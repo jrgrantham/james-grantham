@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { appColor, backgroundColor, color, transition } from "../views/styling";
@@ -7,9 +7,15 @@ import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
 import { personal } from "../data/personal";
+// import HiddenDiv from "./HiddenDiv";
 
 export default function ContentButtons(props) {
   const categoryButtons = ["Career", "Experience", "Web", "Personal"];
+  const [hidden, setHidden] = useState(true);
+
+  const menuButtonContent = hidden
+    ? `${props.selected} (click to change)`
+    : "Please select...";
 
   function setCategory(title) {
     props.setSelected(title);
@@ -24,52 +30,92 @@ export default function ContentButtons(props) {
       props.setContent(personal);
     }
   }
+  console.log(props.selected);
 
   return (
     <ButtonContainer>
-      {categoryButtons.map((title, index) => (
-        <StyledButton
-          className={props.selected === title ? "selected" : null}
-          key={index}
-          onClick={() => {
-            setCategory(title, index);
-          }}
-        >
-          {title}
-        </StyledButton>
-      ))}
+      <StyledMenuButton
+        onClick={() => {
+          setHidden(!hidden);
+        }}
+      >
+        <h5>{menuButtonContent}</h5>
+      </StyledMenuButton>
+      <VerticalMenu style={hidden ? null : openDiv}>
+        {categoryButtons.map((title, index) => (
+          <StyledButton
+            style={props.selected === title ? selectedButtonStyle : null}
+            key={index}
+            onClick={() => {
+              setCategory(title, index);
+              setHidden(!hidden);
+            }}
+          >
+            {title}
+          </StyledButton>
+        ))}
+      </VerticalMenu>
+      <HorizontalMenu >
+        {categoryButtons.map((title, index) => (
+          <StyledButton
+            style={props.selected === title ? selectedButtonStyle : null}
+            key={index}
+            onClick={() => {
+              setCategory(title, index);
+            }}
+          >
+            {title}
+          </StyledButton>
+        ))}
+      </HorizontalMenu>
     </ButtonContainer>
   );
 }
 
 const ButtonContainer = styled.div`
-  background-color: ${appColor}
-  margin: 1rem 0.5rem
-  display: flex
-  flex-direction: column
-
-  .selected {
-    border: 1px solid ${color}
-  }
-  
-  @media (min-width: 370px) {
-    flex-direction: row;
-    justify-content: space-between
-  }
-  
-  @media (min-width: 550px) {
-    margin: 1rem 1rem
-    justify-content: space-evenly
-  }
+  margin-top: 12px
 `;
 
-const StyledButton = styled.div`
-  margin: 0.25rem 0
-  padding: .5rem 0
+const HorizontalMenu = styled.div`
+  display: none
+  
+  @media (min-width: 650px) {
+    display: flex
+    justify-content: space-between
+  }
+`
+
+const VerticalMenu = styled.div`
+  display: flex
+  flex-direction: column
+  overflow: hidden;
+  justify-content: flex-start
+  align-items: center
+  background-color: ${appColor}
+  height: 0px;
+  width: 100%
+  max-width: 700px
+  transition: height ${transition}
+
+  @media (min-width: 650px) {
+    display: none
+  }
+
+  `;
+
+const openDiv = {
+  height: "209px"
+};
+
+const StyledMenuButton = styled.div`
+  margin: 0.25rem 0rem
+  padding: 10px 0
   background-color: ${backgroundColor}
-  // border: 0.5px solid ${color}
   border-radius: 10px
+  width: 100%
   cursor: pointer
+
+  // border: 1px solid red
 
   @media (pointer:fine) {
     &:hover {
@@ -79,8 +125,34 @@ const StyledButton = styled.div`
     }
   }
 
-  @media (min-width: 370px) {
-    width: 32%
-    max-width: 150px
+  @media (min-width: 650px) {
+    display: none
   }
 `;
+
+const StyledButton = styled.div`
+  margin: 0.25rem 0rem
+  padding: 10px 0
+  background-color: ${backgroundColor}
+  border-radius: 10px
+  cursor: pointer
+  width: 100%
+
+  // border: 1px solid red
+  
+  @media (pointer:fine) {
+    &:hover {
+      color: ${appColor};
+      background-color: ${color};
+      transition: background-color ${transition}
+    }
+  }
+
+  @media (min-width: 650px) {
+    width: 150px
+  }
+`;
+
+const selectedButtonStyle = {
+  border: `1px solid ${color}`
+};

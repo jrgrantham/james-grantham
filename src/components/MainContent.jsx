@@ -75,3 +75,7 @@ transition: max-height ${transition}
 const closedDetails = {
   'maxHeight': "1000px",
 };
+
+const selectedButtonStyle = {
+  border: `1px solid ${color}`
+};
