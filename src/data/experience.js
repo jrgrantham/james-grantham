@@ -26,6 +26,15 @@ export const experience = [
     display: false
   },
   {
+    title: "Leadership",
+    introduction:
+      "Managed a small group of people in the office and a remote team working offshore.",
+    contents: [
+      "Add some details here."
+    ],
+    display: false
+  },
+  {
     title: "Interpersonal Skills",
     introduction:
       "Work collaboratively, communicate effectively and have positive relationships with customers and co-workers.",

@@ -20,7 +20,7 @@ export default function MainContent(props) {
   return (
     <div>
       {props.content.map((article, index) => (
-        <Article
+        <Article style={article.display ? selectedStyle : null}
           key={index}
           onClick={e => {
             isExpanded(article.title);
@@ -74,4 +74,8 @@ transition: max-height ${transition}
 
 const closedDetails = {
   'maxHeight': "1000px",
+};
+
+const selectedStyle = {
+  border: `1px solid ${color}`
 };
