@@ -58,7 +58,7 @@ export default function ContentButtons(props) {
         <ButtonDiv />
       </StyledMenuButton>
 
-      <VerticalMenu style={hidden ? null : openDiv}>
+      <VerticalMenu style={!hidden ? null : openDiv}>
         {categoryButtons.map((title, index) => (
           <StyledButton
             style={props.selected === title ? selectedStyle : null}
@@ -126,7 +126,7 @@ const VerticalMenu = styled.div`
   `;
 
 const openDiv = {
-  height: "209px"
+  height: "220px"
 };
 
 const StyledMenuButton = styled.div`
