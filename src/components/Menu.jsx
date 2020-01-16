@@ -68,7 +68,9 @@ export default function ContentButtons(props) {
               setHidden(!hidden);
             }}
           >
-            {title}
+            <h5>
+              {title}
+            </h5>
           </StyledButton>
         ))}
       </VerticalMenu>
@@ -82,7 +84,9 @@ export default function ContentButtons(props) {
               setCategory(title, index);
             }}
           >
-            {title}
+            <h5>
+              {title}
+            </h5>
           </StyledButton>
         ))}
       </HorizontalMenu>
