@@ -89,7 +89,7 @@ const ButtonContainer = styled.div`
 
 const HorizontalMenu = styled.div`
   display: none
-  padding: 0.25rem 0.25rem 0 0.25rem
+  padding: 0.25rem 0.25rem 0.5rem 0.25rem
   @media (min-width: ${mediaBreak}) {
     display: flex
     justify-content: space-between
