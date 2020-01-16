@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import menu from "../../src/images/menu.png";
+import arrowUp from "../../src/images/arrowUp.png";
+import arrowDown from "../../src/images/arrowDown.png";
 
 import {
   appColor,
   backgroundColor,
   backgroundColorHover,
-  color,
   accentColor,
   transition,
   mediaBreak
@@ -47,7 +48,7 @@ export default function ContentButtons(props) {
         <ImageContainer></ImageContainer>
         <h4>{hidden ? props.selected : "Please select..."}</h4>
         <ImageContainer>
-          <img src={hidden ? menu : null} alt="" />
+          <img src={hidden ? arrowDown : arrowUp} alt="" />
         </ImageContainer>
       </StyledMenuButton>
 
@@ -155,6 +156,7 @@ const ImageContainer = styled.div`
   width: 20px
   // border: 1px solid red
   img {
+    opacity: 0.1
     height: 20px;
   }
 `;
