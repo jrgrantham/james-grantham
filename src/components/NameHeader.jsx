@@ -1,11 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-import { backgroundColor, backgroundColorHover, accentColor, accentColorHover, transition, mediaBreak, borderRad } from "../views/styling";
+import {
+  backgroundColor,
+  backgroundColorHover,
+  accentColor,
+  accentColorHover,
+  transition,
+  mediaBreak,
+  borderRad
+} from "../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
-  const contact = hidden ? "(contact)" : "hide menu...";
+  const contact = hidden ? "(links)" : "hide menu...";
+
+  function linkToWebsite(url) {
+    window.open(url, "mywindow");
+  }
 
   return (
     <Container>
@@ -24,8 +36,12 @@ export default function Header(props) {
         <StyledMiddleButton>
           <h5>Contact me</h5>
         </StyledMiddleButton>
-        <StyledButton>
-          <h5 href="https://www.linkedin.com/in/j-grantham/">LinkedIn</h5>
+        <StyledButton
+          onclick={() => {
+            linkToWebsite("https://www.linkedin.com/in/j-grantham/");
+          }}
+        >
+          <h5>LinkedIn</h5>
         </StyledButton>
       </StyledHiddenDiv>
     </Container>
@@ -49,7 +65,7 @@ const StyledHeader = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${backgroundColorHover};
+      background-color: ${accentColor};
       transition: background-color ${transition}
     }
   }
@@ -69,10 +85,10 @@ const StyledHiddenDiv = styled.div`
     width: 100%
   }
   `;
-  
-  const openDiv = {
-    height: "60px",
-    // border: '1px solid red'
+
+const openDiv = {
+  height: "60px"
+  // border: '1px solid red'
 };
 
 const StyledButton = styled.div`
