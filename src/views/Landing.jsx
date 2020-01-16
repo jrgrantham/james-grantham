@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import jamesPhoto from "../../src/images/james.jpg";
 
-import { appColor, color, transition } from "./styling";
+import { appColor, color, transition, backgroundColorHover } from "./styling";
 
 export default function Landing() {
   // document.body.style.background = appColor;
@@ -81,8 +81,7 @@ const Buttons = styled.div`
 
     @media (pointer:fine) {
       &:hover {
-        color: ${appColor};
-        background-color: ${color};
+        background-color: ${backgroundColorHover};
         transition: background-color ${transition}
       }
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { transition, appColor, backgroundColor, color } from "../views/styling";
+import { appColor, appColorHover, backgroundColor, backgroundColorHover, color, colorHover, accentColor, accentColorHover, transition } from "../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
@@ -49,11 +49,7 @@ const StyledHeader = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      color: ${appColor};
-      h4 {
-        color: ${appColor}
-      }
-      background-color: ${color};
+      background-color: ${backgroundColorHover};
       transition: background-color ${transition}
     }
   }
@@ -90,8 +86,7 @@ const StyledButton = styled.div`
   
   @media (pointer:fine) {
     &:hover {
-      color: ${appColor};
-      background-color: ${color};
+      background-color: ${backgroundColorHover};
       transition: background-color ${transition}
     }
   }

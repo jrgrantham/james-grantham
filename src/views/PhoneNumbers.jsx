@@ -5,7 +5,7 @@ import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
 import Footer from "../components/Footer";
-import { backgroundColor, appColor, color, transition } from "./styling";
+import { backgroundColor, appColor, color, transition, backgroundColorHover } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -23,15 +23,22 @@ export default function PhoneNumbers(props) {
       .catch(err => {
         props.setIsLoading(false);
         props.history.push("/login");
-      });
+      })
+      .finally(localStorage.clear());
   };
+
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   };
+  // }, [input])
 
   useEffect(() => {
     getNumbers();
   }, []);
 
   function callNumber(number) {
-    localStorage.clear()
     window.location = `tel:${number}`;
   }
 
@@ -92,10 +99,7 @@ const NumberCard = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${color};
-      h4 {
-        color: ${appColor};
-      }
+      background-color: ${backgroundColorHover};
       transition: ${transition}
     }
   }
