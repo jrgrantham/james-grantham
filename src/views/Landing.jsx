@@ -38,7 +38,6 @@ const Position = styled.div`
   display: flex
   flex-direction: column
   justify-content: center
-  // border: 2px solid red
 
   @media (min-height: 850px) {
     min-height: 100vh

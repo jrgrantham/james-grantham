@@ -36,8 +36,6 @@ export default function LoginForm(props) {
               props.setIsLoading(false);
               props.setToken(response.data.token);
               props.setUser(response.data.user);
-              // localStorage.setItem("token", response.data.token);
-              // localStorage.setItem("user", response.data.user);
               props.history.push("/personal/phonenumbers");
             })
             .catch(error => {

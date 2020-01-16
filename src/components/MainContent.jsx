@@ -58,11 +58,8 @@ const Container = styled.div`
 `;
 
 const Article = styled.div`
-  // margin: 0.5rem 0
   padding: 0.5rem 1rem
   background-color: ${greyLight}
-  // border: 0.5px solid ${blackOff}
-  // border-radius: ${borderRad}
   cursor: pointer
   h5 {
     text-align: left
@@ -75,17 +72,11 @@ const Article = styled.div`
       transition: background-color ${transition}
     }
   }
-
-  // @media (min-width: 550px) {
-  //   padding: 0.5rem 1rem
-  // }
 `;
 
 const StyledTitle = styled.div`
   display: flex
   justify-content: space-between
-  // border: 1px solid red
-
 `;
 
 const ImageContainer = styled.div`
@@ -93,7 +84,6 @@ const ImageContainer = styled.div`
   justify-content: center
   align-items: center
   min-height: 100%
-  // border: 1px solid red
   img {
     opacity: 0.08
     height: 25px
@@ -101,10 +91,9 @@ const ImageContainer = styled.div`
 `;
 
 const StyledDetails = styled.div`
-
-max-height: 0px
-overflow: hidden
-transition: max-height ${transition}
+  max-height: 0px
+  overflow: hidden
+  transition: max-height ${transition}
 `;
 
 const closedDetails = {

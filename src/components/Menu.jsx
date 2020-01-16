@@ -20,7 +20,6 @@ import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
 import { personal } from "../data/personal";
-// import HiddenDiv from "./HiddenDiv";
 
 export default function ContentButtons(props) {
   const categoryButtons = ["Experience", "Career", "Web", "Personal"];
@@ -89,7 +88,6 @@ export default function ContentButtons(props) {
 }
 
 const ButtonContainer = styled.div`
-  // margin-top: 12px;
 `;
 
 const HorizontalMenu = styled.div`
@@ -118,27 +116,22 @@ const VerticalMenu = styled.div`
   }
 `;
 
-// once sorted make this bigger for txt size changes
 const openDiv = {
-  height: "205px"
+  height: "207px"
 };
 
 const StyledMenuButton = styled.div`
   display: flex
   justify-content: space-between
   align-items: center
-  // margin: 0.25rem 0rem
   padding: 10px 15px
   background-color: ${greyLight}
-  // border-radius: ${borderRad}
   width: 100%
   cursor: pointer
   overflow: hidden
   img {
     height: 30px
   }
-
-  // border: 1px solid red
 
   @media (pointer:fine) {
     &:hover {
@@ -158,9 +151,9 @@ const ImageContainer = styled.div`
   align-items: center
   min-height: 30px
   width: 30px
-  // border: 1px solid red
+
   img {
-    opacity: 0.1
+    opacity: 0.15
     height: 25px;
   }
 `;
@@ -172,8 +165,6 @@ const StyledButton = styled.div`
   border-radius: ${borderRad}
   cursor: pointer
   width: 50%
-
-  // border: 1px solid red
 
   @media (min-width: ${mediaBreak}) {
     width: 25%
