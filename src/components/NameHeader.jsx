@@ -13,10 +13,6 @@ export default function Header(props) {
   const { hidden, setHidden } = props;
   const contact = hidden ? "(links)" : "hide menu...";
 
-  function linkToWebsite(url) {
-    window.open(url, "mywindow");
-  }
-
   return (
     <Container>
       <StyledHeader

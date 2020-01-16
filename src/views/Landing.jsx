@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import jamesPhoto from "../../src/images/james.jpg";
 
-import { color, transition, greyMedium, borderRad, blackOff } from "./styling";
+import { transition, greyMedium, borderRad, blackOff } from "./styling";
 
 export default function Landing() {
   // document.body.style.background = appColor;

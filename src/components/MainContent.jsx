@@ -7,9 +7,7 @@ import arrowDown from "../../src/images/arrowDown.png";
 import {
   greyLight,
   greyMedium,
-  blackOff,
   transition,
-  borderRad
 } from "../views/styling";
 
 export default function MainContent(props) {
