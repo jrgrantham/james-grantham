@@ -7,7 +7,7 @@ export const backgroundColor = '#DCDCDC'
 export const backgroundColorHover = '#BEBEBE'
 export const color = '#202020'
 export const colorHover = '#202020'
-export const accentColor = ''
+export const accentColor = '#ffd27f'
 export const accentColorHover = ''
 
 // appColor, appColorHover, backgroundColor, backgroundColorHover, color, colorHover, accentColor, accentColorHover, transition

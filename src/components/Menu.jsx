@@ -132,6 +132,7 @@ const StyledMenuButton = styled.div`
   border-radius: 10px
   width: 100%
   cursor: pointer
+  overflow: hidden
 
   // border: 1px solid red
 
@@ -150,7 +151,7 @@ const StyledMenuButton = styled.div`
 const StyledButton = styled.div`
   margin: 0.25rem 0rem
   padding: 10px 0
-  background-color: ${backgroundColor}
+  background-color: ${accentColor}
   border-radius: 10px
   cursor: pointer
   width: 100%
@@ -166,6 +167,8 @@ const StyledButton = styled.div`
 
   @media (min-width: 650px) {
     width: 150px
+    background-color: ${backgroundColor}
+
   }
 `;
 
