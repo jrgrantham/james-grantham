@@ -166,7 +166,7 @@ const StyledButton = styled.div`
   margin: 0.25rem 0.25rem 0 0.25rem
   padding: 10px 0
   background-color: ${backgroundColorHover}
-  border-radius: 10px ${borderRad}
+  border-radius: ${borderRad}
   cursor: pointer
   width: 50%
 
