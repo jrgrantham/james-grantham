@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { appColor, appColorHover, backgroundColor, backgroundColorHover, color, colorHover, accentColor, accentColorHover, transition } from "../views/styling";
+import { appColor, backgroundColor, backgroundColorHover, color,accentColor, transition } from "../views/styling";
 
 import { career } from "../data/career";
 import { experience } from "../data/experience";

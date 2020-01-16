@@ -5,7 +5,7 @@ import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
 import Footer from "../components/Footer";
-import { backgroundColor, appColor, color, transition, backgroundColorHover } from "./styling";
+import { backgroundColor, color, transition, backgroundColorHover } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
