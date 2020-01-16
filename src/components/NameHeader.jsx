@@ -19,13 +19,13 @@ export default function Header(props) {
       </StyledHeader>
       <StyledHiddenDiv style={hidden ? null : openDiv}>
         <StyledButton>
-          <a href="https://github.com/jrgrantham">GitHub</a>
+          <h5 href="https://github.com/jrgrantham">GitHub</h5>
         </StyledButton>
         <StyledButton>
           <h5>e-mail</h5>
         </StyledButton>
         <StyledButton>
-          <a href="https://www.linkedin.com/in/j-grantham/">LinkedIn</a>
+          <h5 href="https://www.linkedin.com/in/j-grantham/">LinkedIn</h5>
         </StyledButton>
       </StyledHiddenDiv>
     </Container>
@@ -58,40 +58,39 @@ const StyledHeader = styled.div`
 const StyledHiddenDiv = styled.div`
   display: flex
   flex-direction: columm
-  justify-content: space-evenly
-  align-items: center
-  background-color: blue
+  justify-content: space-between
+  align-items: flex-end
   height: 0px;
-  width: 80%
-  max-width: 700px
+  width: 100%
   overflow: hidden;
+  transition: height ${transition}
 
-  transition height ${transition}
+  @media (min-width: 650px) {
+    width: 100%
+  }
   `;
-
-const openDiv = {
-  height: "80px",
-  borderRadius: "10px"
+  
+  const openDiv = {
+    height: "60px",
+    // border: '1px solid red'
 };
 
 const StyledButton = styled.div`
   margin: 0.25rem 0rem
   padding: 10px 0
-  background-color: ${backgroundColor}
+  background-color: ${accentColor}
   border-radius: 10px
   cursor: pointer
-  width: 100%
+  width: 30%
 
-  // border: 1px solid red
-  
   @media (pointer:fine) {
     &:hover {
-      background-color: ${backgroundColorHover};
+      background-color: ${accentColorHover};
       transition: background-color ${transition}
     }
   }
 
-  @media (min-width: 650px) {
-    width: 150px
-  }
+  // @media (min-width: 650px) {
+  //   width: 150px
+  // }
 `;

@@ -166,7 +166,7 @@ const StyledButton = styled.div`
   }
 
   @media (min-width: 650px) {
-    width: 150px
+    width: 23%
     background-color: ${backgroundColor}
 
   }
