@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 import arrowUp from "../../src/images/arrowUp.png";
 import arrowDown from "../../src/images/arrowDown.png";
+import menu from "../../src/images/menu.png";
 
 import {
-  appColor,
-  backgroundColor,
-  backgroundColorHover,
-  backgroundColorDark,
-  accentColor,
+  whiteOff,
+  greyLight,
+  greyMedium,
+  greyDark,
+  orangeMedium,
   transition,
   mediaBreak,
   borderRad
@@ -47,11 +48,11 @@ export default function ContentButtons(props) {
         }}
       >
         <ImageContainer>
-          <img src={hidden ? arrowDown : arrowUp} alt="" />
+          {/* <img src={hidden ? arrowDown : arrowUp} alt="" /> */}
         </ImageContainer>
         <h4>{hidden ? props.selected : "select..."}</h4>
         <ImageContainer>
-          <img src={hidden ? arrowDown : arrowUp} alt="" />
+          <img src={hidden ? menu : null} alt="" />
         </ImageContainer>
       </StyledMenuButton>
 
@@ -106,7 +107,7 @@ const VerticalMenu = styled.div`
   overflow: hidden;
   justify-content: flex-start
   align-items: center
-  background-color: ${appColor}
+  background-color: ${whiteOff}
   height: 0px;
   width: 100%
   max-width: 700px
@@ -124,11 +125,11 @@ const openDiv = {
 
 const StyledMenuButton = styled.div`
   display: flex
-  justify-content: center
+  justify-content: space-between
   align-items: center
   // margin: 0.25rem 0rem
   padding: 10px 15px
-  background-color: ${backgroundColor}
+  background-color: ${greyLight}
   // border-radius: ${borderRad}
   width: 100%
   cursor: pointer
@@ -141,7 +142,7 @@ const StyledMenuButton = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${backgroundColorHover};
+      background-color: ${greyMedium};
       transition: background-color ${transition}
     }
   }
@@ -156,18 +157,18 @@ const ImageContainer = styled.div`
   justify-content: center
   align-items: center
   min-height: 30px
-  width: 40px
+  width: 30px
   // border: 1px solid red
   img {
     opacity: 0.1
-    height: 20px;
+    height: 25px;
   }
 `;
 
 const StyledButton = styled.div`
   margin: 0.25rem 0.25rem 0 0.25rem
   padding: 10px 0
-  background-color: ${backgroundColorHover}
+  background-color: ${greyMedium}
   border-radius: ${borderRad}
   cursor: pointer
   width: 50%
@@ -176,18 +177,18 @@ const StyledButton = styled.div`
 
   @media (min-width: ${mediaBreak}) {
     width: 25%
-    background-color: ${backgroundColorHover}
+    background-color: ${greyMedium}
   }
   
   @media (pointer:fine) {
     &:hover {
-      background-color: ${accentColor};
+      background-color: ${orangeMedium};
       transition: background-color ${transition}
     }
   }
 `;
 
 const selectedStyle = {
-  backgroundColor: appColor,
-  border: `1px solid ${backgroundColorDark}`
+  backgroundColor: whiteOff,
+  border: `1px solid ${greyDark}`
 };

@@ -6,7 +6,7 @@ import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 
-import { appColor, color } from "./views/styling";
+import { whiteOff, blackOff } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -54,12 +54,12 @@ const StyledApp = styled.div`
   margin: auto
   display: flex
   justify-content: center
-  background-color: ${appColor}
+  background-color: ${whiteOff}
   text-align: center;
   // --------
   // border: 2px solid blue;
 
   h1, h2, h3, h4, h5, h6, p, a {
-    color: ${color}
+    color: ${blackOff}
   }
 `;

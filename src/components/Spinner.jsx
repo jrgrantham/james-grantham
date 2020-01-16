@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { color, mediaBreak, borderRad } from "../views/styling";
+import { blackOff, mediaBreak, borderRad } from "../views/styling";
 
 export default function Spinner() {
   return (
@@ -31,7 +31,7 @@ const Position = styled.div`
 
 const Container = styled.div`
   h4 {
-    color: ${color}
+    color: ${blackOff}
   }
   width: 500px
   height: 200px
@@ -41,7 +41,7 @@ const Container = styled.div`
   align-items: center
   
   @media (min-width: ${mediaBreak}) {
-    border: 1px solid ${color}
+    border: 1px solid ${blackOff}
     border-radius: ${borderRad}
   }
 `
@@ -64,7 +64,7 @@ const Animation = styled.div`
     display: block;
     width: 25%;
     height: 25%;
-    background-color: ${color};
+    background-color: ${blackOff};
     border-radius: 100%;
     animation: sk-chase-dot-before 2s infinite ease-in-out both;
   }

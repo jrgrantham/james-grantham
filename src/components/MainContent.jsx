@@ -5,9 +5,9 @@ import arrowUp from "../../src/images/arrowUp.png";
 import arrowDown from "../../src/images/arrowDown.png";
 
 import {
-  backgroundColor,
-  backgroundColorHover,
-  color,
+  greyLight,
+  greyMedium,
+  blackOff,
   transition,
   borderRad
 } from "../views/styling";
@@ -60,8 +60,8 @@ const Container = styled.div`
 const Article = styled.div`
   // margin: 0.5rem 0
   padding: 0.5rem 1rem
-  background-color: ${backgroundColor}
-  // border: 0.5px solid ${color}
+  background-color: ${greyLight}
+  // border: 0.5px solid ${blackOff}
   // border-radius: ${borderRad}
   cursor: pointer
   h5 {
@@ -71,7 +71,7 @@ const Article = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${backgroundColorHover};
+      background-color: ${greyMedium};
       transition: background-color ${transition}
     }
   }
@@ -95,8 +95,8 @@ const ImageContainer = styled.div`
   min-height: 100%
   // border: 1px solid red
   img {
-    opacity: 0.06
-    height: 20px
+    opacity: 0.08
+    height: 25px
   }
 `;
 
@@ -112,5 +112,5 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  // border: `1px solid ${color}`
+  // border: `1px solid ${blackOff}`
 };
