@@ -28,7 +28,7 @@ export default function MainContent(props) {
   }
 
   return (
-    <div>
+    <Container>
       {props.content.map((article, index) => (
         <Article
           style={article.display ? selectedStyle : null}
@@ -46,9 +46,13 @@ export default function MainContent(props) {
           </StyledDetails>
         </Article>
       ))}
-    </div>
+    </Container>
   );
 }
+
+const Container = styled.div`
+
+`
 
 const Article = styled.div`
   margin: 0.5rem 0
