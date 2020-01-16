@@ -23,15 +23,22 @@ export default function PhoneNumbers(props) {
       .catch(err => {
         props.setIsLoading(false);
         props.history.push("/login");
-      });
+      })
+      .finally(localStorage.clear());
   };
+
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   };
+  // }, [input])
 
   useEffect(() => {
     getNumbers();
   }, []);
 
   function callNumber(number) {
-    localStorage.clear()
     window.location = `tel:${number}`;
   }
 
