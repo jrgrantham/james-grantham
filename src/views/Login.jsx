@@ -34,13 +34,14 @@ export default function LoginForm(props) {
               actions.resetForm();
               actions.setSubmitting(false);
               props.setIsLoading(false);
-              localStorage.setItem("token", response.data.token);
-              localStorage.setItem("user", response.data.user);
+              props.setToken(response.data.token);
+              props.setUser(response.data.user);
+              // localStorage.setItem("token", response.data.token);
+              // localStorage.setItem("user", response.data.user);
               props.history.push("/personal/phonenumbers");
             })
             .catch(error => {
               console.log(error);
-              // toast.error(error.response.statusText);
               actions.resetForm();
               actions.setSubmitting(false);
               props.setIsLoading(false);

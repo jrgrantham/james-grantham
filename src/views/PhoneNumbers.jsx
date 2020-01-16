@@ -14,7 +14,7 @@ export default function PhoneNumbers(props) {
 
   const getNumbers = () => {
     props.setIsLoading(true);
-    axiosWithAuth()
+    axiosWithAuth(props.token)
       .get(numberApi)
       .then(res => {
         setNumbers(res.data);
@@ -24,7 +24,9 @@ export default function PhoneNumbers(props) {
         props.setIsLoading(false);
         props.history.push("/login");
       })
-      .finally(localStorage.clear());
+      .finally(() => {
+        props.setToken('');
+      });
   };
 
   // useEffect(() => {
@@ -40,6 +42,7 @@ export default function PhoneNumbers(props) {
 
   function callNumber(number) {
     window.location = `tel:${number}`;
+    props.history.push("/")
   }
 
   if (props.isLoading) {
@@ -47,7 +50,7 @@ export default function PhoneNumbers(props) {
   } else {
     return (
       <Container>
-        <h3>Hi {localStorage.getItem("user")}!</h3>
+        <h3>Hi {props.user}!</h3>
         <h4>Here are your numbers...</h4>
         {numbers.map(number => (
           <NumberCard

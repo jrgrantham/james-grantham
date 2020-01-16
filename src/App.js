@@ -12,6 +12,8 @@ export default function App() {
   document.getElementById("root").style.height = "100%";
 
   const [isLoading, setIsLoading] = useState(false);
+  const [user, setUser] = useState("");
+  const [token, setToken] = useState("");
 
   return (
     <StyledApp>
@@ -20,7 +22,13 @@ export default function App() {
       <Route
         path="/login"
         render={props => (
-          <Login {...props} setIsLoading={setIsLoading} isLoading={isLoading} />
+          <Login
+            {...props}
+            setIsLoading={setIsLoading}
+            isLoading={isLoading}
+            setToken={setToken}
+            setUser={setUser}
+          />
         )}
       />
       <Route
@@ -30,6 +38,9 @@ export default function App() {
             {...props}
             setIsLoading={setIsLoading}
             isLoading={isLoading}
+            user={user}
+            token={token}
+            setToken={setToken}
           />
         )}
       />
