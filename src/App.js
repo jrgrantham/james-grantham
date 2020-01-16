@@ -56,8 +56,6 @@ const StyledApp = styled.div`
   justify-content: center
   background-color: ${whiteOff}
   text-align: center;
-  // --------
-  // border: 2px solid blue;
 
   h1, h2, h3, h4, h5, h6, p, a {
     color: ${blackOff}

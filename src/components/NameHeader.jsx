@@ -28,19 +28,15 @@ export default function Header(props) {
         {contact}
       </StyledHeader>
       <StyledHiddenDiv style={hidden ? null : openDiv}>
-        <StyledButton>
-          <h5 href="https://github.com/jrgrantham">GitHub</h5>
-        </StyledButton>
+        <StyledLinkButton>
+          <a href="https://github.com/jrgrantham">GitHub</a>
+        </StyledLinkButton>
         <StyledMiddleButton>
           <h5>Contact me</h5>
         </StyledMiddleButton>
-        <StyledButton
-          onclick={() => {
-            linkToWebsite("https://www.linkedin.com/in/j-grantham/");
-          }}
-        >
-          <h5>LinkedIn</h5>
-        </StyledButton>
+        <StyledLinkButton>
+          <a href="https://www.linkedin.com/in/j-grantham/">LinkedIn</a>
+        </StyledLinkButton>
       </StyledHiddenDiv>
     </Container>
   );
@@ -54,7 +50,6 @@ const Container = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  // margin: 0.25rem 0
   padding: .5rem 0
   width: 300px
   background-color: ${greyLight}
@@ -85,17 +80,18 @@ const StyledHiddenDiv = styled.div`
   `;
 
 const openDiv = {
-  height: "60px"
-  // border: '1px solid red'
+  height: "55px"
 };
 
-const StyledButton = styled.div`
-  margin: 0.25rem 0rem
-  padding: 10px 0
-  background-color: ${orangeMedium}
-  border-radius: ${borderRad}
-  cursor: pointer
-  width: 30%
+const StyledLinkButton = styled.div`
+width: 30%
+  a {
+    font-size: 1.2rem
+    display: block
+    padding: 10px 0
+    background-color: ${orangeMedium}
+    border-radius: ${borderRad}
+  }
 
   @media (pointer:fine) {
     &:hover {
@@ -106,7 +102,6 @@ const StyledButton = styled.div`
 `;
 
 const StyledMiddleButton = styled.div`
-  margin: 0.25rem 0rem
   padding: 10px 0
   background-color: ${orangeMedium}
   border-radius: ${borderRad}
