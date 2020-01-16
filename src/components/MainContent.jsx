@@ -42,7 +42,7 @@ export default function MainContent(props) {
             </ImageContainer>
           </StyledTitle>
           <p>{article.introduction}</p>
-          <StyledDetails style={article.display ? closedDetails : null}>
+          <StyledDetails style={!article.display ? closedDetails : null}>
             {article.contents.map((content, index) => (
               <p key={index}>{content}</p>
             ))}
