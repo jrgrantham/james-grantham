@@ -21,7 +21,7 @@ export default function Landing() {
           <h4>Mechanical Engineer</h4>
         </Career>
         <Buttons>
-          <Link to="/personal/phonenumbers">
+          <Link to="/phonenumbers">
             <h5>Social</h5>
           </Link>
           <Link to="/professional">

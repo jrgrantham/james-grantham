@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import {
@@ -28,7 +29,9 @@ export default function Header(props) {
           <a href="https://github.com/jrgrantham">GitHub</a>
         </StyledLinkButton>
         <StyledMiddleButton>
-          <h5>Contact me</h5>
+          <Link to='contact'>
+            <h5>Contact me</h5>
+          </Link>
         </StyledMiddleButton>
         <StyledLinkButton>
           <a href="https://www.linkedin.com/in/j-grantham/">LinkedIn</a>
