@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { color } from "../views/styling";
+import { color, mediaBreak } from "../views/styling";
 
 export default function Spinner() {
   return (
@@ -40,7 +40,7 @@ const Container = styled.div`
   justify-content: space-evenly
   align-items: center
   
-  @media (min-width: 650px) {
+  @media (min-width: ${mediaBreak}) {
     border: 1px solid ${color}
     border-radius: 10px
   }

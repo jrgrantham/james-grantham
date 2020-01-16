@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { appColor, color, width } from "./styling";
+import { appColor, color, width, backgroundColorHover, backgroundColor } from "./styling";
 import { experience } from "../data/experience";
 
 import NameHeader from "../components/NameHeader";
@@ -19,15 +19,15 @@ export default function Professional() {
 
   return (
     <StyledProfessional>
-      <NameHeader hidden={hidden} setHidden={setHidden} />
-      <Menu
-        setContent={setContent}
-        selected={selected}
-        setSelected={setSelected}
-      />
-      <MainContent content={content} setContent={setContent} />
-      {/* <HiddenDiv /> */}
-      {/* <HiddenDiv hidden={hidden} setHidden={setHidden} /> */}
+        <NameHeader hidden={hidden} setHidden={setHidden} />
+      <StyledContent>
+        <Menu
+          setContent={setContent}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        <MainContent content={content} setContent={setContent} />
+      </StyledContent>
       <Footer />
     </StyledProfessional>
   );
@@ -47,3 +47,10 @@ const StyledProfessional = styled.div`
     margin-top:100px
   }
 `;
+
+const StyledContent = styled.div`
+  background-color: ${backgroundColor}
+  border-radius: 10px
+  margin-top: 12px
+  overflow: hidden
+`

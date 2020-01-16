@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { backgroundColor, backgroundColorHover, accentColor, accentColorHover, transition } from "../views/styling";
+import { backgroundColor, backgroundColorHover, accentColor, accentColorHover, transition, mediaBreak } from "../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
@@ -65,7 +65,7 @@ const StyledHiddenDiv = styled.div`
   overflow: hidden;
   transition: height ${transition}
 
-  @media (min-width: 650px) {
+  @media (min-width: ${mediaBreak}) {
     width: 100%
   }
   `;
@@ -89,8 +89,4 @@ const StyledButton = styled.div`
       transition: background-color ${transition}
     }
   }
-
-  // @media (min-width: 650px) {
-  //   width: 150px
-  // }
 `;
