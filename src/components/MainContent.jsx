@@ -63,7 +63,7 @@ const Article = styled.div`
   cursor: pointer
   h5 {
     text-align: left
-    padding: 0.25rem 0
+    padding: 0.5rem 0 0.25rem 0
   }
 
   @media (pointer:fine) {
