@@ -8,7 +8,8 @@ import {
   backgroundColor,
   backgroundColorHover,
   color,
-  transition
+  transition,
+  borderRad
 } from "../views/styling";
 
 export default function MainContent(props) {
@@ -61,7 +62,7 @@ const Article = styled.div`
   padding: 0.5rem 1rem
   background-color: ${backgroundColor}
   // border: 0.5px solid ${color}
-  // border-radius: 10px
+  // border-radius: ${borderRad}
   cursor: pointer
   h5 {
     text-align: left

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import { appColor, transition } from "./styling";
+import { appColor, transition, borderRad } from "./styling";
 import Footer from "../components/Footer";
 
 const loginApi = url() + "api/auth/login";
@@ -111,7 +111,7 @@ const StyledForm = styled.form`
     font-size: 1rem;
     text-align: center;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: ${borderRad}
     border: solid 0.5px lightgrey;
     width: 250px;
   }
@@ -120,7 +120,7 @@ const StyledForm = styled.form`
     margin-top: 30px
     background-color: green;
     color: ${appColor};
-    border-radius: 5px;
+    border-radius: ${borderRad};
     font-size: 1.2rem;
     padding: 0.6rem 0rem;
     width: 200px

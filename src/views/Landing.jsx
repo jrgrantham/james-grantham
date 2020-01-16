@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import jamesPhoto from "../../src/images/james.jpg";
 
-import { color, transition, backgroundColorHover } from "./styling";
+import { color, transition, backgroundColorHover, borderRad } from "./styling";
 
 export default function Landing() {
   // document.body.style.background = appColor;
@@ -56,7 +56,7 @@ const LandingStyle = styled.div`
 
   img {
     width: 300px
-    border-radius: 10px
+    border-radius: ${borderRad}
   }
 `;
 
@@ -77,7 +77,7 @@ const Buttons = styled.div`
     padding: 1rem 0
     min-width: 15rem
     border: 1px solid ${color}
-    border-radius: 8px
+    border-radius: ${borderRad}
 
     @media (pointer:fine) {
       &:hover {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { appColor, color, width, backgroundColorHover, backgroundColor } from "./styling";
+import { appColor, color, width, backgroundColorHover, backgroundColor, borderRad } from "./styling";
 import { experience } from "../data/experience";
 
 import NameHeader from "../components/NameHeader";
@@ -46,7 +46,7 @@ const StyledProfessional = styled.div`
 
 const StyledContent = styled.div`
   background-color: ${backgroundColor}
-  border-radius: 10px
+  border-radius: ${borderRad}
   margin-top: 12px
   overflow: hidden
 `
