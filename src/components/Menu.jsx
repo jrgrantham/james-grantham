@@ -31,14 +31,14 @@ export default function ContentButtons(props) {
   function ClosedMenuButtonText() {
     return (
       <>
-        <span style={{ fontSize: "1.3rem" }}>{`${menuButtonContent} `}</span>
-        <span style={{ fontSize: "1rem" }}>(click to change)</span>
+        <h5>{menuButtonContent}</h5>
+        <span style={{ fontSize: "0.8rem" }}>(click to change)</span>
       </>
     );
   }
 
   function OpenMenuButtonText() {
-    return <span style={{ fontSize: "1.2rem" }}>Please select...</span>;
+    return <h5>Please select...</h5>;
   }
 
   function ButtonDiv(props) {
