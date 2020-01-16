@@ -8,6 +8,9 @@ import {
   greyLight,
   greyMedium,
   transition,
+  blackOff,
+  borderRad,
+  greyDark,
 } from "../views/styling";
 
 export default function MainContent(props) {
@@ -99,5 +102,7 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  // border: `1px solid ${blackOff}`
+  // border: `1px solid ${greyDark}`,
+  'borderRadius': borderRad,
+  backgroundColor: greyMedium
 };
