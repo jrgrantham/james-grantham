@@ -55,7 +55,7 @@ export const experience = [
     display: false
   },
   {
-    title: "Data management",
+    title: "Data Management",
     introduction:
       "Experienced at managing and reviewing large volumes of inspection reports and data.",
     contents: [
