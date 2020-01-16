@@ -53,14 +53,17 @@ export default function MainContent(props) {
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+border-radius: 10px
+overflow: hidden
+`;
 
 const Article = styled.div`
-  margin: 0.5rem 0
+  // margin: 0.5rem 0
   padding: 0.5rem
   background-color: ${backgroundColor}
   // border: 0.5px solid ${color}
-  border-radius: 10px
+  // border-radius: 10px
   cursor: pointer
   h5 {
     text-align: left
@@ -109,5 +112,5 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  border: `1px solid ${color}`
+  // border: `1px solid ${color}`
 };
