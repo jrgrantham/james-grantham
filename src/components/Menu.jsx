@@ -45,7 +45,7 @@ export default function ContentButtons(props) {
         }}
       >
         <ImageContainer></ImageContainer>
-        <h5>{hidden ? props.selected : "Please select..."}</h5>
+        <h4>{hidden ? props.selected : "Please select..."}</h4>
         <ImageContainer>
           <img src={hidden ? menu : null} alt="" />
         </ImageContainer>
