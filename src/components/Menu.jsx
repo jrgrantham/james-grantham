@@ -46,7 +46,9 @@ export default function ContentButtons(props) {
           setHidden(!hidden);
         }}
       >
-        <ImageContainer></ImageContainer>
+        <ImageContainer>
+          <img src={hidden ? arrowDown : arrowUp} alt="" />
+        </ImageContainer>
         <h4>{hidden ? props.selected : "select..."}</h4>
         <ImageContainer>
           <img src={hidden ? arrowDown : arrowUp} alt="" />
@@ -122,7 +124,7 @@ const openDiv = {
 
 const StyledMenuButton = styled.div`
   display: flex
-  justify-content: space-between
+  justify-content: center
   align-items: center
   // margin: 0.25rem 0rem
   padding: 10px 15px
@@ -154,7 +156,7 @@ const ImageContainer = styled.div`
   justify-content: center
   align-items: center
   min-height: 30px
-  width: 20px
+  width: 40px
   // border: 1px solid red
   img {
     opacity: 0.1
