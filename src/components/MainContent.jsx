@@ -94,7 +94,7 @@ const ImageContainer = styled.div`
   min-height: 100%
   // border: 1px solid red
   img {
-    height: 20px
+    height: 15px
   }
 `;
 
