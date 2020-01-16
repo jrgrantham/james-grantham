@@ -7,9 +7,10 @@ import arrowDown from "../../src/images/arrowDown.png";
 import {
   greyLight,
   greyMedium,
-  blackOff,
   transition,
-  borderRad
+  blackOff,
+  borderRad,
+  greyDark,
 } from "../views/styling";
 
 export default function MainContent(props) {
@@ -101,5 +102,7 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  // border: `1px solid ${blackOff}`
+  // border: `1px solid ${greyDark}`,
+  'borderRadius': borderRad,
+  backgroundColor: greyMedium
 };

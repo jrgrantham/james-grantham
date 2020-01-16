@@ -32,7 +32,7 @@ export default function App() {
         )}
       />
       <Route
-        path="/personal/phonenumbers"
+        path="/phonenumbers"
         render={props => (
           <PhoneNumbers
             {...props}

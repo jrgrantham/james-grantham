@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import jamesPhoto from "../../src/images/james.jpg";
 
-import { color, transition, greyMedium, borderRad, blackOff } from "./styling";
+import { transition, greyMedium, borderRad, blackOff } from "./styling";
 
 export default function Landing() {
   // document.body.style.background = appColor;
@@ -21,7 +21,7 @@ export default function Landing() {
           <h4>Mechanical Engineer</h4>
         </Career>
         <Buttons>
-          <Link to="/personal/phonenumbers">
+          <Link to="/phonenumbers">
             <h5>Social</h5>
           </Link>
           <Link to="/professional">

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import arrowUp from "../../src/images/arrowUp.png";
-import arrowDown from "../../src/images/arrowDown.png";
 import menu from "../../src/images/menu.png";
 
 import {
