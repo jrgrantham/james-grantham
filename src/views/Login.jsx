@@ -5,7 +5,7 @@ import styled from "styled-components";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import { appColor, transition, borderRad } from "./styling";
+import { whiteOff, transition, borderRad } from "./styling";
 import Footer from "../components/Footer";
 
 const loginApi = url() + "api/auth/login";
@@ -119,7 +119,7 @@ const StyledForm = styled.form`
   button {
     margin-top: 30px
     background-color: green;
-    color: ${appColor};
+    color: ${whiteOff};
     border-radius: ${borderRad};
     font-size: 1.2rem;
     padding: 0.6rem 0rem;

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { color } from "../views/styling";
+import { blackOff } from "../views/styling";
 
 export default function Footer(props) {
   return (
     <StyledFooter>
-      <Link to="/" style={{ color: color }} >
+      <Link to="/" style={{ color: blackOff }} >
         Return to home page
       </Link>
     </StyledFooter>

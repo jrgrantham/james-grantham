@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import {
-  backgroundColor,
-  backgroundColorHover,
-  accentColor,
-  accentColorHover,
+  greyLight,
+  orangeMedium,
   transition,
   mediaBreak,
   borderRad
@@ -59,13 +57,13 @@ const StyledHeader = styled.div`
   // margin: 0.25rem 0
   padding: .5rem 0
   width: 300px
-  background-color: ${backgroundColor}
+  background-color: ${greyLight}
   border-radius: ${borderRad}
   cursor: pointer
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${accentColor};
+      background-color: ${orangeMedium};
       transition: background-color ${transition}
     }
   }
@@ -94,14 +92,14 @@ const openDiv = {
 const StyledButton = styled.div`
   margin: 0.25rem 0rem
   padding: 10px 0
-  background-color: ${accentColor}
+  background-color: ${orangeMedium}
   border-radius: ${borderRad}
   cursor: pointer
   width: 30%
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${accentColorHover};
+      background-color: ${null};
       transition: background-color ${transition}
     }
   }
@@ -110,14 +108,14 @@ const StyledButton = styled.div`
 const StyledMiddleButton = styled.div`
   margin: 0.25rem 0rem
   padding: 10px 0
-  background-color: ${accentColor}
+  background-color: ${orangeMedium}
   border-radius: ${borderRad}
   cursor: pointer
   width: 38%
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${accentColorHover};
+      background-color: ${null};
       transition: background-color ${transition}
     }
   }
