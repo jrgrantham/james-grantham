@@ -94,7 +94,7 @@ const ImageContainer = styled.div`
   min-height: 100%
   // border: 1px solid red
   img {
-    opacity: 0.5
+    opacity: 0.25
     height: 15px
   }
 `;
