@@ -21,7 +21,6 @@ import { personal } from "../data/personal";
 export default function ContentButtons(props) {
   const categoryButtons = ["Experience", "Career", "Web", "Personal"];
   const [hidden, setHidden] = useState(true);
-  const menuButtonContent = props.selected;
 
   function setCategory(title) {
     props.setSelected(title);
@@ -39,6 +38,7 @@ export default function ContentButtons(props) {
 
   return (
     <ButtonContainer>
+
       <StyledMenuButton
         onClick={() => {
           setHidden(!hidden);
@@ -79,6 +79,7 @@ export default function ContentButtons(props) {
           </StyledButton>
         ))}
       </HorizontalMenu>
+
     </ButtonContainer>
   );
 }
@@ -111,8 +112,7 @@ const VerticalMenu = styled.div`
   @media (min-width: 650px) {
     display: none
   }
-
-  `;
+`;
 
 const openDiv = {
   height: "220px"
