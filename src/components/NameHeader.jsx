@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { appColor, appColorHover, backgroundColor, backgroundColorHover, color, colorHover, accentColor, accentColorHover, transition } from "../views/styling";
+import { backgroundColor, backgroundColorHover, accentColor, accentColorHover, transition } from "../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
