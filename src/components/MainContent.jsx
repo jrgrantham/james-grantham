@@ -54,13 +54,11 @@ export default function MainContent(props) {
 }
 
 const Container = styled.div`
-border-radius: 10px
-overflow: hidden
 `;
 
 const Article = styled.div`
   // margin: 0.5rem 0
-  padding: 0.5rem
+  padding: 0.5rem 1rem
   background-color: ${backgroundColor}
   // border: 0.5px solid ${color}
   // border-radius: 10px
@@ -77,9 +75,9 @@ const Article = styled.div`
     }
   }
 
-  @media (min-width: 550px) {
-    padding: 0.5rem 1rem
-  }
+  // @media (min-width: 550px) {
+  //   padding: 0.5rem 1rem
+  // }
 `;
 
 const StyledTitle = styled.div`

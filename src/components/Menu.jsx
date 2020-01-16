@@ -9,7 +9,8 @@ import {
   backgroundColorHover,
   color,
   accentColor,
-  transition
+  transition,
+  mediaBreak
 } from "../views/styling";
 
 import { career } from "../data/career";
@@ -38,7 +39,6 @@ export default function ContentButtons(props) {
 
   return (
     <ButtonContainer>
-
       <StyledMenuButton
         onClick={() => {
           setHidden(!hidden);
@@ -79,19 +79,18 @@ export default function ContentButtons(props) {
           </StyledButton>
         ))}
       </HorizontalMenu>
-
     </ButtonContainer>
   );
 }
 
 const ButtonContainer = styled.div`
-  margin-top: 12px;
+  // margin-top: 12px;
 `;
 
 const HorizontalMenu = styled.div`
   display: none
-  
-  @media (min-width: 650px) {
+  padding: 0.25rem 0.25rem 0 0.25rem
+  @media (min-width: ${mediaBreak}) {
     display: flex
     justify-content: space-between
   }
@@ -109,23 +108,24 @@ const VerticalMenu = styled.div`
   max-width: 700px
   transition: height ${transition}
 
-  @media (min-width: 650px) {
+  @media (min-width: ${mediaBreak}) {
     display: none
   }
 `;
 
+// once sorted make this bigger for txt size changes
 const openDiv = {
-  height: "220px"
+  height: "205px"
 };
 
 const StyledMenuButton = styled.div`
   display: flex
   justify-content: space-between
   align-items: center
-  margin: 0.25rem 0rem
-  padding: 10px
+  // margin: 0.25rem 0rem
+  padding: 10px 15px
   background-color: ${backgroundColor}
-  border-radius: 10px
+  // border-radius: 10px
   width: 100%
   cursor: pointer
   overflow: hidden
@@ -142,7 +142,7 @@ const StyledMenuButton = styled.div`
     }
   }
 
-  @media (min-width: 650px) {
+  @media (min-width: ${mediaBreak}) {
     display: none
   }
 `;
@@ -160,29 +160,29 @@ const ImageContainer = styled.div`
 `;
 
 const StyledButton = styled.div`
-  margin: 0.25rem 0rem
+  margin: 0.25rem 0.25rem 0 0.25rem
   padding: 10px 0
-  background-color: ${accentColor}
+  background-color: ${backgroundColorHover}
   border-radius: 10px
   cursor: pointer
   width: 100%
 
   // border: 1px solid red
+
+  @media (min-width: ${mediaBreak}) {
+    width: 25%
+    background-color: ${backgroundColorHover}
+  }
   
   @media (pointer:fine) {
     &:hover {
-      background-color: ${backgroundColorHover};
+      background-color: ${accentColor};
       transition: background-color ${transition}
     }
-  }
-
-  @media (min-width: 650px) {
-    width: 23%
-    background-color: ${backgroundColor}
-
   }
 `;
 
 const selectedStyle = {
-  border: `1px solid ${color}`
+  backgroundColor: appColor,
+  border: `1px solid ${backgroundColorHover}`
 };
