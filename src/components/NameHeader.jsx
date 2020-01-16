@@ -5,7 +5,7 @@ import { appColor, appColorHover, backgroundColor, backgroundColorHover, color, 
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
-  const contact = hidden ? "contact..." : "hide menu...";
+  const contact = hidden ? "(contact)" : "hide menu...";
 
   return (
     <Container>

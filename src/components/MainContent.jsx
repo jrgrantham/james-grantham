@@ -57,6 +57,9 @@ const Article = styled.div`
   // border: 0.5px solid ${color}
   border-radius: 10px
   cursor: pointer
+  h5 {
+    text-align: left
+  }
 
   @media (pointer:fine) {
     &:hover {
