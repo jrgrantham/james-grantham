@@ -31,7 +31,7 @@ export default function ContentButtons(props) {
   function ClosedMenuButtonText() {
     return (
       <>
-        <h5>{menuButtonContent}</h5>
+        <h4>{menuButtonContent}</h4>
         <span style={{ fontSize: "0.8rem" }}>(click to change)</span>
       </>
     );
