@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, color, transition } from "../views/styling";
+import { appColor, appColorHover, backgroundColor, backgroundColorHover, color, colorHover, accentColor, accentColorHover, transition } from "../views/styling";
 
 import { career } from "../data/career";
 import { experience } from "../data/experience";
@@ -137,8 +137,7 @@ const StyledMenuButton = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      color: ${appColor};
-      background-color: ${color};
+      background-color: ${backgroundColorHover};
       transition: background-color ${transition}
     }
   }
@@ -160,8 +159,7 @@ const StyledButton = styled.div`
   
   @media (pointer:fine) {
     &:hover {
-      color: ${appColor};
-      background-color: ${color};
+      background-color: ${backgroundColorHover};
       transition: background-color ${transition}
     }
   }

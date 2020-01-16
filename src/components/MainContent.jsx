@@ -1,7 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, color, transition } from "../views/styling";
+import {
+  appColor,
+  appColorHover,
+  backgroundColor,
+  backgroundColorHover,
+  color,
+  colorHover,
+  accentColor,
+  accentColorHover,
+  transition
+} from "../views/styling";
 
 export default function MainContent(props) {
   function isExpanded(receivedArticle) {
@@ -20,16 +30,15 @@ export default function MainContent(props) {
   return (
     <div>
       {props.content.map((article, index) => (
-        <Article style={article.display ? selectedStyle : null}
+        <Article
+          style={article.display ? selectedStyle : null}
           key={index}
           onClick={e => {
             isExpanded(article.title);
           }}
         >
           <h5>{article.title}</h5>
-          <p>
-            {article.introduction}
-          </p>
+          <p>{article.introduction}</p>
           <StyledDetails style={article.display ? closedDetails : null}>
             {article.contents.map((content, index) => (
               <p key={index}>{content}</p>
@@ -51,10 +60,7 @@ const Article = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${color};
-      h5, p {
-        color: ${appColor};
-      }
+      background-color: ${backgroundColorHover};
       transition: background-color ${transition}
     }
   }
@@ -72,7 +78,7 @@ transition: max-height ${transition}
 `;
 
 const closedDetails = {
-  'maxHeight': "1000px",
+  maxHeight: "1000px"
 };
 
 const selectedStyle = {
