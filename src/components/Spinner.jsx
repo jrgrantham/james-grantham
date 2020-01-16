@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { color, mediaBreak } from "../views/styling";
+import { color, mediaBreak, borderRad } from "../views/styling";
 
 export default function Spinner() {
   return (
@@ -42,7 +42,7 @@ const Container = styled.div`
   
   @media (min-width: ${mediaBreak}) {
     border: 1px solid ${color}
-    border-radius: 10px
+    border-radius: ${borderRad}
   }
 `
 

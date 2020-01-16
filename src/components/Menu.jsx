@@ -11,7 +11,8 @@ import {
   backgroundColorDark,
   accentColor,
   transition,
-  mediaBreak
+  mediaBreak,
+  borderRad
 } from "../views/styling";
 
 import { career } from "../data/career";
@@ -126,7 +127,7 @@ const StyledMenuButton = styled.div`
   // margin: 0.25rem 0rem
   padding: 10px 15px
   background-color: ${backgroundColor}
-  // border-radius: 10px
+  // border-radius: ${borderRad}
   width: 100%
   cursor: pointer
   overflow: hidden
@@ -165,7 +166,7 @@ const StyledButton = styled.div`
   margin: 0.25rem 0.25rem 0 0.25rem
   padding: 10px 0
   background-color: ${backgroundColorHover}
-  border-radius: 10px
+  border-radius: 10px ${borderRad}
   cursor: pointer
   width: 50%
 

@@ -1,5 +1,6 @@
 export const width = '800px'
 export const mediaBreak = '650px'
+export const borderRad = '5px'
 
 export const transition = '0.3s ease-in-out'
 export const appColor = '#F5F5F5'

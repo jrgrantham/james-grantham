@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { backgroundColor, backgroundColorHover, accentColor, accentColorHover, transition, mediaBreak } from "../views/styling";
+import { backgroundColor, backgroundColorHover, accentColor, accentColorHover, transition, mediaBreak, borderRad } from "../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
@@ -21,9 +21,9 @@ export default function Header(props) {
         <StyledButton>
           <h5 href="https://github.com/jrgrantham">GitHub</h5>
         </StyledButton>
-        <StyledButton>
-          <h5>e-mail</h5>
-        </StyledButton>
+        <StyledMiddleButton>
+          <h5>Contact me</h5>
+        </StyledMiddleButton>
         <StyledButton>
           <h5 href="https://www.linkedin.com/in/j-grantham/">LinkedIn</h5>
         </StyledButton>
@@ -33,10 +33,10 @@ export default function Header(props) {
 }
 
 const Container = styled.div`
-display: flex
-flex-direction: column
-align-items: center
-border-radius: 10px
+  display: flex
+  flex-direction: column
+  align-items: center
+  border-radius: ${borderRad}
 `;
 
 const StyledHeader = styled.div`
@@ -44,7 +44,7 @@ const StyledHeader = styled.div`
   padding: .5rem 0
   width: 300px
   background-color: ${backgroundColor}
-  border-radius: 10px
+  border-radius: ${borderRad}
   cursor: pointer
 
   @media (pointer:fine) {
@@ -79,9 +79,25 @@ const StyledButton = styled.div`
   margin: 0.25rem 0rem
   padding: 10px 0
   background-color: ${accentColor}
-  border-radius: 10px
+  border-radius: ${borderRad}
   cursor: pointer
   width: 30%
+
+  @media (pointer:fine) {
+    &:hover {
+      background-color: ${accentColorHover};
+      transition: background-color ${transition}
+    }
+  }
+`;
+
+const StyledMiddleButton = styled.div`
+  margin: 0.25rem 0rem
+  padding: 10px 0
+  background-color: ${accentColor}
+  border-radius: ${borderRad}
+  cursor: pointer
+  width: 38%
 
   @media (pointer:fine) {
     &:hover {
