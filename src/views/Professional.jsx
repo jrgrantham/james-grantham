@@ -37,11 +37,7 @@ const StyledProfessional = styled.div`
   width: ${width}
   background-color: ${appColor}
   color: ${color}
-  padding: 1.5rem 0.5rem
-
-  @media (min-width: 550px) {
-    padding: 1.5rem 1rem
-  }
+  padding: 1.5rem 1rem
 
   @media (min-height: 850px) {
     margin-top:100px
