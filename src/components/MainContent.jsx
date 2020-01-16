@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import menu from "../../src/images/menu.png";
 import arrowUp from "../../src/images/arrowUp.png";
 import arrowDown from "../../src/images/arrowDown.png";
 

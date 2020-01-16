@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { appColor, backgroundColor, backgroundColorHover, color,accentColor, transition } from "../views/styling";
+import menu from "../../src/images/menu.png";
+
+import {
+  appColor,
+  backgroundColor,
+  backgroundColorHover,
+  color,
+  accentColor,
+  transition
+} from "../views/styling";
 
 import { career } from "../data/career";
 import { experience } from "../data/experience";
@@ -28,26 +37,6 @@ export default function ContentButtons(props) {
     }
   }
 
-  function ClosedMenuButtonText() {
-    return (
-      <>
-        <h4>{menuButtonContent}</h4>
-        <span style={{ fontSize: "0.8rem" }}>(click to change)</span>
-      </>
-    );
-  }
-
-  function OpenMenuButtonText() {
-    return <h5>Please select...</h5>;
-  }
-
-  function ButtonDiv(props) {
-    if (hidden) {
-      return <ClosedMenuButtonText />;
-    }
-    return <OpenMenuButtonText />;
-  }
-
   return (
     <ButtonContainer>
       <StyledMenuButton
@@ -55,7 +44,11 @@ export default function ContentButtons(props) {
           setHidden(!hidden);
         }}
       >
-        <ButtonDiv />
+        <ImageContainer></ImageContainer>
+        <h5>{hidden ? props.selected : "Please select..."}</h5>
+        <ImageContainer>
+          <img src={hidden ? menu : null} alt="" />
+        </ImageContainer>
       </StyledMenuButton>
 
       <VerticalMenu style={hidden ? null : openDiv}>
@@ -68,9 +61,7 @@ export default function ContentButtons(props) {
               setHidden(!hidden);
             }}
           >
-            <h5>
-              {title}
-            </h5>
+            <h5>{title}</h5>
           </StyledButton>
         ))}
       </VerticalMenu>
@@ -84,9 +75,7 @@ export default function ContentButtons(props) {
               setCategory(title, index);
             }}
           >
-            <h5>
-              {title}
-            </h5>
+            <h5>{title}</h5>
           </StyledButton>
         ))}
       </HorizontalMenu>
@@ -95,7 +84,7 @@ export default function ContentButtons(props) {
 }
 
 const ButtonContainer = styled.div`
-  margin-top: 12px
+  margin-top: 12px;
 `;
 
 const HorizontalMenu = styled.div`
@@ -130,13 +119,19 @@ const openDiv = {
 };
 
 const StyledMenuButton = styled.div`
+  display: flex
+  justify-content: space-between
+  align-items: center
   margin: 0.25rem 0rem
-  padding: 10px 0
+  padding: 10px
   background-color: ${backgroundColor}
   border-radius: 10px
   width: 100%
   cursor: pointer
   overflow: hidden
+  img {
+    height: 30px
+  }
 
   // border: 1px solid red
 
@@ -149,6 +144,18 @@ const StyledMenuButton = styled.div`
 
   @media (min-width: 650px) {
     display: none
+  }
+`;
+
+const ImageContainer = styled.div`
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 30px
+  width: 20px
+  // border: 1px solid red
+  img {
+    height: 20px;
   }
 `;
 
