@@ -14,28 +14,32 @@ import {
   borderRad
 } from "../views/styling";
 
+// --------- naming of sections to be sorted within this section ---------
+
 import { career } from "../data/career";
 import { experience } from "../data/experience";
 import { web } from "../data/web";
 import { personal } from "../data/personal";
 
 export default function ContentButtons(props) {
-  const categoryButtons = ["Experience", "Career", "Web", "Personal"];
+  const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
   const [hidden, setHidden] = useState(true);
 
   function setCategory(title) {
     props.setSelected(title);
 
-    if (title === "Career") {
+    if (title === "Time line") {
       props.setContent(career);
     } else if (title === "Experience") {
       props.setContent(experience);
-    } else if (title === "Web") {
+    } else if (title === "Projects") {
       props.setContent(web);
-    } else if (title === "Personal") {
+    } else if (title === "About me") {
       props.setContent(personal);
     }
   }
+
+  // --------- naming of sections to be sorted within this section ---------
 
   return (
     <ButtonContainer>
@@ -44,9 +48,6 @@ export default function ContentButtons(props) {
           setHidden(!hidden);
         }}
       >
-        <ImageContainer>
-          {/* <img src={hidden ? arrowDown : arrowUp} alt="" /> */}
-        </ImageContainer>
         <h4>{hidden ? props.selected : "select..."}</h4>
         <ImageContainer>
           <img src={hidden ? menu : null} alt="" />
@@ -85,8 +86,7 @@ export default function ContentButtons(props) {
   );
 }
 
-const ButtonContainer = styled.div`
-`;
+const ButtonContainer = styled.div``;
 
 const HorizontalMenu = styled.div`
   display: none

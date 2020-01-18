@@ -70,7 +70,7 @@ const Buttons = styled.div`
   display: flex
   flex-direction: column
   justify-content: space-between
-  height: 140px
+  height: 130px
 
   h5 {
     padding: 1rem 0

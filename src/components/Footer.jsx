@@ -16,7 +16,7 @@ export default function Footer(props) {
 const StyledFooter = styled.div`
 a {
   display: block
-  margin: 25px 0 50px 0
+  margin: 30px 0 50px 0
   padding: 0
 
   @media (min-width: 501px) {

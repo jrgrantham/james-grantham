@@ -4,6 +4,7 @@ import axios from "axios";
 import styled from "styled-components";
 import url from "../helpers/url";
 
+import { StyledForm } from "./ContactForm";
 import Spinner from "../components/Spinner";
 import { whiteOff, transition, borderRad } from "./styling";
 import Footer from "../components/Footer";
@@ -51,8 +52,8 @@ export default function LoginForm(props) {
           <Position>
             <StyledForm onSubmit={handleSubmit}>
               {/* <div> */}
-              <div>
-                <label htmlFor="username" />
+              <div className="inputField">
+                <label htmlFor="username">Name</label>
                 <input
                   name="username"
                   type="text"
@@ -62,9 +63,10 @@ export default function LoginForm(props) {
                   onBlur={handleBlur}
                   value={values.username}
                 />
+                <div></div>
               </div>
-              <div>
-                <label htmlFor="password" />
+              <div className="inputField">
+                <label htmlFor="password">Password</label>
                 <input
                   name="password"
                   type="password"
@@ -78,8 +80,8 @@ export default function LoginForm(props) {
               <button type="submit" disabled={isSubmitting}>
                 Login
               </button>
-              <Footer />
             </StyledForm>
+            <Footer />
           </Position>
         )}
       </Formik>
@@ -95,41 +97,4 @@ const Position = styled.div`
     min-height: 100vh
     justify-content: center
   }
-`;
-
-const StyledForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between
-  margin: auto
-  height: 350px
-
-  input {
-    font-size: 1rem;
-    text-align: center;
-    padding: 10px;
-    border-radius: ${borderRad}
-    border: solid 0.5px lightgrey;
-    width: 250px;
-  }
-
-  button {
-    margin-top: 30px
-    background-color: green;
-    color: ${whiteOff};
-    border-radius: ${borderRad};
-    font-size: 1.2rem;
-    padding: 0.6rem 0rem;
-    width: 200px
-
-    @media (pointer:fine) {
-      &:hover{
-        background-color: white;
-        color: green;
-        transition: background-color ${transition}
-      }
-    }
-  }
-
 `;

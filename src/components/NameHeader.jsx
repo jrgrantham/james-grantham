@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import arrowUp from "../../src/images/arrowUp.png";
+import arrowDown from "../../src/images/arrowDown.png";
+
 import {
   greyLight,
   orangeMedium,
@@ -12,7 +15,6 @@ import {
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
-  const contact = hidden ? "(links)" : "hide menu...";
 
   return (
     <Container>
@@ -21,8 +23,15 @@ export default function Header(props) {
           setHidden(!hidden);
         }}
       >
-        <h4>James Grantham</h4>
-        {contact}
+        <StyledTitle>
+          <ImageContainer>
+            <img src={hidden ? arrowDown : arrowUp } alt="" />
+          </ImageContainer>
+          <h4>James Grantham</h4>
+          <ImageContainer>
+            <img src={hidden ? arrowDown : arrowUp } alt="" />
+          </ImageContainer>
+        </StyledTitle>
       </StyledHeader>
       <StyledHiddenDiv style={hidden ? null : openDiv}>
         <StyledLinkButton>
@@ -60,6 +69,23 @@ const StyledHeader = styled.div`
       background-color: ${orangeMedium};
       transition: background-color ${transition}
     }
+  }
+`;
+
+const StyledTitle = styled.div`
+  display: flex
+  justify-content: center
+`;
+
+const ImageContainer = styled.div`
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100%
+  width: 50px
+  img {
+    opacity: 0.08
+    height: 25px
   }
 `;
 
