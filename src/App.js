@@ -5,6 +5,7 @@ import Landing from "./views/Landing";
 import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
+import ContactForm from './views/ContactForm'
 
 import { whiteOff, blackOff } from "./views/styling";
 
@@ -35,6 +36,19 @@ export default function App() {
         path="/phonenumbers"
         render={props => (
           <PhoneNumbers
+            {...props}
+            setIsLoading={setIsLoading}
+            isLoading={isLoading}
+            user={user}
+            token={token}
+            setToken={setToken}
+          />
+        )}
+      />
+      <Route
+        path="/contact"
+        render={props => (
+          <ContactForm
             {...props}
             setIsLoading={setIsLoading}
             isLoading={isLoading}

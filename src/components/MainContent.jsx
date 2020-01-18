@@ -8,9 +8,7 @@ import {
   greyLight,
   greyMedium,
   transition,
-  blackOff,
   borderRad,
-  greyDark,
 } from "../views/styling";
 
 export default function MainContent(props) {

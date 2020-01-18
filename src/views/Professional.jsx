@@ -46,6 +46,7 @@ const StyledProfessional = styled.div`
 
 const StyledContent = styled.div`
   background-color: ${greyLight}
+  border: 4px solid ${greyLight}
   border-radius: ${borderRad}
   margin-top: 12px
   overflow: hidden
