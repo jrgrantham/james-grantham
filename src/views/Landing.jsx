@@ -35,7 +35,12 @@ export default function Landing() {
   );
 }
 
-// window.onresize = function(){window.location.reload()}
+window.onload = function() {
+  if(!window.location.hash) {
+      window.location = window.location + '#loaded';
+      window.location.reload();
+  }
+}
 
 let vh = (window.innerHeight < 630) ? 630 : window.innerHeight
 console.log(vh)
