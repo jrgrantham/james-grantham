@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -17,20 +17,34 @@ export default function LandingInitialView() {
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
 
+  setTimeout(function() {
+    document.getElementById("info").classList.remove("hide");
+  }, 2000);
+
+  useEffect(function() {
+    document.getElementById("name").classList.remove("fade");
+    document.getElementById("img").classList.remove("fade");
+    document.getElementById("jobs").classList.remove("fade");
+  }, []);
+
   return (
     <LandingContainer>
       <LandingContent>
-        <h1>James Grantham</h1>
-        <div className="img ">
+        <div id="name" className="fade">
+          <h1>James Grantham</h1>
+        </div>
+        <div id="img" className="fade img">
           <img src={jamesPhoto} alt="" />
         </div>
-        <div>
+        <div id="jobs" className="fade">
           <h3>Mechanical Engineer</h3>
           <p>turned</p>
           <h3>Full-stack Web Developer</h3>
         </div>
         <Link to="/professional">
-          <h4>Further Information</h4>
+          <h4 id="info" className="hide">
+            Further Information
+          </h4>
         </Link>
       </LandingContent>
     </LandingContainer>
@@ -66,6 +80,8 @@ const LandingContent = styled.div`
     flex-direction: column;
     // justify-content: space-between;
     align-items: center;
+    opacity: 1
+    transition: opacity 2s ease-in-out
   }
 
   .img {
@@ -77,6 +93,7 @@ const LandingContent = styled.div`
     max-width: 100%
     max-height: 100%
     border-radius: ${borderRad}
+    border: 1px solid black
   }
 
   h4 {
@@ -91,5 +108,13 @@ const LandingContent = styled.div`
         transition: background-color ${transition}
       }
     }
+  }
+
+  .hide {
+    opacity: 0
+  }
+
+  .fade {
+    opacity: 0
   }
 `;
