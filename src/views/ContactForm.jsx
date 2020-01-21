@@ -5,7 +5,7 @@ import Error from "../helpers/Error";
 import { validationSchema } from "../helpers/validationSchema";
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
-import { axiosWithBase, baseURL } from "../helpers/AxiosCustom";
+import { axiosWithBase } from "../helpers/AxiosCustom";
 
 import { borderRad, whiteOff, transition } from "../views/styling";
 import Footer from "../components/Footer";
