@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
 import Landing from "./views/Landing";
-import Trial from "./views/Trial";
 import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
@@ -20,7 +19,6 @@ export default function App() {
   return (
     <StyledApp>
       <Route exact path="/" component={Landing} />
-      <Route exact path="/trial" component={Trial} />
       <Route path="/professional" component={Professional} />
       <Route
         path="/login"

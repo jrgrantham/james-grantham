@@ -1,61 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import ContactMeHeader from "../components/ContactMeHeader";
-import jamesPhoto from "../../src/images/james.jpg";
 
-import {
-  transition,
-  greyMedium,
-  borderRad,
-  blackOff,
-  greyDark,
-  width,
-  headerHeight,
-  footerHeight
-} from "./styling";
+import { greyDark, headerHeight, footerHeight } from "./styling";
 import FooterBanner from "../components/FooterBanner";
+import LandingInitialView from "../components/LandingInitialView";
+import LandingCaptions from "../components/LandingCaptions";
 
 export default function Landing() {
-  // document.body.style.background = appColor;
-  // document.getElementById("root").style.background = appColor;
 
   return (
     <>
       <ContactMeHeader />
       <FullPage>
-          <LandingContainer>
-        <LandingContent>
-            <h2>James Grantham</h2>
-            <div className="img ">
-              <img src={jamesPhoto} alt="" />
-            </div>
-            <div>
-              <h4>Mechanical Engineer</h4>
-              <p>turned</p>
-              <h4>Full-stack Web Developer</h4>
-            </div>
-            <Link to="/professional">
-              <h5>Further information</h5>
-            </Link>
-        </LandingContent>
-          </LandingContainer>
+        {/* <Contact style={ hidden ? null : openDiv }>
+          <h5>Phone Numbers</h5>
+          <h5>eMail</h5>
+        </Contact> */}
+        <LandingInitialView />
+        <LandingCaptions />
+        <h2 style={hstyle} >... and dedicated Father of three awesome boys!</h2>
       </FullPage>
       <FooterBanner />
     </>
   );
 }
-
-// window.onload = function() {
-//   if (!window.location.hash) {
-//     window.location = window.location + "#loaded";
-//     window.location.reload();
-//   }
-// };
-
-let vh = window.innerHeight < 630 ? 630 : window.innerHeight;
-console.log(vh);
 
 const FullPage = styled.div`
   margin-top: ${headerHeight}px
@@ -64,59 +34,25 @@ const FullPage = styled.div`
   display: flex
   flex-direction: column
   justify-content: center
+  align-items: center
   // border: 10px solid ${greyDark}
+
 `;
 
-const LandingContainer = styled.div`
-  height: ${vh-headerHeight-footerHeight}px
-  width: 100%
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // border: 2px solid green
-`
+const hstyle = {
+    color: 'white',
+    fontWeight: 'bold',
+    width: '100%',
+    padding: '100px 50px',
+    backgroundColor: 'green'
+}
 
-const LandingContent = styled.div`
-  width: 100%
-  height: ${vh-headerHeight-footerHeight}px
-  min-height: 500px
-  max-height: 800px
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  // border: 2px solid green
+// const Contact = styled.div`
+// background-color: black
+// height: 0px
+// overflow: hidden
+// `
 
-  div {
-    display: flex;
-    flex-direction: column;
-    // justify-content: space-between;
-    align-items: center;
-  }
-
-  .img {
-    width: 90%
-    max-width: 800px
-  }
-  
-  img {
-    max-width: 100%
-    max-height: 100%
-    border-radius: ${borderRad}
-  }
-
-  h5 {
-    padding: 1rem 0
-    min-width: 15rem
-    border: 1px solid ${blackOff}
-    border-radius: ${borderRad}
-
-    @media (pointer:fine) {
-      &:hover {
-        background-color: ${greyMedium};
-        transition: background-color ${transition}
-      }
-    }
-  }
-`;
+// const openDiv = {
+//   height: "55px"
+// };
