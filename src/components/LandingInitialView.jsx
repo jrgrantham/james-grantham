@@ -16,27 +16,33 @@ import {
 export default function LandingInitialView() {
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
+  
+  setTimeout(function() {
+    document.getElementById("name").classList.remove("hide");
+  }, 800);
+  
+  // setTimeout(function() {
+  //   document.getElementById("img").classList.remove("fade");
+  // }, 000);
+  
+  setTimeout(function() {
+    document.getElementById("jobs").classList.remove("hide");
+  }, 1600);
 
   setTimeout(function() {
     document.getElementById("info").classList.remove("hide");
-  }, 2000);
-
-  useEffect(function() {
-    document.getElementById("name").classList.remove("fade");
-    document.getElementById("img").classList.remove("fade");
-    document.getElementById("jobs").classList.remove("fade");
-  }, []);
-
+  }, 2400);
+  
   return (
     <LandingContainer>
       <LandingContent>
-        <div id="name" className="fade">
+        <div id="name" className="hide">
           <h1>James Grantham</h1>
         </div>
-        <div id="img" className="fade img">
+        <div id="img" className="img">
           <img src={jamesPhoto} alt="" />
         </div>
-        <div id="jobs" className="fade">
+        <div id="jobs" className="hide">
           <h3>Mechanical Engineer</h3>
           <p>turned</p>
           <h3>Full-stack Web Developer</h3>
@@ -67,7 +73,7 @@ const LandingContainer = styled.div`
 const LandingContent = styled.div`
   width: 100%
   height: ${vh - headerHeight - footerHeight}px
-  min-height: 500px
+  // min-height: 500px
   max-height: 800px
   display: flex;
   flex-direction: column;
@@ -80,13 +86,12 @@ const LandingContent = styled.div`
     flex-direction: column;
     // justify-content: space-between;
     align-items: center;
-    opacity: 1
-    transition: opacity 2s ease-in-out
   }
 
   .img {
     width: 90%
     max-width: 800px
+    max-width: 90vh
   }
   
   img {
@@ -97,10 +102,12 @@ const LandingContent = styled.div`
   }
 
   h4 {
+    margin-bottom: 20px
     padding: 1rem 0
     min-width: 15rem
-    border: 2px solid ${blackOff}
+    border: 1px solid ${blackOff}
     border-radius: ${borderRad}
+    transition: opacity 1s
 
     @media (pointer:fine) {
       &:hover {
@@ -111,10 +118,6 @@ const LandingContent = styled.div`
   }
 
   .hide {
-    opacity: 0
-  }
-
-  .fade {
     opacity: 0
   }
 `;

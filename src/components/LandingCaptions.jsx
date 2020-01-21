@@ -53,14 +53,14 @@ const Caption = styled.div`
   // margin: 50px auto
   border: 10px solid brown
   border-radius: 10px
-  padding: 5px
+  padding: 15px
   width: 300px
-  height: 200px
+  min-height: 200px
   font-size: 2rem
 
   @media (min-width: ${mediaBreak}) {
     margin: 40px 0
     width: 60%;
-    min-width: 300px
+    min-width: 400px
   }
 `;
