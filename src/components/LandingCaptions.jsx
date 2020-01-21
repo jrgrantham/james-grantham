@@ -24,9 +24,11 @@ export default function LandingCaptions() {
 
 const Captions = styled.div`
 background-color: ${orangeMedium}
-  padding: 50px 100px;
+padding: 50px 0
+width: 100%;
+
   @media (min-width: ${mediaBreak}) {
-    width: 100%;
+    padding: 50px 100px;
     .left {
       justify-content: flex-start;
     }

@@ -20,7 +20,7 @@ export default function Landing() {
         </Contact> */}
         <LandingInitialView />
         <LandingCaptions />
-        <h3>something different to go here</h3>
+        <h2 style={hstyle} >... and dedicated Father of three awesome boys!</h2>
       </FullPage>
       <FooterBanner />
     </>
@@ -36,7 +36,16 @@ const FullPage = styled.div`
   justify-content: center
   align-items: center
   // border: 10px solid ${greyDark}
+
 `;
+
+const hstyle = {
+    color: 'white',
+    fontWeight: 'bold',
+    width: '100%',
+    padding: '100px 50px',
+    backgroundColor: 'green'
+}
 
 // const Contact = styled.div`
 // background-color: black
