@@ -56,7 +56,7 @@ export function RegisterForm(props) {
         <Position>
           <StyledForm onSubmit={handleSubmit}>
             <div data-testid="nameField" className="inputField">
-              <label htmlFor="name">Name</label>
+              {/* <label htmlFor="name">Name</label> */}
               <input
                 name="name"
                 type="text"
@@ -70,7 +70,7 @@ export function RegisterForm(props) {
             </div>
 
             <div data-testid="emailField" className="inputField">
-              <label htmlFor="email">E-mail address</label>
+              {/* <label htmlFor="email">E-mail address</label> */}
               <input
                 name="email"
                 type="email"
@@ -84,7 +84,7 @@ export function RegisterForm(props) {
             </div>
 
             <div data-testid="messageField" className="inputField">
-              <label htmlFor="message">Message</label>
+              {/* <label htmlFor="message">Message</label> */}
               <textarea
                 name="message"
                 type="text"
@@ -117,9 +117,9 @@ export function RegisterForm(props) {
                   'text-align': 'center'
                 }}
               /> */}
-              <Error touched={touched.name} message={errors.name} /> 
-              <Error touched={touched.email} message={errors.email} />
-              <Error touched={touched.message} message={errors.message} />
+            <Error touched={touched.name} message={errors.name} />
+            <Error touched={touched.email} message={errors.email} />
+            <Error touched={touched.message} message={errors.message} />
           </StyledForm>
           <Footer />
         </Position>
@@ -131,13 +131,13 @@ export function RegisterForm(props) {
 export default RegisterForm;
 
 const Position = styled.div`
-  display: flex
-  flex-direction: column
-  padding-top: 20px
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
 
   @media (min-height: 850px) {
-    min-height: 100vh
-    justify-content: center
+    min-height: 100vh;
+    justify-content: center;
   }
 `;
 
@@ -145,43 +145,45 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
-  margin: auto
+  justify-content: center;
+  margin: auto;
 
   .inputField {
-    margin: 10px
-    display: flex
-    flex-direction: column
-    align-items: flex-start
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  input, textarea {
+
+  input,
+  textarea {
+    min-height: 50px;
     font-size: 1rem;
     text-align: center;
     padding: 10px;
-    border-radius: ${borderRad}
+    border-radius: ${borderRad};
     border: solid 0.5px lightgrey;
     width: 300px;
   }
 
   textarea {
-    height: 100px
+    height: 100px;
   }
 
   button {
-    margin: 20px 0
+    margin: 20px 0;
     background-color: green;
-    color: red;
+    color: white;
     border-radius: ${borderRad};
     font-size: 1.2rem;
     padding: 0.6rem 0rem;
-    width: 200px
+    width: 200px;
 
-    @media (pointer:fine) {
-      &:hover{
+    @media (pointer: fine) {
+      &:hover {
         background-color: white;
         color: green;
-        transition: background-color ${transition}
+        transition: background-color ${transition};
       }
     }
   }
@@ -199,5 +201,4 @@ export const StyledForm = styled.form`
     font-size: 1rem;
     color: green;
   }
-
 `;

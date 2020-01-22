@@ -32,15 +32,15 @@ export default function LandingCaptions() {
 }
 
 const fontStyle = {
-  'color': landingCaptionFont,
-  fontWeight: 'bold'
+  color: landingCaptionFont,
+  fontWeight: "bold"
 };
 
 const Captions = styled.div`
-background-color: ${landingCaptionBack2};
-// background-image: linear-gradient(${landingCaptionBack1}, ${landingCaptionBack2});
-padding: 50px 0
-width: 100%;
+  background-color: ${landingCaptionBack1};
+  // background-image: linear-gradient(${landingCaptionBack1}, ${landingCaptionBack2});
+  padding: 50px 0;
+  width: 100%;
 
   @media (min-width: ${mediaBreak}) {
     padding: 50px 100px;
@@ -54,10 +54,9 @@ width: 100%;
 `;
 
 const CaptionContainer = styled.div`
-  justify-content: center
-  width: 100%
-  display: flex 
-  // border: 1px solid red
+  justify-content: center;
+  width: 100%;
+  display: flex;
 `;
 
 const Caption = styled.div`

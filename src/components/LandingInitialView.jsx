@@ -19,7 +19,7 @@ export default function LandingInitialView() {
 
   setTimeout(function() {
     document.getElementById("name").classList.remove("hide");
-  }, 800);
+  }, 500);
   
   setTimeout(function() {
     document.getElementById("img").classList.remove("hide");
@@ -27,11 +27,11 @@ export default function LandingInitialView() {
   
   setTimeout(function() {
     document.getElementById("jobs").classList.remove("hide");
-  }, 1600);
+  }, 1000);
 
   setTimeout(function() {
     document.getElementById("info").classList.remove("hide");
-  }, 2400);
+  }, 1500);
   
   return (
     <LandingContainer>

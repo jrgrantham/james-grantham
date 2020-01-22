@@ -88,28 +88,26 @@ export default function ContentButtons(props) {
 const ButtonContainer = styled.div``;
 
 const HorizontalMenu = styled.div`
-  display: none
-  padding: 0.25rem 0.25rem 0.5rem 0.25rem
+  display: none;
+  padding: 0.25rem 0.25rem 0.5rem 0.25rem;
   @media (min-width: ${mediaBreak}) {
-    display: flex
-    justify-content: space-between
+    display: flex;
+    justify-content: space-between;
   }
 `;
 
 const VerticalMenu = styled.div`
-  display: flex
-  flex-direction: column
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  justify-content: flex-start
-  align-items: center
-  background-color: red
+  justify-content: flex-start;
+  align-items: center;
   height: 0px;
-  width: 100%
-  max-width: 700px
-  transition: height ${transition}
+  width: 100%;
+  transition: height ${transition};
 
   @media (min-width: ${mediaBreak}) {
-    display: none
+    display: none;
   }
 `;
 
@@ -118,60 +116,60 @@ const openDiv = {
 };
 
 const StyledMenuButton = styled.div`
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: 10px 15px
-  background-color: ${professionalBack}
-  width: 100%
-  cursor: pointer
-  overflow: hidden
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: ${professionalBack};
+  width: 100%;
+  cursor: pointer;
+  overflow: hidden;
   img {
-    height: 30px
+    height: 30px;
   }
 
   @media (pointer:fine) {
     &:hover {
       background-color: ${professionalButton};
-      transition: background-color ${transition}
+      transition: background-color ${transition};
     }
   }
 
   @media (min-width: ${mediaBreak}) {
-    display: none
+    display: none;
   }
 `;
 
 const ImageContainer = styled.div`
-  display: flex
-  justify-content: center
-  align-items: center
-  min-height: 30px
-  width: 30px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30px;
+  width: 30px;
 
   img {
-    opacity: 0.15
+    opacity: 0.15;
     height: 25px;
   }
 `;
 
 const StyledButton = styled.div`
-  margin: 0.25rem 0.25rem 0 0.25rem
-  padding: 10px 0
-  background-color: ${professionalButton}
-  border-radius: ${borderRad}
-  cursor: pointer
-  width: 50%
+  margin: 0.25rem 0.25rem 0 0.25rem;
+  padding: 10px 0;
+  background-color: ${professionalButton};
+  border-radius: ${borderRad};
+  cursor: pointer;
+  width: 85%;
 
   @media (min-width: ${mediaBreak}) {
-    width: 25%
-    background-color: ${professionalButton}
+    width: 25%;
+    background-color: ${professionalButton};
   }
   
   @media (pointer:fine) {
     &:hover {
       background-color: ${professionalButtonHov};
-      transition: background-color ${transition}
+      transition: background-color ${transition};
     }
   }
 `;
