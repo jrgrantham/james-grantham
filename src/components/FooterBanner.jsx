@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { footerHeight } from "../views/styling";
+import { footerHeight, landingFooter } from "../views/styling";
 
 export default function FooterBanner(props) {
   return <Footer></Footer>;
 }
 
 const Footer = styled.div`
-  background-color: brown;
+  background-color: ${landingFooter}
   height: ${footerHeight}px
   width: 100vw
   max-width:  1000px

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { orangeMedium } from "../views/styling";
+import { orangeMedium, landingBoysBack, landingBoysButton } from "../views/styling";
 
 export default function Boys() {
   return (
@@ -14,13 +14,13 @@ export default function Boys() {
 }
 
 const StyledBoys = styled.div`
-  background-color: ${orangeMedium}
+  background-color: ${landingBoysBack}
   width: 100%
 `;
 
 const Content = styled.div`
-  margin: 0 20px 50px 20px
-  background-color: green
+  margin: 50px 20px 50px 20px
+  background-color: ${landingBoysButton}
   border-radius: 120px
 `;
 

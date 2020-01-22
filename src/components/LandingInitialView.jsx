@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -10,7 +10,8 @@ import {
   borderRad,
   blackOff,
   headerHeight,
-  footerHeight
+  footerHeight,
+  landingInitial
 } from "../views/styling";
 
 export default function LandingInitialView() {
@@ -21,9 +22,9 @@ export default function LandingInitialView() {
     document.getElementById("name").classList.remove("hide");
   }, 800);
   
-  // setTimeout(function() {
-  //   document.getElementById("img").classList.remove("fade");
-  // }, 000);
+  setTimeout(function() {
+    document.getElementById("img").classList.remove("hide");
+  }, 100);
   
   setTimeout(function() {
     document.getElementById("jobs").classList.remove("hide");
@@ -39,7 +40,7 @@ export default function LandingInitialView() {
         <div id="name" className="hide">
           <h1>James Grantham</h1>
         </div>
-        <div id="img" className="img">
+        <div id="img" className="hide img">
           <img src={jamesPhoto} alt="" />
         </div>
         <div id="jobs" className="hide">
@@ -58,10 +59,10 @@ export default function LandingInitialView() {
 }
 
 let vh = window.innerHeight < 630 ? 630 : window.innerHeight;
-console.log(vh);
 
 const LandingContainer = styled.div`
   height: ${vh - headerHeight - footerHeight}px
+  background-color: ${landingInitial}
   width: 100%
   display: flex;
   flex-direction: column;
@@ -92,6 +93,7 @@ const LandingContent = styled.div`
     width: 90%
     max-width: 800px
     max-width: 90vh
+    transition: opacity 0.3s
   }
   
   img {
