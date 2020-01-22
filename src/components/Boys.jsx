@@ -7,7 +7,7 @@ export default function Boys() {
   return (
     <StyledBoys>
       <Content>
-        <h3 style={hstyle}>... and dedicated Father of three awesome boys!</h3>
+        <h3 style={hstyle}>... and dedicated Father to three awesome boys!</h3>
       </Content>
     </StyledBoys>
   );

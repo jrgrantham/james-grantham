@@ -19,16 +19,18 @@ export const orangeMedium = '#ffd27f'
 
 // Landing Page
 
-export const landingHeader = '#463730'
-export const landingFooter = '#463730'
-export const landingInitial = '#C8EAD3'
+export const landingHeader = '#626d71'
+export const landingFooter = landingHeader
+export const landingInitial = '#cdcdc0'
 export const landingInitialFont = '#01295F'
 
-export const landingCaptionBack = '#51A3A3'
-export const landingCaption = '#DFCC74'
-export const landingCaptionBorder = '#CB904D'
+export const landingCaptionBack1 = '#07575B'
+export const landingCaptionBack2 = '#66a5ad'
+export const landingCaption = '#07575B'
+export const landingCaptionBorder = '#003b46'
+export const landingCaptionFont = '#c4dfe6'
 
-export const landingBoysBack = '#AE759F'
-export const landingBoysButton = '#55286F'
+export const landingBoysBack = '#eb5e30'
+export const landingBoysButton = '#752a07'
 
 
