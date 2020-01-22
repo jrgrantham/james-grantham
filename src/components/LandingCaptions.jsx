@@ -15,7 +15,7 @@ export default function LandingCaptions() {
           key={index}
           className={index % 2 === 0 ? "left" : "right"}
         >
-          <Caption>{caption}</Caption>
+          <Caption><h4>{caption}</h4></Caption>
         </CaptionContainer>
       ))}
     </Captions>
@@ -57,7 +57,6 @@ const Caption = styled.div`
   padding: 15px
   width: 300px
   min-height: 200px
-  font-size: 2rem
 
   @media (min-width: ${mediaBreak}) {
     margin: 40px 0
