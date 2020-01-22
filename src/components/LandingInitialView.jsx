@@ -49,9 +49,9 @@ export default function LandingInitialView() {
           <h3>Full-stack Web Developer</h3>
         </div>
         <Link to="/professional">
-          <h4 id="info" className="hide">
+          <h5 id="info" className="hide">
             Further Information
-          </h4>
+          </h5>
         </Link>
       </LandingContent>
     </LandingContainer>
@@ -103,7 +103,11 @@ const LandingContent = styled.div`
     border: 1px solid black
   }
 
-  h4 {
+  h1, h3, p {
+    font-weight: bold
+  }
+
+  h5 {
     margin-bottom: 20px
     padding: 1rem 0
     min-width: 15rem
