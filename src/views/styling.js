@@ -5,6 +5,8 @@ export const footerHeight = 30
 export const borderRad = '5px'
 export const transition = '0.3s ease-in-out'
 
+export const fontColor = '#202020'
+
 export const whiteOff = '#F5F5F5'
 export const whiteDark = '#E0E0E0'
 export const greyLight = '#DCDCDC'
@@ -19,7 +21,7 @@ export const orangeMedium = '#ffd27f'
 
 export const landingHeader = '#463730'
 export const landingFooter = '#463730'
-export const landingInitial = '#c7c5cc'
+export const landingInitial = '#808F87'
 
 export const landingCaptionBack = '#51A3A3'
 export const landingCaption = '#DFCC74'

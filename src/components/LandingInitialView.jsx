@@ -75,7 +75,7 @@ const LandingContent = styled.div`
   width: 100%
   height: ${vh - headerHeight - footerHeight}px
   // min-height: 500px
-  max-height: 800px
+  max-height: 1000px
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -87,13 +87,14 @@ const LandingContent = styled.div`
     flex-direction: column;
     // justify-content: space-between;
     align-items: center;
+    transition: opacity 1s
   }
 
   .img {
     width: 90%
     max-width: 800px
     max-width: 90vh
-    transition: opacity 0.3s
+    transition: opacity ${transition}
   }
   
   img {
