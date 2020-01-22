@@ -8,16 +8,16 @@ import {
   transition,
   greyMedium,
   borderRad,
-  blackOff,
   headerHeight,
   footerHeight,
-  landingInitial
+  landingInitial,
+  landingInitialFont
 } from "../views/styling";
 
 export default function LandingInitialView() {
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
-  
+
   setTimeout(function() {
     document.getElementById("name").classList.remove("hide");
   }, 800);
@@ -38,18 +38,18 @@ export default function LandingInitialView() {
     <LandingContainer>
       <LandingContent>
         <div id="name" className="hide">
-          <h1>James Grantham</h1>
+          <h1 style={fontStyle} >James Grantham</h1>
         </div>
         <div id="img" className="hide img">
           <img src={jamesPhoto} alt="" />
         </div>
         <div id="jobs" className="hide">
-          <h3>Mechanical Engineer</h3>
-          <p>turned</p>
-          <h3>Full-stack Web Developer</h3>
+          <h3 style={fontStyle} >Mechanical Engineer</h3>
+          <p style={fontStyle} >turned</p>
+          <h3 style={fontStyle} >Full-stack Web Developer</h3>
         </div>
         <Link to="/professional">
-          <h5 id="info" className="hide">
+          <h5  style={fontStyle} id="info" className="hide">
             Further Information
           </h5>
         </Link>
@@ -70,6 +70,10 @@ const LandingContainer = styled.div`
   align-items: center;
   // border: 2px solid green
 `;
+
+const fontStyle = {
+  color: landingInitialFont
+}
 
 const LandingContent = styled.div`
   width: 100%
@@ -101,7 +105,7 @@ const LandingContent = styled.div`
     max-width: 100%
     max-height: 100%
     border-radius: ${borderRad}
-    border: 1px solid black
+    border: 1px solid  ${landingInitialFont}
   }
 
   h1, h3, p {
@@ -112,7 +116,7 @@ const LandingContent = styled.div`
     margin-bottom: 20px
     padding: 1rem 0
     min-width: 15rem
-    border: 1px solid ${blackOff}
+    border: 1px solid ${landingInitialFont}
     border-radius: ${borderRad}
     transition: opacity 1s
 

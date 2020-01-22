@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { captions } from "../data/captions";
 
-import { mediaBreak, orangeMedium, landingCaptionBack, landingCaptionBorder, landingCaption } from "../views/styling";
+import { mediaBreak, landingCaptionBack, landingCaptionBorder, landingCaption } from "../views/styling";
 
 export default function LandingCaptions() {
   // document.body.style.background = appColor;
