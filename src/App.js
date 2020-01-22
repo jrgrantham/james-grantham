@@ -7,7 +7,7 @@ import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from './views/ContactForm'
 
-import { whiteOff, blackOff } from "./views/styling";
+import { whiteOff, fontColor } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -73,6 +73,6 @@ const StyledApp = styled.div`
   text-align: center;
 
   h1, h2, h3, h4, h5, h6, p, a {
-    color: ${blackOff}
+    color: ${fontColor}
   }
 `;
