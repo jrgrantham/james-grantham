@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { captions } from "../data/captions";
 
-import { mediaBreak, orangeMedium } from "../views/styling";
+import { mediaBreak, orangeMedium, landingCaptionBack, landingCaptionBorder, landingCaption } from "../views/styling";
 
 export default function LandingCaptions() {
   // document.body.style.background = appColor;
@@ -23,7 +23,7 @@ export default function LandingCaptions() {
 }
 
 const Captions = styled.div`
-background-color: ${orangeMedium}
+background-color: ${landingCaptionBack}
 padding: 50px 0
 width: 100%;
 
@@ -46,12 +46,13 @@ const CaptionContainer = styled.div`
 `;
 
 const Caption = styled.div`
+  background-color: ${landingCaption}
   margin: 20px 0
   display: flex
   justify-content: center
   align-items: center
   // margin: 50px auto
-  border: 10px solid brown
+  border: 10px solid ${landingCaptionBorder}
   border-radius: 10px
   padding: 15px
   width: 300px

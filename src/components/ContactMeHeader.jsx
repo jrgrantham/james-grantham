@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { headerHeight, whiteOff, borderRad } from "../views/styling";
+import { headerHeight, whiteOff, borderRad, landingHeader } from "../views/styling";
 
 export default function ContactMeHeader(props) {
   const [hidden, setHidden] = useState(true);
-  console.log(hidden);
 
   const Header = styled.div`
     display: flex
     justify-content: ${hidden ? "flex-end" : "space-evenly"} 
     align-items: center
-    background-color: brown
+    background-color: ${landingHeader}
     min-height: ${headerHeight}px
     width: 100vw
     max-width:  1000px
