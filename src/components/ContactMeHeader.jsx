@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { headerHeight, whiteOff, borderRad, landingHeader } from "../views/styling";
+import { headerHeight, borderRad, landingHeader, landingInitial } from "../views/styling";
 
 export default function ContactMeHeader(props) {
   const [hidden, setHidden] = useState(true);
@@ -22,9 +22,9 @@ export default function ContactMeHeader(props) {
     cursor: "pointer",
     margin: "0 10px",
     minWidth: "80px",
-    border: `1px solid ${whiteOff}`,
+    border: `1px solid ${landingInitial}`,
     borderRadius: borderRad,
-    color: whiteOff,
+    color: landingInitial,
     padding: "0 10px"
   };
 

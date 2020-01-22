@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { footerHeight, landingFooter } from "../views/styling";
+import { footerHeight, landingFooter, landingInitial } from "../views/styling";
 
 export default function FooterBanner(props) {
   return (
@@ -21,6 +21,6 @@ const Footer = styled.div`
 
 const pstyle = {
   padding: '6px 15px',
-  color: 'white',
+  color: landingInitial,
   fontSize: '0.8rem'
 }

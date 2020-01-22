@@ -5,8 +5,8 @@ import arrowUp from "../../src/images/arrowUp.png";
 import arrowDown from "../../src/images/arrowDown.png";
 
 import {
-  greyLight,
-  greyMedium,
+  professionalBack,
+  professionalButton,
   transition,
   borderRad,
 } from "../views/styling";
@@ -58,7 +58,7 @@ const Container = styled.div`
 
 const Article = styled.div`
   padding: 0.5rem 1rem
-  background-color: ${greyLight}
+  background-color: ${professionalBack}
   cursor: pointer
   h5 {
     text-align: left
@@ -67,7 +67,7 @@ const Article = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${greyMedium};
+      background-color: ${professionalButton};
       transition: background-color ${transition}
     }
   }
@@ -100,7 +100,6 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  // border: `1px solid ${greyDark}`,
   'borderRadius': borderRad,
-  backgroundColor: greyMedium
+  backgroundColor: professionalButton
 };

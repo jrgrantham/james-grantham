@@ -5,16 +5,6 @@ export const footerHeight = 30
 export const borderRad = '5px'
 export const transition = '0.3s ease-in-out'
 
-export const fontColor = '#202020'
-
-export const whiteOff = '#F5F5F5'
-export const whiteDark = '#E0E0E0'
-export const greyLight = '#DCDCDC'
-export const greyMedium = '#D0D0D0'
-export const greyDark = '#808080'
-export const blackOff = '#202020'
-export const orangeMedium = '#ffd27f'
-
 // favicon font - Merriweather
 
 // Landing Page
@@ -33,4 +23,8 @@ export const landingCaptionFont = '#c4dfe6'
 export const landingBoysBack = '#eb5e30'
 export const landingBoysButton = '#752a07'
 
-
+export const professionalOuter = '#f5f5f5'
+export const professionalBack = '#eae2d6'
+export const professionalButton = '#d5c3aa'
+export const professionalButtonHov = '#e1b80d'
+export const professionalLinks = '#867666'

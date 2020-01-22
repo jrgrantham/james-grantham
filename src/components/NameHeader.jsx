@@ -6,8 +6,9 @@ import arrowUp from "../../src/images/arrowUp.png";
 import arrowDown from "../../src/images/arrowDown.png";
 
 import {
-  greyLight,
-  orangeMedium,
+  professionalBack,
+  professionalButtonHov,
+  professionalLinks,
   transition,
   mediaBreak,
   borderRad
@@ -37,11 +38,11 @@ export default function Header(props) {
         <StyledLinkButton>
           <a href="https://github.com/jrgrantham">GitHub</a>
         </StyledLinkButton>
-        <StyledMiddleButton>
+        <StyledLinkButton>
           <Link to='contact'>
-            <h5>Contact me</h5>
+            <h5>contact me</h5>
           </Link>
-        </StyledMiddleButton>
+        </StyledLinkButton>
         <StyledLinkButton>
           <a href="https://www.linkedin.com/in/j-grantham/">LinkedIn</a>
         </StyledLinkButton>
@@ -51,53 +52,54 @@ export default function Header(props) {
 }
 
 const Container = styled.div`
-  display: flex
-  flex-direction: column
-  align-items: center
-  border-radius: ${borderRad}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: ${borderRad};
 `;
 
 const StyledHeader = styled.div`
-  padding: .5rem 0
-  width: 300px
-  background-color: ${greyLight}
-  border-radius: ${borderRad}
-  cursor: pointer
+  padding: .5rem 0;
+  width: 300px;
+  background-color: ${professionalBack};
+  border-radius: ${borderRad};
+  cursor: pointer;
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${orangeMedium};
-      transition: background-color ${transition}
+      background-color: ${professionalButtonHov};
+      transition: background-color ${transition};
     }
   }
 `;
 
 const StyledTitle = styled.div`
-  display: flex
-  justify-content: center
+  display: flex;
+  justify-content: center;
 `;
 
 const ImageContainer = styled.div`
-  display: flex
-  justify-content: center
-  align-items: center
-  min-height: 100%
-  width: 50px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 50px;
+
   img {
-    opacity: 0.08
-    height: 25px
+    opacity: 0.08;
+    height: 25px;
   }
 `;
 
 const StyledHiddenDiv = styled.div`
-  display: flex
-  flex-direction: columm
-  justify-content: space-between
-  align-items: flex-end
+  display: flex;
+  flex-direction: columm;
+  justify-content: space-between;
+  align-items: flex-end;
   height: 0px;
-  width: 100%
+  width: 100%;
   overflow: hidden;
-  transition: height ${transition}
+  transition: height ${transition};
 
   @media (min-width: ${mediaBreak}) {
     width: 100%
@@ -109,34 +111,22 @@ const openDiv = {
 };
 
 const StyledLinkButton = styled.div`
-width: 30%
+  min-width: 30%;
+
   a {
-    font-size: 1.2rem
-    display: block
-    padding: 10px 0
-    background-color: ${orangeMedium}
-    border-radius: ${borderRad}
-  }
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    padding: 10px 10px;
+    background-color: ${professionalLinks};
+    border-radius: ${borderRad};
 
-  @media (pointer:fine) {
-    &:hover {
-      background-color: ${null};
-      transition: background-color ${transition}
-    }
-  }
-`;
-
-const StyledMiddleButton = styled.div`
-  padding: 10px 0
-  background-color: ${orangeMedium}
-  border-radius: ${borderRad}
-  cursor: pointer
-  width: 38%
-
-  @media (pointer:fine) {
-    &:hover {
-      background-color: ${null};
-      transition: background-color ${transition}
+    @media (pointer:fine) {
+      &:hover {
+        background-color: ${professionalButtonHov};
+        transition: background-color ${transition};
+      }
     }
   }
 `;

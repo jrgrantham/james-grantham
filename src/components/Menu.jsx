@@ -4,14 +4,13 @@ import styled from "styled-components";
 import menu from "../../src/images/menu.png";
 
 import {
-  whiteOff,
-  greyLight,
-  greyMedium,
-  greyDark,
-  orangeMedium,
+  professionalBack,
+  professionalButton,
+  professionalButtonHov,
   transition,
   mediaBreak,
-  borderRad
+  borderRad,
+  professionalOuter
 } from "../views/styling";
 
 // --------- naming of sections to be sorted within this section ---------
@@ -103,7 +102,7 @@ const VerticalMenu = styled.div`
   overflow: hidden;
   justify-content: flex-start
   align-items: center
-  background-color: ${whiteOff}
+  background-color: red
   height: 0px;
   width: 100%
   max-width: 700px
@@ -123,7 +122,7 @@ const StyledMenuButton = styled.div`
   justify-content: space-between
   align-items: center
   padding: 10px 15px
-  background-color: ${greyLight}
+  background-color: ${professionalBack}
   width: 100%
   cursor: pointer
   overflow: hidden
@@ -133,7 +132,7 @@ const StyledMenuButton = styled.div`
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${greyMedium};
+      background-color: ${professionalButton};
       transition: background-color ${transition}
     }
   }
@@ -159,25 +158,25 @@ const ImageContainer = styled.div`
 const StyledButton = styled.div`
   margin: 0.25rem 0.25rem 0 0.25rem
   padding: 10px 0
-  background-color: ${greyMedium}
+  background-color: ${professionalButton}
   border-radius: ${borderRad}
   cursor: pointer
   width: 50%
 
   @media (min-width: ${mediaBreak}) {
     width: 25%
-    background-color: ${greyMedium}
+    background-color: ${professionalButton}
   }
   
   @media (pointer:fine) {
     &:hover {
-      background-color: ${orangeMedium};
+      background-color: ${professionalButtonHov};
       transition: background-color ${transition}
     }
   }
 `;
 
 const selectedStyle = {
-  backgroundColor: whiteOff,
-  border: `1px solid ${greyDark}`
+  backgroundColor: professionalOuter,
+  border: `2px solid ${professionalButton}`
 };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { whiteOff, blackOff, width, greyLight, borderRad } from "./styling";
+import { width, professionalBack, borderRad, professionalOuter } from "./styling";
 import { experience } from "../data/experience";
 
 import NameHeader from "../components/NameHeader";
@@ -35,8 +35,7 @@ export default function Professional() {
 
 const StyledProfessional = styled.div`
   width: ${width}
-  background-color: ${whiteOff}
-  color: ${blackOff}
+  background-color: ${professionalOuter}
   padding: 1.5rem 1rem
 
   @media (min-height: 850px) {
@@ -45,8 +44,8 @@ const StyledProfessional = styled.div`
 `;
 
 const StyledContent = styled.div`
-  background-color: ${greyLight}
-  border: 4px solid ${greyLight}
+  background-color: ${professionalBack}
+  border: 4px solid ${professionalBack}
   border-radius: ${borderRad}
   margin-top: 12px
   overflow: hidden

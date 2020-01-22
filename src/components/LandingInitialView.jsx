@@ -6,7 +6,6 @@ import jamesPhoto from "../../src/images/james.jpg";
 
 import {
   transition,
-  greyMedium,
   borderRad,
   headerHeight,
   footerHeight,
@@ -122,8 +121,8 @@ const LandingContent = styled.div`
 
     @media (pointer:fine) {
       &:hover {
-        background-color: ${greyMedium};
-        transition: background-color ${transition}
+        opacity: 0.5;
+        transition: opacity ${transition}
       }
     }
   }
