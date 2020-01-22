@@ -13,14 +13,14 @@ export default function FooterBanner(props) {
 const Footer = styled.div`
   background-color: ${landingFooter}
   height: ${footerHeight}px
-  width: 100vw
+  width: 100%
   max-width:  1000px
   position: fixed
   bottom: 0
 `;
 
 const pstyle = {
-  padding: '5px 10px',
+  padding: '6px 15px',
   color: 'white',
   fontSize: '0.8rem'
 }

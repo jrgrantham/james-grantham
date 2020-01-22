@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { orangeMedium, landingBoysBack, landingBoysButton } from "../views/styling";
+import { landingBoysBack, landingBoysButton } from "../views/styling";
 
 export default function Boys() {
   return (
     <StyledBoys>
       <Content>
-        <h2 style={hstyle}>... and dedicated Father of three awesome boys!</h2>
+        <h3 style={hstyle}>... and dedicated Father of three awesome boys!</h3>
       </Content>
     </StyledBoys>
   );

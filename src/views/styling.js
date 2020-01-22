@@ -21,7 +21,8 @@ export const orangeMedium = '#ffd27f'
 
 export const landingHeader = '#463730'
 export const landingFooter = '#463730'
-export const landingInitial = '#808F87'
+export const landingInitial = '#C8EAD3'
+export const landingInitialFont = '#01295F'
 
 export const landingCaptionBack = '#51A3A3'
 export const landingCaption = '#DFCC74'

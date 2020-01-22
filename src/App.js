@@ -63,7 +63,7 @@ export default function App() {
 }
 
 const StyledApp = styled.div`
-  width: 100vw
+  width: 100%
   max-width: 1000px
   min-height: 100%
   margin: auto

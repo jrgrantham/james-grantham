@@ -12,7 +12,7 @@ export default function ContactMeHeader(props) {
     align-items: center
     background-color: ${landingHeader}
     min-height: ${headerHeight}px
-    width: 100vw
+    width: 100%
     max-width:  1000px
     position: fixed
     top: 0
