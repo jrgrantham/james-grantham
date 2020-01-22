@@ -3,7 +3,11 @@ import styled from "styled-components";
 import { footerHeight, landingFooter } from "../views/styling";
 
 export default function FooterBanner(props) {
-  return <Footer></Footer>;
+  return (
+    <Footer>
+      <p style={pstyle} >James Grantham</p>
+    </Footer>
+  );
 }
 
 const Footer = styled.div`
@@ -13,11 +17,10 @@ const Footer = styled.div`
   max-width:  1000px
   position: fixed
   bottom: 0
-
-  // clip-path: polygon(
-  //   0 0, /* left top */
-  //   100% 100%, /* right top */
-  //   100% 100%, /* right bottom */
-  //   0 100% /* left bottom */
-  // );
 `;
+
+const pstyle = {
+  padding: '5px 10px',
+  color: 'white',
+  fontSize: '0.8rem'
+}
