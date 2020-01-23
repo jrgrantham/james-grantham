@@ -1,4 +1,4 @@
-export const width = "800px";
+export const professionalWidth = "800px";
 export const mediaBreak = "650px";
 export const headerHeight = 50;
 export const footerHeight = 30;
@@ -28,3 +28,4 @@ export const professionalBack = "#eae2d6";
 export const professionalButton = "#d5c3aa";
 export const professionalButtonHov = "#e1b80d";
 export const professionalLinks = "#867666";
+export const professionalInnerPad = "10px";

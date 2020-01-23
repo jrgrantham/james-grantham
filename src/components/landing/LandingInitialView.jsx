@@ -11,7 +11,8 @@ import {
   footerHeight,
   landingInitial1,
   landingInitial2,
-  landingInitialFont
+  landingInitialFont,
+  landingCaptionBack1
 } from "../../views/styling";
 
 export default function LandingInitialView(props) {
@@ -40,7 +41,7 @@ export default function LandingInitialView(props) {
     <LandingContainer onClick={() => props.setHiddenContact(true)}>
       <LandingContent>
         <div id="name" className="hide">
-          <h1 style={fontStyle}>James Grantham</h1>
+          <h2 style={fontStyle}>James Grantham</h2>
         </div>
         <div id="img" className="hide img">
           <img src={jamesPhoto} alt="" />
@@ -48,7 +49,7 @@ export default function LandingInitialView(props) {
         <div id="jobs" className="hide">
           <h3 style={fontStyle}>Mechanical Engineer</h3>
           <p style={fontStyle}>turned</p>
-          <h3 style={fontStyle}>Full-stack Web Developer</h3>
+          <h3 style={fontStyle}>Web Developer</h3>
         </div>
         <Link to="/professional">
           <h5 style={fontStyle} id="info" className="hide">
@@ -112,6 +113,7 @@ const LandingContent = styled.div`
   }
 
   h1,
+  h2,
   h3,
   p {
     font-weight: bold;
@@ -123,12 +125,11 @@ const LandingContent = styled.div`
     min-width: 15rem;
     border: 1px solid ${landingInitialFont};
     border-radius: ${borderRad};
-    transition: opacity 1s;
 
     @media (pointer: fine) {
       &:hover {
-        opacity: 0.5;
-        transition: opacity ${transition};
+        background-color: ${landingInitial1};
+        transition: background-color ${transition};
       }
     }
   }

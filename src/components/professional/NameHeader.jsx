@@ -1,38 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import arrowUp from "../../../src/images/arrowUp.png";
-import arrowDown from "../../../src/images/arrowDown.png";
-import { StyledArrow } from "./buttonStyles";
-
-import { Container, StyledHeader, StyledHiddenDiv, openDiv, styledButton } from "./nameHeaderStyle";
+import { MenuArrow } from "./buttonStyles";
+import {
+  Container,
+  StyledHeader,
+  StyledHiddenDiv,
+  openDiv,
+  styledButton
+} from "./nameHeaderStyle";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
+  function changeHidden() {
+    setHidden(!hidden);
+  }
 
   return (
-    <Container>
-      <StyledHeader
-        onClick={() => {
-          setHidden(!hidden);
-        }}
-      >
-        <StyledArrow>
-          <img src={hidden ? arrowDown : arrowUp} alt="" />
-        </StyledArrow>
+    <>
+      <StyledHeader onClick={() => changeHidden()}>
+        <MenuArrow hidden={hidden} />
         <h4>James Grantham</h4>
-        <StyledArrow>
-          <img src={hidden ? arrowDown : arrowUp} alt="" />
-        </StyledArrow>
+        <MenuArrow hidden={hidden} />
       </StyledHeader>
-      <StyledHiddenDiv style={!hidden ? null : openDiv}>
+      <StyledHiddenDiv style={hidden ? null : openDiv}>
         <a
           href="https://github.com/jrgrantham"
           style={styledButton}
+          className="hover"
         >
-          <div className="hover">
-            GitHub
-          </div>
+          GitHub
         </a>
         <Link to="contact" style={styledButton} className="hover">
           <h5>contact me</h5>
@@ -45,8 +42,6 @@ export default function Header(props) {
           LinkedIn
         </a>
       </StyledHiddenDiv>
-    </Container>
+    </>
   );
 }
-
-

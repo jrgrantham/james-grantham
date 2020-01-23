@@ -43,7 +43,7 @@ export default function ContactMeHeader(props) {
       }}
     >
       {hiddenContact ? (
-        <h5
+        <p
           style={button}
           onClick={e => {
             e.stopPropagation();
@@ -51,12 +51,12 @@ export default function ContactMeHeader(props) {
           }}
         >
           {hiddenContact ? "contact me" : "hide "}
-        </h5>
+        </p>
       ) : (
         <>
-          <h5 style={button}>Email</h5>
+          <p style={button}>Email</p>
           <Link to="/phonenumbers">
-            <h5 style={button}>Phone</h5>
+            <p style={button}>Phone</p>
           </Link>
         </>
       )}
