@@ -5,7 +5,7 @@ import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
 import Footer from "../components/Footer";
-import { greyLight, blackOff, transition, borderRad, greyMedium } from "./styling";
+import { professionalBack, borderRad } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -91,19 +91,12 @@ const NumberCard = styled.div`
   width: 250px
   height: 100px
 
-  border: 1px solid ${blackOff};
+  border: 1px solid black;
   border-radius: ${borderRad};
-  background-color: ${greyLight}
+  background-color: ${professionalBack}
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
-  @media (pointer:fine) {
-    &:hover {
-      background-color: ${greyMedium};
-      transition: ${transition}
-    }
-  }
 `;

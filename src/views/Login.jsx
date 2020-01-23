@@ -6,7 +6,6 @@ import url from "../helpers/url";
 
 import { StyledForm } from "./ContactForm";
 import Spinner from "../components/Spinner";
-// import { whiteOff, transition, borderRad } from "./styling";
 import Footer from "../components/Footer";
 
 const loginApi = url() + "api/auth/login";
@@ -53,11 +52,11 @@ export default function LoginForm(props) {
             <StyledForm onSubmit={handleSubmit}>
               {/* <div> */}
               <div className="inputField">
-                <label htmlFor="username">Name</label>
+                {/* <label htmlFor="username">Name</label> */}
                 <input
                   name="username"
                   type="text"
-                  placeholder="Enter username"
+                  placeholder="Username"
                   id="username"
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -66,11 +65,11 @@ export default function LoginForm(props) {
                 <div></div>
               </div>
               <div className="inputField">
-                <label htmlFor="password">Password</label>
+                {/* <label htmlFor="password">Password</label> */}
                 <input
                   name="password"
                   type="password"
-                  placeholder="Enter password"
+                  placeholder="Password"
                   id="password"
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -90,11 +89,15 @@ export default function LoginForm(props) {
 }
 
 const Position = styled.div`
-  display: flex
-  flex-direction: column
+  display: flex;
+  flex-direction: column;
+
+  label {
+    height: 20px;
+  }
 
   @media (min-height: 850px) {
-    min-height: 100vh
-    justify-content: center
+    min-height: 100vh;
+    justify-content: center;
   }
 `;
