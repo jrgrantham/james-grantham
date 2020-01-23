@@ -6,6 +6,7 @@ import {
   borderRad,
   landingHeader,
   landingInitial1,
+  landingHeadFootOpacity,
 } from "../views/styling";
 
 export default function ContactMeHeader(props) {
@@ -16,6 +17,7 @@ export default function ContactMeHeader(props) {
     justify-content: flex-end;
     align-items: center;
     background-color: ${landingHeader};
+    opacity: ${landingHeadFootOpacity};
     min-height: ${headerHeight}px;
     width: 100%;
     max-width: 1000px;
