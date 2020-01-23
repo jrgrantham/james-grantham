@@ -9,7 +9,8 @@ import {
   borderRad,
   headerHeight,
   footerHeight,
-  landingInitial,
+  landingInitial1,
+  landingInitial2,
   landingInitialFont
 } from "../views/styling";
 
@@ -63,7 +64,8 @@ let vh = window.innerHeight < 630 ? 630 : window.innerHeight;
 
 const LandingContainer = styled.div`
   height: ${vh - headerHeight - footerHeight}px;
-  background-color: ${landingInitial};
+  // background-color: ${landingInitial1};
+  background-image: linear-gradient(${landingInitial1}, ${landingInitial2});
   width: 100%;
   display: flex;
   flex-direction: column;
