@@ -4,10 +4,10 @@ import styled from "styled-components";
 import { width, professionalBack, borderRad, professionalOuter } from "./styling";
 import { experience } from "../data/experience";
 
-import NameHeader from "../components/NameHeader";
-import Menu from "../components/Menu";
-import MainContent from "../components/MainContent";
-import Footer from "../components/Footer";
+import NameHeader from "../components/professional/NameHeader";
+import Menu from "../components/professional/Menu";
+import MainContent from "../components/professional/MainContent";
+import Footer from "../components/professional/Footer";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);

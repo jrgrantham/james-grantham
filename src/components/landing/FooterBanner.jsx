@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { footerHeight, landingFooter, landingInitial1 } from "../views/styling";
+import { footerHeight, landingFooter, landingInitial1 } from "../../views/styling";
 
 export default function FooterBanner(props) {
   return (

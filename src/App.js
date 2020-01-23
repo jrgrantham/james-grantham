@@ -68,4 +68,8 @@ const StyledApp = styled.div`
   display: flex
   justify-content: center
   text-align: center;
+
+  a {
+    // color: black
+  }
 `;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import menu from "../../src/images/menu.png";
+import menu from "../../../src/images/menu.png";
 
 import {
   professionalBack,
@@ -11,14 +11,14 @@ import {
   mediaBreak,
   borderRad,
   professionalOuter
-} from "../views/styling";
+} from "../../views/styling";
 
 // --------- naming of sections to be sorted within this section ---------
 
-import { career } from "../data/career";
-import { experience } from "../data/experience";
-import { web } from "../data/web";
-import { personal } from "../data/personal";
+import { career } from "../../data/career";
+import { experience } from "../../data/experience";
+import { web } from "../../data/web";
+import { personal } from "../../data/personal";
 
 export default function ContentButtons(props) {
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];

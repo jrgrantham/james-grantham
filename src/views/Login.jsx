@@ -6,7 +6,7 @@ import url from "../helpers/url";
 
 import { StyledForm } from "./ContactForm";
 import Spinner from "../components/Spinner";
-import Footer from "../components/Footer";
+import Footer from "../components/professional/Footer";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {

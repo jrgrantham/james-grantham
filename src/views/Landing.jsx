@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import ContactMeHeader from "../components/ContactMeHeader";
+import ContactMeHeader from "../components/landing/ContactMeHeader";
 
 import { headerHeight, footerHeight } from "./styling";
-import FooterBanner from "../components/FooterBanner";
-import LandingInitialView from "../components/LandingInitialView";
-import LandingCaptions from "../components/LandingCaptions";
-import Boys from "../components/Boys";
+import FooterBanner from "../components/landing/FooterBanner";
+import LandingInitialView from "../components/landing/LandingInitialView";
+import LandingCaptions from "../components/landing/LandingCaptions";
+import Boys from "../components/landing/Boys";
 
 export default function Landing() {
   const [hiddenContact, setHiddenContact] = useState(true);

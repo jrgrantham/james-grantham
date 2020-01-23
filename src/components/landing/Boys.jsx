@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { landingBoysBack, landingBoysButton } from "../views/styling";
+import { landingBoysBack, landingBoysButton } from "../../views/styling";
 
 export default function Boys() {
   return (

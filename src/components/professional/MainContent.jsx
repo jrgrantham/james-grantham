@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-import arrowUp from "../../src/images/arrowUp.png";
-import arrowDown from "../../src/images/arrowDown.png";
+import arrowUp from "../../../src/images/arrowUp.png";
+import arrowDown from "../../../src/images/arrowDown.png";
 
 import {
   professionalBack,
   professionalButton,
   transition,
   borderRad,
-} from "../views/styling";
+} from "../../views/styling";
 
 export default function MainContent(props) {
   function isExpanded(receivedArticle) {

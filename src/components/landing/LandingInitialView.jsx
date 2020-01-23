@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import jamesPhoto from "../../src/images/james.jpg";
+import jamesPhoto from "../../../src/images/james.jpg";
 
 import {
   transition,
@@ -12,7 +12,7 @@ import {
   landingInitial1,
   landingInitial2,
   landingInitialFont
-} from "../views/styling";
+} from "../../views/styling";
 
 export default function LandingInitialView(props) {
   // document.body.style.background = appColor;

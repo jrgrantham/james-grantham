@@ -7,7 +7,7 @@ import {
   landingHeader,
   landingInitial1,
   landingHeadFootOpacity,
-} from "../views/styling";
+} from "../../views/styling";
 
 export default function ContactMeHeader(props) {
   const { hiddenContact, setHiddenContact } = props;

@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import arrowUp from "../../src/images/arrowUp.png";
-import arrowDown from "../../src/images/arrowDown.png";
+import arrowUp from "../../../src/images/arrowUp.png";
+import arrowDown from "../../../src/images/arrowDown.png";
 
 import {
   professionalBack,
@@ -12,7 +12,7 @@ import {
   transition,
   mediaBreak,
   borderRad
-} from "../views/styling";
+} from "../../views/styling";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
@@ -24,28 +24,24 @@ export default function Header(props) {
           setHidden(!hidden);
         }}
       >
-        <StyledTitle>
-          <ImageContainer>
-            <img src={hidden ? arrowDown : arrowUp } alt="" />
-          </ImageContainer>
-          <h4>James Grantham</h4>
-          <ImageContainer>
-            <img src={hidden ? arrowDown : arrowUp } alt="" />
-          </ImageContainer>
-        </StyledTitle>
+        <ImageContainer>
+          <img src={hidden ? arrowDown : arrowUp} alt="" />
+        </ImageContainer>
+        <h4>James Grantham</h4>
+        <ImageContainer>
+          <img src={hidden ? arrowDown : arrowUp} alt="" />
+        </ImageContainer>
       </StyledHeader>
-      <StyledHiddenDiv style={hidden ? null : openDiv}>
-        <StyledLinkButton>
-          <a href="https://github.com/jrgrantham">GitHub</a>
-        </StyledLinkButton>
-        <StyledLinkButton>
-          <Link to='contact'>
-            <h5>contact me</h5>
-          </Link>
-        </StyledLinkButton>
-        <StyledLinkButton>
-          <a href="https://www.linkedin.com/in/j-grantham/">LinkedIn</a>
-        </StyledLinkButton>
+      <StyledHiddenDiv style={!hidden ? null : openDiv}>
+        <a style={styledButton} href="https://github.com/jrgrantham">
+          GitHub
+        </a>
+        <Link style={styledButton} to="contact">
+          <h5>contact me</h5>
+        </Link>
+        <a style={styledButton} href="https://www.linkedin.com/in/j-grantham/">
+          LinkedIn
+        </a>
       </StyledHiddenDiv>
     </Container>
   );
@@ -59,23 +55,20 @@ const Container = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  padding: .5rem 0;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
   width: 300px;
   background-color: ${professionalBack};
   border-radius: ${borderRad};
   cursor: pointer;
 
-  @media (pointer:fine) {
+  @media (pointer: fine) {
     &:hover {
       background-color: ${professionalButtonHov};
       transition: background-color ${transition};
     }
   }
-`;
-
-const StyledTitle = styled.div`
-  display: flex;
-  justify-content: center;
 `;
 
 const ImageContainer = styled.div`
@@ -86,7 +79,7 @@ const ImageContainer = styled.div`
   width: 50px;
 
   img {
-    opacity: 0.08;
+    opacity: 0.2;
     height: 25px;
   }
 `;
@@ -102,27 +95,37 @@ const StyledHiddenDiv = styled.div`
   transition: height ${transition};
 
   @media (min-width: ${mediaBreak}) {
-    width: 100%
+    width: 100%;
   }
-  `;
+`;
 
 const openDiv = {
   height: "55px"
+};
+
+const styledButton = {
+  minWidth: "30%",
+  color: "white",
+  fontWeight: "bold",
+  fontSize: "1.2rem",
+  display: "block",
+  padding: "10px 10px",
+  backgroundColor: professionalLinks,
+  borderRadius: borderRad
+
+  // @media (pointer:fine) {
+  //   &:hover {
+  //     background-color: ${professionalButtonHov},
+  //     transition: background-color ${transition},
+  //   }
+  // }
 };
 
 const StyledLinkButton = styled.div`
   min-width: 30%;
 
   a {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    display: block;
-    padding: 10px 10px;
-    background-color: ${professionalLinks};
-    border-radius: ${borderRad};
-
-    @media (pointer:fine) {
+    @media (pointer: fine) {
       &:hover {
         background-color: ${professionalButtonHov};
         transition: background-color ${transition};
