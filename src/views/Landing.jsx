@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import ContactMeHeader from "../components/ContactMeHeader";
@@ -10,12 +10,20 @@ import LandingCaptions from "../components/LandingCaptions";
 import Boys from "../components/Boys";
 
 export default function Landing() {
+  const [hiddenContact, setHiddenContact] = useState(true);
 
   return (
     <>
-      <ContactMeHeader />
-      <FullPage>
-        <LandingInitialView />
+      <ContactMeHeader
+        hiddenContact={hiddenContact}
+        setHiddenContact={setHiddenContact}
+      />
+      <FullPage
+        onClick={e => {
+          setHiddenContact(true);
+        }}
+      >
+        <LandingInitialView setHiddenContact={setHiddenContact} />
         <LandingCaptions />
         <Boys />
       </FullPage>

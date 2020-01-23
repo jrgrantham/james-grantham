@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { headerHeight, borderRad, landingHeader, landingInitial } from "../views/styling";
+import {
+  headerHeight,
+  borderRad,
+  landingHeader,
+  landingInitial
+} from "../views/styling";
 
 export default function ContactMeHeader(props) {
-  const [hidden, setHidden] = useState(true);
+  const { hiddenContact, setHiddenContact } = props;
 
   const Header = styled.div`
     display: flex
-    justify-content: ${hidden ? "flex-end" : "space-evenly"} 
+    justify-content: flex-end 
     align-items: center
     background-color: ${landingHeader}
     min-height: ${headerHeight}px
@@ -16,12 +21,13 @@ export default function ContactMeHeader(props) {
     max-width:  1000px
     position: fixed
     top: 0
+    padding: 0 10px
   `;
 
   const button = {
     cursor: "pointer",
     margin: "0 10px",
-    minWidth: "80px",
+    minWidth: "90px",
     border: `1px solid ${landingInitial}`,
     borderRadius: borderRad,
     color: landingInitial,
@@ -29,27 +35,29 @@ export default function ContactMeHeader(props) {
   };
 
   return (
-    <Header>
-      {hidden ? null : (
+    <Header
+      onClick={e => {
+        setHiddenContact(!hiddenContact);
+      }}
+    >
+      {hiddenContact ? (
+        <h5
+          style={button}
+          onClick={e => {
+            e.stopPropagation();
+            setHiddenContact(!hiddenContact);
+          }}
+        >
+          {hiddenContact ? "contact me" : "hide "}
+        </h5>
+      ) : (
         <>
+          <h5 style={button}>Email</h5>
           <Link to="/phonenumbers">
             <h5 style={button}>Phone</h5>
           </Link>
-          <div>
-            <h5 style={button}>Email</h5>
-          </div>
         </>
       )}
-      <div>
-        <h5
-          style={button}
-          onClick={() => {
-            setHidden(!hidden);
-          }}
-        >
-          {hidden ? "contact me" : "hide "}
-        </h5>
-      </div>
     </Header>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -13,42 +13,44 @@ import {
   landingInitialFont
 } from "../views/styling";
 
-export default function LandingInitialView() {
+export default function LandingInitialView(props) {
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
 
-  setTimeout(function() {
-    document.getElementById("name").classList.remove("hide");
-  }, 500);
+  useEffect(() => {
+    setTimeout(function() {
+      document.getElementById("name").classList.remove("hide");
+    }, 300);
   
-  setTimeout(function() {
-    document.getElementById("img").classList.remove("hide");
-  }, 100);
+    setTimeout(function() {
+      document.getElementById("img").classList.remove("hide");
+    }, 100);
   
-  setTimeout(function() {
-    document.getElementById("jobs").classList.remove("hide");
-  }, 1000);
+    setTimeout(function() {
+      document.getElementById("jobs").classList.remove("hide");
+    }, 600);
+  
+    setTimeout(function() {
+      document.getElementById("info").classList.remove("hide");
+    }, 900);
+  }, [])
 
-  setTimeout(function() {
-    document.getElementById("info").classList.remove("hide");
-  }, 1500);
-  
   return (
-    <LandingContainer>
+    <LandingContainer onClick={() => props.setHiddenContact(true)}>
       <LandingContent>
         <div id="name" className="hide">
-          <h1 style={fontStyle} >James Grantham</h1>
+          <h1 style={fontStyle}>James Grantham</h1>
         </div>
         <div id="img" className="hide img">
           <img src={jamesPhoto} alt="" />
         </div>
         <div id="jobs" className="hide">
-          <h3 style={fontStyle} >Mechanical Engineer</h3>
-          <p style={fontStyle} >turned</p>
-          <h3 style={fontStyle} >Full-stack Web Developer</h3>
+          <h3 style={fontStyle}>Mechanical Engineer</h3>
+          <p style={fontStyle}>turned</p>
+          <h3 style={fontStyle}>Full-stack Web Developer</h3>
         </div>
         <Link to="/professional">
-          <h5  style={fontStyle} id="info" className="hide">
+          <h5 style={fontStyle} id="info" className="hide">
             Further Information
           </h5>
         </Link>
@@ -72,7 +74,7 @@ const LandingContainer = styled.div`
 
 const fontStyle = {
   color: landingInitialFont
-}
+};
 
 const LandingContent = styled.div`
   width: 100%
