@@ -9,7 +9,9 @@ export const transition = "0.3s ease-in-out";
 
 export const landingHeader = "#626d71";
 export const landingFooter = landingHeader;
-export const landingInitial = "#cdcdc0";
+export const landingHeadFootOpacity = 1;
+export const landingInitial1 = "#cdcdc0";
+export const landingInitial2 = "#D9AE61";
 export const landingInitialFont = "#301b28";
 
 export const landingCaptionBack1 = "#2c4a52";

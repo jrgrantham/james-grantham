@@ -5,7 +5,8 @@ import {
   headerHeight,
   borderRad,
   landingHeader,
-  landingInitial
+  landingInitial1,
+  landingHeadFootOpacity,
 } from "../views/styling";
 
 export default function ContactMeHeader(props) {
@@ -16,6 +17,7 @@ export default function ContactMeHeader(props) {
     justify-content: flex-end;
     align-items: center;
     background-color: ${landingHeader};
+    opacity: ${landingHeadFootOpacity};
     min-height: ${headerHeight}px;
     width: 100%;
     max-width: 1000px;
@@ -28,16 +30,16 @@ export default function ContactMeHeader(props) {
     cursor: "pointer",
     margin: "0 10px",
     minWidth: "90px",
-    border: `1px solid ${landingInitial}`,
+    border: `1px solid ${landingInitial1}`,
     borderRadius: borderRad,
-    color: landingInitial,
+    color: landingInitial1,
     padding: "0 10px"
   };
 
   return (
     <Header
       onClick={e => {
-        setHiddenContact(!hiddenContact);
+        setHiddenContact(true);
       }}
     >
       {hiddenContact ? (
