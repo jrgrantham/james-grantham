@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import menu from "../../src/images/menu.png";
+import menu from "../../../src/images/menu.png";
+import { StyledHamburger, MenuBurger } from "./buttonStyles";
 
 import {
   professionalBack,
@@ -10,18 +11,25 @@ import {
   transition,
   mediaBreak,
   borderRad,
-  professionalOuter
-} from "../views/styling";
+  professionalOuter,
+  professionalInnerPad
+} from "../../views/styling";
 
 // --------- naming of sections to be sorted within this section ---------
 
-import { career } from "../data/career";
-import { experience } from "../data/experience";
-import { web } from "../data/web";
-import { personal } from "../data/personal";
+import { career } from "../../data/career";
+import { experience } from "../../data/experience";
+import { web } from "../../data/web";
+import { personal } from "../../data/personal";
 
 export default function ContentButtons(props) {
+
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
+
+  const openDiv = {
+    height: `${categoryButtons.length * 4}rem`
+  };
+  
   const [hidden, setHidden] = useState(true);
 
   function setCategory(title) {
@@ -39,18 +47,16 @@ export default function ContentButtons(props) {
   }
 
   // --------- naming of sections to be sorted within this section ---------
+  function changeHidden() {
+    setHidden(!hidden);
+  }
 
   return (
-    <ButtonContainer>
-      <StyledMenuButton
-        onClick={() => {
-          setHidden(!hidden);
-        }}
-      >
+    <Container>
+      <h3>James Grantham</h3>
+      <StyledMenuButton onClick={() => changeHidden()}>
         <h4>{hidden ? props.selected : "select..."}</h4>
-        <ImageContainer>
-          <img src={hidden ? menu : null} alt="" />
-        </ImageContainer>
+        <MenuBurger hidden={hidden} />
       </StyledMenuButton>
 
       <VerticalMenu style={hidden ? null : openDiv}>
@@ -81,15 +87,23 @@ export default function ContentButtons(props) {
           </StyledButton>
         ))}
       </HorizontalMenu>
-    </ButtonContainer>
+    </Container>
   );
 }
 
-const ButtonContainer = styled.div``;
+const Container = styled.div`
+  padding: ${professionalInnerPad};
+  background-color: ${professionalBack};
+  margin-bottom: 10px;
+
+  h3 {
+    padding: 1rem 0;
+  }
+`;
 
 const HorizontalMenu = styled.div`
   display: none;
-  padding: 0.25rem 0.25rem 0.5rem 0.25rem;
+  // padding: 0.25rem 0.25rem 0.5rem 0.25rem;
   @media (min-width: ${mediaBreak}) {
     display: flex;
     justify-content: space-between;
@@ -100,7 +114,7 @@ const VerticalMenu = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   height: 0px;
   width: 100%;
@@ -111,15 +125,10 @@ const VerticalMenu = styled.div`
   }
 `;
 
-const openDiv = {
-  height: "207px"
-};
-
 const StyledMenuButton = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
   background-color: ${professionalBack};
   width: 100%;
   cursor: pointer;
@@ -128,7 +137,7 @@ const StyledMenuButton = styled.div`
     height: 30px;
   }
 
-  @media (pointer:fine) {
+  @media (pointer: fine) {
     &:hover {
       background-color: ${professionalButton};
       transition: background-color ${transition};
@@ -140,21 +149,7 @@ const StyledMenuButton = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 30px;
-  width: 30px;
-
-  img {
-    opacity: 0.15;
-    height: 25px;
-  }
-`;
-
 const StyledButton = styled.div`
-  margin: 0.25rem 0.25rem 0 0.25rem;
   padding: 10px 0;
   background-color: ${professionalButton};
   border-radius: ${borderRad};
@@ -162,11 +157,11 @@ const StyledButton = styled.div`
   width: 85%;
 
   @media (min-width: ${mediaBreak}) {
-    width: 25%;
+    width: 24%;
     background-color: ${professionalButton};
   }
-  
-  @media (pointer:fine) {
+
+  @media (pointer: fine) {
     &:hover {
       background-color: ${professionalButtonHov};
       transition: background-color ${transition};
@@ -175,6 +170,6 @@ const StyledButton = styled.div`
 `;
 
 const selectedStyle = {
-  backgroundColor: professionalOuter,
+  backgroundColor: '#E3D8C7',
   border: `2px solid ${professionalButton}`
 };

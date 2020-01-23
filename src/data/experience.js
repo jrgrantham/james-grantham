@@ -35,9 +35,9 @@ export const experience = [
     display: false
   },
   {
-    title: "Interpersonal Skills",
+    title: "Collaboration",
     introduction:
-      "Work collaboratively, communicate effectively and have positive relationships with customers and co-workers.",
+      "Communicate effectively and have positive relationships with clients and co-workers.",
     contents: [
       "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner"
     ],

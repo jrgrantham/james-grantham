@@ -4,7 +4,7 @@ import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/Spinner";
-import Footer from "../components/Footer";
+import Footer from "../components/professional/Footer";
 import { professionalBack, borderRad } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;

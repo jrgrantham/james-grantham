@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-import arrowUp from "../../src/images/arrowUp.png";
-import arrowDown from "../../src/images/arrowDown.png";
-
+import { MenuArrow } from "./buttonStyles";
 import {
   professionalBack,
   professionalButton,
   transition,
   borderRad,
-} from "../views/styling";
+  professionalWidth,
+  professionalInnerPad,
+  professionalButtonHov
+} from "../../views/styling";
 
 export default function MainContent(props) {
+
   function isExpanded(receivedArticle) {
     props.setContent(
       props.content.map(article => {
@@ -26,7 +28,7 @@ export default function MainContent(props) {
   }
 
   return (
-    <Container>
+    <>
       {props.content.map((article, index) => (
         <Article
           style={article.display ? selectedStyle : null}
@@ -37,9 +39,7 @@ export default function MainContent(props) {
         >
           <StyledTitle>
             <h5>{article.title}</h5>
-            <ImageContainer>
-              <img src={ article.display ? arrowUp : arrowDown } alt="" />
-            </ImageContainer>
+            <MenuArrow hidden={!article.display} />
           </StyledTitle>
           <p>{article.introduction}</p>
           <StyledDetails style={article.display ? closedDetails : null}>
@@ -49,50 +49,40 @@ export default function MainContent(props) {
           </StyledDetails>
         </Article>
       ))}
-    </Container>
+    </>
   );
 }
 
-const Container = styled.div`
-`;
-
 const Article = styled.div`
-  padding: 0.5rem 1rem
-  background-color: ${professionalBack}
-  cursor: pointer
+  width: 100%;
+  padding: ${professionalInnerPad};
+  background-color: ${professionalBack};
+  cursor: pointer;
   h5 {
-    text-align: left
-    padding: 0.5rem 0 0.25rem 0
+    text-align: left;
+    // padding: 0.5rem 0 0.25rem 0;
+  }
+  p {
+    padding: 0.7rem 0;
   }
 
   @media (pointer:fine) {
     &:hover {
-      background-color: ${professionalButton};
-      transition: background-color ${transition}
+      background-color: ${professionalButtonHov};
+      transition: background-color ${transition};
     }
   }
 `;
 
 const StyledTitle = styled.div`
-  display: flex
-  justify-content: space-between
-`;
-
-const ImageContainer = styled.div`
-  display: flex
-  justify-content: center
-  align-items: center
-  min-height: 100%
-  img {
-    opacity: 0.08
-    height: 25px
-  }
+  display: flex;
+  justify-content: space-between;
 `;
 
 const StyledDetails = styled.div`
-  max-height: 0px
-  overflow: hidden
-  transition: max-height ${transition}
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height ${transition};
 `;
 
 const closedDetails = {
@@ -100,6 +90,6 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  'borderRadius': borderRad,
+  borderRadius: borderRad,
   backgroundColor: professionalButton
 };

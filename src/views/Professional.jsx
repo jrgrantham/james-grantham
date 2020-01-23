@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { width, professionalBack, borderRad, professionalOuter } from "./styling";
+import {
+  professionalWidth,
+  professionalBack,
+  borderRad,
+  professionalOuter
+} from "./styling";
 import { experience } from "../data/experience";
 
-import NameHeader from "../components/NameHeader";
-import Menu from "../components/Menu";
-import MainContent from "../components/MainContent";
-import Footer from "../components/Footer";
+import NameHeader from "../components/professional/NameHeader";
+import Menu from "../components/professional/Menu";
+import MainContent from "../components/professional/MainContent";
+import Footer from "../components/professional/Footer";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
@@ -19,34 +24,39 @@ export default function Professional() {
 
   return (
     <StyledProfessional>
-        <NameHeader hidden={hidden} setHidden={setHidden} />
-      <StyledContent>
-        <Menu
-          setContent={setContent}
-          selected={selected}
-          setSelected={setSelected}
-        />
-        <MainContent content={content} setContent={setContent} />
-      </StyledContent>
+      {/* <PaddingTop /> */}
+      {/* <NameHeader hidden={hidden} setHidden={setHidden} /> */}
+      <Menu
+        setContent={setContent}
+        selected={selected}
+        setSelected={setSelected}
+      />
+      <MainContent content={content} setContent={setContent} />
+      {/* <PaddingBottom /> */}
       <Footer />
     </StyledProfessional>
   );
 }
 
 const StyledProfessional = styled.div`
-  width: ${width}
-  background-color: ${professionalOuter}
-  padding: 1.5rem 1rem
+  width: 100%
+  padding: 10px
+  background-color: ${professionalBack}
 
-  @media (min-height: 850px) {
-    margin-top:100px
-  }
+  // @media (min-height: 850px) {
+  //   padding-top: 50px
+  //   margin: 50px 0
+  // }
 `;
 
-const StyledContent = styled.div`
-  background-color: ${professionalBack}
-  border: 4px solid ${professionalBack}
-  border-radius: ${borderRad}
-  margin-top: 12px
-  overflow: hidden
+const PaddingBottom = styled.div`
+  background-color: ${professionalBack};
+  height: 10px;
+  border-radius: 0 0 ${borderRad} ${borderRad};
+`
+
+const PaddingTop = styled.div`
+  background-color: ${professionalBack};
+  height: 10px;
+  border-radius: ${borderRad} ${borderRad} 0 0;
 `

@@ -8,7 +8,7 @@ import { validationSchema } from "../helpers/validationSchema";
 import { axiosWithBase } from "../helpers/AxiosCustom";
 
 import { borderRad, transition } from "../views/styling";
-import Footer from "../components/Footer";
+import Footer from "../components/professional/Footer";
 
 const initalSignupForm = {
   name: "",

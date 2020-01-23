@@ -6,6 +6,7 @@ import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from './views/ContactForm'
+import { professionalOuter } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -61,11 +62,16 @@ export default function App() {
 }
 
 const StyledApp = styled.div`
-  width: 100%
-  max-width: 1000px
-  min-height: 100%
-  margin: auto
-  display: flex
-  justify-content: center
+  background-color: ${professionalOuter};
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
   text-align: center;
+
+  a {
+    color: black;
+  }
 `;

@@ -142,25 +142,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
-  font-size: 2.5rem
+  font-size: 2.8rem
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 h3 {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 /* need to be the same (phone numbers) */
 h5, h6 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 p {
   text-align: left;
-  font-size: 1rem;
-  padding: 0.25rem 0
+  font-size: 1.2rem;
 }
 a {
   text-decoration: none
