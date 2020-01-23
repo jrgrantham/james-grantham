@@ -120,7 +120,6 @@ const LandingContent = styled.div`
   }
 
   h5 {
-    margin-bottom: 20px;
     padding: 1rem 0;
     min-width: 15rem;
     border: 1px solid ${landingInitialFont};

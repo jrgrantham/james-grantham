@@ -8,6 +8,7 @@ import FooterBanner from "../components/landing/FooterBanner";
 import LandingInitialView from "../components/landing/LandingInitialView";
 import LandingCaptions from "../components/landing/LandingCaptions";
 import Boys from "../components/landing/Boys";
+import SiteLinks from "../components/professional/SiteLinks";
 
 export default function Landing() {
   const [hiddenContact, setHiddenContact] = useState(true);
@@ -25,6 +26,7 @@ export default function Landing() {
       >
         <LandingInitialView setHiddenContact={setHiddenContact} />
         <LandingCaptions />
+        <SiteLinks style={{backgroundColor: '#C7CCDB'}}/>
         <Boys />
       </FullPage>
       <FooterBanner />

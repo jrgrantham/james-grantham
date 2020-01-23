@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import menu from "../../../src/images/menu.png";
-import { StyledHamburger, MenuBurger } from "./buttonStyles";
+import { MenuBurger } from "./buttonStyles";
 
 import {
   professionalBack,
@@ -11,7 +10,6 @@ import {
   transition,
   mediaBreak,
   borderRad,
-  professionalOuter,
   professionalInnerPad
 } from "../../views/styling";
 
@@ -26,8 +24,23 @@ export default function ContentButtons(props) {
 
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
 
-  const openDiv = {
+  const openDivHeight = {
     height: `${categoryButtons.length * 4}rem`
+  };
+
+  const horizontalWidth = {
+    width: `${100 / categoryButtons.length - 1}%`
+  }
+
+  const selectedHorizontal = {
+    width: `${100 / categoryButtons.length - 1}%`,
+    backgroundColor: '#E3D8C7',
+    border: `2px solid ${professionalButton}`
+  }
+  
+  const selectedVertical = {
+    backgroundColor: '#E3D8C7',
+    border: `2px solid ${professionalButton}`
   };
   
   const [hidden, setHidden] = useState(true);
@@ -53,16 +66,16 @@ export default function ContentButtons(props) {
 
   return (
     <Container>
-      <h3>James Grantham</h3>
+      <h2>James Grantham</h2>
       <StyledMenuButton onClick={() => changeHidden()}>
         <h4>{hidden ? props.selected : "select..."}</h4>
         <MenuBurger hidden={hidden} />
       </StyledMenuButton>
 
-      <VerticalMenu style={hidden ? null : openDiv}>
+      <VerticalMenu style={hidden ? null : openDivHeight}>
         {categoryButtons.map((title, index) => (
           <StyledButton
-            style={props.selected === title ? selectedStyle : null}
+            style={props.selected === title ? selectedVertical : null}
             key={index}
             onClick={() => {
               setCategory(title, index);
@@ -77,7 +90,7 @@ export default function ContentButtons(props) {
       <HorizontalMenu>
         {categoryButtons.map((title, index) => (
           <StyledButton
-            style={props.selected === title ? selectedStyle : null}
+            style={props.selected === title ? selectedHorizontal : horizontalWidth}
             key={index}
             onClick={() => {
               setCategory(title, index);
@@ -92,18 +105,19 @@ export default function ContentButtons(props) {
 }
 
 const Container = styled.div`
+  width: 100%;
   padding: ${professionalInnerPad};
   background-color: ${professionalBack};
   margin-bottom: 10px;
 
-  h3 {
-    padding: 1rem 0;
+  h2 {
+    font-weight: bold;
+    padding-bottom: 1.5rem;
   }
 `;
 
 const HorizontalMenu = styled.div`
   display: none;
-  // padding: 0.25rem 0.25rem 0.5rem 0.25rem;
   @media (min-width: ${mediaBreak}) {
     display: flex;
     justify-content: space-between;
@@ -168,8 +182,3 @@ const StyledButton = styled.div`
     }
   }
 `;
-
-const selectedStyle = {
-  backgroundColor: '#E3D8C7',
-  border: `2px solid ${professionalButton}`
-};
