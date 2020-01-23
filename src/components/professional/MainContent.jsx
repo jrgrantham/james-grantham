@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import arrowUp from "../../../src/images/arrowUp.png";
 import arrowDown from "../../../src/images/arrowDown.png";
+import { StyledArrow } from './buttonStyles'
 
 import {
   professionalBack,
@@ -37,9 +38,9 @@ export default function MainContent(props) {
         >
           <StyledTitle>
             <h5>{article.title}</h5>
-            <ImageContainer>
+            <StyledArrow>
               <img src={ article.display ? arrowUp : arrowDown } alt="" />
-            </ImageContainer>
+            </StyledArrow>
           </StyledTitle>
           <p>{article.introduction}</p>
           <StyledDetails style={article.display ? closedDetails : null}>
@@ -76,17 +77,6 @@ const Article = styled.div`
 const StyledTitle = styled.div`
   display: flex
   justify-content: space-between
-`;
-
-const ImageContainer = styled.div`
-  display: flex
-  justify-content: center
-  align-items: center
-  min-height: 100%
-  img {
-    opacity: 0.08
-    height: 25px
-  }
 `;
 
 const StyledDetails = styled.div`

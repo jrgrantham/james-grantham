@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import arrowUp from "../../../src/images/arrowUp.png";
 import arrowDown from "../../../src/images/arrowDown.png";
+import { StyledArrow } from "./buttonStyles";
 
 import {
   professionalBack,
@@ -24,13 +25,13 @@ export default function Header(props) {
           setHidden(!hidden);
         }}
       >
-        <ImageContainer>
+        <StyledArrow>
           <img src={hidden ? arrowDown : arrowUp} alt="" />
-        </ImageContainer>
+        </StyledArrow>
         <h4>James Grantham</h4>
-        <ImageContainer>
+        <StyledArrow>
           <img src={hidden ? arrowDown : arrowUp} alt="" />
-        </ImageContainer>
+        </StyledArrow>
       </StyledHeader>
       <StyledHiddenDiv style={!hidden ? null : openDiv}>
         <a style={styledButton} href="https://github.com/jrgrantham">
@@ -56,7 +57,7 @@ const Container = styled.div`
 
 const StyledHeader = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0.5rem 0;
   width: 300px;
   background-color: ${professionalBack};
@@ -68,19 +69,6 @@ const StyledHeader = styled.div`
       background-color: ${professionalButtonHov};
       transition: background-color ${transition};
     }
-  }
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
-  width: 50px;
-
-  img {
-    opacity: 0.2;
-    height: 25px;
   }
 `;
 

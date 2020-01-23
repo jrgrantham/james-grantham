@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import menu from "../../../src/images/menu.png";
+import { StyledHamburger } from './buttonStyles'
+
 
 import {
   professionalBack,
@@ -48,9 +50,9 @@ export default function ContentButtons(props) {
         }}
       >
         <h4>{hidden ? props.selected : "select..."}</h4>
-        <ImageContainer>
+        <StyledHamburger>
           <img src={hidden ? menu : null} alt="" />
-        </ImageContainer>
+        </StyledHamburger>
       </StyledMenuButton>
 
       <VerticalMenu style={hidden ? null : openDiv}>
@@ -137,19 +139,6 @@ const StyledMenuButton = styled.div`
 
   @media (min-width: ${mediaBreak}) {
     display: none;
-  }
-`;
-
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 30px;
-  width: 30px;
-
-  img {
-    opacity: 0.15;
-    height: 25px;
   }
 `;
 
