@@ -12,16 +12,16 @@ export default function ContactMeHeader(props) {
   const { hiddenContact, setHiddenContact } = props;
 
   const Header = styled.div`
-    display: flex
-    justify-content: flex-end 
-    align-items: center
-    background-color: ${landingHeader}
-    min-height: ${headerHeight}px
-    width: 100%
-    max-width:  1000px
-    position: fixed
-    top: 0
-    padding: 0 10px
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: ${landingHeader};
+    min-height: ${headerHeight}px;
+    width: 100%;
+    max-width: 1000px;
+    position: fixed;
+    top: 0;
+    padding: 0 10px;
   `;
 
   const button = {
