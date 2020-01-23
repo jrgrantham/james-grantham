@@ -1,19 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 import arrowUp from "../../../src/images/arrowUp.png";
 import arrowDown from "../../../src/images/arrowDown.png";
 import { StyledArrow } from "./buttonStyles";
 
-import {
-  professionalBack,
-  professionalButtonHov,
-  professionalLinks,
-  transition,
-  mediaBreak,
-  borderRad
-} from "../../views/styling";
+import { Container, StyledHeader, StyledHiddenDiv, openDiv, styledButton } from "./nameHeaderStyle";
 
 export default function Header(props) {
   const { hidden, setHidden } = props;
@@ -34,13 +26,22 @@ export default function Header(props) {
         </StyledArrow>
       </StyledHeader>
       <StyledHiddenDiv style={!hidden ? null : openDiv}>
-        <a style={styledButton} href="https://github.com/jrgrantham">
-          GitHub
+        <a
+          href="https://github.com/jrgrantham"
+          style={styledButton}
+        >
+          <div className="hover">
+            GitHub
+          </div>
         </a>
-        <Link style={styledButton} to="contact">
+        <Link to="contact" style={styledButton} className="hover">
           <h5>contact me</h5>
         </Link>
-        <a style={styledButton} href="https://www.linkedin.com/in/j-grantham/">
+        <a
+          href="https://www.linkedin.com/in/j-grantham/"
+          style={styledButton}
+          className="hover"
+        >
           LinkedIn
         </a>
       </StyledHiddenDiv>
@@ -48,76 +49,4 @@ export default function Header(props) {
   );
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: ${borderRad};
-`;
 
-const StyledHeader = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0.5rem 0;
-  width: 300px;
-  background-color: ${professionalBack};
-  border-radius: ${borderRad};
-  cursor: pointer;
-
-  @media (pointer: fine) {
-    &:hover {
-      background-color: ${professionalButtonHov};
-      transition: background-color ${transition};
-    }
-  }
-`;
-
-const StyledHiddenDiv = styled.div`
-  display: flex;
-  flex-direction: columm;
-  justify-content: space-between;
-  align-items: flex-end;
-  height: 0px;
-  width: 100%;
-  overflow: hidden;
-  transition: height ${transition};
-
-  @media (min-width: ${mediaBreak}) {
-    width: 100%;
-  }
-`;
-
-const openDiv = {
-  height: "55px"
-};
-
-const styledButton = {
-  minWidth: "30%",
-  color: "white",
-  fontWeight: "bold",
-  fontSize: "1.2rem",
-  display: "block",
-  padding: "10px 10px",
-  backgroundColor: professionalLinks,
-  borderRadius: borderRad
-
-  // @media (pointer:fine) {
-  //   &:hover {
-  //     background-color: ${professionalButtonHov},
-  //     transition: background-color ${transition},
-  //   }
-  // }
-};
-
-const StyledLinkButton = styled.div`
-  min-width: 30%;
-
-  a {
-    @media (pointer: fine) {
-      &:hover {
-        background-color: ${professionalButtonHov};
-        transition: background-color ${transition};
-      }
-    }
-  }
-`;
