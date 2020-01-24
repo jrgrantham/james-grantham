@@ -38,8 +38,16 @@ export default function Projects() {
 const StyledProjects = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
+  align-items: center;
   width: 100%;
+  padding: 5px;
+  background-color: #FFBE0B;
+
+  h1 {
+    font-weight: bold;
+    padding: 20px 0;
+  }
 
   @media (min-width: ${mediaBreak}) {
     .imgLeft {
@@ -54,13 +62,19 @@ const StyledProjects = styled.div`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  // height: 500px;
-  width: 100%;
-  margin: 5px 0;
-  border: 1px solid red;
+  min-height: 300px;
+  width: 95%;
+  padding: 10px;
+  border: 3px solid black;
+  margin-bottom: 20px;
+  background-color: #C6D4FF 
 
   .image {
-    width: 50%;
+    width: 100%;
+
+    @media (min-width: ${mediaBreak}) {
+      width: 50%
+    }
 
     img {
       width: 100%;
@@ -69,10 +83,14 @@ const Card = styled.div`
   }
 
   .info {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (min-width: ${mediaBreak}) {
+      width: 50%
+    }
 
     .buttons {
       display: flex;
@@ -82,9 +100,9 @@ const Card = styled.div`
     a {
       display: inline-block;
       min-width: 150px;
-      margin-bottom: 30px;
+      margin: 30px 0;
       padding: 10px;
-      border: 1px solid red;
+      border: 2px solid black;
     }
   }
 `;

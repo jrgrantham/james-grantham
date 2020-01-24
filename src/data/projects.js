@@ -1,10 +1,11 @@
-import RickandMorty from '../images/RickandMorty.jpg'
+import randM from '../images/randM.jpeg'
+import starwars from '../images/starwars.jpg'
 
 export const projects = [
   {
     title: "Ricky and Morty",
     description: "Sprint challenge",
-    image: RickandMorty,
+    image: randM,
     link: 'http://google.co.uk',
     repo: 'github',
     uses: 'react, axios'
@@ -12,15 +13,7 @@ export const projects = [
   {
     title: "Star Wars",
     description: "Why train to be a Full Stack Web-Developer?",
-    image: '',
-    link: 'url',
-    repo: 'github',
-    uses: 'react, axios'
-  },
-  {
-    title: "Lambda School",
-    description: "Why train to be a Full Stack Web-Developer?",
-    image: '',
+    image: starwars,
     link: 'url',
     repo: 'github',
     uses: 'react, axios'
