@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Route } from "react-router-dom";
 import styled from "styled-components";
 
 import { professionalBack } from "./styling";
@@ -7,9 +8,6 @@ import { experience } from "../data/experience";
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Footer from "../components/professional/Footer";
-
-import github from "../images/github.png";
-import linkedin from "../images/linkedin.png";
 import SiteLinks from "../components/professional/SiteLinks";
 
 export default function Professional() {
@@ -18,12 +16,27 @@ export default function Professional() {
 
   return (
     <StyledProfessional>
-      <Menu
-        setContent={setContent}
-        selected={selected}
-        setSelected={setSelected}
+      <Route
+        path="/professional"
+        render={props => (
+          <Menu
+            {...props}
+            setContent={setContent}
+            selected={selected}
+            setSelected={setSelected}
+          />
+        )}
       />
-      <MainContent content={content} setContent={setContent} />
+      <Route
+        exact path="/professional"
+        render={props => (
+          <MainContent
+            {...props}
+            content={content} 
+            setContent={setContent}
+          />
+        )}
+      />
       <SiteLinks />
       <Footer />
     </StyledProfessional>

@@ -7,7 +7,6 @@ import {
   professionalButton,
   transition,
   borderRad,
-  professionalWidth,
   professionalInnerPad,
   professionalButtonHov
 } from "../../views/styling";
