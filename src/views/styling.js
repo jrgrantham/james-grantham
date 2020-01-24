@@ -1,5 +1,6 @@
 export const professionalWidth = "800px";
 export const mediaBreak = "650px";
+export const projectMediaBreak = "750px";
 export const headerHeight = 50;
 export const footerHeight = 30;
 export const borderRad = "5px";

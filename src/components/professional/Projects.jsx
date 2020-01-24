@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { projects } from "../../data/projects";
-import { mediaBreak } from "../../views/styling";
+import { projectMediaBreak } from "../../views/styling";
 
 export default function Projects() {
   return (
@@ -49,7 +49,7 @@ const StyledProjects = styled.div`
     padding: 20px 0;
   }
 
-  @media (min-width: ${mediaBreak}) {
+  @media (min-width: ${projectMediaBreak}) {
     .imgLeft {
       flex-direction: row;
     }
@@ -66,7 +66,7 @@ const Card = styled.div`
   width: 95%;
   border: 6px solid black;
   margin-bottom: 20px;
-  background-color: #C6D4FF 
+  background-color: #A3E7FC 
 
   .image {
     display: flex;
@@ -74,7 +74,7 @@ const Card = styled.div`
     align-items: center;
     overflow: hidden
 
-    @media (min-width: ${mediaBreak}) {
+    @media (min-width: ${projectMediaBreak}) {
       width: 50%
     }
 
@@ -90,20 +90,26 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 30px 0;
 
     h4, h5 {
       text-align: left;
-      padding: 0 30px;
+      // padding: 0 30px;
     }
 
-    @media (min-width: ${mediaBreak}) {
+    @media (min-width: ${projectMediaBreak}) {
       width: 50%
+    }
+
+    .details {
+      padding: 30px;
+      // border: 1px solid red
     }
 
     .buttons {
       display: flex;
       justify-content: space-evenly;
+      padding: 30px 0;
+      // border: 1px solid red
     }
   
     a {
