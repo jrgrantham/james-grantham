@@ -1,4 +1,4 @@
-export const career = [
+export const timeLine = [
   {
     title: "Lambda School",
     introduction: "Why train to be a Full Stack Web-Developer?",

@@ -1,4 +1,4 @@
-export const personal = [
+export const aboutMe = [
   {
     title: "Summary",
     introduction: "What's important to me..",

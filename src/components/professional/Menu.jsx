@@ -13,16 +13,34 @@ import {
   professionalInnerPad
 } from "../../views/styling";
 
-// --------- naming of sections to be sorted within this section ---------
+// --------- naming of sections to be sorted here ---------
 
-import { career } from "../../data/career";
+import { timeLine } from "../../data/timeLine";
 import { experience } from "../../data/experience";
 import { web } from "../../data/web";
-import { personal } from "../../data/personal";
+import { aboutMe } from "../../data/aboutMe";
 
 export default function ContentButtons(props) {
 
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
+  
+  const [hidden, setHidden] = useState(true);
+
+  function setCategory(title) {
+    props.setSelected(title);
+
+    if (title === "Time line") {
+      props.setContent(timeLine);
+    } else if (title === "Experience") {
+      props.setContent(experience);
+    } else if (title === "Projects") {
+      props.setContent(web);
+    } else if (title === "About me") {
+      props.setContent(aboutMe);
+    }
+  }
+
+  // --------- naming of sections to be sorted here ---------
 
   const openDivHeight = {
     height: `${categoryButtons.length * 4}rem`
@@ -42,24 +60,7 @@ export default function ContentButtons(props) {
     backgroundColor: '#E3D8C7',
     border: `2px solid ${professionalButton}`
   };
-  
-  const [hidden, setHidden] = useState(true);
 
-  function setCategory(title) {
-    props.setSelected(title);
-
-    if (title === "Time line") {
-      props.setContent(career);
-    } else if (title === "Experience") {
-      props.setContent(experience);
-    } else if (title === "Projects") {
-      props.setContent(web);
-    } else if (title === "About me") {
-      props.setContent(personal);
-    }
-  }
-
-  // --------- naming of sections to be sorted within this section ---------
   function changeHidden() {
     setHidden(!hidden);
   }

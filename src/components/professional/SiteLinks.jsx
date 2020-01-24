@@ -6,7 +6,7 @@ import linkedin from "../../images/linkedin.png";
 
 export default function SiteLinks(props) {
   const Links = styled.div`
-    ${props.style};
+    ${props.backgroundColor};
     display: flex;
     justify-content: center;
     padding: 50px;
