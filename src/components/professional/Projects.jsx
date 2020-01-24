@@ -65,14 +65,18 @@ const Card = styled.div`
   min-height: 300px;
   width: 95%;
   border: 6px solid black;
-  margin-bottom: 20px;
-  background-color: #A3E7FC 
+  margin-bottom: 30px;
+  background-color: #A3E7FC;
+
+  @media (max-width: ${projectMediaBreak}) {
+    max-width: 500px;
+  }
 
   .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden
+    overflow: hidden;
 
     @media (min-width: ${projectMediaBreak}) {
       width: 50%
