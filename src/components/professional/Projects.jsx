@@ -21,7 +21,7 @@ export default function Projects() {
               <div className="details">
                 <h2>{project.title}</h2>
                 <h4>{project.uses}</h4>
-                <h4>{project.description}</h4>
+                <h5>{project.description}</h5>
               </div>
               <div className="buttons">
                 <a href={project.link}>{"url"}</a>
@@ -64,21 +64,24 @@ const Card = styled.div`
   flex-direction: column;
   min-height: 300px;
   width: 95%;
-  padding: 10px;
-  border: 3px solid black;
+  border: 6px solid black;
   margin-bottom: 20px;
   background-color: #C6D4FF 
 
   .image {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
 
     @media (min-width: ${mediaBreak}) {
       width: 50%
     }
 
     img {
+      // flex-shrink: 0;
       width: 100%;
-      height: auto;
+      height: auto
     }
   }
 
@@ -87,6 +90,12 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 30px 0;
+
+    h4, h5 {
+      text-align: left;
+      padding: 0 30px;
+    }
 
     @media (min-width: ${mediaBreak}) {
       width: 50%
@@ -99,8 +108,7 @@ const Card = styled.div`
   
     a {
       display: inline-block;
-      min-width: 150px;
-      margin: 30px 0;
+      min-width: 130px;
       padding: 10px;
       border: 2px solid black;
     }
