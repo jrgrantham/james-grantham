@@ -24,7 +24,7 @@ export default function Projects() {
                 <h5>{project.description}</h5>
               </div>
               <div className="buttons">
-                <a href={project.link}>{"url"}</a>
+                {(project.link === '') ? null : <a href={project.link}>{"url"}</a>}
                 <a href={project.repo}>{"github"}</a>
               </div>
             </div>
@@ -47,6 +47,10 @@ const StyledProjects = styled.div`
   h1 {
     font-weight: bold;
     padding: 20px 0;
+  }
+
+  h4 {
+    padding: 7px 0;
   }
 
   @media (min-width: ${projectMediaBreak}) {
@@ -77,6 +81,7 @@ const Card = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background: black;
 
     @media (min-width: ${projectMediaBreak}) {
       width: 50%

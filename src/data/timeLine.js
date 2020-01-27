@@ -1,13 +1,9 @@
 export const timeLine = [
   {
     title: "Lambda School",
-    introduction: "Why train to be a Full Stack Web-Developer?",
+    introduction: "Joined Lambda School to learn how to be a full stack web developer",
     contents: [
-      "The Oil industry is an interesting and often exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in extreme and remote environments.",
-      "One of my responsibilities was to manage and oversee a project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time.",
-      "To ensure the project delivered as expected, I became involved in the coding and setting-up of the site. This prevented rewriting code and sped the process up significantly, delivering a well presented product that contained all the data our client was hoping for.",
-      "The logical and technical challenges faced during the development were at times difficult, but the reward of completing the work was particularly satisfying.",
-      "It was time adopt new challenges and turn my hand to web-development."
+      ""
     ],
     display: false
   },
@@ -15,7 +11,7 @@ export const timeLine = [
     title: "Oceaneering",
     introduction: "Managed the day to day operations of the integrity contract for the Kittiwake Oil Platform.",
     contents: [
-      "Senior Inspection Engineer, 2011 - 2019:",
+      "Inspection Engineer, 2011 - 2019:",
       "Responsible for managing workloads, prioritising and scheduling inspection activities and completing the inspection scope on time and within budget. Anomaly reviews, repair recommendations, inspection summaries, team briefs, and budget tracking and forecasting.",
       "Restructured the project, developing new systems and processes to better manage the large amount of data generated. This increased project efficiency turning a once struggling project, performing poorly for Oceaneering, into the benchmark against which other projects were compared.",
       "The new approach helped to manage and track our workload and budget simply and effectively, providing thorough visibility and therefore the opportunity to focus on the areas that were failing.",

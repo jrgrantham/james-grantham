@@ -47,9 +47,9 @@ export default function LandingInitialView(props) {
           <img src={jamesPhoto} alt="" />
         </div>
         <div id="jobs" className="hide">
-          <h3 style={fontStyle}>Mechanical Engineer</h3>
-          <p style={fontStyle}>turned</p>
           <h3 style={fontStyle}>Web Developer</h3>
+          <p style={fontStyle}>-</p>
+          <h3 style={fontStyle}>Mechanical Engineer</h3>
         </div>
         <Link to="/professional">
           <h5 style={fontStyle} id="info" className="hide">
