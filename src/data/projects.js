@@ -1,21 +1,24 @@
 import randM from '../images/randM.jpeg'
-import starwars from '../images/starwars.jpg'
+import r2d2 from '../images/r2d2.png'
 
 export const projects = [
   {
-    title: "Ricky and Morty",
-    description: "Lambda school sprint challenge",
+    title: "Rick and Morty",
+    description: "Lambda school sprint challenge for week xxx",
+    comments: '',
     image: randM,
-    link: 'http://google.co.uk',
-    repo: 'github',
+    link: '',
+    repo: 'https://github.com/jrgrantham/RickAndMorty',
     uses: 'react, axios'
   },
   {
     title: "Star Wars",
     description: "Lambda school sprint challenge",
-    image: starwars,
-    link: 'url',
+    comments: '',
+    image: r2d2,
+    link: '',
     repo: 'github',
     uses: 'react, axios'
   },
+
 ];

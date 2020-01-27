@@ -2,7 +2,7 @@ export const experience = [
   {
     title: "Summary",
     introduction:
-      "Qualified Engineer with nearly twenty-years industry experience in both onshore and offshore topsides Oil and Gas integrity services.",
+      "Qualified Engineer with nearly twenty-years integrity services experience in both onshore and offshore topsides Oil and Gas.",
     contents: [
       "Experienced Inspection Engineer, started working in the Oil and Gas Industry in 2001. Worked at Lloyd's Register for 11 years prior to joining Oceaneering, gaining experience offshore, visiting all BP SNS assests and satellite platforms (18 at the time).",
 

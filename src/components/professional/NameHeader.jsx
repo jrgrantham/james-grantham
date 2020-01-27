@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import { MenuArrow } from "./buttonStyles";
 import {
-  Container,
   StyledHeader,
   StyledHiddenDiv,
   openDiv,
