@@ -26,9 +26,9 @@ export default function Landing() {
         }}
       >
         <LandingInitialView setHiddenContact={setHiddenContact} />
-        <LandingCaptions />
         <Projects />
         <SiteLinks backgroundColor={{backgroundColor: '#C7CCDB'}}/>
+        <LandingCaptions />
         <Boys />
       </FullPage>
       <FooterBanner />
@@ -39,7 +39,7 @@ export default function Landing() {
 const FullPage = styled.div`
   margin-top: ${headerHeight}px;
   margin-bottom: ${footerHeight}px;
-  width: 100%;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;

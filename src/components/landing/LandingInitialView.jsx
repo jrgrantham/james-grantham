@@ -66,7 +66,7 @@ let vh = window.innerHeight < 630 ? 630 : window.innerHeight;
 const LandingContainer = styled.div`
   height: ${vh - headerHeight - footerHeight}px;
   // background-color: ${landingInitial1};
-  background-image: linear-gradient(${landingInitial1}, ${landingInitial2});
+  // background-image: linear-gradient(${landingInitial1}, ${landingInitial2});
   width: 100%;
   display: flex;
   flex-direction: column;

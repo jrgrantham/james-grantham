@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
+import mail from "../../images/mail-512.png";
 
 export default function SiteLinks(props) {
   const Links = styled.div`
@@ -22,11 +23,15 @@ export default function SiteLinks(props) {
       width: 40px;
     }
   `;
+
   return (
     <Links>
       <a href="https://github.com/jrgrantham" className="image">
         <img src={github} alt="" />
       </a>
+      <div className="image">
+      <img src={mail} alt="" />
+      </div>
       <a href="https://www.linkedin.com/in/j-grantham/" className="image">
         <img src={linkedin} alt="" />
       </a>

@@ -7,6 +7,8 @@ import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from './views/ContactForm'
 import { professionalOuter } from "./views/styling";
+import back from './images/background.png'
+
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -62,9 +64,10 @@ export default function App() {
 }
 
 const StyledApp = styled.div`
-  background-color: ${professionalOuter};
+  background-image: url('${back}');
+  background-repeat: repeat;
   width: 100%;
-  max-width: 1000px;
+  // max-width: 1000px;
   min-height: 100%;
   margin: auto;
   display: flex;
