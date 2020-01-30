@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mail-512.png";
+import phone from "../../images/phone.png";
 
 export default function SiteLinks(props) {
   const Links = styled.div`
@@ -25,13 +27,16 @@ export default function SiteLinks(props) {
   `;
 
   return (
-    <Links>
+    <Links id="contact">
       <a href="https://github.com/jrgrantham" className="image">
         <img src={github} alt="" />
       </a>
       <div className="image">
-      <img src={mail} alt="" />
+        <img src={mail} alt="" />
       </div>
+      <Link to="/phonenumbers" className="image">
+        <img src={phone} alt="" />
+      </Link>
       <a href="https://www.linkedin.com/in/j-grantham/" className="image">
         <img src={linkedin} alt="" />
       </a>

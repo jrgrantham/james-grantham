@@ -6,7 +6,6 @@ import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from './views/ContactForm'
-import { professionalOuter } from "./views/styling";
 import back from './images/background.png'
 
 

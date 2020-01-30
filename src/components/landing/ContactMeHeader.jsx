@@ -10,8 +10,6 @@ import {
 } from "../../views/styling";
 
 export default function ContactMeHeader(props) {
-  const { hiddenContact, setHiddenContact } = props;
-
   let project;
   let captions;
   let contact;
@@ -26,10 +24,14 @@ export default function ContactMeHeader(props) {
       document.getElementById("captions").getBoundingClientRect().top +
       window.pageYOffset -
       headerHeight;
+    contact =
+      document.getElementById("contact").getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight;
   };
 
   function scroll(selectedDiv) {
-    window.scrollTo({ top: selectedDiv, behavior: "smooth" });
+    window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
 
   const Header = styled.div`
@@ -47,47 +49,34 @@ export default function ContactMeHeader(props) {
   `;
 
   const button = {
+    textAlign: 'center',
     cursor: "pointer",
-    margin: "0 10px",
-    minWidth: "90px",
-    border: `1px solid ${landingInitial1}`,
-    borderRadius: borderRad,
+    // margin: "0 10px",
+    // minWidth: "90px",
+    // border: `1px solid ${landingInitial1}`,
+    // borderRadius: borderRad,
     color: landingInitial1,
-    padding: "0 10px"
+    padding: "0 10px",
+    fontSize: '1rem',
+    fontWeight: 'bold'
   };
 
   return (
-    <Header
-      onClick={e => {
-        setHiddenContact(true);
-      }}
-    >
-      {hiddenContact ? (
-        <>
-          <p
-            style={button}
-            onClick={e => {
-              e.stopPropagation();
-              setHiddenContact(!hiddenContact);
-            }}
-          >
-            {hiddenContact ? "contact me" : "hide "}
-          </p>
-          <p style={button} onClick={() => scroll(project)}>
-            projects
-          </p>
-          <p style={button} onClick={() => scroll(captions)}>
-            captions
-          </p>
-        </>
-      ) : (
-        <>
-          <p style={button}>Email</p>
-          <Link to="/phonenumbers">
-            <p style={button}>Phone</p>
-          </Link>
-        </>
-      )}
+    <Header>
+      <>
+        <p style={button} onClick={() => scroll(0)}>
+          Top
+        </p>
+        <p style={button} onClick={() => scroll(project)}>
+          Projects
+        </p>
+        <p style={button} onClick={() => scroll(captions)}>
+          Captions
+        </p>
+        <p style={button} onClick={() => scroll(contact)}>
+          Contact
+        </p>
+      </>
     </Header>
   );
 }

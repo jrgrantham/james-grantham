@@ -12,20 +12,12 @@ import SiteLinks from "../components/professional/SiteLinks";
 import Projects from "../components/professional/Projects";
 
 export default function Landing() {
-  const [hiddenContact, setHiddenContact] = useState(true);
 
   return (
     <>
-      <ContactMeHeader
-        hiddenContact={hiddenContact}
-        setHiddenContact={setHiddenContact}
-      />
-      <FullPage
-        onClick={e => {
-          setHiddenContact(true);
-        }}
-      >
-        <LandingInitialView setHiddenContact={setHiddenContact} />
+      <ContactMeHeader />
+      <FullPage >
+        <LandingInitialView />
         <Projects />
         <SiteLinks backgroundColor={{backgroundColor: '#C7CCDB'}}/>
         <LandingCaptions />
