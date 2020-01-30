@@ -12,15 +12,23 @@ import SiteLinks from "../components/professional/SiteLinks";
 import Projects from "../components/professional/Projects";
 
 export default function Landing() {
+  const [hiddenContact, setHiddenContact] = useState(true);
 
   return (
     <>
-      <ContactMeHeader />
-      <FullPage >
-        <LandingInitialView />
+      <ContactMeHeader
+        hiddenContact={hiddenContact}
+        setHiddenContact={setHiddenContact}
+      />
+      <FullPage
+        onClick={e => {
+          setHiddenContact(true);
+        }}
+      >
+        <LandingInitialView setHiddenContact={setHiddenContact} />
+        <LandingCaptions />
         <Projects />
         <SiteLinks backgroundColor={{backgroundColor: '#C7CCDB'}}/>
-        <LandingCaptions />
         <Boys />
       </FullPage>
       <FooterBanner />
@@ -31,7 +39,7 @@ export default function Landing() {
 const FullPage = styled.div`
   margin-top: ${headerHeight}px;
   margin-bottom: ${footerHeight}px;
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
