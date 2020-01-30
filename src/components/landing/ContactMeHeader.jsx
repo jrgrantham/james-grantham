@@ -6,21 +6,41 @@ import {
   borderRad,
   landingHeader,
   landingInitial1,
-  landingHeadFootOpacity,
+  landingHeadFootOpacity
 } from "../../views/styling";
 
 export default function ContactMeHeader(props) {
   const { hiddenContact, setHiddenContact } = props;
 
+  let project;
+  let captions;
+  let contact;
+
+  window.onload = function() {
+    // const linkedDiv = document.getElementById("projects");
+    project =
+      document.getElementById("projects").getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight;
+    captions =
+      document.getElementById("captions").getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight;
+  };
+
+  function scroll(selectedDiv) {
+    window.scrollTo({ top: selectedDiv, behavior: "smooth" });
+  }
+
   const Header = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-color: ${landingHeader};
     opacity: ${landingHeadFootOpacity};
     min-height: ${headerHeight}px;
     width: 100%;
-    max-width: 1000px;
+    // max-width: 1000px;
     position: fixed;
     top: 0;
     padding: 0 10px;
@@ -43,15 +63,23 @@ export default function ContactMeHeader(props) {
       }}
     >
       {hiddenContact ? (
-        <p
-          style={button}
-          onClick={e => {
-            e.stopPropagation();
-            setHiddenContact(!hiddenContact);
-          }}
-        >
-          {hiddenContact ? "contact me" : "hide "}
-        </p>
+        <>
+          <p
+            style={button}
+            onClick={e => {
+              e.stopPropagation();
+              setHiddenContact(!hiddenContact);
+            }}
+          >
+            {hiddenContact ? "contact me" : "hide "}
+          </p>
+          <p style={button} onClick={() => scroll(project)}>
+            projects
+          </p>
+          <p style={button} onClick={() => scroll(captions)}>
+            captions
+          </p>
+        </>
       ) : (
         <>
           <p style={button}>Email</p>

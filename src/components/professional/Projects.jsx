@@ -6,7 +6,7 @@ import { projectMediaBreak } from "../../views/styling";
 
 export default function Projects() {
   return (
-    <StyledProjects>
+    <StyledProjects id="projects">
       <h1>Projects</h1>
       {projects.map((project, index) => {
         return (
@@ -24,7 +24,9 @@ export default function Projects() {
                 <h5>{project.description}</h5>
               </div>
               <div className="buttons">
-                {(project.link === '') ? null : <a href={project.link}>{"url"}</a>}
+                {project.link === "" ? null : (
+                  <a href={project.link}>{"url"}</a>
+                )}
                 <a href={project.repo}>{"github"}</a>
               </div>
             </div>
@@ -42,7 +44,7 @@ const StyledProjects = styled.div`
   align-items: center;
   width: 100%;
   padding: 5px;
-  background-color: #FFBE0B;
+  background-color: #ffbe0b;
 
   h1 {
     font-weight: bold;
@@ -70,7 +72,7 @@ const Card = styled.div`
   width: 95%;
   border: 6px solid black;
   margin-bottom: 30px;
-  background-color: #A3E7FC;
+  background-color: #a3e7fc;
 
   @media (max-width: ${projectMediaBreak}) {
     max-width: 500px;
@@ -84,13 +86,13 @@ const Card = styled.div`
     background: black;
 
     @media (min-width: ${projectMediaBreak}) {
-      width: 50%
+      width: 50%;
     }
 
     img {
       // flex-shrink: 0;
       width: 100%;
-      height: auto
+      height: auto;
     }
   }
 
@@ -100,13 +102,14 @@ const Card = styled.div`
     flex-direction: column;
     justify-content: space-between;
 
-    h4, h5 {
+    h4,
+    h5 {
       text-align: left;
       // padding: 0 30px;
     }
 
     @media (min-width: ${projectMediaBreak}) {
-      width: 50%
+      width: 50%;
     }
 
     .details {
@@ -120,7 +123,7 @@ const Card = styled.div`
       padding: 30px 0;
       // border: 1px solid red
     }
-  
+
     a {
       display: inline-block;
       min-width: 130px;

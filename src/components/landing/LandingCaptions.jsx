@@ -16,7 +16,7 @@ export default function LandingCaptions() {
   // document.getElementById("root").style.background = appColor;
 
   return (
-    <Captions>
+    <Captions id='captions'>
       {captions.map((caption, index) => (
         <CaptionContainer
           key={index}
