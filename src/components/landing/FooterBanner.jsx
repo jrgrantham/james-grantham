@@ -14,7 +14,6 @@ const Footer = styled.div`
   background-color: ${landingFooter}
   height: ${footerHeight}px
   width: 100%
-  max-width:  1000px
   position: fixed
   bottom: 0
 `;

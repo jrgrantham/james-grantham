@@ -1,3 +1,4 @@
+export const appWidth = "1000px";
 export const professionalWidth = "800px";
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";
@@ -17,9 +18,9 @@ export const landingInitialFont = "#301b28";
 
 export const landingCaptionBack1 = "#2c4a52";
 export const landingCaptionBack2 = "#66a5ad";
-export const landingCaption = "#537072";
-export const landingCaptionBorder = "#8e9b97";
-export const landingCaptionFont = "#f4ebdb";
+export const landingCaption = "white";
+export const landingCaptionBorder = "lightgrey";
+export const landingCaptionFont = "#3e3e3e";
 
 export const landingBoysBack = "#eb5e30";
 export const landingBoysButton = "#752a07";

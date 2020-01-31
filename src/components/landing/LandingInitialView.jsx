@@ -12,7 +12,6 @@ import {
   landingInitial1,
   landingInitial2,
   landingInitialFont,
-  landingCaptionBack1
 } from "../../views/styling";
 
 export default function LandingInitialView(props) {
@@ -53,7 +52,7 @@ export default function LandingInitialView(props) {
         </div>
         <Link to="/professional">
           <h5 style={fontStyle} id="info" className="hide">
-            Further Information
+            Learn about me
           </h5>
         </Link>
       </LandingContent>
@@ -66,7 +65,7 @@ let vh = window.innerHeight < 630 ? 630 : window.innerHeight;
 const LandingContainer = styled.div`
   height: ${vh - headerHeight - footerHeight}px;
   // background-color: ${landingInitial1};
-  background-image: linear-gradient(${landingInitial1}, ${landingInitial2});
+  // background-image: linear-gradient(${landingInitial1}, ${landingInitial2});
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -120,6 +119,7 @@ const LandingContent = styled.div`
   }
 
   h5 {
+    background-color: white;
     padding: 1rem 0;
     min-width: 15rem;
     border: 1px solid ${landingInitialFont};

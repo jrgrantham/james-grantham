@@ -1,9 +1,10 @@
 export const captions = [
-  'Collaboration. Team player',
   'Qualified Mechanical Engineer',
   'Minimalistic, no frills',
   'Function over form',
-  'Learning new things',
+  'Love the outdoors',
+  'Perfectionist',
+  'Collaboration',
   // 'Enjoy hill walking with my children and their remote control cars',
   'Music lover',
   // 'Recently joined the gym in an effort to impove fitness and health',
