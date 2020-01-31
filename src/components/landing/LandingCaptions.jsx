@@ -68,15 +68,16 @@ const Caption = styled.div`
   justify-content: center;
   align-items: center;
   // margin: 50px auto;
-  border: 10px solid ${landingCaptionBorder};
-  border-radius: 10px;
+  border: 1px solid ${landingCaptionBorder};
+  border-radius: 3px;
   padding: 15px;
   width: 300px;
-  min-height: 200px;
+  min-height: 120px;
 
   @media (min-width: ${mediaBreak}) {
     margin: 40px 0;
     width: 60%;
     min-width: 400px;
+    min-height: 200px;
   }
 `;

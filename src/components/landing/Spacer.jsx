@@ -8,8 +8,8 @@ export default function Spacer(props) {
 }
 
 const StyledSpacer = styled.div`
-  background: rgb(0,0,0, 0.05);
-  height: 5px;
+  background: rgb(0,0,0, 0.08);
+  height: 3px;
   width: 100%;
   bottom: 0;
 `;
