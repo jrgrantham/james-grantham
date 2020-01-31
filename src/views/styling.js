@@ -1,3 +1,4 @@
+export const appWidth = "1000px";
 export const professionalWidth = "800px";
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";

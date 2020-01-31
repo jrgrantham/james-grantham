@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { projects } from "../../data/projects";
-import { projectMediaBreak } from "../../views/styling";
+import { projectMediaBreak, appWidth } from "../../views/styling";
 
 export default function Projects() {
   return (
@@ -38,13 +38,13 @@ export default function Projects() {
 }
 
 const StyledProjects = styled.div`
+  max-width: ${appWidth}
   display: flex;
   flex-direction: column;
   // justify-content: center;
   align-items: center;
   width: 100%;
   padding: 5px;
-  background-color: #ffbe0b;
 
   h1 {
     font-weight: bold;

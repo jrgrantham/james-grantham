@@ -8,12 +8,22 @@ import mail from "../../images/mail-512.png";
 import phone from "../../images/phone.png";
 
 export default function SiteLinks(props) {
-  const Links = styled.div`
-    ${props.backgroundColor};
+
+  const Container = styled.div`
     display: flex;
     justify-content: center;
-    padding: 50px;
     width: 100%;
+  `
+
+  const Links = styled.div`
+    // ${props.backgroundColor};
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    min-width: 320px;
+    width: 100%;
+    max-width: 1000px;
+    // border: 1px solid red
 
     img {
       width: 100%;
@@ -21,25 +31,26 @@ export default function SiteLinks(props) {
     }
 
     .image {
-      margin: 0 40px;
       width: 40px;
     }
   `;
 
   return (
-    <Links id="contact">
-      <a href="https://github.com/jrgrantham" className="image">
-        <img src={github} alt="" />
-      </a>
-      <div className="image">
-        <img src={mail} alt="" />
-      </div>
-      <Link to="/phonenumbers" className="image">
-        <img src={phone} alt="" />
-      </Link>
-      <a href="https://www.linkedin.com/in/j-grantham/" className="image">
-        <img src={linkedin} alt="" />
-      </a>
-    </Links>
+    <Container>
+      <Links id="contact">
+        <a href="https://github.com/jrgrantham" className="image">
+          <img src={github} alt="" />
+        </a>
+        <a to="/phonenumbers" className="image">
+          <img src={mail} alt="" />
+        </a>
+        <Link to="/phonenumbers" className="image">
+          <img src={phone} alt="" />
+        </Link>
+        <a href="https://www.linkedin.com/in/j-grantham/" className="image">
+          <img src={linkedin} alt="" />
+        </a>
+      </Links>
+    </Container>
   );
 }

@@ -1,5 +1,5 @@
-import randM from '../images/randM.jpeg'
-import r2d2 from '../images/r2d2.png'
+import randM from '../images/randM.png'
+import starwars from '../images/starwars.png'
 
 export const projects = [
   {
@@ -15,7 +15,7 @@ export const projects = [
     title: "Star Wars",
     description: "Lambda school sprint challenge",
     comments: '',
-    image: r2d2,
+    image: starwars,
     link: '',
     repo: 'github',
     uses: 'react, axios'

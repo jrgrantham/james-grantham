@@ -8,7 +8,8 @@ import {
   landingCaptionBack2,
   landingCaptionBorder,
   landingCaption,
-  landingCaptionFont
+  landingCaptionFont,
+  appWidth
 } from "../../views/styling";
 
 export default function LandingCaptions() {
@@ -37,7 +38,8 @@ const fontStyle = {
 };
 
 const Captions = styled.div`
-  background-color: ${landingCaptionBack1};
+  max-width: ${appWidth}
+  // background-color: ${landingCaptionBack1};
   // background-image: linear-gradient(${landingCaptionBack1}, ${landingCaptionBack2});
   padding: 50px 0;
   width: 100%;

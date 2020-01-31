@@ -9,7 +9,8 @@ import LandingInitialView from "../components/landing/LandingInitialView";
 import LandingCaptions from "../components/landing/LandingCaptions";
 import Boys from "../components/landing/Boys";
 import SiteLinks from "../components/professional/SiteLinks";
-import Projects from "../components/professional/Projects";
+import Projects from "../components/landing/Projects";
+import Spacer from "../components/landing/Spacer";
 
 export default function Landing() {
   const [hiddenContact, setHiddenContact] = useState(true);
@@ -26,9 +27,13 @@ export default function Landing() {
         }}
       >
         <LandingInitialView setHiddenContact={setHiddenContact} />
-        <LandingCaptions />
+        <Spacer />
         <Projects />
+        <Spacer />
+        <LandingCaptions />
+        <Spacer />
         <SiteLinks backgroundColor={{backgroundColor: '#C7CCDB'}}/>
+        <Spacer />
         <Boys />
       </FullPage>
       <FooterBanner />
