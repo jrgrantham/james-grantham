@@ -6,9 +6,9 @@ import { projectMediaBreak, appWidth, borderRad } from "../../views/styling";
 
 export default function Projects() {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
         <h1>Projects</h1>
-      <StyledProjects id="projects">
+      <StyledProjects>
         {projects.map((project, index) => {
           return (
             <Card
@@ -79,10 +79,7 @@ const Card = styled.div`
   margin: 0 30px 50px 30px;
   overflow: hidden;
   background-color: white;
-    max-width: 400px;
-
-  // @media (max-width: ${projectMediaBreak}) {
-  // }
+  max-width: 400px;
 
   .image {
     max-height: 360px;
