@@ -72,7 +72,8 @@ const StyledApp = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
-
+  shadows: none;
+  
   a {
     color: black;
   }

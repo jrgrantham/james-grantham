@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { projects } from "../../data/projects";
 import { appWidth } from "../../views/styling";
 import ProjectCard from "./ProjectCard";
+// import ProjectCard from "./ProjectCardCopy";
 
 export default function Projects() {
   return (
@@ -26,10 +27,12 @@ const ProjectsContainer = styled.div`
 `;
 
 const StyledProjects = styled.div`
-  max-width: ${appWidth}
+  max-width: 1400px
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
+  // padding: 0 50px;
   width: 100%;
+  margin-bottom: 30px;
 `;

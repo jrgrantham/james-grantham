@@ -35,6 +35,7 @@ export default function ContactMeHeader(props) {
   }
 
   const Header = styled.div`
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
