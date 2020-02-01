@@ -17,9 +17,9 @@ export default function ProjectCard(props) {
             />
             <div className="buttons">
               {props.project.link === "" ? null : (
-                <a href={props.project.link}>{"url"}</a>
+                <a href={props.project.link}>visit</a>
               )}
-              <a href={props.project.repo}>{"github"}</a>
+              <a href={props.project.repo}>github</a>
             </div>
           </div>
           <div class="flip-card-back">
@@ -30,9 +30,9 @@ export default function ProjectCard(props) {
             </div>
             <div className="buttons">
               {props.project.link === "" ? null : (
-                <a href={props.project.link}>{"site"}</a>
+                <a href={props.project.link}>visit</a>
               )}
-              <a href={props.project.repo}>{"github"}</a>
+              <a href={props.project.repo}>github</a>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ const FlipCard = styled.div`
 
   @media (max-width: 500px) {
     width: 300px;
-    height: 370px;
+    height: 350px;
     margin: 20px 10px;
   }
 
@@ -58,8 +58,11 @@ const FlipCard = styled.div`
     display: inline-block;
     min-width: 130px;
     padding: 10px;
-    border: 1px solid grey;
+    // border: 1px solid grey;
     border-radius: ${borderRad}
+    background: dodgerblue;
+    color: floralwhite;
+    font-weight: bold;
   }
 
   img {
@@ -110,6 +113,7 @@ const FlipCard = styled.div`
   }
 
   .buttons {
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
   }

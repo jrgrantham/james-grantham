@@ -74,7 +74,7 @@ const StyledApp = styled.div`
   text-align: center;
   shadows: none;
   
-  a {
-    color: black;
-  }
+  // a {
+  //   color: black;
+  // }
 `;

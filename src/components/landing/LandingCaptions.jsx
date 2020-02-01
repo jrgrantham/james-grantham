@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { captions } from "../../data/captions";
 
 import {
@@ -9,7 +10,11 @@ import {
   landingCaptionBorder,
   landingCaption,
   landingCaptionFont,
-  appWidth
+  appWidth,
+  transition,
+  landingInitialFont,
+  borderRad,
+  landingInitial1
 } from "../../views/styling";
 
 export default function LandingCaptions() {
@@ -19,6 +24,7 @@ export default function LandingCaptions() {
   return (
     <Captions id="captions">
       <h1>About me</h1>
+
       {captions.map((caption, index) => (
         <CaptionContainer
           key={index}
@@ -29,6 +35,12 @@ export default function LandingCaptions() {
           </Caption>
         </CaptionContainer>
       ))}
+      <p>For more information about me, tap the button below...</p>
+      <Link to="/professional">
+        <h6>
+          Learn more about me
+        </h6>
+      </Link>
     </Captions>
   );
 }
@@ -39,6 +51,10 @@ const fontStyle = {
 };
 
 const Captions = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
   max-width: ${appWidth}
   // background-color: ${landingCaptionBack1};
   // background-image: linear-gradient(${landingCaptionBack1}, ${landingCaptionBack2});
@@ -46,7 +62,31 @@ const Captions = styled.div`
 
   h1 {
     font-weight: bold;
-    padding: 20px 0;
+    padding: 60px 0;
+  }
+
+  h6 {
+    color: FloralWhite;
+    font-weight: bold;
+    background-color: DodgerBlue;
+    padding: 1rem 2.6rem;
+    margin-bottom: 50px;
+    border-radius: ${borderRad};
+
+    @media (pointer: fine) {
+      &:hover {
+        background-color: ${landingInitial1};
+        transition: background-color ${transition};
+      }
+    }
+  }
+
+  p {
+    color: rgb(0,0,0, 0.1)
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+
   }
 
   @media (min-width: ${mediaBreak}) {
@@ -77,10 +117,17 @@ const Caption = styled.div`
   padding: 15px;
   width: 300px;
   min-height: 120px;
+  transition: all ${transition};
 
   @media (min-width: ${mediaBreak}) {
     width: 60%;
     min-width: 400px;
     min-height: 170px;
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;

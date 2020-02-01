@@ -22,7 +22,7 @@ export default function Projects() {
 const ProjectsContainer = styled.div`
   h1 {
     font-weight: bold;
-    padding: 20px 0;
+    padding: 60px 0;
   }
 `;
 

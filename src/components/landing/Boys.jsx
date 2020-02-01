@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { landingBoysBack, landingBoysButton, appWidth } from "../../views/styling";
+import { landingBoysBack, landingBoysButton, appWidth, landingBoysFont } from "../../views/styling";
 
 export default function Boys() {
   return (
     <StyledBoys>
       <Content>
-        <h3 style={hstyle}>... and dedicated Father to three awesome boys!</h3>
+        <h5 style={hstyle}>... and dedicated Father to three awesome boys!</h5>
       </Content>
     </StyledBoys>
   );
@@ -23,13 +23,13 @@ const StyledBoys = styled.div`
 const Content = styled.div`
   width: 100%;
   max-width: ${appWidth};
-  margin: 50px 20px 50px 20px;
+  margin: 20px 20px;
   background-color: ${landingBoysButton};
   border-radius: 120px;
 `;
 
 const hstyle = {
-  color: "white",
+  color: landingBoysFont,
   fontWeight: "bold",
-  padding: "100px 40px"
+  padding: "40px"
 };

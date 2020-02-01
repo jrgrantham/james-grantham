@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <StyledFooter>
       <Link to="/" >
