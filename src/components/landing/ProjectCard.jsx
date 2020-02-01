@@ -1,92 +1,120 @@
 import React from "react";
+import Flippy, { FrontSide, BackSide } from "react-flippy";
 import styled from "styled-components";
 
 import { borderRad } from "../../views/styling";
 
 export default function ProjectCard(props) {
-
-          return (
-            <StlyedCard>
-              <div className="image">
-                <img src={props.project.image} alt={props.project.title} />
-              </div>
-              <div className="info">
-                <div className="details">
-                  {/* <h2>{props.project.title}</h2> */}
-                  {/* <h4>{props.project.uses}</h4> */}
-                  <h5>{props.project.description}</h5>
-                </div>
-                <div className="buttons">
-                  {props.project.link === "" ? null : (
-                    <a href={props.project.link}>{"url"}</a>
-                  )}
-                  <a href={props.project.repo}>{"github"}</a>
-                </div>
-              </div>
-            </StlyedCard>
-          );
-
+  return (
+    <>
+      <FlipCard>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src={props.project.image}
+              alt={props.project.title}
+              // style={imgStyle}
+            />
+            <div className="buttons">
+              {props.project.link === "" ? null : (
+                <a href={props.project.link}>visit</a>
+              )}
+              <a href={props.project.repo}>github</a>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div className="details">
+              {/* <h2>{props.project.title}</h2> */}
+              {/* <h4>{props.project.uses}</h4> */}
+              <h5>{props.project.description}</h5>
+            </div>
+            <div className="buttons">
+              {props.project.link === "" ? null : (
+                <a href={props.project.link}>visit</a>
+              )}
+              <a href={props.project.repo}>github</a>
+            </div>
+          </div>
+        </div>
+      </FlipCard>
+    </>
+  );
 }
 
-const StlyedCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid lightgrey;
-  border-radius: 3px
-  margin: 0 30px 50px 30px;
-  overflow: hidden;
-  background-color: white;
-  max-width: 400px;
+const FlipCard = styled.div`
+  background-color: transparent;
+  width: 400px;
+  height: 450px;
+  perspective: 1000px;
+  margin: 0 25px 50px 25px;
 
-  .image {
-    max-height: 360px;
+  @media (max-width: 500px) {
+    width: 300px;
+    height: 350px;
+    margin: 20px 10px;
+  }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: white;
-    // border: 1px solid blue
+  a {
+    display: inline-block;
+    min-width: 130px;
+    padding: 10px;
+    // border: 1px solid grey;
+    border-radius: ${borderRad}
+    background: dodgerblue;
+    color: floralwhite;
+    font-weight: bold;
+  }
 
+  img {
+    max-width: 350px;
+    max-height: 350px;
 
-    img {
-      // flex-shrink: 0;
-      width: 70%;
-      height: auto;
-      padding: 20px;
-      margin: 40px 0;
-      border-top: 1px solid lightgrey
-      border-bottom: 1px solid lightgrey
-      // border: 1px solid blue
+    @media (max-width: 500px) {
+      width: 250px;
+      height: 250px;
     }
   }
 
-  .info {
+  @media (pointer: fine) {
+    &:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .flip-card-inner {
+    position: relative;
     width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // border: 1px solid blue
+    padding: 20px 0;
+    background-color: white;
+  }
 
-    .details {
-      padding: 10px;
-      // border: 1px solid red
-    }
+  .flip-card-front {
+    align-items: center;
+  }
 
-    .buttons {
-      display: flex;
-      justify-content: space-evenly;
-      padding: 30px 0;
-      // border: 1px solid red
-    }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
 
-    a {
-      display: inline-block;
-      min-width: 130px;
-      padding: 10px;
-      border: 1px solid grey;
-      border-radius: ${borderRad}
-    }
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
 `;

@@ -6,20 +6,28 @@ import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mail-512.png";
 import phone from "../../images/phone.png";
+import { transition } from "../../views/styling";
 
 export default function SiteLinks(props) {
 
   const Container = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100%;
+    height: 250px;
+    padding: 40px 0;
+    
+    h3 {
+      font-weight: bold;
+    }
   `
 
   const Links = styled.div`
     // ${props.backgroundColor};
     display: flex;
     justify-content: space-evenly;
-    padding: 50px 0;
     min-width: 320px;
     width: 100%;
     max-width: 1000px;
@@ -29,14 +37,23 @@ export default function SiteLinks(props) {
       width: 100%;
       height: auto;
     }
-
+    
     .image {
       width: 40px;
+      transition: all ${transition}
+      
+      @media (pointer: fine) {
+        &:hover {
+          transform: scale(2);
+        }
+      }
     }
+
   `;
 
   return (
     <Container>
+      <h3>Find me...</h3>
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />

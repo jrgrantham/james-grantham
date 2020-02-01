@@ -7,7 +7,7 @@ export const projects = [
     description: "Lambda school sprint challenge",
     comments: '',
     image: randM,
-    link: '',
+    link: 'test',
     repo: 'https://github.com/jrgrantham/RickAndMorty',
     uses: 'react, axios'
   },

@@ -9,7 +9,8 @@ export const transition = "0.3s ease-in-out";
 
 // favicon font - Merriweather
 
-export const landingHeader = "#626d71";
+export const landingHeaderFont = "floralwhite";
+export const landingHeader = "#303030";
 export const landingFooter = landingHeader;
 export const landingHeadFootOpacity = 1;
 export const landingInitial1 = "#cdcdc0";
@@ -18,12 +19,13 @@ export const landingInitialFont = "#301b28";
 
 export const landingCaptionBack1 = "#2c4a52";
 export const landingCaptionBack2 = "#66a5ad";
-export const landingCaption = "white";
+export const landingCaption = "GhostWhite";
 export const landingCaptionBorder = "lightgrey";
 export const landingCaptionFont = "#3e3e3e";
 
-export const landingBoysBack = "#eb5e30";
-export const landingBoysButton = "#752a07";
+export const landingBoysBack = "#a9a9a9";
+export const landingBoysButton = "#505050";
+export const landingBoysFont = "#dcdcdc";
 
 export const professionalOuter = "#f5f5f5";
 export const professionalBack = "#eae2d6";
