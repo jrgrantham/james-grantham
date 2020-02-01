@@ -38,7 +38,7 @@ export default function LandingCaptions() {
           </Caption>
         </CaptionContainer>
       ))}
-      <p>For more information about me, tap the button below...</p>
+      <p>For more information about me, my career and experience, tap the button below...</p>
       <Link to="/professional">
         <h6>Learn more about me</h6>
       </Link>
@@ -75,6 +75,11 @@ align-items: center;
         opacity: 0.75;
       }
     }
+  }
+
+  p {
+    text-align: center;
+    padding: 10px;
   }
 
   @media (min-width: ${mediaBreak}) {
