@@ -4,12 +4,13 @@ import styled from "styled-components";
 import { projects } from "../../data/projects";
 import { appWidth } from "../../views/styling";
 import ProjectCard from "./ProjectCard";
+import SectionTitle from "./SectionTitle";
 // import ProjectCard from "./ProjectCardCopy";
 
 export default function Projects() {
   return (
     <ProjectsContainer id="projects">
-      <h1>Projects</h1>
+      <SectionTitle title={'Projects'} description={'Check out some of my work'} />
       <StyledProjects>
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;
@@ -20,10 +21,7 @@ export default function Projects() {
 }
 
 const ProjectsContainer = styled.div`
-  h1 {
-    font-weight: bold;
-    padding: 60px 0;
-  }
+
 `;
 
 const StyledProjects = styled.div`
