@@ -5,7 +5,7 @@ export const projectMediaBreak = "750px";
 export const headerHeight = 50;
 export const footerHeight = 30;
 export const borderRad = "5px";
-export const transition = "0.3s ease-in-out";
+export const transition = "0.3s";
 
 // favicon font - Merriweather
 

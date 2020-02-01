@@ -16,6 +16,7 @@ import {
   borderRad,
   landingInitial1
 } from "../../views/styling";
+import SectionTitle from "./SectionTitle";
 
 export default function LandingCaptions() {
   // document.body.style.background = appColor;
@@ -23,8 +24,10 @@ export default function LandingCaptions() {
 
   return (
     <Captions id="captions">
-      <h1>About me</h1>
-
+      <SectionTitle
+        title={"About me"}
+        description={"Just a few summarising statements"}
+      />
       {captions.map((caption, index) => (
         <CaptionContainer
           key={index}
@@ -35,11 +38,9 @@ export default function LandingCaptions() {
           </Caption>
         </CaptionContainer>
       ))}
-      <p>For more information about me, tap the button below...</p>
+      <p>For more information about me, my career and experience, tap the button below...</p>
       <Link to="/professional">
-        <h6>
-          Learn more about me
-        </h6>
+        <h6>Learn more about me</h6>
       </Link>
     </Captions>
   );
@@ -60,33 +61,25 @@ align-items: center;
   // background-image: linear-gradient(${landingCaptionBack1}, ${landingCaptionBack2});
   width: 100%;
 
-  h1 {
-    font-weight: bold;
-    padding: 60px 0;
-  }
-
   h6 {
     color: FloralWhite;
     font-weight: bold;
     background-color: DodgerBlue;
     padding: 1rem 2.6rem;
-    margin-bottom: 50px;
+    margin: 20px 0 50px 0;
     border-radius: ${borderRad};
+    transition: opacity ${transition};
 
     @media (pointer: fine) {
       &:hover {
-        background-color: ${landingInitial1};
-        transition: background-color ${transition};
+        opacity: 0.75;
       }
     }
   }
 
   p {
-    color: rgb(0,0,0, 0.1)
-    padding: 10px;
     text-align: center;
-    margin-bottom: 40px;
-
+    padding: 10px;
   }
 
   @media (min-width: ${mediaBreak}) {
@@ -102,13 +95,12 @@ align-items: center;
 
 const CaptionContainer = styled.div`
   display: flex;
-  justify-content: center;
   width: 100%;
 `;
 
 const Caption = styled.div`
   background-color: ${landingCaption};
-  margin: 0 30px 50px 30px;
+  margin: 0 30px 30px 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,6 +112,7 @@ const Caption = styled.div`
   transition: all ${transition};
 
   @media (min-width: ${mediaBreak}) {
+    margin: 0 30px 50px 30px;
     width: 60%;
     min-width: 400px;
     min-height: 170px;
