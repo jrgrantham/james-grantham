@@ -4,7 +4,7 @@ export const captions = [
   'Function over form',
   'Love the outdoors',
   'Perfectionist',
-  'Collaboration',
+  'Collaborator',
   // 'Enjoy hill walking with my children and their remote control cars',
   'Music lover',
   // 'Recently joined the gym in an effort to impove fitness and health',

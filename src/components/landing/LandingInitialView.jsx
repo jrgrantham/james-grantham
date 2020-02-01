@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import jamesPhoto from "../../../src/images/james.jpg";
@@ -31,9 +30,9 @@ export default function LandingInitialView(props) {
       document.getElementById("jobs").classList.remove("hide");
     }, 600);
 
-    setTimeout(function() {
-      document.getElementById("info").classList.remove("hide");
-    }, 900);
+    // setTimeout(function() {
+    //   document.getElementById("info").classList.remove("hide");
+    // }, 900);
   }, []);
 
   return (
@@ -50,11 +49,6 @@ export default function LandingInitialView(props) {
           <p style={fontStyle}>-</p>
           <h3 style={fontStyle}>Mechanical Engineer</h3>
         </div>
-        <Link to="/professional">
-          <h5 style={fontStyle} id="info" className="hide">
-            Learn about me
-          </h5>
-        </Link>
       </LandingContent>
     </LandingContainer>
   );

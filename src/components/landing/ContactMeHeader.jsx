@@ -6,7 +6,8 @@ import {
   borderRad,
   landingHeader,
   landingInitial1,
-  landingHeadFootOpacity
+  landingHeadFootOpacity,
+  landingHeaderFont
 } from "../../views/styling";
 
 export default function ContactMeHeader(props) {
@@ -35,6 +36,7 @@ export default function ContactMeHeader(props) {
   }
 
   const Header = styled.div`
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +57,7 @@ export default function ContactMeHeader(props) {
     // minWidth: "90px",
     // border: `1px solid ${landingInitial1}`,
     // borderRadius: borderRad,
-    color: landingInitial1,
+    color: landingHeaderFont,
     padding: "0 10px",
     fontSize: '1rem',
     fontWeight: 'bold'

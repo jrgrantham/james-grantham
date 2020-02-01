@@ -33,7 +33,7 @@ export default function Landing() {
         <LandingCaptions />
         <Spacer />
         <SiteLinks backgroundColor={{backgroundColor: '#C7CCDB'}}/>
-        <Spacer />
+        {/* <Spacer /> */}
         <Boys />
       </FullPage>
       <FooterBanner />
