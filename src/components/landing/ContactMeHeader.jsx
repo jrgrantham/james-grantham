@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {
   headerHeight,
-  borderRad,
   landingHeader,
-  landingInitial1,
   landingHeadFootOpacity,
   landingHeaderFont
 } from "../../views/styling";
@@ -53,10 +50,6 @@ export default function ContactMeHeader(props) {
   const button = {
     textAlign: 'center',
     cursor: "pointer",
-    // margin: "0 10px",
-    // minWidth: "90px",
-    // border: `1px solid ${landingInitial1}`,
-    // borderRadius: borderRad,
     color: landingHeaderFont,
     padding: "0 10px",
     fontSize: '1rem',

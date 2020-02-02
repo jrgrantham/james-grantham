@@ -12,11 +12,9 @@ import {
   landingCaptionFont,
   appWidth,
   transition,
-  landingInitialFont,
   borderRad,
-  landingInitial1
 } from "../../views/styling";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../reusable/SectionTitle";
 
 export default function LandingCaptions() {
   // document.body.style.background = appColor;
@@ -95,20 +93,23 @@ align-items: center;
 
 const CaptionContainer = styled.div`
   display: flex;
+  // flex-direction: column;
+  align-items: center;
   width: 100%;
 `;
 
 const Caption = styled.div`
   background-color: ${landingCaption};
-  margin: 0 30px 30px 30px;
+  margin: auto;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid ${landingCaptionBorder};
   border-radius: 3px;
-  padding: 15px;
-  width: 300px;
-  min-height: 120px;
+  padding: 10px;
+  width: 85%;
+  min-height: 100px;
   transition: all ${transition};
 
   @media (min-width: ${mediaBreak}) {

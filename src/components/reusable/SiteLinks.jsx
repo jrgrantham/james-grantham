@@ -7,8 +7,9 @@ import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mail-512.png";
 import phone from "../../images/phone.png";
 import { transition } from "../../views/styling";
+import SectionTitle from "./SectionTitle";
 
-export default function SiteLinks(props) {
+export default function SiteLinks() {
 
   const Container = styled.div`
     display: flex;
@@ -16,8 +17,9 @@ export default function SiteLinks(props) {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 250px;
-    padding: 40px 0;
+    // height: 250px;
+    // padding: 40px 0;
+    margin-bottom: 50px;
     
     h3 {
       font-weight: bold;
@@ -25,7 +27,6 @@ export default function SiteLinks(props) {
   `
 
   const Links = styled.div`
-    // ${props.backgroundColor};
     display: flex;
     justify-content: space-evenly;
     min-width: 320px;
@@ -53,7 +54,7 @@ export default function SiteLinks(props) {
 
   return (
     <Container>
-      <h3>Find me...</h3>
+      <SectionTitle title={'Find me...'} description={"Use  the links below to navigate"} />
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
