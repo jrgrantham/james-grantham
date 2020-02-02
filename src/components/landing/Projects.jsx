@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import { projects } from "../../data/projects";
-import { appWidth } from "../../views/styling";
+import { appWidth, mediaBreak } from "../../views/styling";
 import ProjectCard from "./ProjectCard";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../reusable/SectionTitle";
 // import ProjectCard from "./ProjectCardCopy";
 
 export default function Projects() {
@@ -21,16 +21,20 @@ export default function Projects() {
 }
 
 const ProjectsContainer = styled.div`
-
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
 `;
 
 const StyledProjects = styled.div`
-  max-width: 1400px
+  max-width: 1600px
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   // padding: 0 50px;
   width: 100%;
   margin-bottom: 30px;
+  // border: 1px solid red
 `;

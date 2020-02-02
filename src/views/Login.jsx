@@ -5,7 +5,7 @@ import styled from "styled-components";
 import url from "../helpers/url";
 
 import { StyledForm } from "./ContactForm";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/reusable/Spinner";
 import Footer from "../components/professional/Footer";
 
 const loginApi = url() + "api/auth/login";

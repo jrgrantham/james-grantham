@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { mediaBreak, borderRad } from "../views/styling";
+import { mediaBreak, borderRad } from "../../views/styling";
 
 export default function Spinner() {
   return (

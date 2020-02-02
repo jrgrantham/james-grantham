@@ -1,11 +1,11 @@
 export const captions = [
-  'Qualified Mechanical Engineer',
-  'Minimalistic, no frills',
+  'Experienced Engineer',
   'Function over form',
-  'Love the outdoors',
+  'Music lover',
+  'Minimalist, no frills',
   'Perfectionist',
+  'Love the outdoors',
   'Collaborator',
   // 'Enjoy hill walking with my children and their remote control cars',
-  'Music lover',
   // 'Recently joined the gym in an effort to impove fitness and health',
 ];

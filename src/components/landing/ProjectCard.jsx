@@ -51,7 +51,7 @@ const FlipCard = styled.div`
   @media (max-width: 500px) {
     width: 300px;
     height: 350px;
-    margin: 20px 10px;
+    margin: 0 10px 20px 10px;
   }
 
   a {

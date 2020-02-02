@@ -63,16 +63,15 @@ export default function App() {
 }
 
 const StyledApp = styled.div`
-  background-image: url('${back}');
-  background-repeat: repeat;
-  width: 100%;
-  // max-width: 1000px;
-  min-height: 100%;
-  margin: auto;
   display: flex;
   justify-content: center;
   text-align: center;
-  shadows: none;
+  width: 100%;
+  min-height: 100%;
+  // margin: auto;
+  background-image: url('${back}');
+  background-repeat: repeat;
+  // shadows: none;
   
   // a {
   //   color: black;

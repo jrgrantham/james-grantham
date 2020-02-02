@@ -8,7 +8,7 @@ import { experience } from "../data/experience";
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Footer from "../components/professional/Footer";
-import SiteLinks from "../components/professional/SiteLinks";
+import SiteLinks from "../components/reusable/SiteLinks";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);

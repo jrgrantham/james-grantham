@@ -3,7 +3,7 @@ import styled from "styled-components";
 import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
-import Spinner from "../components/Spinner";
+import Spinner from "../components/reusable/Spinner";
 import Footer from "../components/professional/Footer";
 import { professionalBack, borderRad } from "./styling";
 
