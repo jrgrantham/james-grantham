@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 
 import ContactMeHeader from "../components/landing/ContactMeHeader";
@@ -13,6 +13,18 @@ import Projects from "../components/landing/Projects";
 import Spacer from "../components/landing/Spacer";
 
 export default function Landing() {
+
+  useEffect(() => {
+    try {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'auto',
+      });
+    } catch (error) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   return (
     <>

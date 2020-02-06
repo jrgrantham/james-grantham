@@ -15,7 +15,6 @@ export default function ContactMeHeader() {
   let contact;
 
   window.onload = function() {
-    // const linkedDiv = document.getElementById("projects");
     project =
       document.getElementById("projects").getBoundingClientRect().top +
       window.pageYOffset -
@@ -107,7 +106,7 @@ export default function ContactMeHeader() {
       <div className="links">
         <p onClick={() => scroll(0)}>Top</p>
         <p onClick={() => scroll(project)}>Projects</p>
-        <p onClick={() => scroll(captions)}>Captions</p>
+        <p onClick={() => scroll(captions)}>Me</p>
         <p onClick={() => scroll(contact)}>Contact</p>
       </div>
       <div className="image" />

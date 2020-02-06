@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { projects } from "../../data/projects";
-import { appWidth, mediaBreak } from "../../views/styling";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
 // import ProjectCard from "./ProjectCardCopy";

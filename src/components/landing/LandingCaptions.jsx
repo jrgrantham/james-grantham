@@ -116,7 +116,7 @@ const Caption = styled.div`
     margin: 0 30px 50px 30px;
     width: 60%;
     min-width: 400px;
-    min-height: 170px;
+    min-height: 120px;
   }
 
   @media (pointer: fine) {

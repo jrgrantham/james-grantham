@@ -59,7 +59,7 @@ export default function SiteLinks() {
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
         </a>
-        <a to="/phonenumbers" className="image">
+        <a href='' className="image">
           <img src={mail} alt="" />
         </a>
         <Link to="/phonenumbers" className="image">

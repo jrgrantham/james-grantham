@@ -4,28 +4,20 @@ import styled from "styled-components";
 import jamesPhoto from "../../../src/images/james.jpg";
 
 import {
-  transition,
   borderRad,
   headerHeight,
   footerHeight,
-  landingInitial1,
-  landingInitial2,
-  landingInitialFont,
+  landingInitialFont
 } from "../../views/styling";
 
 export default function LandingInitialView() {
-  // document.body.style.background = appColor;
-  // document.getElementById("root").style.background = appColor;
-
   useEffect(() => {
     setTimeout(function() {
       document.getElementById("name").classList.remove("hide");
       document.getElementById("jobs").classList.remove("hide");
     }, 500);
 
-    setTimeout(function() {
-      document.getElementById("img").classList.remove("small");
-    }, 100);
+    document.getElementById("img").classList.remove("small");
   }, []);
 
   return (
@@ -35,7 +27,7 @@ export default function LandingInitialView() {
           <h2>James Grantham</h2>
         </div>
         <div id="img" className="small img">
-          <img src={jamesPhoto} alt="" />
+          <img src={jamesPhoto} alt="James Grantham" />
         </div>
         <div id="jobs" className="hide">
           <h3>Web Developer</h3>
@@ -47,18 +39,15 @@ export default function LandingInitialView() {
   );
 }
 
-let vh = Math.max(window.innerHeight, 630)
+let vh = Math.max(window.innerHeight, 630);
 
 const LandingContainer = styled.div`
   height: ${vh - headerHeight - footerHeight}px;
-  // background-color: ${landingInitial1};
-  // background-image: linear-gradient(${landingInitial1}, ${landingInitial2});
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // border: 2px solid green;
 `;
 
 const LandingContent = styled.div`
@@ -81,7 +70,7 @@ const LandingContent = styled.div`
     width: 90%;
     max-width: 800px;
     max-width: 90vh;
-    transition: max-width 1.5s;
+    transition: max-width 0.8s;
   }
 
   img {
@@ -112,6 +101,6 @@ const LandingContent = styled.div`
   }
 
   .small {
-    max-width: 0px
+    max-width: 0px;
   }
 `;
