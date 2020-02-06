@@ -1,16 +1,17 @@
 import React, {useEffect} from "react";
 import styled from "styled-components";
 
-import ContactMeHeader from "../components/landing/ContactMeHeader";
+import ContactMeHeader from "../components/landing/Header";
 
 import { headerHeight, footerHeight } from "./styling";
-import FooterBanner from "../components/landing/FooterBanner";
-import LandingInitialView from "../components/landing/LandingInitialView";
-import LandingCaptions from "../components/landing/LandingCaptions";
+import FooterBanner from "../components/landing/Footer";
+import LandingInitialView from "../components/landing/InitialView";
+import Captions from "../components/landing/Captions";
 import Boys from "../components/landing/Boys";
 import SiteLinks from "../components/reusable/SiteLinks";
 import Projects from "../components/landing/Projects";
 import Spacer from "../components/landing/Spacer";
+import LearnMore from "../components/landing/LearnMore";
 
 export default function Landing() {
 
@@ -33,10 +34,12 @@ export default function Landing() {
         <LandingInitialView />
         <Spacer />
         <Projects />
+        <LearnMore />
         <Spacer />
-        <LandingCaptions />
+        <Captions />
         <Spacer />
         <SiteLinks />
+        <LearnMore />
         {/* <Spacer /> */}
         <Boys />
       </FullPage>

@@ -7,6 +7,7 @@ export const footerHeight = 30;
 export const borderRad = "5px";
 export const transition = "0.3s";
 
+// https://favicon.io/favicon-generator/
 // favicon font - Merriweather
 
 export const landingHeaderFont = "floralwhite";
