@@ -4,7 +4,8 @@ import {
   headerHeight,
   landingHeader,
   landingHeadFootOpacity,
-  landingHeaderFont
+  landingHeaderFont,
+  transition
 } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
 
@@ -76,9 +77,6 @@ export default function ContactMeHeader(props) {
 
     .links {
       display: flex;
-      // justify-content: space-between;
-      // align-items: center;
-      // border: 1px solid red;
     }
 
     p {
@@ -88,6 +86,17 @@ export default function ContactMeHeader(props) {
       padding: 0 10px;
       font-size: 1rem;
       font-weight: bold;
+
+      @media (pointer:fine) {
+        &:hover {
+          color: dodgerblue;
+          transition: color ${transition};
+        }
+      }
+
+      @media (max-width: 400px) {
+        font-size: 0.8rem;
+      }
     }
   `;
 
