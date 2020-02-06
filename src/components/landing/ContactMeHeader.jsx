@@ -1,5 +1,5 @@
 import React from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
   headerHeight,
   landingHeader,
@@ -46,8 +46,8 @@ export default function ContactMeHeader(props) {
   const Rotate = styled.div`
     display: inline-block;
     animation: ${rotate} 5s linear infinite;
-    padding: 2rem 1rem;
-    font-size: 1.2rem;
+    // padding: 2rem 1rem;
+    // font-size: 1.2rem;
   `;
 
   const Header = styled.div`
@@ -80,16 +80,16 @@ export default function ContactMeHeader(props) {
       // align-items: center;
       // border: 1px solid red;
     }
-  `;
 
-  const button = {
-    textAlign: "center",
-    cursor: "pointer",
-    color: landingHeaderFont,
-    padding: "0 10px",
-    fontSize: "1rem",
-    fontWeight: "bold"
-  };
+    p {
+      text-align: center;
+      cursor: pointer;
+      color: ${landingHeaderFont};
+      padding: 0 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  `;
 
   return (
     <Header>
@@ -99,21 +99,13 @@ export default function ContactMeHeader(props) {
         </div>
       </Rotate>
       <div className="links">
-        <p style={button} onClick={() => scroll(0)}>
-          Top
-        </p>
-        <p style={button} onClick={() => scroll(project)}>
-          Projects
-        </p>
-        <p style={button} onClick={() => scroll(captions)}>
-          Captions
-        </p>
-        <p style={button} onClick={() => scroll(contact)}>
-          Contact
-        </p>
+        <p onClick={() => scroll(0)}>Top</p>
+        <p onClick={() => scroll(project)}>Projects</p>
+        <p onClick={() => scroll(captions)}>Captions</p>
+        <p onClick={() => scroll(contact)}>Contact</p>
       </div>
       <Rotate>
-        <div className="image" />
+        <div className="image remove" />
       </Rotate>
     </Header>
   );
