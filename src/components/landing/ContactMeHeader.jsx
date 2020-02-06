@@ -9,7 +9,7 @@ import {
 } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
 
-export default function ContactMeHeader(props) {
+export default function ContactMeHeader() {
   let project;
   let captions;
   let contact;
@@ -43,12 +43,10 @@ export default function ContactMeHeader(props) {
       transform: rotate(360deg);
     }
     `;
-  // Here we create a component that will rotate everything we pass in over two seconds
+  // create a component that will rotate everything we pass in
   const Rotate = styled.div`
     display: inline-block;
     animation: ${rotate} 5s linear infinite;
-    // padding: 2rem 1rem;
-    // font-size: 1.2rem;
   `;
 
   const Header = styled.div`
@@ -72,6 +70,7 @@ export default function ContactMeHeader(props) {
 
       img {
         max-height: 100%;
+        width: auto;
       }
     }
 
@@ -87,7 +86,7 @@ export default function ContactMeHeader(props) {
       font-size: 1rem;
       font-weight: bold;
 
-      @media (pointer:fine) {
+      @media (pointer: fine) {
         &:hover {
           color: dodgerblue;
           transition: color ${transition};
@@ -102,10 +101,8 @@ export default function ContactMeHeader(props) {
 
   return (
     <Header>
-      <Rotate>
-        <div className="image">
-          <img src={logo192} alt="logo" id="logo" />
-        </div>
+      <Rotate className="image">
+        <img src={logo192} alt="logo" id="logo" />
       </Rotate>
       <div className="links">
         <p onClick={() => scroll(0)}>Top</p>
@@ -113,9 +110,7 @@ export default function ContactMeHeader(props) {
         <p onClick={() => scroll(captions)}>Captions</p>
         <p onClick={() => scroll(contact)}>Contact</p>
       </div>
-      <Rotate>
-        <div className="image remove" />
-      </Rotate>
+      <div className="image" />
     </Header>
   );
 }

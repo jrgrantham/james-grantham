@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function SectionTitle(props) {
   return (
     <StyledTitle>
-      <h1>{props.title}</h1>
+      <h2>{props.title}</h2>
       <p>{props.description}</p>
     </StyledTitle>
   );
@@ -16,9 +16,16 @@ const StyledTitle = styled.div`
   justify-content: center;
   width: 100%;
 
-  h1 {
+  h2 {
     font-weight: bold;
     padding-top: 60px;
+
+    @media (min-width: 800px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 4rem;
+    }
   }
 
   p {

@@ -12,8 +12,9 @@ import {
   landingInitial2,
   landingInitialFont,
 } from "../../views/styling";
+import SectionTitle from "../reusable/SectionTitle";
 
-export default function LandingInitialView(props) {
+export default function LandingInitialView() {
   // document.body.style.background = appColor;
   // document.getElementById("root").style.background = appColor;
 
@@ -39,22 +40,22 @@ export default function LandingInitialView(props) {
     <LandingContainer>
       <LandingContent>
         <div id="name" className="hide">
-          <h2 style={fontStyle}>James Grantham</h2>
+          <h2>James Grantham</h2>
         </div>
         <div id="img" className="hide img">
           <img src={jamesPhoto} alt="" />
         </div>
         <div id="jobs" className="hide">
-          <h3 style={fontStyle}>Web Developer</h3>
-          <p style={fontStyle}>-</p>
-          <h3 style={fontStyle}>Mechanical Engineer</h3>
+          <h3>Web Developer</h3>
+          <p>-</p>
+          <h3>Mechanical Engineer</h3>
         </div>
       </LandingContent>
     </LandingContainer>
   );
 }
 
-let vh = window.innerHeight < 630 ? 630 : window.innerHeight;
+let vh = Math.max(window.innerHeight, 630)
 
 const LandingContainer = styled.div`
   height: ${vh - headerHeight - footerHeight}px;
@@ -67,10 +68,6 @@ const LandingContainer = styled.div`
   align-items: center;
   // border: 2px solid green;
 `;
-
-const fontStyle = {
-  color: landingInitialFont
-};
 
 const LandingContent = styled.div`
   width: 100%;
@@ -86,7 +83,6 @@ const LandingContent = styled.div`
   div {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     align-items: center;
     transition: opacity 1s;
   }
@@ -112,18 +108,12 @@ const LandingContent = styled.div`
     font-weight: bold;
   }
 
-  h5 {
-    background-color: white;
-    padding: 1rem 0;
-    min-width: 15rem;
-    border: 1px solid ${landingInitialFont};
-    border-radius: ${borderRad};
-
-    @media (pointer: fine) {
-      &:hover {
-        background-color: ${landingInitial1};
-        transition: background-color ${transition};
-      }
+  h2 {
+    @media (min-width: 800px) {
+      font-size: 3rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 4rem;
     }
   }
 

@@ -50,7 +50,7 @@ export default function Professional() {
           />
         )}
       />
-      {/* <SiteLinks /> */}
+      <SiteLinks />
       <Footer />
     </StyledProfessional>
   );
