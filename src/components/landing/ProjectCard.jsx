@@ -1,5 +1,5 @@
 import React from "react";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
+// import Flippy, { FrontSide, BackSide } from "react-flippy";
 import styled from "styled-components";
 
 import { borderRad } from "../../views/styling";
@@ -8,8 +8,8 @@ export default function ProjectCard(props) {
   return (
     <>
       <FlipCard>
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
+        <div className="flip-card-inner">
+          <div className="flip-card-front">
             <img
               src={props.project.image}
               alt={props.project.title}
@@ -22,7 +22,7 @@ export default function ProjectCard(props) {
               <a href={props.project.repo}>github</a>
             </div>
           </div>
-          <div class="flip-card-back">
+          <div className="flip-card-back">
             <div className="details">
               {/* <h2>{props.project.title}</h2> */}
               {/* <h4>{props.project.uses}</h4> */}

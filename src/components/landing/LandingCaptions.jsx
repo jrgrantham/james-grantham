@@ -37,8 +37,8 @@ export default function LandingCaptions() {
         </CaptionContainer>
       ))}
       <p>For more information about me, my career and experience, tap the button below...</p>
-      <Link to="/professional">
-        <h6>Learn more about me</h6>
+      <Link to="/professional" >
+        <h6 >Learn more about me</h6>
       </Link>
     </Captions>
   );

@@ -1,13 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
   headerHeight,
   landingHeader,
   landingHeadFootOpacity,
-  landingHeaderFont
+  landingHeaderFont,
+  transition
 } from "../../views/styling";
+import logo192 from "../../images/logo192.png";
 
-export default function ContactMeHeader(props) {
+export default function ContactMeHeader() {
   let project;
   let captions;
   let contact;
@@ -32,46 +34,83 @@ export default function ContactMeHeader(props) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
 
+  // Create the keyframes
+  const rotate = keyframes`
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+    `;
+  // create a component that will rotate everything we pass in
+  const Rotate = styled.div`
+    display: inline-block;
+    animation: ${rotate} 5s linear infinite;
+  `;
+
   const Header = styled.div`
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: ${landingHeader};
     opacity: ${landingHeadFootOpacity};
-    min-height: ${headerHeight}px;
+    height: ${headerHeight}px;
     width: 100%;
     // max-width: 1000px;
     position: fixed;
     top: 0;
     padding: 0 10px;
-  `;
 
-  const button = {
-    textAlign: 'center',
-    cursor: "pointer",
-    color: landingHeaderFont,
-    padding: "0 10px",
-    fontSize: '1rem',
-    fontWeight: 'bold'
-  };
+    .image {
+      height: 25px;
+      width: 25px;
+      // border: 1px solid red
+
+      img {
+        max-height: 100%;
+        width: auto;
+      }
+    }
+
+    .links {
+      display: flex;
+    }
+
+    p {
+      text-align: center;
+      cursor: pointer;
+      color: ${landingHeaderFont};
+      padding: 0 10px;
+      font-size: 1rem;
+      font-weight: bold;
+
+      @media (pointer: fine) {
+        &:hover {
+          color: dodgerblue;
+          transition: color ${transition};
+        }
+      }
+
+      @media (max-width: 400px) {
+        font-size: 0.8rem;
+      }
+    }
+  `;
 
   return (
     <Header>
-      <>
-        <p style={button} onClick={() => scroll(0)}>
-          Top
-        </p>
-        <p style={button} onClick={() => scroll(project)}>
-          Projects
-        </p>
-        <p style={button} onClick={() => scroll(captions)}>
-          Captions
-        </p>
-        <p style={button} onClick={() => scroll(contact)}>
-          Contact
-        </p>
-      </>
+      <Rotate className="image">
+        <img src={logo192} alt="logo" id="logo" />
+      </Rotate>
+      <div className="links">
+        <p onClick={() => scroll(0)}>Top</p>
+        <p onClick={() => scroll(project)}>Projects</p>
+        <p onClick={() => scroll(captions)}>Captions</p>
+        <p onClick={() => scroll(contact)}>Contact</p>
+      </div>
+      <div className="image" />
     </Header>
   );
 }
