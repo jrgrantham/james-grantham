@@ -12,7 +12,6 @@ import {
   landingInitial2,
   landingInitialFont,
 } from "../../views/styling";
-import SectionTitle from "../reusable/SectionTitle";
 
 export default function LandingInitialView() {
   // document.body.style.background = appColor;
@@ -21,19 +20,12 @@ export default function LandingInitialView() {
   useEffect(() => {
     setTimeout(function() {
       document.getElementById("name").classList.remove("hide");
-    }, 300);
-
-    setTimeout(function() {
-      document.getElementById("img").classList.remove("hide");
-    }, 100);
-
-    setTimeout(function() {
       document.getElementById("jobs").classList.remove("hide");
-    }, 600);
+    }, 500);
 
-    // setTimeout(function() {
-    //   document.getElementById("info").classList.remove("hide");
-    // }, 900);
+    setTimeout(function() {
+      document.getElementById("img").classList.remove("small");
+    }, 100);
   }, []);
 
   return (
@@ -42,7 +34,7 @@ export default function LandingInitialView() {
         <div id="name" className="hide">
           <h2>James Grantham</h2>
         </div>
-        <div id="img" className="hide img">
+        <div id="img" className="small img">
           <img src={jamesPhoto} alt="" />
         </div>
         <div id="jobs" className="hide">
@@ -72,13 +64,11 @@ const LandingContainer = styled.div`
 const LandingContent = styled.div`
   width: 100%;
   height: ${vh - headerHeight - footerHeight}px;
-  // min-height: 500px;
   max-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  // border: 2px solid green;
 
   div {
     display: flex;
@@ -91,7 +81,7 @@ const LandingContent = styled.div`
     width: 90%;
     max-width: 800px;
     max-width: 90vh;
-    transition: opacity ${transition};
+    transition: max-width 1.5s;
   }
 
   img {
@@ -119,5 +109,9 @@ const LandingContent = styled.div`
 
   .hide {
     opacity: 0;
+  }
+
+  .small {
+    max-width: 0px
   }
 `;
