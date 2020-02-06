@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
 
@@ -14,8 +14,21 @@ export default function Professional() {
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
 
+  useEffect(() => {
+    try {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'auto',
+      });
+    } catch (error) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
+
   return (
-    <StyledProfessional>
+    <StyledProfessional id='professional'>
       <Route
         path="/professional"
         render={props => (
@@ -37,7 +50,7 @@ export default function Professional() {
           />
         )}
       />
-      <SiteLinks />
+      {/* <SiteLinks /> */}
       <Footer />
     </StyledProfessional>
   );

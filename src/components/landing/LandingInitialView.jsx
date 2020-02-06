@@ -36,7 +36,7 @@ export default function LandingInitialView(props) {
   }, []);
 
   return (
-    <LandingContainer onClick={() => props.setHiddenContact(true)}>
+    <LandingContainer>
       <LandingContent>
         <div id="name" className="hide">
           <h2 style={fontStyle}>James Grantham</h2>
