@@ -105,18 +105,22 @@ const LandingContent = styled.div`
       #3e3e3e,
       #3e3e3e,
       #3e3e3e,
+      red,
+      #3e3e3e,
+      #3e3e3e,
+      #3e3e3e,
+      #3e3e3e,
+      #3e3e3e,
       dodgerblue,
       #3e3e3e,
       #3e3e3e,
-      #3e3e3e,
-      red,
       #3e3e3e,
       #3e3e3e,
       #3e3e3e
     );
     color: transparent;
     -webkit-background-clip: text;
-    animation: ${colours} 5s linear infinite;
+    animation: ${colours} 8s linear infinite;
     background-size: 800%;
 
     @media (min-width: 800px) {
