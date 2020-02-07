@@ -24,7 +24,7 @@ export default function LandingInitialView() {
     <LandingContainer>
       <LandingContent>
         <div id="name" className="hide">
-          <h2>James Grantham</h2>
+          <h1>James Grantham</h1>
         </div>
         <div id="img" className="small img">
           <img src={jamesPhoto} alt="James Grantham" />
@@ -57,9 +57,6 @@ const colours = keyframes`
   to {
     background-position: 0%;
   }
-  // 100% {
-  //   background-position: 0% 50%;
-  // }
 `;
 
 const LandingContent = styled.div`
@@ -99,19 +96,19 @@ const LandingContent = styled.div`
     font-weight: bold;
   }
 
-  h2 {
+  h1 {
     background-image: linear-gradient(
       to right,
       #3e3e3e,
       #3e3e3e,
       #3e3e3e,
-      red,
+      #1e90ff,
       #3e3e3e,
       #3e3e3e,
       #3e3e3e,
       #3e3e3e,
       #3e3e3e,
-      dodgerblue,
+      #ff8d1e,
       #3e3e3e,
       #3e3e3e,
       #3e3e3e,
@@ -123,11 +120,14 @@ const LandingContent = styled.div`
     animation: ${colours} 8s linear infinite;
     background-size: 800%;
 
-    @media (min-width: 800px) {
-      font-size: 3rem;
+    @media (max-width: 550px) {
+      font-size: 2.5rem;
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 1000px) {
       font-size: 4rem;
+    }
+    @media (min-width: 1500px) {
+      font-size: 5rem;
     }
   }
 

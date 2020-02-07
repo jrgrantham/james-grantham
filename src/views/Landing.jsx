@@ -11,7 +11,7 @@ import Boys from "../components/landing/Boys";
 import SiteLinks from "../components/reusable/SiteLinks";
 import Projects from "../components/landing/Projects";
 import Spacer from "../components/landing/Spacer";
-import LearnMore from "../components/landing/LearnMore";
+import LearnMore from "../components/reusable/LearnMore";
 
 export default function Landing() {
 
