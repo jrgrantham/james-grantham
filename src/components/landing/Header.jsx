@@ -45,7 +45,7 @@ export default function ContactMeHeader() {
   // create a component that will rotate everything we pass in
   const Rotate = styled.div`
     display: inline-block;
-    animation: ${rotate} 5s linear infinite;
+    animation: ${rotate} 8s linear infinite;
   `;
 
   const Header = styled.div`

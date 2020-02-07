@@ -18,7 +18,7 @@ export default function LearnMore() {
         below...
       </p>
       <Link to="/professional">
-        <h6>Learn about me</h6>
+        <h6>Learn more</h6>
       </Link>
     </Captions>
   );
@@ -34,8 +34,8 @@ const Captions = styled.div`
   h6 {
     color: FloralWhite;
     font-weight: bold;
-    background-color: DodgerBlue;
-    padding: 1rem 2.6rem;
+    background-color: #ff8d1e;
+    padding: 1rem 3.6rem;
     margin: 20px 0 50px 0;
     border-radius: ${borderRad};
     transition: opacity ${transition};
