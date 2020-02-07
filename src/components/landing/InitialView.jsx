@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import jamesPhoto from "../../../src/images/james.jpg";
 
@@ -50,6 +50,18 @@ const LandingContainer = styled.div`
   align-items: center;
 `;
 
+const colours = keyframes`
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: 0%;
+  }
+  // 100% {
+  //   background-position: 0% 50%;
+  // }
+`;
+
 const LandingContent = styled.div`
   width: 100%;
   height: ${vh - headerHeight - footerHeight}px;
@@ -88,6 +100,25 @@ const LandingContent = styled.div`
   }
 
   h2 {
+    background-image: linear-gradient(
+      to right,
+      #3e3e3e,
+      #3e3e3e,
+      #3e3e3e,
+      dodgerblue,
+      #3e3e3e,
+      #3e3e3e,
+      #3e3e3e,
+      red,
+      #3e3e3e,
+      #3e3e3e,
+      #3e3e3e
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: ${colours} 5s linear infinite;
+    background-size: 800%;
+
     @media (min-width: 800px) {
       font-size: 3rem;
     }
