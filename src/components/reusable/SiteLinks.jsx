@@ -6,8 +6,7 @@ import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mail-512.png";
 import phone from "../../images/phone.png";
-import { transition } from "../../views/styling";
-import SectionTitle from "./SectionTitle";
+import { transition, fontColour, borderRad } from "../../views/styling";
 
 export default function SiteLinks() {
 
@@ -17,12 +16,10 @@ export default function SiteLinks() {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    // height: 250px;
-    // padding: 40px 0;
     margin-bottom: 50px;
     
-    h3 {
-      font-weight: bold;
+    h4 {
+      padding: 80px 0px 40px 0px;
     }
   `
 
@@ -32,20 +29,22 @@ export default function SiteLinks() {
     min-width: 320px;
     width: 100%;
     max-width: 1000px;
-    // border: 1px solid red
 
     img {
-      width: 100%;
+      display: flex;
+      width: 35px;
       height: auto;
     }
     
     .image {
-      width: 40px;
-      transition: all ${transition}
+      padding: 20px;
+      // border: 1px solid ${fontColour};
+      // border-radius: ${borderRad};
+      transition: all ${transition};
       
       @media (pointer: fine) {
         &:hover {
-          transform: scale(2);
+          transform: scale(1.6);
         }
       }
     }
@@ -53,8 +52,8 @@ export default function SiteLinks() {
   `;
 
   return (
-    <Container>
-      <SectionTitle title={'Find me...'} description={"Use  the links below to navigate"} />
+    <Container id='contact'>
+      <h4>Find me...</h4>
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />

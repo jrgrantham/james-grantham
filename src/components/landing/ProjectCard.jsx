@@ -2,7 +2,7 @@ import React from "react";
 // import Flippy, { FrontSide, BackSide } from "react-flippy";
 import styled from "styled-components";
 
-import { borderRad } from "../../views/styling";
+import { borderRad, transition } from "../../views/styling";
 
 export default function ProjectCard(props) {
   return (
@@ -51,7 +51,7 @@ const FlipCard = styled.div`
   @media (max-width: 500px) {
     width: 300px;
     height: 350px;
-    margin: 0 10px 20px 10px;
+    margin-bottom: 40px;
   }
 
   a {
@@ -63,6 +63,13 @@ const FlipCard = styled.div`
     background: dodgerblue;
     color: floralwhite;
     font-weight: bold;
+    transition: opacity ${transition};
+
+    @media (pointer: fine) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 
   img {

@@ -7,6 +7,7 @@ import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from './views/ContactForm'
 import back from './images/background.png'
+import { fontColour } from "./views/styling";
 
 
 export default function App() {
@@ -68,12 +69,62 @@ const StyledApp = styled.div`
   text-align: center;
   width: 100%;
   min-height: 100%;
-  // margin: auto;
   background-image: url('${back}');
   background-repeat: repeat;
-  // shadows: none;
-  
-  // a {
-  //   color: black;
-  // }
+
+  color: ${fontColour};
+
+  @media (max-width: 1500px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+    h4 {
+      font-size: 2rem;
+    }
+    h5, h6 {
+
+    }
+  }
+
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      // font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.8rem;
+    }
+    h5, h6 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2.3rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+    h5, h6 {
+      font-size: 1.2rem;
+    }
+  }
 `;
