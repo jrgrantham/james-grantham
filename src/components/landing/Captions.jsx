@@ -4,11 +4,8 @@ import { captions } from "../../data/captions";
 
 import {
   mediaBreak,
-  landingCaptionBack1,
-  landingCaptionBack2,
   landingCaptionBorder,
   landingCaption,
-  landingCaptionFont,
   appWidth,
   transition,
   borderRad,
@@ -22,8 +19,8 @@ export default function LandingCaptions() {
   return (
     <Captions id="captions">
       <SectionTitle
-        title={"About me"}
-        description={"Just a few summarising statements"}
+        title={"Values"}
+        description={"For details hit the learn about me button"}
       />
       {captions.map((caption, index) => (
         <CaptionContainer
@@ -42,14 +39,11 @@ export default function LandingCaptions() {
 const Captions = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   max-width: ${appWidth};
   margin-bottom: 20px;
 
   @media (min-width: ${mediaBreak}) {
-    // padding: 0 100px;
     .left {
       justify-content: flex-start;
     }
@@ -61,30 +55,26 @@ const Captions = styled.div`
 
 const CaptionContainer = styled.div`
   display: flex;
-  // flex-direction: column;
-  align-items: center;
   width: 100%;
 `;
 
 const Caption = styled.div`
   background-color: ${landingCaption};
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid ${landingCaptionBorder};
   border-radius: ${borderRad};
   width: 85%;
-
-  min-height: 80px;
+  min-height: 70px;
   transition: all ${transition};
 
   @media (min-width: ${mediaBreak}) {
-    margin: 0 30px 50px 30px;
-    width: 60%;
-    min-width: 500px;
-    min-height: 120px;
+    margin: 0 80px 40px 80px;
+    width: 500px;
+    min-height: 100px;
   }
 
   @media (pointer: fine) {

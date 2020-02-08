@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { projects } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
-// import ProjectCard from "./ProjectCardCopy";
 
 export default function Projects() {
   return (
