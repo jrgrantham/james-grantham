@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import { projects } from "../../data/projects";
+import { projects, projectsTitle, projectsDescription } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
 
 export default function Projects() {
   return (
     <ProjectsContainer id="projects">
-      <SectionTitle title={'Projects'} description={'Check out some of my work'} />
+      <SectionTitle title={projectsTitle} description={projectsDescription} />
       <StyledProjects>
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;

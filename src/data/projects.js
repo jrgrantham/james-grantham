@@ -1,6 +1,11 @@
 import randM from '../images/randM.png'
 import starwars from '../images/starwars.png'
 
+export const projectsTitle = 'Projects'
+export const projectsDescription = 'Check out some of my work'
+export const projectsLink = 'Visit'
+export const projectsGitHub = 'github'
+
 export const projects = [
   {
     title: "Rick and Morty",

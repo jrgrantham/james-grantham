@@ -6,16 +6,14 @@ import {
   transition,
   borderRad
 } from "../../views/styling";
+import { learnMoreIntro, learnMoreButton } from "../../data/learnMore";
 
 export default function LearnMore() {
   return (
     <Captions>
-      <p>
-        For more information about me, my career and experience, tap the button
-        below...
-      </p>
+      <p>{learnMoreIntro}</p>
       <Link to="/professional">
-        <h6>Learn more</h6>
+        <h6>{learnMoreButton}</h6>
       </Link>
     </Captions>
   );

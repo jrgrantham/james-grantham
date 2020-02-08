@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { borderRad, transition } from "../../views/styling";
+import { projectsLink, projectsGitHub } from "../../data/projects";
 
 export default function ProjectCard(props) {
   return (
@@ -17,23 +18,23 @@ export default function ProjectCard(props) {
             />
             <div className="buttons">
               {props.project.link === "" ? null : (
-                <a href={props.project.link}>visit</a>
+                <a href={props.project.link}>{projectsLink}</a>
               )}
-              <a href={props.project.repo}>github</a>
+              <a href={props.project.repo}>{projectsGitHub}</a>
             </div>
           </div>
           <div className="flip-card-back">
             <div className="details">
-              <h2>{props.project.title}</h2>
+              <h3>{props.project.title}</h3>
               <h4>{props.project.uses}</h4>
               <h5>{props.project.description}</h5>
               <p>{props.project.comments}</p>
             </div>
             <div className="buttons">
               {props.project.link === "" ? null : (
-                <a href={props.project.link}>visit</a>
+                <a href={props.project.link}>{projectsLink}</a>
               )}
-              <a href={props.project.repo}>github</a>
+              <a href={props.project.repo}>{projectsGitHub}</a>
             </div>
           </div>
         </div>
@@ -56,7 +57,7 @@ const FlipCard = styled.div`
     margin-bottom: 40px;
   }
 
-  h2, h4, h5 {
+  h3, h4, h5 {
     margin-bottom: 7px
   }
 
