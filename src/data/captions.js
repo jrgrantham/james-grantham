@@ -1,3 +1,6 @@
+export const captionTitle = 'Values'
+export const captionComment = 'For further details, hit the learn more button'
+
 export const captions = [
   // 'Experienced Engineer',
   // 'Function over form',

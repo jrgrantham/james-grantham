@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { captions } from "../../data/captions";
+import { captions, captionTitle, captionComment } from "../../data/captions";
 
 import {
   mediaBreak,
@@ -13,14 +13,12 @@ import {
 import SectionTitle from "../reusable/SectionTitle";
 
 export default function LandingCaptions() {
-  // document.body.style.background = appColor;
-  // document.getElementById("root").style.background = appColor;
 
   return (
     <Captions id="captions">
       <SectionTitle
-        title={"Values"}
-        description={"For details hit the learn about me button"}
+        title={captionTitle}
+        description={captionComment}
       />
       {captions.map((caption, index) => (
         <CaptionContainer

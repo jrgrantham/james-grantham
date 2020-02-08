@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { borderRad, transition } from "../../views/styling";
+import { projectsLink, projectsGitHub } from "../../data/projects";
 
 export default function ProjectCard(props) {
   return (
@@ -17,9 +18,9 @@ export default function ProjectCard(props) {
             />
             <div className="buttons">
               {props.project.link === "" ? null : (
-                <a href={props.project.link}>visit</a>
+                <a href={props.project.link}>{projectsLink}</a>
               )}
-              <a href={props.project.repo}>github</a>
+              <a href={props.project.repo}>{projectsGitHub}</a>
             </div>
           </div>
           <div className="flip-card-back">
@@ -31,9 +32,9 @@ export default function ProjectCard(props) {
             </div>
             <div className="buttons">
               {props.project.link === "" ? null : (
-                <a href={props.project.link}>visit</a>
+                <a href={props.project.link}>{projectsLink}</a>
               )}
-              <a href={props.project.repo}>github</a>
+              <a href={props.project.repo}>{projectsGitHub}</a>
             </div>
           </div>
         </div>
