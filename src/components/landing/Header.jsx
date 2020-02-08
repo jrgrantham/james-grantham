@@ -70,6 +70,7 @@ export default function ContactMeHeader() {
       img {
         max-height: 100%;
         width: auto;
+        transition: all 1s;
       }
     }
 
@@ -84,11 +85,12 @@ export default function ContactMeHeader() {
       padding: 0 10px;
       font-size: 1rem;
       font-weight: bold;
+      transition: all ${transition};
 
       @media (pointer: fine) {
         &:hover {
           color: dodgerblue;
-          transition: color ${transition};
+          transform: scale(1.2);
         }
       }
 

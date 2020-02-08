@@ -8,11 +8,8 @@ import {
 } from "../../views/styling";
 
 export default function LearnMore() {
-  // document.body.style.background = appColor;
-  // document.getElementById("root").style.background = appColor;
-
   return (
-    <Captions id="captions">
+    <Captions>
       <p>
         For more information about me, my career and experience, tap the button
         below...

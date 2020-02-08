@@ -31,7 +31,7 @@ export default function LandingCaptions() {
           className={index % 2 === 0 ? "left" : "right"}
         >
           <Caption>
-            <h4 style={fontStyle}>{caption}</h4>
+            <h4>{caption}</h4>
           </Caption>
         </CaptionContainer>
       ))}
@@ -39,44 +39,17 @@ export default function LandingCaptions() {
   );
 }
 
-const fontStyle = {
-  color: landingCaptionFont,
-  fontWeight: "bold"
-};
-
 const Captions = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-  max-width: ${appWidth}
-  // background-color: ${landingCaptionBack1};
-  // background-image: linear-gradient(${landingCaptionBack1}, ${landingCaptionBack2});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-
-  h6 {
-    color: FloralWhite;
-    font-weight: bold;
-    background-color: DodgerBlue;
-    padding: 1rem 2.6rem;
-    margin: 20px 0 50px 0;
-    border-radius: ${borderRad};
-    transition: opacity ${transition};
-
-    @media (pointer: fine) {
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-  }
-
-  p {
-    text-align: center;
-    padding: 10px;
-  }
+  max-width: ${appWidth};
+  margin-bottom: 20px;
 
   @media (min-width: ${mediaBreak}) {
-    padding: 0 100px;
+    // padding: 0 100px;
     .left {
       justify-content: flex-start;
     }
@@ -101,16 +74,16 @@ const Caption = styled.div`
   justify-content: center;
   align-items: center;
   border: 1px solid ${landingCaptionBorder};
-  border-radius: 3px;
-  padding: 10px;
+  border-radius: ${borderRad};
   width: 85%;
-  min-height: 100px;
+
+  min-height: 80px;
   transition: all ${transition};
 
   @media (min-width: ${mediaBreak}) {
     margin: 0 30px 50px 30px;
     width: 60%;
-    min-width: 400px;
+    min-width: 500px;
     min-height: 120px;
   }
 

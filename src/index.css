@@ -86,7 +86,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  color: #3e3e3e;
+  /* color: #3e3e3e; */
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -143,27 +143,33 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
 h1 {
-  font-size: 4rem
+  font-size: 5rem
 }
 h2 {
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 2.7rem;
 }
 h4 {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 /* need to be the same (phone numbers) */
 h5, h6 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 p {
   text-align: left;
   font-size: 1.2rem;
 }
 a {
+  font-size: 1.2rem;
   text-decoration: none
 }
 

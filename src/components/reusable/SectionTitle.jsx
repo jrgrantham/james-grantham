@@ -20,12 +20,12 @@ const StyledTitle = styled.div`
     font-weight: bold;
     padding-top: 60px;
 
-    @media (min-width: 800px) {
-      font-size: 3rem;
-    }
-    @media (min-width: 1200px) {
-      font-size: 4rem;
-    }
+  //   @media (min-width: 800px) {
+  //     font-size: 3rem;
+  //   }
+  //   @media (min-width: 1200px) {
+  //     font-size: 4rem;
+  //   }
   }
 
   p {

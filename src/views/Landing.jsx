@@ -40,7 +40,6 @@ export default function Landing() {
         <Spacer />
         <SiteLinks />
         <LearnMore />
-        {/* <Spacer /> */}
         <Boys />
       </FullPage>
       <FooterBanner />

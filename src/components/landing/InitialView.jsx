@@ -120,15 +120,15 @@ const LandingContent = styled.div`
     animation: ${colours} 8s linear infinite;
     background-size: 800%;
 
-    @media (max-width: 550px) {
-      font-size: 2.5rem;
-    }
-    @media (min-width: 1000px) {
-      font-size: 4rem;
-    }
-    @media (min-width: 1500px) {
-      font-size: 5rem;
-    }
+  //   @media (max-width: 550px) {
+  //     font-size: 2.5rem;
+  //   }
+    // @media (max-width: 1000px) {
+    //   font-size: 4rem;
+    // }
+  //   @media (min-width: 1500px) {
+  //     font-size: 5rem;
+  //   }
   }
 
   .hide {

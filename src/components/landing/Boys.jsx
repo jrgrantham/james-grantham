@@ -7,7 +7,7 @@ export default function Boys() {
   return (
     <StyledBoys>
       <Content>
-        <h5 style={hstyle}>... and dedicated Father to three awesome boys!</h5>
+        <h5 style={hstyle}>...and dedicated father to three awesome boys!</h5>
       </Content>
     </StyledBoys>
   );
@@ -31,5 +31,5 @@ const Content = styled.div`
 const hstyle = {
   color: landingBoysFont,
   fontWeight: "bold",
-  padding: "40px"
+  padding: "20px 30px"
 };
