@@ -26,7 +26,7 @@ export default function SiteLinks() {
   const Links = styled.div`
     display: flex;
     justify-content: space-evenly;
-    min-width: 320px;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1000px;
 
@@ -58,7 +58,7 @@ export default function SiteLinks() {
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
         </a>
-        <a href='' className="image">
+        <a href='#0' className="image">
           <img src={mail} alt="" />
         </a>
         <Link to="/phonenumbers" className="image">
