@@ -172,11 +172,12 @@ export const StyledForm = styled.form`
 
   button {
     margin: 20px 0;
-    background-color: green;
+    background-color: #ff8d1e;
     color: white;
     border-radius: ${borderRad};
     font-size: 1.2rem;
-    padding: 0.6rem 0rem;
+    font-weight: bold;
+    padding: 1rem 0rem;
     width: 200px;
 
     @media (pointer: fine) {
