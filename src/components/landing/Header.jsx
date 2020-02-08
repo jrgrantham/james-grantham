@@ -8,6 +8,8 @@ import {
   transition
 } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
+import moon from "../../images/moon.png";
+import sunYellow from "../../images/sunYellow.png";
 
 export default function ContactMeHeader() {
   let project;
@@ -108,10 +110,12 @@ export default function ContactMeHeader() {
       <div className="links">
         <p onClick={() => scroll(0)}>Top</p>
         <p onClick={() => scroll(project)}>Projects</p>
-        <p onClick={() => scroll(captions)}>Me</p>
+        <p onClick={() => scroll(captions)}>Values</p>
         <p onClick={() => scroll(contact)}>Contact</p>
       </div>
-      <div className="image" />
+      <div className="image">
+        {/* <img src={moon} alt="mode" style={{padding: '3px'}} /> */}
+      </div>
     </Header>
   );
 }
