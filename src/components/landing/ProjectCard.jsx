@@ -25,7 +25,7 @@ export default function ProjectCard(props) {
           </div>
           <div className="flip-card-back">
             <div className="details">
-              <h2>{props.project.title}</h2>
+              <h3>{props.project.title}</h3>
               <h4>{props.project.uses}</h4>
               <h5>{props.project.description}</h5>
               <p>{props.project.comments}</p>
@@ -57,7 +57,7 @@ const FlipCard = styled.div`
     margin-bottom: 40px;
   }
 
-  h2, h4, h5 {
+  h3, h4, h5 {
     margin-bottom: 7px
   }
 
