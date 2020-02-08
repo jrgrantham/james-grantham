@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import {
   headerHeight,
@@ -105,7 +106,9 @@ export default function ContactMeHeader() {
   return (
     <Header>
       <Rotate className="image">
-        <img src={logo192} alt="logo" id="logo" />
+        <Link to="/phonenumbers" className="image">
+          <img src={logo192} alt="logo" id="logo" />
+        </Link>
       </Rotate>
       <div className="links">
         <p onClick={() => scroll(0)}>Top</p>
