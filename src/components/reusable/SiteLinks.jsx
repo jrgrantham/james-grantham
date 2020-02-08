@@ -28,7 +28,7 @@ export default function SiteLinks() {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 1000px;
+    max-width: 700px;
 
     img {
       display: flex;
@@ -61,9 +61,9 @@ export default function SiteLinks() {
         <a href='#0' className="image">
           <img src={mail} alt="" />
         </a>
-        <Link to="/phonenumbers" className="image">
+        {/* <Link to="/phonenumbers" className="image">
           <img src={phone} alt="" />
-        </Link>
+        </Link> */}
         <a href="https://www.linkedin.com/in/j-grantham/" className="image">
           <img src={linkedin} alt="" />
         </a>

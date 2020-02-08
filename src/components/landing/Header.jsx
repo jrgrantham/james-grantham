@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import {
   headerHeight,
@@ -8,6 +9,8 @@ import {
   transition
 } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
+import moon from "../../images/moon.png";
+import sunYellow from "../../images/sunYellow.png";
 
 export default function ContactMeHeader() {
   let project;
@@ -103,15 +106,19 @@ export default function ContactMeHeader() {
   return (
     <Header>
       <Rotate className="image">
-        <img src={logo192} alt="logo" id="logo" />
+        <Link to="/phonenumbers" className="image">
+          <img src={logo192} alt="logo" id="logo" />
+        </Link>
       </Rotate>
       <div className="links">
         <p onClick={() => scroll(0)}>Top</p>
         <p onClick={() => scroll(project)}>Projects</p>
-        <p onClick={() => scroll(captions)}>Me</p>
+        <p onClick={() => scroll(captions)}>Values</p>
         <p onClick={() => scroll(contact)}>Contact</p>
       </div>
-      <div className="image" />
+      <div className="image">
+        {/* <img src={moon} alt="mode" style={{padding: '3px'}} /> */}
+      </div>
     </Header>
   );
 }
