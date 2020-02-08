@@ -24,9 +24,10 @@ export default function ProjectCard(props) {
           </div>
           <div className="flip-card-back">
             <div className="details">
-              {/* <h2>{props.project.title}</h2> */}
-              {/* <h4>{props.project.uses}</h4> */}
+              <h2>{props.project.title}</h2>
+              <h4>{props.project.uses}</h4>
               <h5>{props.project.description}</h5>
+              <p>{props.project.comments}</p>
             </div>
             <div className="buttons">
               {props.project.link === "" ? null : (
@@ -50,9 +51,17 @@ const FlipCard = styled.div`
   margin: 0 25px 50px 25px;
 
   @media (max-width: 500px) {
-    width: 300px;
-    height: 360px;
+    width: 320px;
+    height: 380px;
     margin-bottom: 40px;
+  }
+
+  h2, h4, h5 {
+    margin-bottom: 7px
+  }
+
+  P {
+    padding: 20px
   }
 
   a {
@@ -111,10 +120,10 @@ const FlipCard = styled.div`
     justify-content: space-between;
     padding: 20px 0;
     background-color: white;
+    align-items: center;
   }
 
   .flip-card-front {
-    align-items: center;
   }
 
   .flip-card-back {
