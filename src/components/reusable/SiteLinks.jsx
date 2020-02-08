@@ -52,7 +52,7 @@ export default function SiteLinks() {
   `;
 
   return (
-    <Container>
+    <Container id='contact'>
       <h4>Find me...</h4>
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
