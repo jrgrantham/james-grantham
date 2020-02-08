@@ -43,14 +43,15 @@ export default function ProjectCard(props) {
 
 const FlipCard = styled.div`
   background-color: transparent;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   height: 450px;
   perspective: 1000px;
   margin: 0 25px 50px 25px;
 
   @media (max-width: 500px) {
     width: 300px;
-    height: 350px;
+    height: 360px;
     margin-bottom: 40px;
   }
 
@@ -58,12 +59,17 @@ const FlipCard = styled.div`
     display: inline-block;
     min-width: 130px;
     padding: 10px;
-    // border: 1px solid grey;
     border-radius: ${borderRad}
     background: dodgerblue;
     color: floralwhite;
     font-weight: bold;
     transition: opacity ${transition};
+
+    @media (max-width: 330px) {
+      width: 90%;
+      margin: 5px;
+      padding: 5px;
+    }
 
     @media (pointer: fine) {
       &:hover {
@@ -73,13 +79,9 @@ const FlipCard = styled.div`
   }
 
   img {
+    width: 85%;
     max-width: 350px;
     max-height: 350px;
-
-    @media (max-width: 500px) {
-      width: 250px;
-      height: 250px;
-    }
   }
 
   @media (pointer: fine) {
@@ -123,5 +125,10 @@ const FlipCard = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+
+    @media (max-width: 330px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 `;
