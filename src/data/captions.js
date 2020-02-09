@@ -11,7 +11,7 @@ export const captions = [
   'Humility',
   'Trust',
   'Fairness',
-  'Dependable',
+  'Dependability',
   'Decisiveness',
   'Honesty',
   // 'Innovative',

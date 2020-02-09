@@ -18,7 +18,7 @@ export default function SiteLinks() {
     width: 100%;
     margin-bottom: 50px;
     
-    h4 {
+    h3 {
       padding: 80px 0px 40px 0px;
     }
   `
@@ -53,7 +53,7 @@ export default function SiteLinks() {
 
   return (
     <Container id='contact'>
-      <h4>Find me...</h4>
+      <h3>Find me...</h3>
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
