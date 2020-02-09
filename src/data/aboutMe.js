@@ -22,7 +22,7 @@ export const aboutMe = [
     display: false
   },
   {
-    title: "Engeering",
+    title: "Engineering",
     introduction:
       "The things that turn me on... and off...",
     contents: [

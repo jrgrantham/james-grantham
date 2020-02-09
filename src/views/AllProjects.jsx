@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { projects, projectsTitle } from "../data/projects";
-import ProjectCard from "../components/landing/ProjectCard";
+
 import SectionTitle from "../components/reusable/SectionTitle";
-import { ProjectsContainer } from "../components/reusable/projectsStyling";
-import { Link } from "react-router-dom";
-import LinkButton from "../components/reusable/LinkButton";
+import ProjectCard from "../components/landing/ProjectCard";
+import { AnchorButton } from "../components/reusable/Buttons";
+
+import { projects, projectsTitle } from "../data/projects";
+import { Container } from "../components/reusable/containerStyling";
 
 export default function Projects() {
   useEffect(() => {
@@ -20,19 +21,16 @@ export default function Projects() {
   }, []);
 
   return (
-    <ProjectsContainer>
-      <SectionTitle title={projectsTitle} />
-      <Link to="/">
-        <LinkButton content="Return to home page" />
-      </Link>
+    <Container>
+      <SectionTitle title={projectsTitle} description="" />
+      {/* <AnchorButton content="Return to home page" target="/" /> */}
+      {/* <div style={{height: '50px'}} /> */}
       <div className="projects">
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;
         })}
       </div>
-      <Link to="/">
-        <LinkButton content="Return to home page" />
-      </Link>
-    </ProjectsContainer>
+      <AnchorButton content="Return to home page" target="/" />
+    </Container>
   );
 }

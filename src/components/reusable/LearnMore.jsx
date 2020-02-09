@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { learnMoreIntro, learnMoreButton } from "../../data/learnMore";
-import LinkButton from "./LinkButton";
+import { LinkButton } from "./Buttons";
 
 export default function LearnMore() {
   return (
     <Container>
       <p>{learnMoreIntro}</p>
-      <Link to="/professional">
-        <LinkButton content={learnMoreButton} />
-      </Link>
+      <LinkButton content={learnMoreButton} target="/professional" />
     </Container>
   );
 }

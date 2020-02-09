@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import {
   projects,
   projectsTitle,
@@ -8,8 +9,20 @@ import {
 } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
-import { ProjectsContainer } from "../reusable/projectsStyling";
-import LinkButton from "../reusable/LinkButton";
+import { LinkButton } from "../reusable/Buttons";
+import { Container } from "../reusable/containerStyling";
+
+const ProjectsContainer = styled(Container)`
+  .projects {
+    max-width: 1600px
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+`;
 
 export default function Projects() {
   return (
@@ -20,9 +33,9 @@ export default function Projects() {
           return <ProjectCard key={index} project={project} />;
         })}
       </div>
-      <Link to="projects">
-        <LinkButton content="View all projects" />
-      </Link>
+      {/* <Link to="projects"> */}
+        <LinkButton content="View all projects" target="projects" />
+      {/* </Link> */}
     </ProjectsContainer>
   );
 }

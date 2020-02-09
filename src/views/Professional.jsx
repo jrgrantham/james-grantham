@@ -9,7 +9,6 @@ import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Footer from "../components/professional/Footer";
 import SiteLinks from "../components/reusable/SiteLinks";
-import LinkButton from "../components/reusable/LinkButton";
 import Spacer from "../components/reusable/Spacer";
 
 export default function Professional() {
