@@ -1,38 +1,38 @@
 import React from "react";
 import styled from "styled-components";
-
-import { projects, projectsTitle, projectsDescription } from "../../data/projects";
+import {
+  projects,
+  projectsTitle,
+  projectsDescription,
+  projectsNumber
+} from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
+import { LinkButton } from "../reusable/Buttons";
+import { Container } from "../reusable/containerStyling";
+
+const ProjectsContainer = styled(Container)`
+  .projects {
+    max-width: 1600px
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+`;
 
 export default function Projects() {
   return (
     <ProjectsContainer id="projects">
       <SectionTitle title={projectsTitle} description={projectsDescription} />
-      <StyledProjects>
-        {projects.map((project, index) => {
+      <div className="projects">
+        {projects.slice(0, projectsNumber).map((project, index) => {
           return <ProjectCard key={index} project={project} />;
         })}
-      </StyledProjects>
+      </div>
+      <LinkButton content="View all projects" target="projects" />
     </ProjectsContainer>
   );
 }
-
-const ProjectsContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 100%;
-`;
-
-const StyledProjects = styled.div`
-  max-width: 1600px
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  // padding: 0 50px;
-  width: 100%;
-  margin-bottom: 30px;
-  // border: 1px solid red
-`;

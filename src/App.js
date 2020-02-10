@@ -5,10 +5,10 @@ import Landing from "./views/Landing";
 import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
-import ContactForm from './views/ContactForm'
-import back from './images/background.png'
+import ContactForm from "./views/ContactForm";
+import Projects from "./views/AllProjects";
+import back from "./images/background.png";
 import { fontColour } from "./views/styling";
-
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -21,6 +21,7 @@ export default function App() {
     <StyledApp>
       <Route exact path="/" component={Landing} />
       <Route path="/professional" component={Professional} />
+      <Route path="/projects" component={Projects} />
       <Route
         path="/login"
         render={props => (

@@ -17,7 +17,7 @@ import {
 
 import { timeLine } from "../../data/timeLine";
 import { experience } from "../../data/experience";
-import { web } from "../../data/web";
+import { values } from "../../data/values";
 import { aboutMe } from "../../data/aboutMe";
 
 export default function ContentButtons(props) {
@@ -34,7 +34,7 @@ export default function ContentButtons(props) {
     } else if (title === "Experience") {
       props.setContent(experience);
     } else if (title === "Projects") {
-      props.setContent(web);
+      props.setContent(values);
     } else if (title === "About me") {
       props.setContent(aboutMe);
     }

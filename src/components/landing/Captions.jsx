@@ -1,83 +1,22 @@
 import React from "react";
-import styled from "styled-components";
-import { captions, captionTitle, captionComment } from "../../data/captions";
 
-import {
-  mediaBreak,
-  landingCaptionBorder,
-  landingCaption,
-  appWidth,
-  transition,
-  borderRad,
-} from "../../views/styling";
 import SectionTitle from "../reusable/SectionTitle";
 
-export default function LandingCaptions() {
+import { captions, captionTitle, captionComment } from "../../data/captions";
+import { Captions } from "./captionsStyling";
 
+export default function LandingCaptions() {
   return (
     <Captions id="captions">
-      <SectionTitle
-        title={captionTitle}
-        description={captionComment}
-      />
+      <SectionTitle title={captionTitle} description={captionComment} />
       {captions.map((caption, index) => (
-        <CaptionContainer
+        <div
           key={index}
-          className={index % 2 === 0 ? "left" : "right"}
+          className={index % 2 === 0 ? "left caption" : "right caption"}
         >
-          <Caption>
-            <h4>{caption}</h4>
-          </Caption>
-        </CaptionContainer>
+          <h4>{caption}</h4>
+        </div>
       ))}
     </Captions>
   );
 }
-
-const Captions = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: ${appWidth};
-  margin-bottom: 20px;
-
-  @media (min-width: ${mediaBreak}) {
-    .left {
-      justify-content: flex-start;
-    }
-    .right {
-      justify-content: flex-end;
-    }
-  }
-`;
-
-const CaptionContainer = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
-const Caption = styled.div`
-  background-color: ${landingCaption};
-  margin: auto;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid ${landingCaptionBorder};
-  border-radius: ${borderRad};
-  width: 85%;
-  min-height: 70px;
-  transition: all ${transition};
-
-  @media (min-width: ${mediaBreak}) {
-    margin: 0 80px 40px 80px;
-    width: 500px;
-    min-height: 100px;
-  }
-
-  @media (pointer: fine) {
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-`;
