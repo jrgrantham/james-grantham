@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import {
   projects,
@@ -33,9 +32,7 @@ export default function Projects() {
           return <ProjectCard key={index} project={project} />;
         })}
       </div>
-      {/* <Link to="projects"> */}
-        <LinkButton content="View all projects" target="projects" />
-      {/* </Link> */}
+      <LinkButton content="View all projects" target="projects" />
     </ProjectsContainer>
   );
 }

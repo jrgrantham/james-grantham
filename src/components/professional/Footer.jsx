@@ -5,14 +5,12 @@ import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mail-512.png";
 import {
-  footerHeight,
-  landingFooter,
   transition,
   professionalBack,
 } from "../../views/styling";
 import { SmallAnchorButton } from "../reusable/Buttons";
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <Container>
       <SmallAnchorButton content="Home" target="/" />
