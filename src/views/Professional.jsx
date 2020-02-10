@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Route, Link } from "react-router-dom";
 import styled from "styled-components";
 
 import { professionalBack } from "./styling";
@@ -8,7 +7,6 @@ import { experience } from "../data/experience";
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Footer from "../components/professional/Footer";
-import SiteLinks from "../components/reusable/SiteLinks";
 import Spacer from "../components/reusable/Spacer";
 
 export default function Professional() {
@@ -36,7 +34,7 @@ export default function Professional() {
       />
       <MainContent content={content} setContent={setContent} />
       <Spacer />
-      <SiteLinks />
+      <div style={{height: '80px'}} />
       <Footer />
     </StyledProfessional>
   );

@@ -1,25 +1,67 @@
 import React from "react";
 import styled from "styled-components";
-import { borderRad } from "../../views/styling";
 
-export default function Footer() {
+import github from "../../images/github.png";
+import linkedin from "../../images/linkedin.png";
+import mail from "../../images/mail-512.png";
+import {
+  footerHeight,
+  landingFooter,
+  transition,
+  professionalBack,
+} from "../../views/styling";
+import { SmallAnchorButton } from "../reusable/Buttons";
+
+export default function Footer(props) {
   return (
-    <StyledFooter>
-      <a href='/'>Return to home page</a>
-    </StyledFooter>
+    <Container>
+      <SmallAnchorButton content="Home" target="/" />
+      <Links id="contact">
+        <a href="https://github.com/jrgrantham" className="image">
+          <img src={github} alt="" />
+        </a>
+        <a href='#0' className="image">
+          <img src={mail} alt="" />
+        </a>
+        <a href="https://www.linkedin.com/in/j-grantham/" className="image">
+          <img src={linkedin} alt="" />
+        </a>
+      </Links>
+    </Container>
   );
 }
 
-const StyledFooter = styled.div`
-  margin-top: 30px;
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ${professionalBack};
+  width: 100%
+  max-width: 1000px;
+  position: fixed;
+  bottom: 0;
+  padding: 0 10px 0 20px;
+`;
 
-  a {
-    color: white;
-    font-weight: bold;
-    background: dodgerblue;
-    display: block;
-    margin: 0px 0 60px 0;
-    padding: 0.6rem 1.6rem;
-    border-radius: ${borderRad}
+const Links = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  img {
+    display: flex;
+    width: 30px;
+    height: auto;
   }
-`
+
+  .image {
+    padding: 20px;
+    transition: all ${transition};
+    
+    @media (pointer: fine) {
+      &:hover {
+        transform: scale(1.6);
+      }
+    }
+}
+`;

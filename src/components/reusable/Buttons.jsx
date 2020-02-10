@@ -28,7 +28,7 @@ export function AnchorButton(props) {
 }
 
 const AncButton = styled.a`
-    display: block;
+  display: block;
   color: FloralWhite;
   font-weight: bold;
   background-color: #ff8d1e;
@@ -41,4 +41,13 @@ const AncButton = styled.a`
       opacity: 0.75;
     }
   }
+`;
+
+export function SmallAnchorButton(props) {
+  return <SmallAncButton href={props.target}>{props.content}</SmallAncButton>;
+}
+
+const SmallAncButton = styled(AncButton)`
+  padding: 0.6rem 1.6rem;
+  background: dodgerblue;
 `;
