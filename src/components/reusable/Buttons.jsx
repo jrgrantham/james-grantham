@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { transition, borderRad } from "../../views/styling";
+import { transition, borderRad, buttonOrange } from "../../views/styling";
 
 export function LinkButton(props) {
   return <LinButton to={props.target}>{props.content}</LinButton>;
@@ -49,5 +49,5 @@ export function SmallAnchorButton(props) {
 
 const SmallAncButton = styled(AncButton)`
   padding: 0.6rem 1.6rem;
-  background: dodgerblue;
+  background: ${buttonOrange};
 `;
