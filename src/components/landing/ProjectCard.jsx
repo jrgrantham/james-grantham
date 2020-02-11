@@ -1,8 +1,7 @@
 import React from "react";
-// import Flippy, { FrontSide, BackSide } from "react-flippy";
 import styled from "styled-components";
 
-import { borderRad, transition } from "../../views/styling";
+import { borderRad, transition, buttonBlue } from "../../views/styling";
 import { projectsLink, projectsGitHub } from "../../data/projects";
 
 export default function ProjectCard(props) {
@@ -14,7 +13,6 @@ export default function ProjectCard(props) {
             <img
               src={props.project.image}
               alt={props.project.title}
-              // style={imgStyle}
             />
             <div className="buttons">
               {props.project.link === "" ? null : (
@@ -70,7 +68,7 @@ const FlipCard = styled.div`
     min-width: 130px;
     padding: 10px;
     border-radius: ${borderRad}
-    background: dodgerblue;
+    background: ${buttonBlue};
     color: floralwhite;
     font-weight: bold;
     transition: opacity ${transition};

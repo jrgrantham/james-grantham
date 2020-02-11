@@ -1,23 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import styled, { keyframes } from "styled-components";
-import {
-  headerHeight,
-  landingHeader,
-  landingHeadFootOpacity,
-  landingHeaderFont,
-  transition
-} from "../../views/styling";
+import { headerHeight } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
-import moon from "../../images/moon.png";
-import sunYellow from "../../images/sunYellow.png";
+import bulbWhite from "../../images/bulbWhite.png";
+import bulbYellow from "../../images/bulbYellow.png";
+import { Header, Rotate } from "./headerStyling";
+import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContactMeHeader() {
+  const [darkMode, setDarkMode] = useDarkMode(true);
+
   let project;
   let captions;
   let contact;
 
-  window.onload = function() {
+  function getHeights() {
     project =
       document.getElementById("projects").getBoundingClientRect().top +
       window.pageYOffset -
@@ -30,79 +27,16 @@ export default function ContactMeHeader() {
       document.getElementById("contact").getBoundingClientRect().top +
       window.pageYOffset -
       headerHeight;
-  };
+  }
+
+  useEffect(() => {
+    getHeights();
+  }, []);
 
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
-
-  // Create the keyframes
-  const rotate = keyframes`
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-    `;
-  // create a component that will rotate everything we pass in
-  const Rotate = styled.div`
-    display: inline-block;
-    animation: ${rotate} 8s linear infinite;
-  `;
-
-  const Header = styled.div`
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: ${landingHeader};
-    opacity: ${landingHeadFootOpacity};
-    height: ${headerHeight}px;
-    width: 100%;
-    // max-width: 1000px;
-    position: fixed;
-    top: 0;
-    padding: 0 10px;
-
-    .image {
-      height: 25px;
-      width: 25px;
-      // border: 1px solid red
-
-      img {
-        max-height: 100%;
-        width: auto;
-        transition: all 1s;
-      }
-    }
-
-    .links {
-      display: flex;
-    }
-
-    p {
-      text-align: center;
-      cursor: pointer;
-      color: ${landingHeaderFont};
-      padding: 0 10px;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: all ${transition};
-
-      @media (pointer: fine) {
-        &:hover {
-          color: dodgerblue;
-          transform: scale(1.2);
-        }
-      }
-
-      @media (max-width: 400px) {
-        font-size: 0.8rem;
-      }
-    }
-  `;
-
+  console.log(darkMode);
   return (
     <Header>
       <Rotate className="image">
@@ -116,8 +50,12 @@ export default function ContactMeHeader() {
         <p onClick={() => scroll(captions)}>Values</p>
         <p onClick={() => scroll(contact)}>Contact</p>
       </div>
-      <div className="image">
-        {/* <img src={moon} alt="mode" style={{padding: '3px'}} /> */}
+      <div onClick={setDarkMode} className="image">
+        <img
+          src={darkMode ? bulbWhite : bulbYellow }
+          alt="mode"
+          style={{ padding: "3px" }}
+        />
       </div>
     </Header>
   );
