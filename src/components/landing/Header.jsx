@@ -31,7 +31,7 @@ export default function ContactMeHeader() {
 
   useEffect(() => {
     getHeights();
-  }, []);
+  }, [darkMode]);
 
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
