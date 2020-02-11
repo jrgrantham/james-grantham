@@ -9,7 +9,7 @@ export default function ProjectCard(props) {
     <>
       <FlipCard>
         <div className="flip-card-inner">
-          <div className="flip-card-front">
+          <div className="flip-card-front toggle darkmode">
             <img
               src={props.project.image}
               alt={props.project.title}
@@ -120,6 +120,10 @@ const FlipCard = styled.div`
     padding: 20px 0;
     background-color: white;
     align-items: center;
+  }
+
+  .darkmode {
+    background: black;
   }
 
   .flip-card-front {

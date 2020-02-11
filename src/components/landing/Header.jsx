@@ -36,7 +36,7 @@ export default function ContactMeHeader() {
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
-  console.log(darkMode);
+  // console.log(darkMode);
   return (
     <Header>
       <Rotate className="image">
