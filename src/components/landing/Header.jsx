@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import {
-  headerHeight} from "../../views/styling";
+import { headerHeight } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
 import bulbWhite from "../../images/bulbWhite.png";
 import bulbYellow from "../../images/bulbYellow.png";
 import { Header, Rotate } from "./headerStyling";
+import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContactMeHeader() {
+  const [darkMode, setDarkMode] = useDarkMode(true);
+
   let project;
   let captions;
   let contact;
@@ -34,7 +36,7 @@ export default function ContactMeHeader() {
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
-
+  console.log(darkMode);
   return (
     <Header>
       <Rotate className="image">
@@ -48,8 +50,12 @@ export default function ContactMeHeader() {
         <p onClick={() => scroll(captions)}>Values</p>
         <p onClick={() => scroll(contact)}>Contact</p>
       </div>
-      <div className="image">
-        <img src={bulbYellow} alt="mode" style={{padding: '3px'}} />
+      <div onClick={setDarkMode} className="image">
+        <img
+          src={darkMode ? bulbWhite : bulbYellow }
+          alt="mode"
+          style={{ padding: "3px" }}
+        />
       </div>
     </Header>
   );

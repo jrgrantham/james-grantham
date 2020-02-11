@@ -1,6 +1,12 @@
 import styled from "styled-components";
-import { professionalBack, professionalButtonHov, professionalLinks, transition, mediaBreak, borderRad } from "../../views/styling";
-
+import {
+  professionalBack,
+  professionalButtonHov,
+  professionalLinks,
+  transition,
+  mediaBreak,
+  borderRad
+} from "../../views/styling";
 
 export const StyledHeader = styled.div`
   display: flex;
@@ -28,7 +34,7 @@ export const StyledHiddenDiv = styled.div`
 
   @media (min-width: ${mediaBreak}) {
     width: 100%;
-  };
+  }
 
   .hover {
     @media (pointer: fine) {

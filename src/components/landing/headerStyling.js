@@ -1,5 +1,13 @@
 import styled, { keyframes } from "styled-components";
-import { headerHeight, landingHeader, landingHeadFootOpacity, landingHeaderFont, transition, buttonBlue } from "../../views/styling";
+import {
+  headerHeight,
+  landingHeader,
+  landingHeadFootOpacity,
+  landingHeaderFont,
+  transition,
+  buttonBlue
+} from "../../views/styling";
+
 // Create the keyframes
 const rotate = keyframes`
     from {
@@ -23,7 +31,6 @@ export const Header = styled.div`
   opacity: ${landingHeadFootOpacity};
   height: ${headerHeight}px;
   width: 100%;
-  // max-width: 1000px;
   position: fixed;
   top: 0;
   padding: 0 10px;
@@ -31,9 +38,9 @@ export const Header = styled.div`
   .image {
     height: 25px;
     width: 25px;
-    // border: 1px solid red
 
     img {
+      cursor: pointer;
       max-height: 100%;
       width: auto;
       transition: all 1s;
