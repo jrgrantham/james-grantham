@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../reusable/containerStyling";
-import { mediaBreak, landingCaptionBorder, landingCaption, appWidth, transition, borderRad } from "../../views/styling";
+import { mediaBreak, landingCaptionBorder, landingCaption, appWidth, transition, borderRad, fontColourDarkMode } from "../../views/styling";
 
 export const Captions = styled(Container)`
   max-width: ${appWidth};
@@ -43,5 +43,10 @@ export const Captions = styled(Container)`
         transform: scale(1.1);
       }
     }
+  }
+
+  h4.darkmode {
+    background-color: black;
+    color: ${fontColourDarkMode}
   }
 `;

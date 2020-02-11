@@ -8,7 +8,7 @@ import { Header, Rotate } from "./headerStyling";
 import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContactMeHeader() {
-  const [darkMode, setDarkMode] = useDarkMode(true);
+  const [darkMode, setDarkMode] = useDarkMode(false);
 
   let project;
   let captions;
@@ -36,7 +36,7 @@ export default function ContactMeHeader() {
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
-  console.log(darkMode);
+  // console.log(darkMode);
   return (
     <Header>
       <Rotate className="image">
