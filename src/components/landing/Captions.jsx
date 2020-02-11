@@ -14,7 +14,7 @@ export default function LandingCaptions() {
           key={index}
           className={index % 2 === 0 ? "left caption" : "right caption"}
         >
-          <h4>{caption}</h4>
+          <h4 className='toggle darkmode' >{caption}</h4>
         </div>
       ))}
     </Captions>

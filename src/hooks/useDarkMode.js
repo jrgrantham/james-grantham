@@ -7,7 +7,7 @@ const useDarkMode = initialValue => {
   const toggleMode = event => {
     event.preventDefault();
     setDarkMode(!darkMode);
-  };
+  };  
 
   function addDark(elements) {
     for (let i = 0; i < elements.length; i++) {

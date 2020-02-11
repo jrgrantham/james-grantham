@@ -8,7 +8,7 @@ import { Header, Rotate } from "./headerStyling";
 import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContactMeHeader() {
-  const [darkMode, setDarkMode] = useDarkMode(true);
+  const [darkMode, setDarkMode] = useDarkMode(false);
 
   let project;
   let captions;

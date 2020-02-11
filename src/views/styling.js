@@ -5,6 +5,7 @@ export const projectMediaBreak = "750px";
 export const borderRad = "5px";
 export const transition = "0.3s";
 export const fontColour = "#3e3e3e";
+export const fontColourDarkMode = "floralwhite";
 
 // https://favicon.io/favicon-generator/
 // favicon font - Merriweather

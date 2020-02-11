@@ -8,7 +8,8 @@ import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from "./views/ContactForm";
 import Projects from "./views/AllProjects";
 import back from "./images/background.png";
-import { fontColour } from "./views/styling";
+import backDark from "./images/backDark.png";
+import { fontColour, fontColourDarkMode } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -19,47 +20,49 @@ export default function App() {
 
   return (
     <StyledApp>
-      <Route exact path="/" component={Landing} />
-      <Route path="/professional" component={Professional} />
-      <Route path="/projects" component={Projects} />
-      <Route
-        path="/login"
-        render={props => (
-          <Login
-            {...props}
-            setIsLoading={setIsLoading}
-            isLoading={isLoading}
-            setToken={setToken}
-            setUser={setUser}
-          />
-        )}
-      />
-      <Route
-        path="/phonenumbers"
-        render={props => (
-          <PhoneNumbers
-            {...props}
-            setIsLoading={setIsLoading}
-            isLoading={isLoading}
-            user={user}
-            token={token}
-            setToken={setToken}
-          />
-        )}
-      />
-      <Route
-        path="/contact"
-        render={props => (
-          <ContactForm
-            {...props}
-            setIsLoading={setIsLoading}
-            isLoading={isLoading}
-            user={user}
-            token={token}
-            setToken={setToken}
-          />
-        )}
-      />
+      <div className="app toggle darkmode">
+        <Route exact path="/" component={Landing} />
+        <Route path="/professional" component={Professional} />
+        <Route path="/projects" component={Projects} />
+        <Route
+          path="/login"
+          render={props => (
+            <Login
+              {...props}
+              setIsLoading={setIsLoading}
+              isLoading={isLoading}
+              setToken={setToken}
+              setUser={setUser}
+            />
+          )}
+        />
+        <Route
+          path="/phonenumbers"
+          render={props => (
+            <PhoneNumbers
+              {...props}
+              setIsLoading={setIsLoading}
+              isLoading={isLoading}
+              user={user}
+              token={token}
+              setToken={setToken}
+            />
+          )}
+        />
+        <Route
+          path="/contact"
+          render={props => (
+            <ContactForm
+              {...props}
+              setIsLoading={setIsLoading}
+              isLoading={isLoading}
+              user={user}
+              token={token}
+              setToken={setToken}
+            />
+          )}
+        />
+      </div>
     </StyledApp>
   );
 }
@@ -70,10 +73,21 @@ const StyledApp = styled.div`
   text-align: center;
   width: 100%;
   min-height: 100%;
-  background-image: url('${back}');
-  background-repeat: repeat;
+  
+  .app {
+    display: flex;
+    justify-content: center;
+    background-image: url('${back}');
+    color: ${fontColour};
+    text-align: center;
+    width: 100%;
+    min-height: 100%;
+  }
 
-  color: ${fontColour};
+  .app.darkmode {
+    color: ${fontColourDarkMode};
+    background-image: url('${backDark}');
+  }
 
   @media (max-width: 1500px) {
     h1 {

@@ -21,7 +21,7 @@ export default function ProjectCard(props) {
               <a href={props.project.repo}>{projectsGitHub}</a>
             </div>
           </div>
-          <div className="flip-card-back">
+          <div className="flip-card-back toggle darkmode">
             <div className="details">
               <h3>{props.project.title}</h3>
               <h4>{props.project.uses}</h4>

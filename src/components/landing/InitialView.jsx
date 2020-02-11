@@ -24,7 +24,7 @@ export default function LandingInitialView() {
     <LandingContainer>
       <LandingContent>
         <div id="name" className="hide">
-          <h1>James Grantham</h1>
+          <h1 className="toggle darkmode">James Grantham</h1>
         </div>
         <div id="img" className="small img">
           <img src={jamesPhoto} alt="James Grantham" />
@@ -119,16 +119,31 @@ const LandingContent = styled.div`
     -webkit-background-clip: text;
     animation: ${colours} 8s linear infinite;
     background-size: 800%;
+  }
 
-  //   @media (max-width: 550px) {
-  //     font-size: 2.5rem;
-  //   }
-    // @media (max-width: 1000px) {
-    //   font-size: 4rem;
-    // }
-  //   @media (min-width: 1500px) {
-  //     font-size: 5rem;
-  //   }
+  h1.darkmode {
+    background-image: linear-gradient(
+      to right,
+      white,
+      white,
+      white,
+      #1e90ff,
+      white,
+      white,
+      white,
+      white,
+      white,
+      #ff8d1e,
+      white,
+      white,
+      white,
+      white,
+      white
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: ${colours} 8s linear infinite;
+    background-size: 800%;
   }
 
   .hide {
