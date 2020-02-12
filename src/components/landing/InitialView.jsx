@@ -7,7 +7,7 @@ import {
   borderRad,
   headerHeight,
   footerHeight,
-  landingInitialFont
+  fontColour
 } from "../../views/styling";
 
 export default function LandingInitialView() {
@@ -86,7 +86,7 @@ const LandingContent = styled.div`
     max-width: 100%;
     max-height: 100%;
     border-radius: ${borderRad};
-    border: 1px solid ${landingInitialFont};
+    border: 1px solid ${fontColour};
   }
 
   h1,

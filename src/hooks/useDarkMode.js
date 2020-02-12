@@ -20,7 +20,7 @@ const useDarkMode = initialValue => {
       elements[i].classList.remove("darkmode");
     }
   }
-
+  
   useEffect(() => {
     const elements = document.querySelectorAll(".toggle");
     darkMode ? addDark(elements) : removeDark(elements);

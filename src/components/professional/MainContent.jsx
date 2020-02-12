@@ -55,12 +55,14 @@ export default function MainContent(props) {
 const Article = styled.div`
   width: 100%;
   padding: ${professionalInnerPad};
-  // background-color: ${professionalBack};
   cursor: pointer;
+  transition: background-color ${transition};
+
   h5 {
     text-align: left;
     // padding: 0.5rem 0 0.25rem 0;
   }
+  
   p {
     padding: 0.7rem 0;
   }
@@ -68,7 +70,6 @@ const Article = styled.div`
   @media (pointer:fine) {
     &:hover {
       background-color: ${professionalButtonHov};
-      transition: background-color ${transition};
     }
   }
 `;

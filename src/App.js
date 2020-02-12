@@ -9,7 +9,7 @@ import ContactForm from "./views/ContactForm";
 import Projects from "./views/AllProjects";
 import back from "./images/background.png";
 import backDark from "./images/backDark.png";
-import { fontColour, fontColourDarkMode } from "./views/styling";
+import { fontColour, fontColourDarkMode, appWidth } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -72,7 +72,9 @@ const StyledApp = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
+  max-width: ${appWidth};
   min-height: 100%;
+  margin: auto;
   
   .app {
     display: flex;

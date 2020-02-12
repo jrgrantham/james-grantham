@@ -114,7 +114,7 @@ const Container = styled.div`
 
   h2 {
     font-weight: bold;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
   }
 `;
 

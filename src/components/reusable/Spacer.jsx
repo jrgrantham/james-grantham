@@ -3,13 +3,21 @@ import styled from "styled-components";
 
 export default function Spacer(props) {
   return (
-    <StyledSpacer />
+    <StyledSpacer>
+      <div className='toggle darkmode' />
+    </StyledSpacer>
   );
 }
 
 const StyledSpacer = styled.div`
-  background: rgb(0,0,0, 0.1);
-  height: 3px;
   width: 100%;
-  bottom: 0;
+
+  .toggle {
+    background: rgb(0,0,0, 0.1);
+    height: 5px;
+  }
+
+  .darkmode {
+    background: rgb(255,255,255, 0.1);
+  }
 `;

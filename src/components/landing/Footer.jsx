@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { footerHeight, landingFooter, landingHeaderFont } from "../../views/styling";
+import { footerHeight, landingFooter, landingHeaderFont, appWidth } from "../../views/styling";
 
 export default function FooterBanner(props) {
   return (
@@ -11,11 +11,12 @@ export default function FooterBanner(props) {
 }
 
 const Footer = styled.div`
-  background-color: ${landingFooter}
-  height: ${footerHeight}px
-  width: 100%
-  position: fixed
-  bottom: 0
+  background-color: ${landingFooter};
+  height: ${footerHeight}px;
+  width: 100%;
+  max-width: ${appWidth};
+  position: fixed;
+  bottom: 0;
 `;
 
 const pstyle = {

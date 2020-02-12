@@ -5,7 +5,8 @@ import {
   landingHeadFootOpacity,
   landingHeaderFont,
   transition,
-  buttonBlue
+  buttonBlue,
+  appWidth
 } from "../../views/styling";
 
 // Create the keyframes
@@ -31,6 +32,7 @@ export const Header = styled.div`
   opacity: ${landingHeadFootOpacity};
   height: ${headerHeight}px;
   width: 100%;
+  max-width: ${appWidth};
   position: fixed;
   top: 0;
   padding: 0 10px;
