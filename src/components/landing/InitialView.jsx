@@ -30,9 +30,9 @@ export default function LandingInitialView() {
           <img src={jamesPhoto} alt="James Grantham" />
         </div>
         <div id="jobs" className="hide">
-          <h3>Web Developer</h3>
-          <p>-</p>
           <h3>Mechanical Engineer</h3>
+          <p>turned</p>
+          <h3>Product Engineer</h3>
         </div>
       </LandingContent>
     </LandingContainer>

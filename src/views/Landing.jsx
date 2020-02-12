@@ -12,6 +12,7 @@ import SiteLinks from "../components/reusable/SiteLinks";
 import Projects from "../components/landing/Projects";
 import Spacer from "../components/reusable/Spacer";
 import LearnMore from "../components/reusable/LearnMore";
+import Introduction from "../components/landing/Introduction";
 
 export default function Landing() {
 
@@ -32,6 +33,8 @@ export default function Landing() {
       <ContactMeHeader />
       <FullPage>
         <LandingInitialView />
+        <Spacer />
+        <Introduction />
         <LearnMore />
         <Spacer />
         <Projects />
