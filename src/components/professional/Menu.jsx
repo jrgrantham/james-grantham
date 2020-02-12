@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { MenuBurger } from "./buttonStyles";
 
 import {
-  professionalBack,
   professionalButton,
   professionalButtonHov,
   transition,
@@ -19,8 +18,11 @@ import { timeLine } from "../../data/timeLine";
 import { experience } from "../../data/experience";
 import { values } from "../../data/values";
 import { aboutMe } from "../../data/aboutMe";
+import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContentButtons(props) {
+
+  const [darkMode, setDarkMode] = useDarkMode();
 
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
   
@@ -66,7 +68,7 @@ export default function ContentButtons(props) {
   }
 
   return (
-    <Container>
+    <Container className='toggle darkmode'>
       <h2>James Grantham</h2>
       <StyledMenuButton onClick={() => changeHidden()}>
         <h4>{hidden ? props.selected : "select..."}</h4>
@@ -108,7 +110,6 @@ export default function ContentButtons(props) {
 const Container = styled.div`
   width: 100%;
   padding: ${professionalInnerPad};
-  background-color: ${professionalBack};
   margin-bottom: 10px;
 
   h2 {
@@ -144,7 +145,6 @@ const StyledMenuButton = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: ${professionalBack};
   width: 100%;
   cursor: pointer;
   overflow: hidden;

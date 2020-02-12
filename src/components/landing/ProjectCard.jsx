@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { borderRad, transition, buttonBlue } from "../../views/styling";
+import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark } from "../../views/styling";
 import { projectsLink, projectsGitHub } from "../../data/projects";
 
 export default function ProjectCard(props) {
@@ -113,17 +113,18 @@ const FlipCard = styled.div`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0;
-    background-color: white;
+    background-color: ${projectCardBack};
     align-items: center;
   }
 
   .darkmode {
-    background: black;
+    background: ${projectCardBackDark};
   }
 
   .flip-card-front {
