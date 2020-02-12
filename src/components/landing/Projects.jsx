@@ -4,16 +4,17 @@ import {
   projects,
   projectsTitle,
   projectsDescription,
-  projectsNumber
+  projectsNumber,
 } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
 import { LinkButton } from "../reusable/Buttons";
 import { Container } from "../reusable/containerStyling";
+import { projectsMaxWidth } from '../../views/styling'
 
 const ProjectsContainer = styled(Container)`
   .projects {
-    max-width: 1600px
+    max-width: ${projectsMaxWidth};
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

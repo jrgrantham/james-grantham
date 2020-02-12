@@ -5,8 +5,8 @@ import styled from "styled-components";
 import {
   landingBoysBack,
   landingBoysButton,
-  appWidth,
-  landingBoysFont
+  landingBoysFont,
+  landingBoysMaxWidth
 } from "../../views/styling";
 
 const content = "...and dedicated father to three awesome boys!";
@@ -33,7 +33,7 @@ const StyledBoys = styled.div`
 
   .content {
     width: 100%;
-    max-width: ${appWidth};
+    max-width: ${landingBoysMaxWidth};
     margin: 20px 20px;
     background-color: ${landingBoysButton};
     border-radius: 120px;

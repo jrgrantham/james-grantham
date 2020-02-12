@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Container } from "../reusable/containerStyling";
-import { mediaBreak, landingCaptionBorder, landingCaption, appWidth, transition, borderRad, fontColourDarkMode } from "../../views/styling";
+import { mediaBreak, landingCaptionBorder, landingCaption, transition, borderRad, fontColourDarkMode, landingCaptionDark, landingCaptionMaxWidth } from "../../views/styling";
 
 export const Captions = styled(Container)`
-  max-width: ${appWidth};
+  max-width: ${landingCaptionMaxWidth};
   align-items: stretch;
 
   @media (min-width: ${mediaBreak}) {
@@ -46,7 +46,7 @@ export const Captions = styled(Container)`
   }
 
   h4.darkmode {
-    background-color: black;
+    background-color: ${landingCaptionDark};
     color: ${fontColourDarkMode}
   }
 `;

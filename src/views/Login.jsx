@@ -6,7 +6,7 @@ import url from "../helpers/url";
 
 import { StyledForm } from "./ContactForm";
 import Spinner from "../components/reusable/Spinner";
-import Footer from "../components/professional/Footer";
+import { LinkButton } from "../components/reusable/Buttons";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -79,8 +79,11 @@ export default function LoginForm(props) {
               <button type="submit" disabled={isSubmitting}>
                 Login
               </button>
+              <LinkButton
+                target="/"
+                content="Home"
+              />
             </StyledForm>
-            <Footer />
           </Position>
         )}
       </Formik>

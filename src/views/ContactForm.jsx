@@ -171,7 +171,7 @@ export const StyledForm = styled.form`
   }
 
   button {
-    margin: 20px 0;
+    margin: 20px 0 100px 0;
     background-color: #ff8d1e;
     color: white;
     border-radius: ${borderRad};
