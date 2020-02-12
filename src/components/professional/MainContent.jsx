@@ -55,7 +55,7 @@ export default function MainContent(props) {
 const Article = styled.div`
   width: 100%;
   padding: ${professionalInnerPad};
-  background-color: ${professionalBack};
+  // background-color: ${professionalBack};
   cursor: pointer;
   h5 {
     text-align: left;

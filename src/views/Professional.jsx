@@ -27,15 +27,17 @@ export default function Professional() {
 
   return (
     <StyledProfessional id="professional">
-      <Menu
-        setContent={setContent}
-        selected={selected}
-        setSelected={setSelected}
-      />
-      <MainContent content={content} setContent={setContent} />
-      <Spacer />
-      <div style={{height: '80px'}} />
-      <Footer />
+      <StyledProfessional className='toggle darkmode'>
+        <Menu
+          setContent={setContent}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        <MainContent content={content} setContent={setContent} />
+        <Spacer />
+        <div style={{height: '80px'}} />
+        <Footer />
+      </StyledProfessional>
     </StyledProfessional>
   );
 }
@@ -44,7 +46,14 @@ const StyledProfessional = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1000px;
-  padding: 10px;
-  background-color: ${professionalBack};
+  min-height: 100%;
+  
+  .toggle {
+    max-width: 1000px;
+    background-color: ${professionalBack};
+  }
+
+  .darkmode {
+    background-color: black;
+  }
 `;

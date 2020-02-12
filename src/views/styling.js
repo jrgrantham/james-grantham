@@ -22,6 +22,9 @@ export const headerHeight = 50;
 export const footerHeight = 30;
 export const landingHeadFootOpacity = 1;
 
+export const projectCardBack = "floralwhite";
+export const projectCardBackDark = "#202020";
+
 export const landingCaption = "GhostWhite";
 export const landingCaptionBorder = "lightgrey";
 
