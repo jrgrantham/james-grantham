@@ -7,7 +7,9 @@ import {
   borderRad,
   headerHeight,
   footerHeight,
-  fontColour
+  fontColour,
+  buttonOrange,
+  buttonBlue
 } from "../../views/styling";
 
 export default function LandingInitialView() {
@@ -99,21 +101,21 @@ const LandingContent = styled.div`
   h1 {
     background-image: linear-gradient(
       to right,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e,
-      #1e90ff,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e,
-      #ff8d1e,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e,
-      #3e3e3e
+      ${fontColour},
+      ${fontColour},
+      ${fontColour},
+      ${buttonBlue},
+      ${fontColour},
+      ${fontColour},
+      ${fontColour},
+      ${fontColour},
+      ${fontColour},
+      ${buttonOrange},
+      ${fontColour},
+      ${fontColour},
+      ${fontColour},
+      ${fontColour},
+      ${fontColour}
     );
     color: transparent;
     -webkit-background-clip: text;

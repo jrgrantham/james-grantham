@@ -22,7 +22,7 @@ export const headerHeight = 50;
 export const footerHeight = 30;
 export const landingHeadFootOpacity = 1;
 
-export const projectsMaxWidth = "";
+export const projectsMaxWidth = "";  // app is narrow enough
 export const projectCardBack = "GhostWhite";
 export const projectCardBackDark = "#202020";
 
@@ -37,7 +37,11 @@ export const landingBoysFont = "#dcdcdc";
 export const landingBoysMaxWidth = "1000px";
 
 export const professionalBack = "#eae2d6";
+export const professionalBackDark = "#282828";
 export const professionalButton = "#d5c3aa";
+export const professionalButtonDark = "#383838";
+export const professionalSelectedButton = "green";
+export const professionalSelectedButtonDark = "#606060";
 export const professionalButtonHov = "#e1b80d";
 export const professionalInnerPad = "10px";
 export const professionalMaxWidth = "";

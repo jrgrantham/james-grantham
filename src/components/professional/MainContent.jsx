@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 import { MenuArrow } from "./buttonStyles";
 import {
-  professionalBack,
-  professionalButton,
   transition,
   borderRad,
   professionalInnerPad,
-  professionalButtonHov
+  professionalButtonHov,
+  mediaBreak,
+  professionalBackDark,
+  professionalButtonDark
 } from "../../views/styling";
 
 export default function MainContent(props) {
@@ -36,10 +37,10 @@ export default function MainContent(props) {
             isExpanded(article.title);
           }}
         >
-          <StyledTitle>
+          <div className='title'>
             <h5>{article.title}</h5>
             <MenuArrow hidden={!article.display} />
-          </StyledTitle>
+          </div>
           <p>{article.introduction}</p>
           <StyledDetails style={article.display ? closedDetails : null}>
             {article.contents.map((content, index) => (
@@ -58,13 +59,29 @@ const Article = styled.div`
   cursor: pointer;
   transition: background-color ${transition};
 
+  @media (min-width: ${mediaBreak}) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   h5 {
     text-align: left;
-    // padding: 0.5rem 0 0.25rem 0;
   }
   
   p {
     padding: 0.7rem 0;
+  }
+
+  .title {
+    // position: -webkit-sticky; /* Safari */
+    // position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .darkmode {
+    // background-color: ${professionalBackDark}
   }
 
   @media (pointer:fine) {
@@ -72,11 +89,6 @@ const Article = styled.div`
       background-color: ${professionalButtonHov};
     }
   }
-`;
-
-const StyledTitle = styled.div`
-  display: flex;
-  justify-content: space-between;
 `;
 
 const StyledDetails = styled.div`
@@ -91,5 +103,5 @@ const closedDetails = {
 
 const selectedStyle = {
   borderRadius: borderRad,
-  backgroundColor: professionalButton
+  backgroundColor: professionalButtonDark
 };
