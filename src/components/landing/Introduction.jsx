@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { welcomeMessage, introduction} from '../../data/introduction';
+import { welcomeMessage, introduction } from "../../data/introduction";
 
 export default function Introduction() {
   return (
@@ -19,10 +19,10 @@ const Container = styled.div`
   align-items: center;
   width 80%;
   margin: 60px 0 20px 0;
-
+  
   p {
     max-width: 90%;
     text-align: center;
-    margin: 20px 10px;
+    margin: 20px 0px;
   }
 `;

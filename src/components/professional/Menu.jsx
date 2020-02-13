@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
+import DarkModeDiv from "../reusable/DarkModeDiv";
 import { MenuBurger } from "./buttonStyles";
+
+import useDarkMode from "../../hooks/useDarkMode";
 
 import {
   professionalButton,
+  professionalButtonDark,
   professionalButtonHov,
   transition,
   mediaBreak,
   borderRad,
-  professionalInnerPad
+  professionalInnerPad,
+  professionalSelectedButtonDark,
+  professionalSelectedButton
 } from "../../views/styling";
 
 // --------- naming of sections to be sorted here ---------
@@ -18,15 +24,12 @@ import { timeLine } from "../../data/timeLine";
 import { experience } from "../../data/experience";
 import { values } from "../../data/values";
 import { aboutMe } from "../../data/aboutMe";
-import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContentButtons(props) {
-
+  const [hidden, setHidden] = useState(true);
   const [darkMode, setDarkMode] = useDarkMode();
 
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
-  
-  const [hidden, setHidden] = useState(true);
 
   function setCategory(title) {
     props.setSelected(title);
@@ -48,59 +51,78 @@ export default function ContentButtons(props) {
     height: `${categoryButtons.length * 4}rem`
   };
 
-  const horizontalWidth = {
-    width: `${100 / categoryButtons.length - 1}%`
-  }
+  // const horizontalWidth = {
+  //   width: `${100 / categoryButtons.length - 1}%`
+  // };
 
-  const selectedHorizontal = {
-    width: `${100 / categoryButtons.length - 1}%`,
-    backgroundColor: '#E3D8C7',
-    border: `2px solid ${professionalButton}`
-  }
-  
-  const selectedVertical = {
-    backgroundColor: '#E3D8C7',
-    border: `2px solid ${professionalButton}`
-  };
+  // const selectedHorizontal = {
+  //   width: `${100 / categoryButtons.length - 1}%`,
+  //   backgroundColor: darkMode
+  //     ? professionalSelectedButtonDark
+  //     : professionalSelectedButton
+  //   // border: "none"
+  // };
+
+  // const selectedVertical = {
+  //   backgroundColor: darkMode
+  //     ? professionalSelectedButtonDark
+  //     : professionalSelectedButton
+  //   // border: `2px solid ${professionalButton}`
+  // };
 
   function changeHidden() {
     setHidden(!hidden);
   }
 
   return (
-    <Container className='toggle darkmode'>
+    <Container className="toggle darkmode">
+      <DarkModeDiv />
       <h2>James Grantham</h2>
-      <StyledMenuButton onClick={() => changeHidden()}>
-        <h4>{hidden ? props.selected : "select..."}</h4>
-        <MenuBurger hidden={hidden} />
-      </StyledMenuButton>
 
-      <VerticalMenu style={hidden ? null : openDivHeight}>
-        {categoryButtons.map((title, index) => (
-          <StyledButton
-            style={props.selected === title ? selectedVertical : null}
-            key={index}
-            onClick={() => {
-              setCategory(title, index);
-              setHidden(!hidden);
-            }}
-          >
-            <h5>{title}</h5>
-          </StyledButton>
-        ))}
-      </VerticalMenu>
+      <CollapsingMenu>
+        <div className="hamburgerButton" onClick={() => changeHidden()}>
+          <h4>{hidden ? props.selected : "select..."}</h4>
+          <MenuBurger hidden={hidden} />
+        </div>
+        <div className="verticalButtons" style={hidden ? null : openDivHeight}>
+          {categoryButtons.map((title, index) => (
+            <div
+              className={
+                props.selected === title
+                  ? "button toggle darkmode selected"
+                  : "button toggle darkmode"
+              }
+              // style={props.selected === title ? selectedVertical : null}
+              key={index}
+              onClick={() => {
+                setCategory(title, index);
+                setHidden(!hidden);
+              }}
+            >
+              <h5>{title}</h5>
+            </div>
+          ))}
+        </div>
+      </CollapsingMenu>
 
       <HorizontalMenu>
         {categoryButtons.map((title, index) => (
-          <StyledButton
-            style={props.selected === title ? selectedHorizontal : horizontalWidth}
+          <div
+            className={
+              props.selected === title
+                ? "button toggle darkmode selected"
+                : "button toggle darkmode"
+            }
+            // style={
+            //   props.selected === title ? selectedHorizontal : horizontalWidth
+            // }
             key={index}
             onClick={() => {
               setCategory(title, index);
             }}
           >
             <h5>{title}</h5>
-          </StyledButton>
+          </div>
         ))}
       </HorizontalMenu>
     </Container>
@@ -112,74 +134,117 @@ const Container = styled.div`
   padding: ${professionalInnerPad};
   margin-bottom: 10px;
 
+  @media (min-width: ${mediaBreak}) {
+    padding: 20px;
+  }
+
   h2 {
     font-weight: bold;
-    padding: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 `;
 
 const HorizontalMenu = styled.div`
   display: none;
+
+  .button.toggle {
+    padding: 10px 0;
+    background-color: ${professionalButton};
+    transition: background-color ${transition};
+    border-radius: ${borderRad};
+    cursor: pointer;
+    width: 85%;
+
+    @media (min-width: ${mediaBreak}) {
+      width: 24%;
+    }
+
+    @media (pointer: fine) {
+      &:hover {
+        background-color: ${professionalButtonHov};
+      }
+    }
+  }
+
+  .button.selected {
+    background-color: ${professionalSelectedButton};
+  }
+
+  .button.darkmode {
+    background-color: ${professionalButtonDark};
+  }
+
+  .button.darkmode.selected {
+    background-color: ${professionalSelectedButtonDark};
+  }
+
   @media (min-width: ${mediaBreak}) {
     display: flex;
     justify-content: space-between;
   }
 `;
 
-const VerticalMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 0px;
-  width: 100%;
-  transition: height ${transition};
+const StyledButton = styled.div``;
 
-  @media (min-width: ${mediaBreak}) {
-    display: none;
-  }
-`;
+const CollapsingMenu = styled.div`
+  .hamburgerButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    img {
+      height: 30px;
+    }
 
-const StyledMenuButton = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-  overflow: hidden;
-  img {
-    height: 30px;
-  }
+    @media (pointer: fine) {
+      &:hover {
+        background-color: ${professionalButton};
+        transition: background-color ${transition};
+      }
+    }
 
-  @media (pointer: fine) {
-    &:hover {
-      background-color: ${professionalButton};
-      transition: background-color ${transition};
+    @media (min-width: ${mediaBreak}) {
+      display: none;
     }
   }
 
-  @media (min-width: ${mediaBreak}) {
-    display: none;
-  }
-`;
+  .verticalButtons {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 0px;
+    width: 100%;
+    transition: height ${transition};
 
-const StyledButton = styled.div`
-  padding: 10px 0;
-  background-color: ${professionalButton};
-  border-radius: ${borderRad};
-  cursor: pointer;
-  width: 85%;
+    @media (min-width: ${mediaBreak}) {
+      display: none;
+    }
 
-  @media (min-width: ${mediaBreak}) {
-    width: 24%;
-    background-color: ${professionalButton};
-  }
+    .button.toggle {
+      padding: 10px 0;
+      background-color: ${professionalButton};
+      border-radius: ${borderRad};
+      cursor: pointer;
+      width: 85%;
 
-  @media (pointer: fine) {
-    &:hover {
-      background-color: ${professionalButtonHov};
-      transition: background-color ${transition};
+      @media (min-width: ${mediaBreak}) {
+        width: 24%;
+        background-color: ${professionalButton};
+      }
+
+      @media (pointer: fine) {
+        &:hover {
+          background-color: ${professionalButtonHov};
+          transition: background-color ${transition};
+        }
+      }
+    }
+    .toggle.darkmode {
+      background-color: ${professionalButtonDark};
     }
   }
 `;

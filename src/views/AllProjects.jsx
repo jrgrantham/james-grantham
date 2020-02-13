@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 
+import useDarkMode from '../hooks/useDarkMode'
+
+
 import SectionTitle from "../components/reusable/SectionTitle";
 import ProjectCard from "../components/landing/ProjectCard";
 import { LinkButton } from "../components/reusable/Buttons";
@@ -8,6 +11,8 @@ import { projects, projectsTitle } from "../data/projects";
 import { Container } from "../components/reusable/containerStyling";
 
 export default function Projects() {
+  useDarkMode();
+
   useEffect(() => {
     try {
       window.scroll({

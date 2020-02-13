@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-import { professionalBack } from "./styling";
+import { professionalBack, professionalBackDark } from "./styling";
 import { experience } from "../data/experience";
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
-import Footer from "../components/professional/Footer";
 import Spacer from "../components/reusable/Spacer";
 
 export default function Professional() {
@@ -36,7 +35,6 @@ export default function Professional() {
         <MainContent content={content} setContent={setContent} />
         <Spacer />
         <div style={{height: '80px'}} />
-        <Footer />
       </StyledProfessional>
     </StyledProfessional>
   );
@@ -54,6 +52,6 @@ const StyledProfessional = styled.div`
   }
 
   .darkmode {
-    background-color: black;
+    background-color: ${professionalBackDark};
   }
 `;

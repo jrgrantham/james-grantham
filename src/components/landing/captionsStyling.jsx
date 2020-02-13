@@ -30,7 +30,7 @@ export const Captions = styled(Container)`
     border-radius: ${borderRad};
     width: 85%;
     min-height: 70px;
-    transition: all ${transition};
+    transition: transform ${transition};
 
     @media (min-width: ${mediaBreak}) {
       margin: 0 80px 40px 80px;
