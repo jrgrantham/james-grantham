@@ -3,15 +3,18 @@ import styled from "styled-components";
 
 import { professionalBack, professionalBackDark } from "./styling";
 import { experience } from "../data/experience";
+import useDarkMode from '../hooks/useDarkMode'
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Spacer from "../components/reusable/Spacer";
+import DarkModeDiv from "../components/reusable/DarkModeDiv";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
   const [selected, setSelected] = useState("Experience");
-
+  useDarkMode();
+  
   useEffect(() => {
     try {
       window.scroll({
@@ -27,6 +30,7 @@ export default function Professional() {
   return (
     <StyledProfessional id="professional">
       <StyledProfessional className='toggle darkmode'>
+        {/* <DarkModeDiv /> */}
         <Menu
           setContent={setContent}
           selected={selected}

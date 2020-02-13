@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import useDarkMode from "../../hooks/useDarkMode";
 import { MenuArrow } from "./buttonStyles";
 import {
   transition,
@@ -13,6 +14,7 @@ import {
 } from "../../views/styling";
 
 export default function MainContent(props) {
+  useDarkMode();
 
   function isExpanded(receivedArticle) {
     props.setContent(
