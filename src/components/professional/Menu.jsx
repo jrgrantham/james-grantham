@@ -239,5 +239,13 @@ const CollapsingMenu = styled.div`
     .toggle.darkmode {
       background-color: ${professionalButtonDark};
     }
+
+    .button.selected {
+      background-color: ${professionalSelectedButton};
+    }
+
+    .button.darkmode.selected {
+      background-color: ${professionalSelectedButtonDark};
+    }
   }
 `;
