@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import useDarkMode from "../../hooks/useDarkMode";
 import { MenuArrow } from "./buttonStyles";
 import {
   transition,
@@ -9,10 +10,12 @@ import {
   professionalButtonHov,
   mediaBreak,
   professionalBackDark,
-  professionalButtonDark
+  professionalButtonDark,
+  professionalButton
 } from "../../views/styling";
 
 export default function MainContent(props) {
+  const [darkMode, setDarkMode] = useDarkMode();
 
   function isExpanded(receivedArticle) {
     props.setContent(
@@ -28,68 +31,78 @@ export default function MainContent(props) {
   }
 
   return (
-    <>
+    <Container>
       {props.content.map((article, index) => (
-        <Article
-          style={article.display ? selectedStyle : null}
+        <div className={
+          article.display
+            ? "article toggle darkmode selected"
+            : "article toggle darkmode"
+        }
+          // style={article.display ? selectedStyle : null}
           key={index}
           onClick={e => {
             isExpanded(article.title);
           }}
         >
-          <div className='title'>
+          <div className="title">
             <h5>{article.title}</h5>
             <MenuArrow hidden={!article.display} />
           </div>
           <p>{article.introduction}</p>
-          <StyledDetails style={article.display ? closedDetails : null}>
+          <StyledDetails
+            style={article.display ? closedDetails : null}
+          >
             {article.contents.map((content, index) => (
               <p key={index}>{content}</p>
             ))}
           </StyledDetails>
-        </Article>
+        </div>
       ))}
-    </>
+    </Container>
   );
 }
 
-const Article = styled.div`
-  width: 100%;
-  padding: ${professionalInnerPad};
-  cursor: pointer;
-  transition: background-color ${transition};
-
-  @media (min-width: ${mediaBreak}) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  h5 {
-    text-align: left;
-  }
+const Container = styled.div`
+  .article {
+    width: 100%;
+    padding: ${professionalInnerPad};
+    cursor: pointer;
+    transition: background-color ${transition};
   
-  p {
-    padding: 0.7rem 0;
-  }
-
-  .title {
-    // position: -webkit-sticky; /* Safari */
-    // position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .darkmode {
-    // background-color: ${professionalBackDark}
-  }
-
-  @media (pointer:fine) {
-    &:hover {
-      background-color: ${professionalButtonHov};
+    @media (min-width: ${mediaBreak}) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    h5 {
+      text-align: left;
+    }
+  
+    p {
+      padding: 0.7rem 0;
+    }
+  
+    .title {
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    @media (pointer: fine) {
+      &:hover {
+        background-color: ${professionalButtonHov};
+      }
     }
   }
-`;
+
+  .article.selected {
+    background-color: ${professionalButton}
+  }
+
+  .article.selected.darkmode {
+    background-color: ${professionalButtonDark}
+  }
+`
 
 const StyledDetails = styled.div`
   max-height: 0px;
@@ -102,6 +115,6 @@ const closedDetails = {
 };
 
 const selectedStyle = {
-  borderRadius: borderRad,
+  // borderRadius: borderRad,
   backgroundColor: professionalButtonDark
 };

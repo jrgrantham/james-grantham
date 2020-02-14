@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import DarkModeDiv from "../reusable/DarkModeDiv";
 import { MenuBurger } from "./buttonStyles";
-
 import useDarkMode from "../../hooks/useDarkMode";
-
 import {
   professionalButton,
   professionalButtonDark,
@@ -27,7 +24,7 @@ import { aboutMe } from "../../data/aboutMe";
 
 export default function ContentButtons(props) {
   const [hidden, setHidden] = useState(true);
-  const [darkMode, setDarkMode] = useDarkMode();
+  useDarkMode();
 
   const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
 
@@ -76,7 +73,6 @@ export default function ContentButtons(props) {
 
   return (
     <Container className="toggle darkmode">
-      <DarkModeDiv />
       <h2>James Grantham</h2>
 
       <CollapsingMenu>
@@ -92,7 +88,6 @@ export default function ContentButtons(props) {
                   ? "button toggle darkmode selected"
                   : "button toggle darkmode"
               }
-              // style={props.selected === title ? selectedVertical : null}
               key={index}
               onClick={() => {
                 setCategory(title, index);
@@ -113,9 +108,6 @@ export default function ContentButtons(props) {
                 ? "button toggle darkmode selected"
                 : "button toggle darkmode"
             }
-            // style={
-            //   props.selected === title ? selectedHorizontal : horizontalWidth
-            // }
             key={index}
             onClick={() => {
               setCategory(title, index);
@@ -131,21 +123,23 @@ export default function ContentButtons(props) {
 
 const Container = styled.div`
   width: 100%;
-  padding: ${professionalInnerPad};
+  // padding: ${professionalInnerPad};
   margin-bottom: 10px;
 
   @media (min-width: ${mediaBreak}) {
-    padding: 20px;
+    // padding: 20px;
   }
 
   h2 {
     font-weight: bold;
-    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
   }
 `;
 
 const HorizontalMenu = styled.div`
   display: none;
+  padding: 20px;
 
   .button.toggle {
     padding: 10px 0;
@@ -184,14 +178,13 @@ const HorizontalMenu = styled.div`
   }
 `;
 
-const StyledButton = styled.div``;
-
 const CollapsingMenu = styled.div`
   .hamburgerButton {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: ${professionalInnerPad};
     cursor: pointer;
     overflow: hidden;
     img {
@@ -200,7 +193,7 @@ const CollapsingMenu = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        background-color: ${professionalButton};
+        background-color: ${professionalButtonHov};
         transition: background-color ${transition};
       }
     }
@@ -245,6 +238,14 @@ const CollapsingMenu = styled.div`
     }
     .toggle.darkmode {
       background-color: ${professionalButtonDark};
+    }
+
+    .button.selected {
+      background-color: ${professionalSelectedButton};
+    }
+
+    .button.darkmode.selected {
+      background-color: ${professionalSelectedButtonDark};
     }
   }
 `;
