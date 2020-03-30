@@ -32,6 +32,7 @@ const Container = styled.div`
   h4 {
     color: black
   }
+  background: #E8E8E8
   width: 500px
   height: 200px
   display: flex
