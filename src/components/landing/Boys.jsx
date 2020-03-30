@@ -34,7 +34,7 @@ const StyledBoys = styled.div`
   .content {
     width: 100%;
     max-width: ${landingBoysMaxWidth};
-    margin: 20px 20px;
+    margin: 30px 30px;
     background-color: ${landingBoysButton};
     border-radius: 120px;
     color: ${landingBoysFont};

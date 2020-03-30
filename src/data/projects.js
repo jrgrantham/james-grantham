@@ -6,7 +6,7 @@ import weather from "../images/weather.png";
 import movie from "../images/movie.png";
 import maze from "../images/maze2.png";
 import jamesPhoto from "../images/james.jpg";
-
+import artFunder from "../images/artFunder.png";
 
 export const projectsNumber = 5;
 
@@ -24,6 +24,16 @@ export const projects = [
       "",
     image: jamesPhoto,
     link: "https://jamesgrantham.me/",
+    repo: ""
+  },
+  {
+    title: "Art Funder",
+    description: "Lambda School Labs",
+    uses: "React, Axios, Redux",
+    comments:
+      "",
+    image: artFunder,
+    link: "https://art-funder.com/",
     repo: ""
   },
   {
