@@ -72,7 +72,7 @@ export default function ContentButtons(props) {
   }
 
   return (
-    <Container className="toggle darkmode">
+    <Container id='menu' className="toggle darkmode">
       <h2>James Grantham</h2>
 
       <CollapsingMenu>
@@ -123,12 +123,8 @@ export default function ContentButtons(props) {
 
 const Container = styled.div`
   width: 100%;
-  // padding: ${professionalInnerPad};
   margin-bottom: 10px;
-
-  @media (min-width: ${mediaBreak}) {
-    // padding: 20px;
-  }
+  // position: fixed;
 
   h2 {
     font-weight: bold;

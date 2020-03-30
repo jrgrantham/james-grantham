@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark } from "../../views/styling";
+import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark, projectCardBorder } from "../../views/styling";
 import { projectsLink, projectsGitHub } from "../../data/projects";
 
 export default function ProjectCard(props) {
@@ -10,10 +10,12 @@ export default function ProjectCard(props) {
       <FlipCard>
         <div className="flip-card-inner">
           <div className="flip-card-front toggle darkmode">
-            <img
-              src={props.project.image}
-              alt={props.project.title}
-            />
+            <div className="imageDiv">
+              <img
+                src={props.project.image}
+                alt={props.project.title}
+              />
+            </div>
             <div className="buttons">
               {props.project.link === "" ? null : (
                 <a href={props.project.link}>{projectsLink}</a>
@@ -113,20 +115,30 @@ const FlipCard = styled.div`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    border: 1px solid ${projectCardBorder};
     border-radius: 15px;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0;
     background-color: ${projectCardBack};
     align-items: center;
+    
+    .imageDiv {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid red;
+    }
   }
-
+  
   .darkmode {
     background: ${projectCardBackDark};
   }
-
+  
   .flip-card-front {
   }
 
