@@ -1,13 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 import { mediaBreak, borderRad } from "../../views/styling";
+import { LinkButton } from "./Buttons";
 
 export default function Spinner() {
   return (
     <Position>
       <Container>
-      <h4>Loading...</h4>
+        <h4>Loading...</h4>
         <Animation>
           <div className="sk-chase-dot"></div>
           <div className="sk-chase-dot"></div>
@@ -17,6 +18,7 @@ export default function Spinner() {
           <div className="sk-chase-dot"></div>
         </Animation>
       </Container>
+      <LinkButton target="/" content="Home" />
     </Position>
   );
 }
@@ -24,27 +26,27 @@ export default function Spinner() {
 const Position = styled.div`
   height: 80vh
   display: flex
-  justify-content: center
+  flex-direction: column
+  justify-content: space-evenly
   align-items: center
-`
+  width: 100%
+`;
 
 const Container = styled.div`
   h4 {
     color: black
   }
-  background: #E8E8E8
-  width: 500px
+  background: #F5F5F5
+  width: 80%
+  max-width: 500px
   height: 200px
   display: flex
   flex-direction: column
   justify-content: space-evenly
   align-items: center
-  
-  @media (min-width: ${mediaBreak}) {
-    border: 1px solid black
-    border-radius: ${borderRad}
-  }
-`
+  border: 1px solid #BEBEBE;
+  border-radius: 10px;
+`;
 
 const Animation = styled.div`
   width: 40px;
@@ -60,7 +62,7 @@ const Animation = styled.div`
     animation: sk-chase-dot 2s infinite ease-in-out both;
   }
   .sk-chase-dot:before {
-    content: '';
+    content: "";
     display: block;
     width: 25%;
     height: 25%;
