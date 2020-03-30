@@ -4,6 +4,9 @@ import nasa from "../images/nasa.png";
 import darkmode from "../images/darkmode.png";
 import weather from "../images/weather.png";
 import movie from "../images/movie.png";
+import maze from "../images/maze2.png";
+import jamesPhoto from "../images/james.jpg";
+
 
 export const projectsNumber = 5;
 
@@ -13,6 +16,26 @@ export const projectsLink = "Visit";
 export const projectsGitHub = "github";
 
 export const projects = [
+  {
+    title: "Portfolio",
+    description: "Personal Website",
+    uses: "React, Axios, Redux",
+    comments:
+      "",
+    image: jamesPhoto,
+    link: "https://jamesgrantham.me/",
+    repo: ""
+  },
+  {
+    title: "RoboMaze",
+    description: "Lambda School Build Week",
+    uses: "Python, React, Axios, Redux",
+    comments:
+      "",
+    image: maze,
+    link: "https://mud-2-frontend-nihkors8y.now.sh/",
+    repo: ""
+  },
   {
     title: "Rick and Morty",
     description: "Lambda School Sprint Challenge",

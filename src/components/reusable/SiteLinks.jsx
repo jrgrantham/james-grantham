@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import github from "../../images/github.png";
 import linkedin from "../../images/linkedin.png";
-import mail from "../../images/mail-512.png";
+import mail from "../../images/mailNew.png";
 import { transition } from "../../views/styling";
 
 export default function SiteLinks() {

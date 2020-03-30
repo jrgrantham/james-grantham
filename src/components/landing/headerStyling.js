@@ -21,7 +21,7 @@ const rotate = keyframes`
 // create a component that will rotate everything we pass in
 export const Rotate = styled.div`
   display: inline-block;
-  animation: ${rotate} 8s linear infinite;
+  animation: ${rotate} 4s linear infinite;
 `;
 export const Header = styled.div`
   z-index: 1000;
@@ -38,6 +38,7 @@ export const Header = styled.div`
   padding: 0 10px;
 
   .image {
+    position: relative;
     height: 25px;
     width: 25px;
 

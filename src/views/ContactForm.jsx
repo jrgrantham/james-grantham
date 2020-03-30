@@ -7,7 +7,7 @@ import { validationSchema } from "../helpers/validationSchema";
 // import 'react-toastify/dist/ReactToastify.css';
 import { axiosWithBase } from "../helpers/AxiosCustom";
 
-import { borderRad, transition } from "../views/styling";
+import { borderRad, transition, buttonBlue } from "../views/styling";
 import Footer from "../components/professional/Footer";
 
 const initalSignupForm = {
@@ -172,7 +172,7 @@ export const StyledForm = styled.form`
 
   button {
     margin: 20px 0 100px 0;
-    background-color: #ff8d1e;
+    background-color: ${buttonBlue};
     color: white;
     border-radius: ${borderRad};
     font-size: 1.2rem;

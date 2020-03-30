@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import useDarkMode from "../../hooks/useDarkMode";
@@ -15,8 +15,15 @@ import {
 } from "../../views/styling";
 
 export default function MainContent(props) {
-  const [darkMode, setDarkMode] = useDarkMode();
+  const [] = useDarkMode();
 
+  let menuHeight = 0
+
+  // useEffect(() => {
+  //   menuHeight = document.getElementById("menu").clientHeight;
+  // }, []);
+  // console.log(menuHeight);
+  
   function isExpanded(receivedArticle) {
     props.setContent(
       props.content.map(article => {
@@ -31,13 +38,14 @@ export default function MainContent(props) {
   }
 
   return (
-    <Container>
+    <Container style={{marginTop: menuHeight}} >
       {props.content.map((article, index) => (
-        <div className={
-          article.display
-            ? "article toggle darkmode selected"
-            : "article toggle darkmode"
-        }
+        <div
+          className={
+            article.display
+              ? "article toggle darkmode selected"
+              : "article toggle darkmode"
+          }
           // style={article.display ? selectedStyle : null}
           key={index}
           onClick={e => {
@@ -49,9 +57,7 @@ export default function MainContent(props) {
             <MenuArrow hidden={!article.display} />
           </div>
           <p>{article.introduction}</p>
-          <StyledDetails
-            style={article.display ? closedDetails : null}
-          >
+          <StyledDetails style={article.display ? closedDetails : null}>
             {article.contents.map((content, index) => (
               <p key={index}>{content}</p>
             ))}
@@ -63,31 +69,33 @@ export default function MainContent(props) {
 }
 
 const Container = styled.div`
+
   .article {
     width: 100%;
     padding: ${professionalInnerPad};
     cursor: pointer;
     transition: background-color ${transition};
-  
+
     @media (min-width: ${mediaBreak}) {
       padding-left: 20px;
       padding-right: 20px;
     }
-  
+
     h5 {
       text-align: left;
+      padding-bottom: 0.5rem;
     }
-  
+
     p {
-      padding: 0.7rem 0;
+      padding-bottom: 0.5rem;
     }
-  
+
     .title {
       top: 0;
       display: flex;
       justify-content: space-between;
     }
-  
+
     @media (pointer: fine) {
       &:hover {
         background-color: ${professionalButtonHov};
@@ -96,13 +104,13 @@ const Container = styled.div`
   }
 
   .article.selected {
-    background-color: ${professionalButton}
+    background-color: ${professionalButton};
   }
 
   .article.selected.darkmode {
-    background-color: ${professionalButtonDark}
+    background-color: ${professionalButtonDark};
   }
-`
+`;
 
 const StyledDetails = styled.div`
   max-height: 0px;
@@ -114,7 +122,7 @@ const closedDetails = {
   maxHeight: "1000px"
 };
 
-const selectedStyle = {
-  // borderRadius: borderRad,
-  backgroundColor: professionalButtonDark
-};
+// const selectedStyle = {
+//   // borderRadius: borderRad,
+//   backgroundColor: professionalButtonDark
+// };
