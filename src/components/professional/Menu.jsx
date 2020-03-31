@@ -13,7 +13,7 @@ import {
   borderRad,
   professionalInnerPad,
   professionalSelectedButtonDark,
-  professionalSelectedButton
+  professionalSelectedButton,
 } from "../../views/styling";
 
 // --------- naming of sections to be sorted here ---------
@@ -73,8 +73,10 @@ export default function ContentButtons(props) {
   }
 
   return (
-    <Container id='menu' className="toggle darkmode">
-      <Link to='/'><h2>James Grantham</h2></Link>
+    <Container id="menu" className="toggle darkmode">
+      <Link className="toggle darkmode" to="/">
+        <h2 className="toggle darkmode">James Grantham</h2>
+      </Link>
 
       <CollapsingMenu>
         <div className="hamburgerButton" onClick={() => changeHidden()}>
@@ -125,14 +127,16 @@ export default function ContentButtons(props) {
 const Container = styled.div`
   width: 100%;
   margin-bottom: 10px;
-  // position: fixed;
+
+  a {
+    color: inherit;
+  }
 
   h2 {
     font-weight: bold;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     cursor: pointer;
-    color: floralwhite;
 
     @media (pointer: fine) {
       &:hover {
@@ -141,7 +145,7 @@ const Container = styled.div`
     }
   }
 `;
-
+  
 const HorizontalMenu = styled.div`
   display: none;
   padding: 20px;

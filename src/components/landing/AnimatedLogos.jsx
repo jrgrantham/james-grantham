@@ -7,6 +7,8 @@ import python from "../../images/pythonLogo.png";
 import js from "../../images/js.png";
 import react from "../../images/react.svg";
 import css from "../../images/css.png";
+import nodejs from "../../images/nodejs.svg";
+import mysql from "../../images/mysql.png";
 
 
 
@@ -29,23 +31,26 @@ export default function AnimatedLogos() {
         <img src={python} alt="python" />
       </Image5>
       <Image6>
-        <img src={js} alt="js" />
-      </Image6>
-      <Image6>
-        <img src={js} alt="js" />
+        <img src={nodejs} alt="node.js" />
       </Image6>
       <Image7>
         <img src={css} alt="css" />
       </Image7>
+      <Image8>
+        <img src={mysql} alt="mysql" />
+      </Image8>
+      <Image9>
+        <img src={js} alt="js" />
+      </Image9>
     </Container>
   );
 }
 
 const imageSize = 50; // px
 const logosWidth = 1000; // px visible area
-const imageOffset = 350; // px use this for spacing
+const imageOffset = 450; // px use this for spacing
 const duration = 15; // seconds
-const imageCount = 7;
+const imageCount = 9;
 
 const Container = styled.div`
   margin: 40px 0 40px 0;
@@ -114,4 +119,12 @@ const Image6 = styled(StyledAnimation)`
 
 const Image7 = styled(StyledAnimation)`
   animation-delay: ${(-6 * duration - 1.5) / imageCount}s;
+`;
+
+const Image8 = styled(StyledAnimation)`
+  animation-delay: ${(-7 * duration - 1.5) / imageCount}s;
+`;
+
+const Image9 = styled(StyledAnimation)`
+  animation-delay: ${(-8 * duration - 1.5) / imageCount}s;
 `;

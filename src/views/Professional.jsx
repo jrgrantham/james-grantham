@@ -49,11 +49,8 @@ const StyledProfessional = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  
-  .toggle {
-    max-width: 1000px;
-    background-color: ${professionalBack};
-  }
+  max-width: 1000px;
+  background-color: ${professionalBack};
 
   .darkmode {
     background-color: ${professionalBackDark};
