@@ -9,39 +9,35 @@ import react from "../../images/react.svg";
 import css from "../../images/css.png";
 import nodejs from "../../images/nodejs.svg";
 import mysql from "../../images/mysql.png";
+import postgress from "../../images/postgress.png";
 
-
+const images = [
+  lessD,
+  styledC,
+  html,
+  python,
+  js,
+  react,
+  css,
+  nodejs,
+  mysql,
+  postgress
+];
 
 export default function AnimatedLogos() {
   return (
     <Container>
-      <Image1>
-        <img src={react} alt="react" />
-      </Image1>
-      <Image2>
-        <img src={lessD} alt="less" />
-      </Image2>
-      <Image3>
-        <img src={styledC} alt="styledC" />
-      </Image3>
-      <Image4>
-        <img src={html} alt="html" />
-      </Image4>
-      <Image5>
-        <img src={python} alt="python" />
-      </Image5>
-      <Image6>
-        <img src={nodejs} alt="node.js" />
-      </Image6>
-      <Image7>
-        <img src={css} alt="css" />
-      </Image7>
-      <Image8>
-        <img src={mysql} alt="mysql" />
-      </Image8>
-      <Image9>
-        <img src={js} alt="js" />
-      </Image9>
+      {images.map((image, index) => (
+        <StyledAnimation
+          style={{
+            "-webkit-animation-delay": `${(-index * duration - 1.5) /
+              images.length}s`
+          }}
+          key={index}
+        >
+          <img src={image} alt="" />
+        </StyledAnimation>
+      ))}
     </Container>
   );
 }
@@ -50,13 +46,13 @@ const imageSize = 50; // px
 const logosWidth = 1000; // px visible area
 const imageOffset = 450; // px use this for spacing
 const duration = 15; // seconds
-const imageCount = 9;
 
 const Container = styled.div`
   margin: 40px 0 40px 0;
   position: relative;
   overflow: hidden;
   height: ${imageSize}px;
+  height: 10000px;
   width: ${logosWidth}px;
   max-width: 80%;
   // border: 1px solid red;
@@ -91,40 +87,4 @@ const StyledAnimation = styled.div`
   animation-duration: ${duration}s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-`;
-
-const Image1 = styled(StyledAnimation)`
-  animation-delay: ${(-0 * duration - 1.5) / imageCount}s;
-`;
-
-const Image2 = styled(StyledAnimation)`
-  animation-delay: ${(-1 * duration - 1.5) / imageCount}s;
-`;
-
-const Image3 = styled(StyledAnimation)`
-  animation-delay: ${(-2 * duration - 1.5) / imageCount}s;
-`;
-
-const Image4 = styled(StyledAnimation)`
-  animation-delay: ${(-3 * duration - 1.5) / imageCount}s;
-`;
-
-const Image5 = styled(StyledAnimation)`
-  animation-delay: ${(-4 * duration - 1.5) / imageCount}s;
-`;
-
-const Image6 = styled(StyledAnimation)`
-  animation-delay: ${(-5 * duration - 1.5) / imageCount}s;
-`;
-
-const Image7 = styled(StyledAnimation)`
-  animation-delay: ${(-6 * duration - 1.5) / imageCount}s;
-`;
-
-const Image8 = styled(StyledAnimation)`
-  animation-delay: ${(-7 * duration - 1.5) / imageCount}s;
-`;
-
-const Image9 = styled(StyledAnimation)`
-  animation-delay: ${(-8 * duration - 1.5) / imageCount}s;
 `;
