@@ -6,11 +6,8 @@ export default function Introduction() {
   return (
     <Container>
       <h4>{welcomeMessage}</h4>
-      {/* <p>{introduction}</p> */}
       {introduction.map((sentence, index) => (
-        <div key={index}>
-          <p className="toggle darkmode">{sentence}</p>
-        </div>
+        <p key={index}>{sentence}</p>
       ))}
     </Container>
   );
@@ -24,9 +21,13 @@ const Container = styled.div`
   width 80%;
   margin-top: 60px;
 
+  h4 {
+    margin-bottom: 20px;
+  }
+
   p {
     max-width: 90%;
     text-align: center;
-    margin: 20px 0px;
+    margin: 15px 0px;
   }
 `;
