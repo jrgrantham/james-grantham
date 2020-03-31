@@ -41,7 +41,7 @@ export default function Introduction() {
 const imageSize = 70; // px
 const logosWidth = 1000; // px visible area
 const imageOffset = 250; // px use this for spacing
-const duration = 6; // seconds
+const duration = 10; // seconds
 const imageCount = 6;
 
 const Container = styled.div`
@@ -78,10 +78,10 @@ const Container = styled.div`
 // Create the keyframes
 const move = keyframes`
   from {
-    left: -${imageSize + imageOffset}px;
+    left: ${logosWidth + imageOffset}px;
   }
   to {
-    left: ${logosWidth + imageOffset}px;
+    left: -${imageSize + imageOffset}px;
   }
 `;
 
