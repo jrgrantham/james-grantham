@@ -6,7 +6,12 @@ export default function Introduction() {
   return (
     <Container>
       <h4>{welcomeMessage}</h4>
-      <p>{introduction}</p>
+      {/* <p>{introduction}</p> */}
+      {introduction.map((sentence, index) => (
+        <div key={index}>
+          <p className="toggle darkmode">{sentence}</p>
+        </div>
+      ))}
     </Container>
   );
 }

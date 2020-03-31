@@ -41,10 +41,10 @@ export default function AnimatedLogos() {
   );
 }
 
-const imageSize = 60; // px
+const imageSize = 50; // px
 const logosWidth = 1000; // px visible area
 const imageOffset = 350; // px use this for spacing
-const duration = 10; // seconds
+const duration = 15; // seconds
 const imageCount = 7;
 
 const Container = styled.div`
