@@ -15,30 +15,30 @@ export default function Introduction() {
       <div></div>
       <p>{introduction}</p>
       <div className="logos">
-        <Move1 className="image">
+        <Image1 className="image">
           <img src={react} alt="react" />
-        </Move1>
-        <Move2 className="image">
+        </Image1>
+        <Image2 className="image">
           <img src={less} alt="less" />
-        </Move2>
-        <Move3 className="image">
+        </Image2>
+        <Image3 className="image">
           <img src={styledC} alt="styledC" />
-        </Move3>
-        <Move4 className="image">
+        </Image3>
+        <Image4 className="image">
           <img src={html} alt="html" />
-        </Move4>
-        <Move5 className="image">
+        </Image4>
+        <Image5 className="image">
           <img src={python} alt="python" />
-        </Move5>
-        <Move6 className="image">
+        </Image5>
+        <Image6 className="image">
           <img src={js} alt="js" />
-        </Move6>
+        </Image6>
       </div>
     </Container>
   );
 }
 
-const imageSize = 70; // px
+const imageSize = 60; // px
 const logosWidth = 1000; // px visible area
 const imageOffset = 250; // px use this for spacing
 const duration = 10; // seconds
@@ -54,9 +54,10 @@ const Container = styled.div`
 
   .logos {
     margin-top: 40px;
+    margin-bottom: 10px;
     position: relative;
     overflow: hidden;
-    height: 100px;
+    height: ${imageSize}px;
     width: ${logosWidth}px;
     max-width: 100%;
     // border: 1px solid red;
@@ -85,41 +86,42 @@ const move = keyframes`
   }
 `;
 
-const StyledImage = styled.div`
-  left: -${imageSize}px;
+const StyledAnimation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   width: ${imageSize}px;
   height: ${imageSize}px;
+
+  left: -${imageSize}px;
+  animation-name: ${move};
+  animation-duration: ${duration}s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 `;
 // create a component that will move everything we pass in
 
-const Move1 = styled(StyledImage)`
-  animation: ${move} ${duration}s linear 0s infinite;
+const Image1 = styled(StyledAnimation)`
+  animation-delay: ${(0 * duration) / imageCount}s
 `;
 
-const Move2 = styled(StyledImage)`
-  animation: ${move} ${duration}s linear ${duration / imageCount}s infinite;
+const Image2 = styled(StyledAnimation)`
+  animation-delay: ${(1 * duration) / imageCount}s
 `;
 
-const Move3 = styled(StyledImage)`
-  animation: ${move} ${duration}s linear ${(2 * duration) / imageCount}s
-    infinite;
+const Image3 = styled(StyledAnimation)`
+  animation-delay: ${(2 * duration) / imageCount}s
 `;
 
-const Move4 = styled(StyledImage)`
-  animation: ${move} ${duration}s linear ${(3 * duration) / imageCount}s
-    infinite;
+const Image4 = styled(StyledAnimation)`
+  animation-delay: ${(3 * duration) / imageCount}s
 `;
 
-const Move5 = styled(StyledImage)`
-  animation: ${move} ${duration}s linear ${(4 * duration) / imageCount}s
-    infinite;
+const Image5 = styled(StyledAnimation)`
+  animation-delay: ${(4 * duration) / imageCount}s
 `;
 
-const Move6 = styled(StyledImage)`
-  animation: ${move} ${duration}s linear ${(5 * duration) / imageCount}s
-    infinite;
+const Image6 = styled(StyledAnimation)`
+  animation-delay: ${(5 * duration) / imageCount}s
 `;
