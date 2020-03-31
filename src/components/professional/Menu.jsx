@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { MenuBurger } from "./buttonStyles";
 import useDarkMode from "../../hooks/useDarkMode";
@@ -73,7 +74,7 @@ export default function ContentButtons(props) {
 
   return (
     <Container id='menu' className="toggle darkmode">
-      <h2>James Grantham</h2>
+      <Link to='/'><h2>James Grantham</h2></Link>
 
       <CollapsingMenu>
         <div className="hamburgerButton" onClick={() => changeHidden()}>
@@ -130,6 +131,14 @@ const Container = styled.div`
     font-weight: bold;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
+    cursor: pointer;
+    color: floralwhite;
+
+    @media (pointer: fine) {
+      &:hover {
+        color: ${professionalButtonHov};
+      }
+    }
   }
 `;
 

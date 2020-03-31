@@ -11,7 +11,7 @@ import artFunder from "../images/artFunder.png";
 export const projectsNumber = 5;
 
 export const projectsTitle = "Projects";
-export const projectsDescription = "Check out some of my work";
+export const projectsDescription = "Here are some of the projects I have worked on";
 export const projectsLink = "Visit";
 export const projectsGitHub = "github";
 

@@ -11,17 +11,20 @@ import {
 
 // Create the keyframes
 const rotate = keyframes`
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-    `;
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 // create a component that will rotate everything we pass in
 export const Rotate = styled.div`
   display: inline-block;
-  animation: ${rotate} 4s linear infinite;
+  animation: ${rotate} 8s ease-in-out infinite;
 `;
 export const Header = styled.div`
   z-index: 1000;
