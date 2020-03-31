@@ -1,11 +1,14 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import less from "../../images/less.png";
+import lessD from "../../images/lessD.png";
 import styledC from "../../images/styledComps.png";
 import html from "../../images/html.png";
-import python from "../../images/python-logo.png";
+import python from "../../images/pythonLogo.png";
 import js from "../../images/js.png";
-import react from "../../images/react.png";
+import react from "../../images/react.svg";
+import css from "../../images/css.png";
+
+
 
 export default function AnimatedLogos() {
   return (
@@ -14,7 +17,7 @@ export default function AnimatedLogos() {
         <img src={react} alt="react" />
       </Image1>
       <Image2>
-        <img src={less} alt="less" />
+        <img src={lessD} alt="less" />
       </Image2>
       <Image3>
         <img src={styledC} alt="styledC" />
@@ -28,6 +31,12 @@ export default function AnimatedLogos() {
       <Image6>
         <img src={js} alt="js" />
       </Image6>
+      <Image6>
+        <img src={js} alt="js" />
+      </Image6>
+      <Image7>
+        <img src={css} alt="css" />
+      </Image7>
     </Container>
   );
 }
@@ -36,7 +45,7 @@ const imageSize = 60; // px
 const logosWidth = 1000; // px visible area
 const imageOffset = 350; // px use this for spacing
 const duration = 10; // seconds
-const imageCount = 6;
+const imageCount = 7;
 
 const Container = styled.div`
   margin: 40px 0 40px 0;
@@ -69,7 +78,7 @@ const StyledAnimation = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: ${imageSize}px;
+  width: ${imageSize * 1.25}px;
   height: ${imageSize}px;
 
   left: -${imageSize}px; // hold the image outside the div;
@@ -101,4 +110,8 @@ const Image5 = styled(StyledAnimation)`
 
 const Image6 = styled(StyledAnimation)`
   animation-delay: ${(-5 * duration - 1.5) / imageCount}s;
+`;
+
+const Image7 = styled(StyledAnimation)`
+  animation-delay: ${(-6 * duration - 1.5) / imageCount}s;
 `;
