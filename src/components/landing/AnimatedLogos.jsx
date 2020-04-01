@@ -43,18 +43,18 @@ export default function AnimatedLogos() {
 }
 
 const imageSize = 50; // px
+const ratio = 1.4 // ratio of width to height space for the images
 const logosWidth = 1000; // px visible area
 const imageOffset = 450; // px use this for spacing
 const duration = 15; // seconds
 
 const Container = styled.div`
-  margin: 40px 0 40px 0;
+  margin: 50px 0 40px 0;
   position: relative;
   overflow: hidden;
   height: ${imageSize}px;
-  height: 10000px;
   width: ${logosWidth}px;
-  max-width: 80%;
+  max-width: 70%;
   // border: 1px solid red;
 
   img {
@@ -79,7 +79,7 @@ const StyledAnimation = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: ${imageSize * 1.25}px;
+  width: ${imageSize * ratio}px;
   height: ${imageSize}px;
 
   left: -${imageSize}px; // hold the image outside the div;
