@@ -9,20 +9,7 @@ import react from "../../images/react.svg";
 import css from "../../images/css.png";
 import nodejs from "../../images/nodejs.svg";
 import mysql from "../../images/mysql.png";
-import postgress from "../../images/postgress.png";
-
-const images = [
-  lessD,
-  styledC,
-  html,
-  python,
-  js,
-  react,
-  css,
-  nodejs,
-  mysql,
-  postgress
-];
+// import postgress from "../../images/postgress.png";
 
 export default function AnimatedLogosOLD() {
   return (
