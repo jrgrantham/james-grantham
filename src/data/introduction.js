@@ -5,8 +5,8 @@ export const introduction = [
     content: `My software development journey started back in 2017 when I supervised a project to convert the monthly powerpoint presention into an online web portal for the client.`
   },
   {
-    title: `A Change`,
-    content: `A new found interest in coding triggered a career break and I enrolled at Lambda School to gain a greater understanding of programming. This included client side and server side.`
+    title: `Change`,
+    content: `A new found interest in coding triggered a career break, I enrolled at Lambda School to gain a greater understanding of programming. This included client side and server side.`
   },
   {
     title: `The Journey`,

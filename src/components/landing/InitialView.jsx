@@ -9,7 +9,8 @@ import {
   footerHeight,
   fontColour,
   buttonOrange,
-  buttonBlue
+  buttonBlue,
+  fontColourDarkMode
 } from "../../views/styling";
 
 export default function LandingInitialView() {
@@ -126,21 +127,21 @@ const LandingContent = styled.div`
   h1.darkmode {
     background-image: linear-gradient(
       to right,
-      white,
-      white,
-      white,
-      #1e90ff,
-      white,
-      white,
-      white,
-      white,
-      white,
-      #ff8d1e,
-      white,
-      white,
-      white,
-      white,
-      white
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${buttonBlue},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${buttonOrange},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode},
+      ${fontColourDarkMode}
     );
     color: transparent;
     -webkit-background-clip: text;
