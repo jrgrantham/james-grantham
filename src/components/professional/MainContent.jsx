@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import useDarkMode from "../../hooks/useDarkMode";
 import { MenuArrow } from "./buttonStyles";
 import {
   transition,
-  borderRad,
   professionalInnerPad,
   professionalButtonHov,
   mediaBreak,
-  professionalBackDark,
   professionalButtonDark,
   professionalButton
 } from "../../views/styling";
 
 export default function MainContent(props) {
-  const [] = useDarkMode();
+  useDarkMode();
 
   let menuHeight = 0
 

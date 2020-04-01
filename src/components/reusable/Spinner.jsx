@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { mediaBreak, borderRad } from "../../views/styling";
 import { LinkButton } from "./Buttons";
 
 export default function Spinner() {

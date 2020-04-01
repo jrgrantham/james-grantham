@@ -8,7 +8,6 @@ import useDarkMode from '../hooks/useDarkMode'
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Spacer from "../components/reusable/Spacer";
-import DarkModeDiv from "../components/reusable/DarkModeDiv";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
@@ -49,11 +48,8 @@ const StyledProfessional = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 100%;
-  
-  .toggle {
-    max-width: 1000px;
-    background-color: ${professionalBack};
-  }
+  max-width: 1000px;
+  background-color: ${professionalBack};
 
   .darkmode {
     background-color: ${professionalBackDark};

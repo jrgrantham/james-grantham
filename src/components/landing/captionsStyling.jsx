@@ -19,7 +19,7 @@ export const Captions = styled(Container)`
     display: flex;
   }
 
-  h4 {
+  h5 {
     background-color: ${landingCaption};
     margin: auto;
     margin-bottom: 20px;
@@ -34,8 +34,8 @@ export const Captions = styled(Container)`
 
     @media (min-width: ${mediaBreak}) {
       margin: 0 80px 40px 80px;
-      width: 500px;
-      min-height: 100px;
+      width: 450px;
+      min-height: 80px;
     }
 
     @media (pointer: fine) {
@@ -45,7 +45,7 @@ export const Captions = styled(Container)`
     }
   }
 
-  h4.darkmode {
+  h5.darkmode {
     background-color: ${landingCaptionDark};
     color: ${fontColourDarkMode}
   }

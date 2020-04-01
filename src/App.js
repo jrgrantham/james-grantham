@@ -105,7 +105,7 @@ const StyledApp = styled.div`
       font-size: 2rem;
     }
     h5, h6 {
-
+      font-size: 1.5rem;
     }
   }
 

@@ -6,9 +6,14 @@ export default function Introduction() {
   return (
     <Container>
       <h4>{welcomeMessage}</h4>
-      {introduction.map((sentence, index) => (
-        <p key={index}>{sentence}</p>
-      ))}
+      <div className='contents'>
+        {introduction.map((section, index) => (
+          <div className='section' key={index}>
+            <h5>{section.title}</h5>
+            <p>{section.content}</p>
+          </div>
+        ))}
+      </div>
     </Container>
   );
 }
@@ -18,16 +23,33 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width 80%;
+  width 90%;
   margin-top: 60px;
 
   h4 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
-  p {
-    max-width: 90%;
-    text-align: center;
-    margin: 15px 0px;
+  .contents {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  .section {
+    width: 45%;
+    margin: 25px 2.5% 0 2.5%;
+    
+    @media (max-width: 800px) {
+      width: 100%
+    }
+    
+    p {
+      text-align: center;
+      // border: 1px solid red;
+    }
   }
+
+  }
+
 `;

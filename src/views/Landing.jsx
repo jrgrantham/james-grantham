@@ -14,6 +14,7 @@ import Spacer from "../components/reusable/Spacer";
 import LearnMore from "../components/reusable/LearnMore";
 import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
+import AnimatedLogosOLD from "../components/landing/AnimatedLogosOLD";
 
 export default function Landing() {
 
@@ -37,6 +38,7 @@ export default function Landing() {
         <Spacer />
         <Introduction />
         <AnimatedLogos />
+        {/* <AnimatedLogosOLD /> */}
         <LearnMore />
         <Spacer />
         <Projects />
