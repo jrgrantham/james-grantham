@@ -37,8 +37,8 @@ export default function Landing() {
         <LandingInitialView />
         <Spacer />
         <Introduction />
-        {/* <AnimatedLogos /> */}
-        <AnimatedLogosOLD />
+        <AnimatedLogos />
+        {/* <AnimatedLogosOLD /> */}
         <LearnMore />
         <Spacer />
         <Projects />

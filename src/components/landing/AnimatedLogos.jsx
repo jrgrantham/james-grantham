@@ -30,7 +30,7 @@ export default function AnimatedLogos() {
       {images.map((image, index) => (
         <StyledAnimation
           style={{
-            "-webkit-animation-delay": `${(-index * duration - 1.5) /
+            animationDelay: `${(-index * duration - 1.5) /
               images.length}s`
           }}
           key={index}

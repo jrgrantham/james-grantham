@@ -8,7 +8,6 @@ import useDarkMode from '../hooks/useDarkMode'
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import Spacer from "../components/reusable/Spacer";
-import DarkModeDiv from "../components/reusable/DarkModeDiv";
 
 export default function Professional() {
   const [content, setContent] = useState(experience);
