@@ -89,7 +89,7 @@ const LandingContent = styled.div`
     max-width: 100%;
     max-height: 100%;
     border-radius: ${borderRad};
-    border: 1px solid ${fontColour};
+    // border: 1px solid ${fontColour};
   }
 
   h1,
