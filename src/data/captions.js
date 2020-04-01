@@ -1,5 +1,5 @@
 export const captionTitle = 'Values'
-export const captionComment = 'For further details, hit the learn more button'
+export const captionComment = 'For further details, hit a learn more button'
 
 export const captions = [
   // 'Experienced Engineer',

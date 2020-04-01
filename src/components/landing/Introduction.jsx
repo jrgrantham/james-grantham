@@ -26,10 +26,6 @@ const Container = styled.div`
   width 90%;
   margin-top: 60px;
 
-  h4 {
-    margin-bottom: 10px;
-  }
-
   .contents {
     // border: 1px solid red;
     display: flex;
@@ -38,7 +34,7 @@ const Container = styled.div`
 
   .section {
     width: 45%;
-    margin: 25px 2.5% 0 2.5%;
+    margin: 50px 2.5% 0 2.5%;
     
     @media (max-width: 800px) {
       width: 100%

@@ -7,9 +7,7 @@ import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from "./views/ContactForm";
 import Projects from "./views/AllProjects";
-import back from "./images/background2.png";
-import backDark from "./images/backDark.png";
-import { fontColour, fontColourDarkMode, appWidth } from "./views/styling";
+import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark } from "./views/styling";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -79,7 +77,7 @@ const StyledApp = styled.div`
   .app {
     display: flex;
     justify-content: center;
-    background-image: url('${back}');
+    background-color: ${appColour};
     color: ${fontColour};
     text-align: center;
     width: 100%;
@@ -88,7 +86,7 @@ const StyledApp = styled.div`
 
   .app.darkmode {
     color: ${fontColourDarkMode};
-    background-image: url('${backDark}');
+    background-color: ${appColourDark};
   }
 
   @media (max-width: 1500px) {

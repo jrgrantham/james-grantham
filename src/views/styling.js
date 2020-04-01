@@ -4,8 +4,11 @@ export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";
 export const borderRad = "5px";
 export const transition = "0.3s";
+
+export const appColour = '#E8E8E8';
+export const appColourDark = '#202020';
 export const fontColour = "#3e3e3e";
-export const fontColourDarkMode = "floralwhite";
+export const fontColourDarkMode = "#e5e1d8"; // floralwhite shade
 
 // https://favicon.io/favicon-generator/
 // favicon font - Merriweather
@@ -16,22 +19,22 @@ export const fontColourDarkMode = "floralwhite";
 export const buttonOrange = "#ff8d1e";
 export const buttonBlue = "#1E90FF";
 
-export const landingHeaderFont = "floralwhite";
+export const landingHeaderFont = fontColourDarkMode;
 
-export const landingHeader = "#303030";
+export const landingHeader = "#151515";
 export const landingFooter = landingHeader;
 export const headerHeight = 50;
 export const footerHeight = 30;
 export const landingHeadFootOpacity = 1;
 
 export const projectsMaxWidth = "";  // app is narrow enough
-export const projectCardBack = "GhostWhite";
-export const projectCardBorder = "darkgrey";
-export const projectCardBackDark = "#202020";
+export const projectCardBack = "#f8f8f8";
+export const projectCardBorder = "#707070";
+export const projectCardBackDark = landingHeader;
 
-export const landingCaption = "GhostWhite";
-export const landingCaptionDark = "#202020";
-export const landingCaptionBorder = "darkgrey";
+export const landingCaption = projectCardBack;
+export const landingCaptionDark = landingHeader;
+export const landingCaptionBorder = projectCardBorder;
 export const landingCaptionMaxWidth = "1000px";
 
 export const landingBoysBack = "#a9a9a9";
