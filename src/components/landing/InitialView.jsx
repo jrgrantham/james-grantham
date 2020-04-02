@@ -75,14 +75,14 @@ const LandingContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: opacity 1s;
+    transition: opacity 2s;
   }
 
   .img {
     width: 90%;
     max-width: 800px;
     max-width: 90vh;
-    transition: max-width 0.8s;
+    transition: max-width 1s;
   }
 
   img {
