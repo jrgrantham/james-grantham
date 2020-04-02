@@ -9,7 +9,9 @@ import {
   professionalButtonHov,
   mediaBreak,
   professionalButtonDark,
-  professionalButton
+  professionalButton,
+  professionalBack,
+  professionalBackDark
 } from "../../views/styling";
 
 export default function MainContent(props) {
@@ -68,11 +70,18 @@ export default function MainContent(props) {
 
 const Container = styled.div`
 
+  width: 100%;
+
   .article {
+    background-color: ${professionalBack};
     width: 100%;
     padding: ${professionalInnerPad};
     cursor: pointer;
     transition: background-color ${transition};
+
+    .darkmode {
+      background-color: ${professionalBackDark};
+    }
 
     @media (min-width: ${mediaBreak}) {
       padding-left: 20px;
@@ -89,6 +98,8 @@ const Container = styled.div`
     }
 
     .title {
+      position: sticky;
+      background-color: inherit;
       top: 0;
       display: flex;
       justify-content: space-between;
@@ -117,7 +128,7 @@ const StyledDetails = styled.div`
 `;
 
 const closedDetails = {
-  maxHeight: "1000px"
+  maxHeight: "2000px"
 };
 
 // const selectedStyle = {

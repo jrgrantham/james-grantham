@@ -1,9 +1,9 @@
 export const timeLine = [
   {
     title: "Lambda School",
-    introduction: "Joined Lambda School to learn how to be a full stack web developer",
+    introduction: "Joined Lambda School to learn how to be a full stack web developer.",
     contents: [
-      ""
+      "****** coming soon ******"
     ],
     display: false
   },
@@ -15,7 +15,7 @@ export const timeLine = [
       "Responsible for managing workloads, prioritising and scheduling inspection activities and completing the inspection scope on time and within budget. Anomaly reviews, repair recommendations, inspection summaries, team briefs, and budget tracking and forecasting.",
       "Restructured the project, developing new systems and processes to better manage the large amount of data generated. This increased project efficiency turning a once struggling project, performing poorly for Oceaneering, into the benchmark against which other projects were compared.",
       "The new approach helped to manage and track our workload and budget simply and effectively, providing thorough visibility and therefore the opportunity to focus on the areas that were failing.",
-      "Managed the development of an internal company project to convert the monthly presentation into a website accessible by client, supplying live data available any time (the catalyst for a career change)",
+      "Managed the development of an internal company project to convert the monthly presentation into a website accessible by client, supplying live data available any time (the catalyst for a career change).",
     ],
     display: false
   },
@@ -40,7 +40,7 @@ export const timeLine = [
   {
     title: "University of Loughborough",
     introduction: "Mechanical Engineering BEng.",
-    contents: ["Studied between 1997 and 2001."],
+    contents: ["No further information."],
     display: false
   }
 ];

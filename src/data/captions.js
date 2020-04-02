@@ -1,5 +1,5 @@
-export const captionTitle = 'Values'
-export const captionComment = 'For further details, hit a learn more button'
+export const captionTitle = ''
+export const captionComment = ''
 
 export const captions = [
   // 'Experienced Engineer',
@@ -7,13 +7,6 @@ export const captions = [
   // 'Minimalist, no frills',
   // 'Perfectionist',
   // 'Collaborator',
-  'Dignity',
-  'Humility',
-  'Trust',
-  'Fairness',
-  'Dependability',
-  'Decisiveness',
-  'Honesty',
   // 'Innovative',
   // 'Intuitive',
   // 'Persistence',

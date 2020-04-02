@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import ContactMeHeader from "../components/landing/Header";
@@ -14,16 +14,16 @@ import Spacer from "../components/reusable/Spacer";
 import LearnMore from "../components/reusable/LearnMore";
 import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
-import AnimatedLogosOLD from "../components/landing/AnimatedLogosOLD";
 
-export default function Landing() {
+export default function Landing(props) {
+  const { content, setContent, selected, setSelected } = props;
 
   useEffect(() => {
     try {
       window.scroll({
         top: 0,
         left: 0,
-        behavior: 'auto',
+        behavior: "auto"
       });
     } catch (error) {
       window.scrollTo(0, 0);
@@ -43,7 +43,7 @@ export default function Landing() {
         <Spacer />
         <Projects />
         <Spacer />
-        <Captions />
+        <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
         <SiteLinks />
         <LearnMore />

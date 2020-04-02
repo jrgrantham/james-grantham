@@ -137,6 +137,7 @@ const Container = styled.div`
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     cursor: pointer;
+    transition: color ${transition};
 
     @media (pointer: fine) {
       &:hover {
@@ -179,6 +180,11 @@ const HorizontalMenu = styled.div`
 
   .button.darkmode.selected {
     background-color: ${professionalSelectedButtonDark};
+    @media (pointer: fine) {
+      &:hover {
+        background-color: ${professionalButtonHov};
+      }
+    }
   }
 
   @media (min-width: ${mediaBreak}) {

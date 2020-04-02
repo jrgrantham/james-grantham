@@ -8,6 +8,8 @@ import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from "./views/ContactForm";
 import Projects from "./views/AllProjects";
 import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark } from "./views/styling";
+import { aboutMe } from "./data/aboutMe";
+
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -15,12 +17,37 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
+  const [content, setContent] = useState(aboutMe);
+  const [selected, setSelected] = useState("About me");
 
   return (
     <StyledApp>
       <div className="app toggle darkmode">
-        <Route exact path="/" component={Landing} />
-        <Route path="/professional" component={Professional} />
+        {/* <Route exact path="/" component={Landing} /> */}
+        <Route
+          exact path="/"
+          render={props => (
+            <Landing
+              {...props}
+              content={content}
+              setContent={setContent}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          )}
+        />
+        <Route
+          path="/professional"
+          render={props => (
+            <Professional
+              {...props}
+              content={content}
+              setContent={setContent}
+              selected={selected}
+              setSelected={setSelected}
+            />
+          )}
+        />
         <Route path="/projects" component={Projects} />
         <Route
           path="/login"
