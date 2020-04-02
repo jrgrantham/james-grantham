@@ -44,7 +44,7 @@ export const experience = [
     display: false
   },
   {
-    title: "Financial",
+    title: "Finance",
     introduction:
       "Budget management and costing experience for the Oil and Gas integrity services division.",
     contents: [

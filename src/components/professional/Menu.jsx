@@ -27,7 +27,7 @@ export default function ContentButtons(props) {
   const [hidden, setHidden] = useState(true);
   useDarkMode();
 
-  const categoryButtons = ["Experience", "About me", "Time line", "Projects"];
+  const categoryButtons = ["About me", "Time line", "Experience", "Values"];
 
   function setCategory(title) {
     props.setSelected(title);
@@ -36,7 +36,7 @@ export default function ContentButtons(props) {
       props.setContent(timeLine);
     } else if (title === "Experience") {
       props.setContent(experience);
-    } else if (title === "Projects") {
+    } else if (title === "Values") {
       props.setContent(values);
     } else if (title === "About me") {
       props.setContent(aboutMe);
