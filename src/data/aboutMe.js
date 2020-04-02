@@ -6,7 +6,7 @@ export const aboutMe = [
     contents: [
       'Originally from Hull, I moved to Aberdeen several years ago when my former boss asked if I\'d be interesting in moving to the "Oil and Gas Capital". I relocated, bought my first proprty and started a new chapter in my life.',
       "I'm still based in Aberdeen but would consider working in another city anywhere in the country. That said, I'm comfortable working from home. I have prior experience of managing remote teams (offshore) and recent experience working remotely, collaborating with teams in different time zones from around the world.",
-      "I have 3 lovely boys that I love spending time with, be it swimming, iceskating, bike rides, skimming stones or even turning the living room into a \"cinema\"!",
+      "I have 3 awesome boys that I love spending time with, be it swimming, iceskating, bike rides, skimming stones or even turning the living room into a \"cinema\"!",
     ],
     display: false
   },

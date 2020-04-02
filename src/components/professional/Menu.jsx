@@ -180,6 +180,11 @@ const HorizontalMenu = styled.div`
 
   .button.darkmode.selected {
     background-color: ${professionalSelectedButtonDark};
+    @media (pointer: fine) {
+      &:hover {
+        background-color: ${professionalButtonHov};
+      }
+    }
   }
 
   @media (min-width: ${mediaBreak}) {
