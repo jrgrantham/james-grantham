@@ -11,8 +11,18 @@ export const aboutMe = [
   },
   {
     title: "Career",
-    introduction: "I worked at, ",
-    contents: ["need to choose 5 things here..."],
+    introduction:
+      "After graduating from University I was fortunate enough to land a job working for Lloyds's Register (Oil and Gas), a prestigious company to which I remained faithful for nearly 10 years. Once temptation got the better of me, I resigned my position at LR to work for Oceaneering, another prestigious company, were I served for about 7 years.",
+    contents: [
+      "I started work for LR Integrity Services at BP's main gas terminal in Dimlington, Hull. Forming part of a small team at the BP offices overlooking the process plant, I got my first experience of engineering.",
+      "Our team was responsible for the integrity management of the onshore terminal and the 18 or so platforms that fed into it. Most my time was split evenly so the majority of it was spent supporting offshore operations.",
+      "Over time, I was given more responsibility and projects of my own to look after, with frequent flights to the installations to carry out the work myself.",
+      "",
+      "Due to BP restructuring, separating the onshore and offshore operations, I was offered the opportunity to relocated to Aberdeen and work at the head office with all the other teams. Why not, so I packed my bags and 4 weeks later I was living over 400 miles away.",
+      "A loss of the BP contract later on resulted in a brief secondment to another department in LR where I acted as Independant Competent Person, but found this to be quite a lonely existence and wanted to be part of a team again.",
+      "Back in integrity services, I spent some time supporting various teams before finding a home looking after the Triton FPSO, where I saw out the rest of my time with LR",
+      "My move to Oceaneering was less eventful. After a brief stint working for a department that was soon closed, I was back working Integrity Services at head office. For 6 years I worked on the EnQuest project looking afer the Kittiwake Oil Platform."
+    ],
     display: false
   },
   {
@@ -20,11 +30,11 @@ export const aboutMe = [
     introduction:
       "To move from Engineering into tech may seem like an unusual decision, this is how it happened... in summary it is satisfying to solve complex problems. With web development, solutions are instantly rendered on screen providing an instant reward for the work completed.",
     contents: [
-      "The Oil industry is an interesting and often exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in extreme and remote environments.",
+      "The Oil industry can be an interesting and often exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in remote and extreme environments.",
       "One of my responsibilities was to manage the project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time.",
-      "I oversaw the construction of the site, speeding up development by enabling on the spot decisions and preventing rewriting code delivering a well presented product that contained all the data our client was hoping for.",
-      "The logical and technical challenges faced during the development were at times difficult, but the reward of completing the work was particularly satisfying.",
-      "It was time adopt new challenges and turn my hand to web-development."
+      "I oversaw the construction of the site and enjoyed getting involved in writing code. We delivered a well presented product that contained all the data our client was hoping for. I found this particularly rewarding.",
+      "The logical and technical challenges faced during development were at times difficult, but this made completing the project even more satisfying.",
+      "It was time to adopt new challenges and turn my hand to web-development."
     ],
     display: false
   },
