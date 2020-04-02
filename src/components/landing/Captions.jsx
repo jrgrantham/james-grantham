@@ -19,7 +19,10 @@ export default function LandingCaptions(props) {
         >
           <Link
             to="/professional"
-            // onClick={props.setContent(values)}
+            onClick={() => {
+              props.setContent(values)
+              props.setSelected('Values')
+            }}
           >
             <h5 className="toggle darkmode">{caption.title}</h5>
           </Link>

@@ -10,8 +10,6 @@ import {
   mediaBreak,
   professionalButtonDark,
   professionalButton,
-  appColour,
-  appColourDark,
   professionalBack,
   professionalBackDark
 } from "../../views/styling";
