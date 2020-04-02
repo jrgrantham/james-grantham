@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import { professionalBack, professionalBackDark } from "./styling";
 import { experience } from "../data/experience";
+import { timeLine } from "../data/timeLine";
+import { aboutMe } from "../data/aboutMe";
 import useDarkMode from '../hooks/useDarkMode'
 
 import Menu from "../components/professional/Menu";
@@ -10,8 +12,8 @@ import MainContent from "../components/professional/MainContent";
 import Spacer from "../components/reusable/Spacer";
 
 export default function Professional() {
-  const [content, setContent] = useState(experience);
-  const [selected, setSelected] = useState("Experience");
+  const [content, setContent] = useState(aboutMe);
+  const [selected, setSelected] = useState("About me");
   useDarkMode();
   
   useEffect(() => {
@@ -36,8 +38,8 @@ export default function Professional() {
           setSelected={setSelected}
         />
         <MainContent content={content} setContent={setContent} />
-        <Spacer />
-        <div style={{height: '80px'}} />
+        {/* <Spacer /> */}
+        {/* <div style={{height: '80px'}} /> */}
       </StyledProfessional>
     </StyledProfessional>
   );
