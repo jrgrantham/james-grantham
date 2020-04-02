@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import { professionalBack, professionalBackDark } from "./styling";
-import { experience } from "../data/experience";
-import { timeLine } from "../data/timeLine";
-import { aboutMe } from "../data/aboutMe";
 import useDarkMode from '../hooks/useDarkMode'
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
-import Spacer from "../components/reusable/Spacer";
 
-export default function Professional() {
-  const [content, setContent] = useState(aboutMe);
-  const [selected, setSelected] = useState("About me");
+export default function Professional(props) {
+  const { content, setContent, selected, setSelected} = props
   useDarkMode();
   
   useEffect(() => {
@@ -49,7 +44,7 @@ const StyledProfessional = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
   max-width: 1000px;
   background-color: ${professionalBack};

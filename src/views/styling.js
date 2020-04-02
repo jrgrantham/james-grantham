@@ -44,9 +44,9 @@ export const landingBoysMaxWidth = "1000px";
 
 export const professionalBack = "#F5F5F5";
 export const professionalBackDark = "#282828";
-export const professionalButton = "#E8E8E8";
+export const professionalButton = "#DCDCDC";
 export const professionalButtonDark = "#383838";
-export const professionalSelectedButton = "#C8C8C8";
+export const professionalSelectedButton = "#c0c0c0";
 export const professionalSelectedButtonDark = "#606060";
 export const professionalButtonHov = "#e1b80d";
 export const professionalInnerPad = "10px";

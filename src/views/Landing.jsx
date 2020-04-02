@@ -14,9 +14,9 @@ import Spacer from "../components/reusable/Spacer";
 import LearnMore from "../components/reusable/LearnMore";
 import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
-import AnimatedLogosOLD from "../components/landing/AnimatedLogosOLD";
 
-export default function Landing() {
+export default function Landing(props) {
+  const { content, setContent, selected, setSelected} = props
 
   useEffect(() => {
     try {
@@ -43,7 +43,7 @@ export default function Landing() {
         <Spacer />
         <Projects />
         <Spacer />
-        <Captions />
+        <Captions setContent={setContent}/>
         <Spacer />
         <SiteLinks />
         <LearnMore />
