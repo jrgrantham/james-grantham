@@ -14,7 +14,7 @@ export function MenuArrow(props) {
     width: 27px;
 
     img {
-      opacity: 0.4;
+      opacity: 1;
       height: 25px;
     }
   `;
@@ -35,7 +35,7 @@ export function MenuBurger(props) {
     width: 30px;
   
     img {
-      opacity: 0.4;
+      opacity: 0.8;
       height: 25px;
     }
   `;
