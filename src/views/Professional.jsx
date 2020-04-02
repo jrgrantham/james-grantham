@@ -50,6 +50,7 @@ const StyledProfessional = styled.div`
   flex-direction: column;
   align-items: center;
   min-height: 100%;
+  width: 100%;
   max-width: 1000px;
   background-color: ${professionalBack};
 

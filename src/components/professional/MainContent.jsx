@@ -68,6 +68,8 @@ export default function MainContent(props) {
 
 const Container = styled.div`
 
+  width: 100%;
+
   .article {
     width: 100%;
     padding: ${professionalInnerPad};
