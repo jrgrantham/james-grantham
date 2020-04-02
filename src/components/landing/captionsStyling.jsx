@@ -19,6 +19,10 @@ export const Captions = styled(Container)`
     display: flex;
   }
 
+  a {
+    color: inherit
+  }
+
   h5 {
     background-color: ${landingCaption};
     margin: auto;

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import SectionTitle from "../reusable/SectionTitle";
 
@@ -10,7 +11,9 @@ export default function LandingCaptions() {
     <Captions id="captions">
       <SectionTitle title={captionTitle} description={captionComment} />
       {captions.map((caption, index) => (
-        <div
+        <div 
+          // to='/professional'
+          onClick={''}
           key={index}
           className={index % 2 === 0 ? "left caption" : "right caption"}
         >
