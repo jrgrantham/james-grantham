@@ -11,7 +11,9 @@ import {
   professionalButtonDark,
   professionalButton,
   appColour,
-  appColourDark
+  appColourDark,
+  professionalBack,
+  professionalBackDark
 } from "../../views/styling";
 
 export default function MainContent(props) {
@@ -73,14 +75,14 @@ const Container = styled.div`
   width: 100%;
 
   .article {
-    background-color: ${appColour};
+    background-color: ${professionalBack};
     width: 100%;
     padding: ${professionalInnerPad};
     cursor: pointer;
     transition: background-color ${transition};
 
     .darkmode {
-      background-color: ${appColourDark};
+      background-color: ${professionalBackDark};
     }
 
     @media (min-width: ${mediaBreak}) {
