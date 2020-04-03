@@ -2,16 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { transition, borderRad, buttonOrange } from "../../views/styling";
+import { transition, borderRad, buttonOrange, fontColourDarkMode, professionalButtonDark } from "../../views/styling";
 
 export function LinkButton(props) {
   return <LinButton to={props.target}>{props.content}</LinButton>;
 }
 
 const LinButton = styled(Link)`
-  color: FloralWhite;
+  color: ${fontColourDarkMode};
   font-weight: bold;
-  background-color: #ff8d1e;
+  background-color: ${buttonOrange};
   padding: 1rem 3.6rem;
   border-radius: ${borderRad};
   transition: opacity ${transition};
@@ -29,9 +29,9 @@ export function AnchorButton(props) {
 
 const AncButton = styled.a`
   display: block;
-  color: FloralWhite;
+  color: ${fontColourDarkMode};
   font-weight: bold;
-  background-color: #ff8d1e;
+  background-color: ${buttonOrange};
   padding: 1rem 3.6rem;
   border-radius: ${borderRad};
   transition: opacity ${transition};
@@ -49,5 +49,5 @@ export function SmallAnchorButton(props) {
 
 const SmallAncButton = styled(AncButton)`
   padding: 0.6rem 1.6rem;
-  background: ${buttonOrange};
+  background: ${professionalButtonDark};
 `;

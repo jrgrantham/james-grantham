@@ -16,7 +16,7 @@ import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
 
 export default function Landing(props) {
-  const { content, setContent, selected, setSelected } = props;
+  const { setContent, setSelected } = props;
 
   useEffect(() => {
     try {

@@ -50,4 +50,4 @@ export const professionalSelectedButton = "#c0c0c0";
 export const professionalSelectedButtonDark = "#606060";
 export const professionalButtonHov = "#e1b80d";
 export const professionalInnerPad = "10px";
-export const professionalMaxWidth = "";
+// export const professionalMaxWidth = "";

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark, projectCardBorder } from "../../views/styling";
+import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark, projectCardBorder, fontColourDarkMode } from "../../views/styling";
 import { projectsLink, projectsGitHub } from "../../data/projects";
 
 export default function ProjectCard(props) {
@@ -71,7 +71,7 @@ const FlipCard = styled.div`
     padding: 10px;
     border-radius: ${borderRad}
     background: ${buttonBlue};
-    color: floralwhite;
+    color: ${fontColourDarkMode};
     font-weight: bold;
     transition: opacity ${transition};
 
