@@ -18,7 +18,7 @@ const initalSignupForm = {
 };
 
 export default function Contact(props) {
-  const showContactMe = props.showContactMe
+  const { showContactMe, setShowContactMe } = props
 
   return (
     <Formik 
@@ -35,8 +35,8 @@ export default function Contact(props) {
           .post(sendmailApi, newUser)
           .then(() => {
             actions.resetForm();
+            setShowContactMe(false);
             actions.setSubmitting(false);
-            props.history.push("/");
           })
           .catch(err => {
             actions.setSubmitting(false);
@@ -134,6 +134,7 @@ export default function Contact(props) {
 }
 
 const Position = styled.div`
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -147,7 +148,6 @@ const showForm = {
 };
 
 export const StyledForm = styled.form`
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;

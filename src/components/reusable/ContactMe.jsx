@@ -25,7 +25,7 @@ export default function SiteLinks(props) {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    padding: 10px 0;
+    padding: 30px 0;
     max-width: 700px;
 
     img {

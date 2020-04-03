@@ -5,7 +5,7 @@ import url from "../helpers/url";
 
 import Spinner from "../components/reusable/Spinner";
 import Footer from "../components/professional/Footer";
-import { professionalBack, borderRad } from "./styling";
+import { professionalBack, borderRad, landingCaptionBorder } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -61,7 +61,6 @@ export default function PhoneNumbers(props) {
             <h6>{number.phoneNumber}</h6>
           </NumberCard>
         ))}
-        <Footer />
       </Container>
     );
   }
@@ -71,6 +70,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 
   h3 {
     margin-top: 40px
@@ -88,12 +88,11 @@ const Container = styled.div`
 const NumberCard = styled.div`
   margin-top: 25px
   padding: 15px;
-  width: 250px
+  width: 300px
   height: 100px
 
-  border: 1px solid black;
+  border: 1px solid ${landingCaptionBorder};
   border-radius: ${borderRad};
-  background-color: ${professionalBack}
 
   display: flex;
   flex-direction: column;
