@@ -4,7 +4,7 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition } from "../../views/styling";
+import { transition, fontColourDarkMode, appColour } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function SiteLinks(props) {
@@ -25,6 +25,7 @@ export default function SiteLinks(props) {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
+    padding: 10px 0;
     max-width: 700px;
 
     img {
@@ -33,10 +34,15 @@ export default function SiteLinks(props) {
       height: auto;
     }
 
+    .mail {
+    }
+    
     .image {
+      background-color: ${appColour};
       padding: 20px;
       transition: all ${transition};
-      // border: 1px solid red
+      // border: 1px solid red;
+      border-radius: 100%;
 
       @media (pointer: fine) {
         &:hover {
@@ -55,7 +61,7 @@ export default function SiteLinks(props) {
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
         </a>
-        <div className="image" onClick={(e) => {
+        <div className="image mail" onClick={(e) => {
           e.stopPropagation()
           setShowContactMe(!showContactMe)
         }}>
