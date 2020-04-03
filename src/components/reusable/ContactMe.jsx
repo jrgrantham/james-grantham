@@ -4,7 +4,7 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition, fontColourDarkMode, appColour } from "../../views/styling";
+import { transition, appColour } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function SiteLinks(props) {

@@ -8,7 +8,6 @@ import { validationSchema } from "../../helpers/validationSchema";
 import axios from "axios";
 import url from "../../helpers/url";
 import { borderRad, transition, buttonBlue, fontColourDarkMode, appColour, landingCaptionBorder } from "../../views/styling";
-import { AnchorButton } from "./Buttons";
 
 const sendmailApi = url() + "sendmail";
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { transition, borderRad, buttonOrange, fontColourDarkMode, professionalButtonDark } from "../../views/styling";
+import { transition, borderRad, buttonOrange, fontColourDarkMode } from "../../views/styling";
 
 export function LinkButton(props) {
   return <LinButton to={props.target}>{props.content}</LinButton>;
