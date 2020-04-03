@@ -6,7 +6,8 @@ import {
   landingBoysBack,
   landingBoysButton,
   landingBoysFont,
-  landingBoysMaxWidth
+  landingBoysMaxWidth,
+  landingCaptionBorder
 } from "../../views/styling";
 
 const content = "...and dedicated father to three awesome boys!";

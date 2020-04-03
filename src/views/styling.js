@@ -37,7 +37,7 @@ export const landingCaptionDark = landingHeader;
 export const landingCaptionBorder = projectCardBorder;
 export const landingCaptionMaxWidth = "1000px";
 
-export const landingBoysBack = "#a9a9a9";
+export const landingBoysBack = appColour;
 export const landingBoysButton = "#505050";
 export const landingBoysFont = "#dcdcdc";
 export const landingBoysMaxWidth = "1000px";

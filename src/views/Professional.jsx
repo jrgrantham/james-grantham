@@ -6,10 +6,10 @@ import useDarkMode from "../hooks/useDarkMode";
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
-import Footer from "../components/professional/Footer";
+import ContactMe from "../components/reusable/ContactMe";
 
 export default function Professional(props) {
-  const { content, setContent, selected, setSelected } = props;
+  const { content, setContent, selected, setSelected, showContactMe, setShowContactMe } = props;
   useDarkMode();
 
   useEffect(() => {
@@ -34,8 +34,11 @@ export default function Professional(props) {
         />
         <MainContent content={content} setContent={setContent} />
         {/* div to push the page up over the fixed footer */}
-        <div style={{height: '80px'}} />
-        <Footer />
+        <ContactMe
+          showContactMe={showContactMe}
+          setShowContactMe={setShowContactMe}
+        />
+        <div style={{height: '50px'}} />
       </StyledProfessional>
     </StyledProfessional>
   );

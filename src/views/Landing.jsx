@@ -50,7 +50,7 @@ export default function Landing(props) {
           setShowContactMe={setShowContactMe}
         />
         <LearnMore />
-        {/* <Contact /> */}
+        <Spacer />
         <Boys />
       </FullPage>
       <FooterBanner />

@@ -7,6 +7,7 @@ import url from "../helpers/url";
 import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
 import { LinkButton } from "../components/reusable/Buttons";
+import { fontColourDarkMode, buttonBlue, borderRad, transition } from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -50,9 +51,7 @@ export default function LoginForm(props) {
         {({ values, handleBlur, handleChange, handleSubmit, isSubmitting }) => (
           <Position>
             <StyledForm onSubmit={handleSubmit}>
-              {/* <div> */}
               <div className="inputField">
-                {/* <label htmlFor="username">Name</label> */}
                 <input
                   name="username"
                   type="text"
@@ -65,7 +64,6 @@ export default function LoginForm(props) {
                 <div></div>
               </div>
               <div className="inputField">
-                {/* <label htmlFor="password">Password</label> */}
                 <input
                   name="password"
                   type="password"
@@ -77,9 +75,9 @@ export default function LoginForm(props) {
                 />
               </div>
               <button type="submit" disabled={isSubmitting}>
-                Login
+                Submit
               </button>
-              <LinkButton
+              <LinkButton className='home'
                 target="/"
                 content="Home"
               />
@@ -95,12 +93,19 @@ const Position = styled.div`
   display: flex;
   flex-direction: column;
 
-  label {
-    height: 20px;
-  }
+  button {
+    color: ${fontColourDarkMode};
+    font-weight: bold;
+    background-color: ${buttonBlue};
+    padding: 1rem 3.6rem;
+    border-radius: ${borderRad};
+    transition: opacity ${transition};
+    margin: 20px 0 70px 0;
 
-  @media (min-height: 850px) {
-    min-height: 100vh;
-    justify-content: center;
+    @media (pointer: fine) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 `;
