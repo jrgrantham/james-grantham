@@ -48,6 +48,8 @@ export default function App() {
               setContent={setContent}
               selected={selected}
               setSelected={setSelected}
+              showContactMe={showContactMe}
+              setShowContactMe={setShowContactMe}
             />
           )}
         />

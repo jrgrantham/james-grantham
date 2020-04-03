@@ -7,7 +7,7 @@ import mail from "../../images/mailNew.png";
 import { transition, appColour } from "../../views/styling";
 import Contact from "./ContactForm";
 
-export default function SiteLinks(props) {
+export default function ContactMe(props) {
   const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -72,9 +72,7 @@ export default function SiteLinks(props) {
         </a>
       </Links>
       <Contact
-      // <Contact style={{maxHeight: showContactMe ? '500px' : 0}}
         showContactMe={showContactMe}
-        // setShowContactMe={setShowContactMe}
       />
     </Container>
   );
