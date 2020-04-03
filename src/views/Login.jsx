@@ -4,7 +4,7 @@ import axios from "axios";
 import styled from "styled-components";
 import url from "../helpers/url";
 
-import { StyledForm } from "./ContactForm";
+import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
 import { LinkButton } from "../components/reusable/Buttons";
 

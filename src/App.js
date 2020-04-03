@@ -5,7 +5,7 @@ import Landing from "./views/Landing";
 import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
-import ContactForm from "./views/ContactForm";
+import ContactForm from "./components/reusable/ContactForm";
 import Projects from "./views/AllProjects";
 import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark } from "./views/styling";
 import { aboutMe } from "./data/aboutMe";
@@ -19,6 +19,7 @@ export default function App() {
   const [token, setToken] = useState("");
   const [content, setContent] = useState(aboutMe);
   const [selected, setSelected] = useState("About me");
+  const [showContactMe, setShowContactMe] = useState(false)
 
   return (
     <StyledApp>
@@ -33,6 +34,8 @@ export default function App() {
               setContent={setContent}
               selected={selected}
               setSelected={setSelected}
+              showContactMe={showContactMe}
+              setShowContactMe={setShowContactMe}
             />
           )}
         />

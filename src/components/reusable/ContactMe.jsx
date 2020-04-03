@@ -5,20 +5,20 @@ import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
 import { transition } from "../../views/styling";
+import Contact from "./ContactForm";
 
-export default function SiteLinks() {
-
+export default function SiteLinks(props) {
   const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    
+
     h4 {
       padding: 60px 0px 20px 0px;
     }
-  `
+  `;
 
   const Links = styled.div`
     display: flex;
@@ -32,11 +32,12 @@ export default function SiteLinks() {
       width: 35px;
       height: auto;
     }
-    
+
     .image {
       padding: 20px;
       transition: all ${transition};
-      
+      // border: 1px solid red
+
       @media (pointer: fine) {
         &:hover {
           transform: scale(1.6);
@@ -45,20 +46,30 @@ export default function SiteLinks() {
     }
   `;
 
+  const { showContactMe, setShowContactMe } = props;
+
   return (
-    <Container id='contact'>
+    <Container id="contact" onClick={() => setShowContactMe(false)}>
       <h4>Find me...</h4>
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
         </a>
-        <a href='#0' className="image">
+        <div className="image" onClick={(e) => {
+          e.stopPropagation()
+          setShowContactMe(!showContactMe)
+        }}>
           <img src={mail} alt="" />
-        </a>
+        </div>
         <a href="https://www.linkedin.com/in/j-grantham/" className="image">
           <img src={linkedin} alt="" />
         </a>
       </Links>
+      <Contact
+      // <Contact style={{maxHeight: showContactMe ? '500px' : 0}}
+        showContactMe={showContactMe}
+        // setShowContactMe={setShowContactMe}
+      />
     </Container>
   );
 }

@@ -8,7 +8,7 @@ import FooterBanner from "../components/landing/Footer";
 import LandingInitialView from "../components/landing/InitialView";
 import Captions from "../components/landing/Captions";
 import Boys from "../components/landing/Boys";
-import SiteLinks from "../components/reusable/SiteLinks";
+import ContactMe from "../components/reusable/ContactMe";
 import Projects from "../components/landing/Projects";
 import Spacer from "../components/reusable/Spacer";
 import LearnMore from "../components/reusable/LearnMore";
@@ -16,7 +16,7 @@ import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
 
 export default function Landing(props) {
-  const { setContent, setSelected } = props;
+  const { setContent, setSelected, showContactMe, setShowContactMe } = props;
 
   useEffect(() => {
     try {
@@ -45,8 +45,12 @@ export default function Landing(props) {
         <Spacer />
         <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
-        <SiteLinks />
+        <ContactMe
+          showContactMe={showContactMe}
+          setShowContactMe={setShowContactMe}
+        />
         <LearnMore />
+        {/* <Contact /> */}
         <Boys />
       </FullPage>
       <FooterBanner />
