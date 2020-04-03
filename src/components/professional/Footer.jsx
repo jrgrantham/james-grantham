@@ -5,12 +5,12 @@ import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
 import { transition } from "../../views/styling";
-import { SmallAnchorButton } from "../reusable/Buttons";
+// import { SmallAnchorButton } from "../reusable/Buttons";
 
 export default function Footer() {
   return (
     <Container className='footer'>
-      <SmallAnchorButton content="Home" target="/" />
+      {/* <SmallAnchorButton content="Home" target="/" /> */}
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />

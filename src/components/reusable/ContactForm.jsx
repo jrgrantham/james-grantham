@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { Formik } from "formik";
-import Error from "../helpers/Error";
-import { validationSchema } from "../helpers/validationSchema";
+import { validationSchema } from "../../helpers/validationSchema";
+// import Error from "../../helpers/Error";
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
-import { axiosWithBase } from "../helpers/AxiosCustom";
+import axios from "axios";
+import url from "../../helpers/url";
+import { borderRad, transition, buttonBlue } from "../../views/styling";
+import { AnchorButton } from "./Buttons";
 
-import { borderRad, transition, buttonBlue } from "../views/styling";
-import Footer from "../components/professional/Footer";
+const sendmailApi = url() + "sendmail";
 
 const initalSignupForm = {
   name: "",
@@ -16,31 +18,29 @@ const initalSignupForm = {
   email: ""
 };
 
-export function RegisterForm(props) {
+export default function Contact(props) {
+  const showContactMe = props.showContactMe
+
   return (
-    <Formik
+    <Formik 
       validationSchema={validationSchema}
       initialValues={initalSignupForm}
       onSubmit={(values, actions) => {
-        props.loadingStarted();
         const newUser = {
           name: values.name,
           message: values.message,
           email: values.email
         };
         actions.setSubmitting(true);
-        axiosWithBase()
-          .post("/conact", newUser)
+        axios
+          .post(sendmailApi, newUser)
           .then(() => {
             actions.resetForm();
             actions.setSubmitting(false);
-            props.loadingFinished();
-            props.history.push("/confirmation");
+            props.history.push("/");
           })
           .catch(err => {
-            // toast.error(err.response.statusText);
             actions.setSubmitting(false);
-            props.loadingFinished();
           });
       }}
     >
@@ -53,10 +53,15 @@ export function RegisterForm(props) {
         handleSubmit,
         isSubmitting
       }) => (
-        <Position>
-          <StyledForm onSubmit={handleSubmit}>
+        <Position style={showContactMe ? showForm : null}>
+        {/* style={article.display ? closedDetails : null} */}
+          <StyledForm
+            onSubmit={handleSubmit}
+            onClick={e => {
+              e.stopPropagation();
+            }}
+          >
             <div data-testid="nameField" className="inputField">
-              {/* <label htmlFor="name">Name</label> */}
               <input
                 name="name"
                 type="text"
@@ -70,7 +75,6 @@ export function RegisterForm(props) {
             </div>
 
             <div data-testid="emailField" className="inputField">
-              {/* <label htmlFor="email">E-mail address</label> */}
               <input
                 name="email"
                 type="email"
@@ -84,7 +88,6 @@ export function RegisterForm(props) {
             </div>
 
             <div data-testid="messageField" className="inputField">
-              {/* <label htmlFor="message">Message</label> */}
               <textarea
                 name="message"
                 type="text"
@@ -99,9 +102,13 @@ export function RegisterForm(props) {
               />
             </div>
 
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
+            <AnchorButton
+              type="submit"
+              disabled={isSubmitting}
+              content="Submit"
+              color={buttonBlue}
+              margin='30px'
+            />
 
             {/* <ToastContainer
                 position="top-center"
@@ -117,42 +124,49 @@ export function RegisterForm(props) {
                   'text-align': 'center'
                 }}
               /> */}
-            <Error touched={touched.name} message={errors.name} />
+            {/* <Error touched={touched.name} message={errors.name} />
             <Error touched={touched.email} message={errors.email} />
-            <Error touched={touched.message} message={errors.message} />
+            <Error touched={touched.message} message={errors.message} /> */}
           </StyledForm>
-          <Footer />
         </Position>
       )}
     </Formik>
   );
 }
 
-export default RegisterForm;
-
 const Position = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-
-  @media (min-height: 850px) {
-    min-height: 100vh;
-    justify-content: center;
-  }
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height ${transition};
 `;
 
+const showForm = {
+  maxHeight: "500px"
+};
+
 export const StyledForm = styled.form`
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
+  width: 100%;
+  max-height: 500px;
+  max-width: 500px;
+  overflow: auto;
+  // border: 1px solid red;
 
   .inputField {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
   }
 
   input,
@@ -162,8 +176,9 @@ export const StyledForm = styled.form`
     text-align: center;
     padding: 10px;
     border-radius: ${borderRad};
+    width: 90%;
+    max-width: 400px;
     border: solid 0.5px lightgrey;
-    width: 300px;
   }
 
   textarea {
@@ -171,22 +186,22 @@ export const StyledForm = styled.form`
   }
 
   button {
-    margin: 20px 0 100px 0;
-    background-color: ${buttonBlue};
-    color: white;
-    border-radius: ${borderRad};
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 1rem 0rem;
-    width: 200px;
+    margin: 20px 0 20px 0;
+    // background-color: ${buttonBlue};
+    // color: white;
+    // border-radius: ${borderRad};
+    // font-size: 1.2rem;
+    // font-weight: bold;
+    // padding: 1rem 0rem;
+    // width: 200px;
 
-    @media (pointer: fine) {
-      &:hover {
-        background-color: white;
-        color: green;
-        transition: background-color ${transition};
-      }
-    }
+    // @media (pointer: fine) {
+    //   &:hover {
+    //     background-color: white;
+    //     color: green;
+    //     transition: background-color ${transition};
+    //   }
+    // }
   }
 
   .has-error {
