@@ -54,7 +54,6 @@ export default function Contact(props) {
         isSubmitting
       }) => (
         <Position style={showContactMe ? showForm : null}>
-        {/* style={article.display ? closedDetails : null} */}
           <StyledForm
             onSubmit={handleSubmit}
             onClick={e => {
@@ -140,7 +139,7 @@ const Position = styled.div`
   width: 100%;
   max-height: 0px;
   overflow: hidden;
-  transition: max-height ${transition};
+  transition: max-height 2s;
 `;
 
 const showForm = {
@@ -155,7 +154,6 @@ export const StyledForm = styled.form`
   justify-content: center;
   margin: auto;
   width: 100%;
-  max-height: 500px;
   max-width: 500px;
   overflow: auto;
   // border: 1px solid red;
@@ -166,7 +164,6 @@ export const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 400px;
   }
 
   input,
@@ -183,25 +180,6 @@ export const StyledForm = styled.form`
 
   textarea {
     height: 100px;
-  }
-
-  button {
-    margin: 20px 0 20px 0;
-    // background-color: ${buttonBlue};
-    // color: white;
-    // border-radius: ${borderRad};
-    // font-size: 1.2rem;
-    // font-weight: bold;
-    // padding: 1rem 0rem;
-    // width: 200px;
-
-    // @media (pointer: fine) {
-    //   &:hover {
-    //     background-color: white;
-    //     color: green;
-    //     transition: background-color ${transition};
-    //   }
-    // }
   }
 
   .has-error {
