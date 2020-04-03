@@ -57,6 +57,12 @@ export const Header = styled.div`
     display: flex;
   }
 
+  .remove {
+    @media (max-width: 550px) {
+      display: none;
+    }
+  }
+
   p {
     text-align: center;
     cursor: pointer;

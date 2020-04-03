@@ -25,7 +25,7 @@ export default function ContactMe(props) {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    padding: 30px 0;
+    padding: 15px 0;
     max-width: 700px;
 
     img {
@@ -35,6 +35,11 @@ export default function ContactMe(props) {
     }
 
     .mail {
+      @media (pointer: fine) {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
     
     .image {

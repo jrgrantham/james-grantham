@@ -10,11 +10,16 @@ import useDarkMode from "../../hooks/useDarkMode";
 export default function ContactMeHeader() {
   const [darkMode, setDarkMode] = useDarkMode(true);
 
+  let about;
   let project;
   let captions;
   let contact;
 
   function getHeights() {
+    about =
+      document.getElementById("about").getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight;
     project =
       document.getElementById("projects").getBoundingClientRect().top +
       window.pageYOffset -
@@ -45,7 +50,8 @@ export default function ContactMeHeader() {
         </Link>
       </Rotate>
       <div className="links">
-        <p onClick={() => scroll(0)}>Top</p>
+        <p onClick={() => scroll(0)} className='remove'>Top</p>
+        <p onClick={() => scroll(about)}>About</p>
         <p onClick={() => scroll(project)}>Projects</p>
         <p onClick={() => scroll(captions)}>Values</p>
         <p onClick={() => scroll(contact)}>Contact</p>
