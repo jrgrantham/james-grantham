@@ -7,8 +7,7 @@ import { validationSchema } from "../../helpers/validationSchema";
 // import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import url from "../../helpers/url";
-import { borderRad, transition, buttonBlue } from "../../views/styling";
-import { AnchorButton } from "./Buttons";
+import { borderRad, transition, buttonBlue, fontColourDarkMode, appColour, landingCaptionBorder } from "../../views/styling";
 
 const sendmailApi = url() + "sendmail";
 
@@ -101,13 +100,14 @@ export default function Contact(props) {
               />
             </div>
 
-            <AnchorButton
+            {/* <AnchorButton
               type="submit"
               disabled={isSubmitting}
               content="Submit"
               color={buttonBlue}
               margin='30px'
-            />
+            /> */}
+            <button type='submit' disabled={isSubmitting}>Submit</button>
 
             {/* <ToastContainer
                 position="top-center"
@@ -165,17 +165,37 @@ export const StyledForm = styled.form`
     align-items: center;
     width: 100%;
   }
-
+  
   input,
   textarea {
+    background: ${appColour}
     min-height: 50px;
     font-size: 1rem;
     text-align: center;
     padding: 10px;
-    border-radius: ${borderRad};
     width: 90%;
     max-width: 400px;
-    border: solid 0.5px lightgrey;
+    border-radius: ${borderRad};
+    border: 1px solid ${landingCaptionBorder};
+  }
+
+  button {
+    display: block;
+    color: ${fontColourDarkMode};
+    font-weight: bold;
+    background-color: ${buttonBlue};
+    padding: 1rem 3.6rem;
+    border-radius: ${borderRad};
+    transition: opacity ${transition};
+    margin: 30px 0;
+    border: none;
+    font-size: 1.2rem;
+
+    @media (pointer: fine) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
   }
 
   textarea {
