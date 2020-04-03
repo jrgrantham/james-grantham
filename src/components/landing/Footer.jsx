@@ -33,7 +33,7 @@ const Footer = styled.div`
 `;
 
 const pstyle = {
-  padding: '6px 15px',
+  padding: '6px 15px 16px 15px',
   color: landingHeaderFont,
   fontSize: '0.8rem',
   textAlign: 'center',

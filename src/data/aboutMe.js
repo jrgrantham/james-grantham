@@ -2,7 +2,7 @@ export const aboutMe = [
   {
     title: "Introduction",
     introduction:
-      "I'm James, a mechanical engineer turned software developer currently based in Aberdeen, Scotland. I originally studied Mechanical Engineering at the University of Loughborough and recently embarked on a career change to experience something completely different.",
+      "I'm a mechanical engineer turned software developer currently based in Aberdeen, Scotland. I originally studied at the University of Loughborough and recently embarked on a career change to experience something completely different.",
     contents: [
       'Originally from Hull, I moved to Aberdeen several years ago when my former boss asked if I\'d be interesting in moving to the "Oil and Gas Capital". I relocated, bought my first proprty and started a new chapter in my life.',
       "I'm still based in Aberdeen but would consider working in another city anywhere in the country. That said, I'm comfortable working from home. I have prior experience of managing remote teams (offshore) and recent experience working remotely, collaborating with teams in different time zones from around the world.",

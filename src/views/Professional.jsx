@@ -1,16 +1,17 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { professionalBack, professionalBackDark } from "./styling";
-import useDarkMode from '../hooks/useDarkMode'
+import { professionalBack, professionalBackDark, mediaBreak } from "./styling";
+import useDarkMode from "../hooks/useDarkMode";
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
+import Footer from "../components/professional/Footer";
 
 export default function Professional(props) {
-  const { content, setContent, selected, setSelected} = props
+  const { content, setContent, selected, setSelected } = props;
   useDarkMode();
-  
+
   useEffect(() => {
     try {
       window.scroll({
@@ -25,16 +26,16 @@ export default function Professional(props) {
 
   return (
     <StyledProfessional id="professional">
-      <StyledProfessional className='toggle darkmode'>
-        {/* <DarkModeDiv /> */}
+      <StyledProfessional className="toggle darkmode">
         <Menu
           setContent={setContent}
           selected={selected}
           setSelected={setSelected}
         />
         <MainContent content={content} setContent={setContent} />
-        {/* <Spacer /> */}
-        {/* <div style={{height: '80px'}} /> */}
+        {/* div to push the page up over the fixed footer */}
+        <div style={{height: '80px'}} />
+        <Footer />
       </StyledProfessional>
     </StyledProfessional>
   );
@@ -48,6 +49,12 @@ const StyledProfessional = styled.div`
   width: 100%;
   max-width: 1000px;
   background-color: ${professionalBack};
+
+  .footer {
+    @media (max-width: ${mediaBreak}) {
+        display: none;
+    }
+  }
 
   .darkmode {
     background-color: ${professionalBackDark};
