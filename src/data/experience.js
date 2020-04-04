@@ -8,9 +8,9 @@ export const experience = [
 
       "Competent at guiding and leading others, managing work loads, handling objections and conflict resolution, an effective communicator with the ability to adapt and thrive in many work environments.",
 
-      "Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks."
+      "Generally office based but not afraid to get hands dirty on site. Worked on projects in a variety of different process stages, from oil rigs, oil tankers, onshore gas terminals and bulk storage tanks.",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Project Management",
@@ -21,27 +21,34 @@ export const experience = [
 
       "Managed the development of an internal company project to convert the monthly presentation into a website accessible by client, supplying live data available any time (the catalyst for this career change)",
 
-      "Increased project efficiency by introducing systems to manage daily and monthly reporting, which simplified and added structure to the project."
+      "Increased project efficiency by introducing systems to manage daily and monthly reporting, which simplified and added structure to the project.",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Leadership",
     introduction:
       "Managed a small group of people in the office and a remote team working offshore.",
+    contents: ["Add some details here."],
+    display: false,
+  },
+  {
+    title: "Coding",
+    introduction:
+      "Weekly exams, monthly build weeks and a 6 week 'Labs' project. We gained experience of working remotely, problem solving, pair programming and collaboration.",
     contents: [
-      "Add some details here."
+      "****** coming soon ******",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Collaboration",
     introduction:
       "Communicate effectively and have positive relationships with clients and co-workers.",
     contents: [
-      "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner"
+      "Worked in remote, hostile and challenging environments, such as flying daily (and getting stranded!) to a decommissioned oil rig North of Shetland, with limited food, no power and unpredictable weather. Demonstrates the interpersonal skills to integrate with small teams and deliver professional results in a timely manner",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Finance",
@@ -50,9 +57,9 @@ export const experience = [
     contents: [
       "Produced engineering quotations for additional inspection services for the client when specialist work was required, costing personnel, equipment and transportation.",
 
-      "Developed a project-specific budget tracking and management tool for independent record keeping to provide accurate real-time and forecast costs to the client."
+      "Developed a project-specific budget tracking and management tool for independent record keeping to provide accurate real-time and forecast costs to the client.",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Data Management",
@@ -63,8 +70,8 @@ export const experience = [
       "In order to manage this critical data, new systems and process were introduced to log and track the status of each report and ensure that each one had been reviewed and signed off.",
       "Report registers, daily reports, anomaly ranking and top 10.",
       "Monthly / quarterly / annual",
-      "During my recent career I have reviewed hundreds of reports, written dozens of summaries and presented these findings, along with project progress and financial / budget status to the client."
+      "During my recent career I have reviewed hundreds of reports, written dozens of summaries and presented these findings, along with project progress and financial / budget status to the client.",
     ],
-    display: false
-  }
+    display: false,
+  },
 ];

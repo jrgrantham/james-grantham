@@ -156,6 +156,9 @@ export const StyledForm = styled.form`
   width: 100%;
   max-width: 500px;
   overflow: auto;
+  border-radius: 15px;
+  padding-top: 20px;
+  background: ${landingCaptionBorder}
   // border: 1px solid red;
 
   .inputField {
