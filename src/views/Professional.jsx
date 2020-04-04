@@ -1,13 +1,20 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { professionalBack, professionalBackDark, mediaBreak } from "./styling";
+import {  } from "./styling";
 import useDarkMode from "../hooks/useDarkMode";
 import { Link } from "react-router-dom";
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import ContactMe from "../components/reusable/ContactMe";
+
+import {
+  transition,
+  professionalWidth,
+  professionalButtonHov,
+  mediaBreak,
+} from "../views/styling";
 
 export default function Professional(props) {
   const {
@@ -61,11 +68,26 @@ const StyledProfessional = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
-  max-width: 1000px;
+  max-width: ${professionalWidth};
   // background-color: inherit;
 
+
+  h2 {
+    font-weight: bold;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    transition: color ${transition};
+
+    @media (pointer: fine) {
+      &:hover {
+        color: ${professionalButtonHov};
+      }
+    }
+  }
+
   a {
-    width: 100%;
+    padding-top: 20px;
     color: inherit;
   }
 

@@ -10,7 +10,7 @@ import {
   mediaBreak,
   professionalButtonDark,
   professionalButton,
-  professionalBack,
+  // professionalBack,
   // professionalBackDark,
   professionalColor
 } from "../../views/styling";
@@ -74,15 +74,10 @@ const Container = styled.div`
   width: 100%;
 
   .article {
-    background-color: ${professionalBack};
     width: 100%;
     padding: ${professionalInnerPad};
     cursor: pointer;
     transition: background-color ${transition};
-
-    .darkmode {
-      background-color: red;
-    }
 
     @media (min-width: ${mediaBreak}) {
       padding-left: 20px;
@@ -93,16 +88,16 @@ const Container = styled.div`
       text-align: left;
       padding-bottom: 0.5rem;
       color: ${professionalColor}
+      width: 100%;
     }
-
+    
     p {
       padding-bottom: 0.5rem;
     }
-
+    
     .title {
-      position: sticky;
-      background-color: inherit;
-      top: 0;
+      // width: 100%;
+      // position: sticky;
       display: flex;
       justify-content: space-between;
     }

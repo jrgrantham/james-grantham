@@ -136,20 +136,6 @@ const Container = styled.div`
       padding: 0 20px;
     }
   }
-
-  h2 {
-    font-weight: bold;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    cursor: pointer;
-    transition: color ${transition};
-
-    @media (pointer: fine) {
-      &:hover {
-        color: ${professionalButtonHov};
-      }
-    }
-  }
 `;
 
 const HorizontalMenu = styled.div`

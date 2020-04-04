@@ -1,5 +1,5 @@
 export const appWidth = "1500px";
-export const professionalWidth = "800px";
+export const professionalWidth = "1000px";
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";
 export const borderRad = "5px";
@@ -42,7 +42,7 @@ export const landingBoysButton = appColour;
 export const landingBoysFont = fontColour;
 export const landingBoysMaxWidth = "1000px";
 
-export const professionalBack = "#F5F5F5";
+// export const professionalBack = "#F5F5F5";
 // export const professionalBackDark = "#282828";
 export const professionalButton = "#DCDCDC";
 export const professionalButtonDark = "#383838";
@@ -50,5 +50,5 @@ export const professionalSelectedButton = "#c0c0c0";
 export const professionalSelectedButtonDark = "#606060";
 export const professionalButtonHov = "#e1b80d";
 export const professionalInnerPad = "10px";
-export const professionalColor = '#fa634f';
+export const professionalColor = '#FE840E';
 // export const professionalMaxWidth = "";
