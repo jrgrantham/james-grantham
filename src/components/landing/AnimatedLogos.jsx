@@ -1,20 +1,22 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import lessD from "../../images/lessD.png";
-import styledC from "../../images/styledComps.png";
+import styledC from "../../images/styled.png";
 import html from "../../images/html.png";
 import python from "../../images/pythonLogo.png";
 import js from "../../images/js.png";
 import react from "../../images/react.svg";
 import css from "../../images/css.png";
 import nodejs from "../../images/nodejs.svg";
-import mysql from "../../images/mysql.png";
-import postgress from "../../images/postgress.png";
+import mysql from "../../images/mysql.svg";
+import postgress from "../../images/postgresql.svg";
+import redux from "../../images/redux.svg";
 
 const images = [
   lessD,
   styledC,
   html,
+  redux,
   python,
   js,
   react,
@@ -45,7 +47,7 @@ export default function AnimatedLogos() {
 const imageSize = 50; // px
 const ratio = 1.4 // ratio of width to height space for the images
 const logosWidth = 1000; // px visible area
-const imageOffset = 450; // px use this for spacing
+const imageOffset = 550; // px use this for spacing
 const duration = 15; // seconds
 
 const Container = styled.div`

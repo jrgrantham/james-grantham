@@ -2,11 +2,22 @@ export const aboutMe = [
   {
     title: "Introduction",
     introduction:
-      "I'm a mechanical engineer turned software developer currently based in Aberdeen, Scotland. I originally studied at the University of Loughborough and recently embarked on a career change to experience something completely different.",
+      "I'm a mechanical engineer turned software developer currently based in Aberdeen, Scotland. I originally studied at the University of Loughborough, which led to a career in the Oil and Gas Industry. A new found interest in software development triggered a career break, to experience something completely different.",
     contents: [
       'Originally from Hull, I moved to Aberdeen several years ago when my former boss asked if I\'d be interesting in moving to the "Oil and Gas Capital". I relocated, bought my first proprty and started a new chapter in my life.',
       "I'm still based in Aberdeen but would consider working in another city anywhere in the country. That said, I'm comfortable working from home. I have prior experience of managing remote teams (offshore) and recent experience working remotely, collaborating with teams in different time zones from around the world.",
       'I have 3 awesome boys that I love spending time with, be it swimming, iceskating, bike rides, skimming stones or even turning the living room into a "cinema"!',
+    ],
+    display: false,
+  },
+  {
+    title: "Why change?",
+    introduction:
+      "To move from Engineering into tech seems like an unusual decision to my friends and famiy. However, this industry didn't really exist when I was younger, so it was never an option. I enjoy coding and solving problems (there's clearly an engineer in me). I get a buzz when the code runs, these short term wins were missing from my day job.",
+    contents: [
+      "The Oil industry can be an interesting and sometimes exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in remote and extreme environments.",
+      "One of my responsibilities was to manage the project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time. I oversaw the construction of the site and enjoyed getting involved in writing code. We delivered a well presented product that contained all the data our client was hoping for. I found this particularly rewarding.",
+      "The logical and technical challenges faced during development were at times difficult, but this made completing the project even more satisfying, this was the driver for the change. It was time to adopt new challenges and turn my hand to web-development.",
     ],
     display: false,
   },
@@ -36,17 +47,6 @@ export const aboutMe = [
       "A loss of the BP contract later on resulted in a brief secondment to another department in LR where I acted as Independant Competent Person, but found this to be quite a lonely existence and wanted to be part of a team again.",
       "Back in integrity services, I spent some time supporting various teams before finding a home looking after the Triton FPSO, where I saw out the rest of my time with LR",
       "My move to Oceaneering was less eventful. After a brief stint working for a department that was soon closed, I was back working Integrity Services at head office. For 6 years I worked on the EnQuest project looking afer the Kittiwake Oil Platform.",
-    ],
-    display: false,
-  },
-  {
-    title: "Why change?",
-    introduction:
-      "To move from Engineering into tech seems like an unusual decision to my friends and famiy. However, this industry didn't really exist when I was younger, so it was never an option. I enjoy coding and find it rewarding solving problems when the results are rendered on screen, these short term wins were missing from my day job.",
-    contents: [
-      "The Oil industry can be an interesting and sometimes exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in remote and extreme environments.",
-      "One of my responsibilities was to manage the project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time. I oversaw the construction of the site and enjoyed getting involved in writing code. We delivered a well presented product that contained all the data our client was hoping for. I found this particularly rewarding.",
-      "The logical and technical challenges faced during development were at times difficult, but this made completing the project even more satisfying, this was the driver for the change. It was time to adopt new challenges and turn my hand to web-development.",
     ],
     display: false,
   },
