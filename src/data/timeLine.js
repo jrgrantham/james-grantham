@@ -3,7 +3,9 @@ export const timeLine = [
     title: "Lambda School",
     introduction: "Joined Lambda School to learn how to be a full stack web developer.",
     contents: [
-      "****** coming soon ******"
+      "****** coming soon ******",
+      "",
+      "Weekly exams, monthly build weeks and a 6 week 'Labs' project. We gained experience of working remotely, problem solving, pair programming and collaboration."
     ],
     display: false
   },

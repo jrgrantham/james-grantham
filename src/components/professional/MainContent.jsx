@@ -11,7 +11,8 @@ import {
   professionalButtonDark,
   professionalButton,
   professionalBack,
-  professionalBackDark
+  // professionalBackDark,
+  professionalColor
 } from "../../views/styling";
 
 export default function MainContent(props) {
@@ -80,7 +81,7 @@ const Container = styled.div`
     transition: background-color ${transition};
 
     .darkmode {
-      background-color: ${professionalBackDark};
+      background-color: red;
     }
 
     @media (min-width: ${mediaBreak}) {
@@ -91,6 +92,7 @@ const Container = styled.div`
     h5 {
       text-align: left;
       padding-bottom: 0.5rem;
+      color: ${professionalColor}
     }
 
     p {

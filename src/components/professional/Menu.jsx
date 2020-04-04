@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 import { MenuBurger } from "./buttonStyles";
 import useDarkMode from "../../hooks/useDarkMode";
@@ -14,6 +13,7 @@ import {
   professionalInnerPad,
   professionalSelectedButtonDark,
   professionalSelectedButton,
+  professionalColor,
 } from "../../views/styling";
 
 // --------- naming of sections to be sorted here ---------
@@ -46,7 +46,7 @@ export default function ContentButtons(props) {
   // --------- naming of sections to be sorted here ---------
 
   const openDivHeight = {
-    height: `${categoryButtons.length * 4}rem`
+    height: `${categoryButtons.length * 4}rem`,
   };
 
   // const horizontalWidth = {
@@ -73,10 +73,7 @@ export default function ContentButtons(props) {
   }
 
   return (
-    <Container id="menu" className="toggle darkmode">
-      <Link className="toggle darkmode" to="/">
-        <h2 className="toggle darkmode">James Grantham</h2>
-      </Link>
+    <Container id="menu" className="toggle darkmode sticky">
 
       <CollapsingMenu>
         <div className="hamburgerButton" onClick={() => changeHidden()}>
@@ -120,16 +117,24 @@ export default function ContentButtons(props) {
           </div>
         ))}
       </HorizontalMenu>
+      <p>
+        Read the sections as they are or click to expand for further details
+      </p>
     </Container>
   );
 }
 
 const Container = styled.div`
-  width: 100%;
-  margin-bottom: 10px;
 
-  a {
-    color: inherit;
+  width: 100%;
+  padding-bottom: 10px;
+
+  p {
+    padding: 0 10px;
+
+    @media (min-width: ${mediaBreak}) {
+      padding: 0 20px;
+    }
   }
 
   h2 {
@@ -146,7 +151,7 @@ const Container = styled.div`
     }
   }
 `;
-  
+
 const HorizontalMenu = styled.div`
   display: none;
   padding: 20px;
@@ -171,7 +176,7 @@ const HorizontalMenu = styled.div`
   }
 
   .button.selected {
-    background-color: ${professionalSelectedButton};
+    background-color: ${professionalColor};
   }
 
   .button.darkmode {
@@ -179,7 +184,7 @@ const HorizontalMenu = styled.div`
   }
 
   .button.darkmode.selected {
-    background-color: ${professionalSelectedButtonDark};
+    background-color: ${professionalColor};
     @media (pointer: fine) {
       &:hover {
         background-color: ${professionalButtonHov};
@@ -194,6 +199,10 @@ const HorizontalMenu = styled.div`
 `;
 
 const CollapsingMenu = styled.div`
+  h4 {
+    color: ${professionalColor};
+  }
+
   .hamburgerButton {
     display: flex;
     justify-content: space-between;

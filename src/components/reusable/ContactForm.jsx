@@ -134,7 +134,7 @@ export default function Contact(props) {
 }
 
 const Position = styled.div`
-  margin-top: 10px;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -157,7 +157,7 @@ export const StyledForm = styled.form`
   max-width: 500px;
   overflow: auto;
   border-radius: 15px;
-  padding-top: 20px;
+  padding: 20px;
   background: ${landingCaptionBorder}
   // border: 1px solid red;
 
@@ -190,7 +190,7 @@ export const StyledForm = styled.form`
     padding: 1rem 3.6rem;
     border-radius: ${borderRad};
     transition: opacity ${transition};
-    margin: 30px 0;
+    margin: 30px 0 10px 0;
     border: none;
     font-size: 1.2rem;
 

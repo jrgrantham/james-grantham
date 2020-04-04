@@ -3,13 +3,21 @@ import styled from "styled-components";
 
 import { professionalBack, professionalBackDark, mediaBreak } from "./styling";
 import useDarkMode from "../hooks/useDarkMode";
+import { Link } from "react-router-dom";
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import ContactMe from "../components/reusable/ContactMe";
 
 export default function Professional(props) {
-  const { content, setContent, selected, setSelected, showContactMe, setShowContactMe } = props;
+  const {
+    content,
+    setContent,
+    selected,
+    setSelected,
+    showContactMe,
+    setShowContactMe,
+  } = props;
   useDarkMode();
 
   useEffect(() => {
@@ -17,7 +25,7 @@ export default function Professional(props) {
       window.scroll({
         top: 0,
         left: 0,
-        behavior: "auto"
+        behavior: "auto",
       });
     } catch (error) {
       window.scrollTo(0, 0);
@@ -25,21 +33,24 @@ export default function Professional(props) {
   }, []);
 
   return (
-    <StyledProfessional id="professional">
-      <StyledProfessional className="toggle darkmode">
+    <StyledProfessional id="professional" className="toggle darkmode">
+      {/* <StyledProfessional > */}
+        <Link className="toggle darkmode" to="/">
+          <h2 className="toggle darkmode">James Grantham</h2>
+        </Link>
         <Menu
           setContent={setContent}
           selected={selected}
           setSelected={setSelected}
         />
         <MainContent content={content} setContent={setContent} />
-        {/* div to push the page up over the fixed footer */}
         <ContactMe
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}
         />
-        <div style={{height: '50px'}} />
-      </StyledProfessional>
+        {/* div to push the page up over the fixed footer */}
+        <div style={{ height: "50px" }} />
+      {/* </StyledProfessional> */}
     </StyledProfessional>
   );
 }
@@ -51,15 +62,24 @@ const StyledProfessional = styled.div`
   height: 100%;
   width: 100%;
   max-width: 1000px;
-  background-color: ${professionalBack};
+  // background-color: inherit;
+
+  a {
+    width: 100%;
+    color: inherit;
+  }
+
+  .sticky {
+    position: sticky;
+  }
 
   .footer {
     @media (max-width: ${mediaBreak}) {
-        display: none;
+      display: none;
     }
   }
 
   .darkmode {
-    background-color: ${professionalBackDark};
+    background-color: inherit;
   }
 `;
