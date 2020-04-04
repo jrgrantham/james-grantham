@@ -134,7 +134,7 @@ export default function Contact(props) {
 }
 
 const Position = styled.div`
-  margin: 10px 0;
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
   width: 100%;

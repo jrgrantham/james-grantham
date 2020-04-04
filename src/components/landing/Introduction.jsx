@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { welcomeMessage, introduction } from "../../data/introduction";
-import SectionTitle from "../reusable/SectionTitle";
+import { buttonOrange } from "../../views/styling";
 
 export default function Introduction() {
   return (
@@ -30,6 +30,7 @@ const Container = styled.div`
   h4 {
     font-weight: bold;
     padding: 60px 0 0px 0;
+    // color: ${buttonOrange}
   }
 
   .contents {
@@ -53,6 +54,9 @@ const Container = styled.div`
     p {
       text-align: center;
       // border: 1px solid red;
+      // @media (min-width: 1000px) {
+      //   text-align: justify;
+      // }
     }
   }
 

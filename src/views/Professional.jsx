@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import {  } from "./styling";
+import { professionalColor } from "./styling";
 import useDarkMode from "../hooks/useDarkMode";
 import { Link } from "react-router-dom";
 
@@ -15,6 +15,7 @@ import {
   professionalButtonHov,
   mediaBreak,
 } from "../views/styling";
+import { LinkButton } from "../components/reusable/Buttons";
 
 export default function Professional(props) {
   const {
@@ -25,6 +26,7 @@ export default function Professional(props) {
     showContactMe,
     setShowContactMe,
   } = props;
+
   useDarkMode();
 
   useEffect(() => {
@@ -55,8 +57,9 @@ export default function Professional(props) {
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}
         />
+        <LinkButton target='/' color={professionalColor} content='Home Page'/>
         {/* div to push the page up over the fixed footer */}
-        <div style={{ height: "50px" }} />
+        <div style={{ height: "100px" }} />
       {/* </StyledProfessional> */}
     </StyledProfessional>
   );
@@ -81,7 +84,7 @@ const StyledProfessional = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        color: ${professionalButtonHov};
+        color: ${professionalColor};
       }
     }
   }

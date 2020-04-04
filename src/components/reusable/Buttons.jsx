@@ -2,26 +2,30 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { transition, borderRad, buttonOrange, fontColourDarkMode } from "../../views/styling";
+import {
+  transition,
+  borderRad,
+  buttonOrange,
+  fontColourDarkMode,
+} from "../../views/styling";
 
 export function LinkButton(props) {
+  const LinButton = styled(Link)`
+    color: ${fontColourDarkMode};
+    font-weight: bold;
+    background-color: ${props.color ? props.color : buttonOrange};
+    padding: 1rem 3.6rem;
+    border-radius: ${borderRad};
+    transition: opacity ${transition};
+
+    @media (pointer: fine) {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  `;
   return <LinButton to={props.target}>{props.content}</LinButton>;
 }
-
-const LinButton = styled(Link)`
-  color: ${fontColourDarkMode};
-  font-weight: bold;
-  background-color: ${buttonOrange};
-  padding: 1rem 3.6rem;
-  border-radius: ${borderRad};
-  transition: opacity ${transition};
-
-  @media (pointer: fine) {
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-`;
 
 export function AnchorButton(props) {
   const AncButton = styled.a`
@@ -32,17 +36,20 @@ export function AnchorButton(props) {
     padding: 1rem 3.6rem;
     border-radius: ${borderRad};
     transition: opacity ${transition};
-    margin:  ${props.margin ? props.margin : 0};
-  
+    margin: ${props.margin ? props.margin : 0};
+
     @media (pointer: fine) {
       &:hover {
         opacity: 0.75;
       }
     }
   `;
-  return <AncButton href={props.target} color={props.color} >{props.content} </AncButton>;
+  return (
+    <AncButton href={props.target} color={props.color}>
+      {props.content}{" "}
+    </AncButton>
+  );
 }
-
 
 // export function SmallAnchorButton(props) {
 //   return <SmallAncButton href={props.target}>{props.content}</SmallAncButton>;
