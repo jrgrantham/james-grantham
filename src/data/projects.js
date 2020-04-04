@@ -34,7 +34,7 @@ export const projects = [
       "",
     image: artFunder,
     link: "https://art-funder.com/",
-    repo: ""
+    repo: "https://github.com/LABS-EU3/Student-Art-Collection-FRONTEND"
   },
   {
     title: "RoboMaze",
@@ -44,7 +44,7 @@ export const projects = [
       "",
     image: maze,
     link: "https://mud-2-frontend-nihkors8y.now.sh/",
-    repo: ""
+    repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend"
   },
   {
     title: "Rick and Morty",

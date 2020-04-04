@@ -7,36 +7,42 @@ import bulbYellow from "../../images/bulbYellow.png";
 import { Header, Rotate } from "./headerStyling";
 import useDarkMode from "../../hooks/useDarkMode";
 
-export default function ContactMeHeader() {
+export default function ContactMeHeader(props) {
   const [darkMode, setDarkMode] = useDarkMode(true);
-
-  let about;
-  let project;
-  let captions;
-  let contact;
+  const {
+    aboutHeight,
+    setAboutHeight,
+    projectsHeight,
+    setProjectsHeight,
+    valuesHeight,
+    setValuesHeight,
+    contactHeight,
+    setContactHeight,
+  } = props;
 
   function getHeights() {
-    about =
+    setAboutHeight(
       document.getElementById("about").getBoundingClientRect().top +
-      window.pageYOffset -
-      headerHeight;
-    project =
+        window.pageYOffset -
+        headerHeight
+    );
+    setProjectsHeight(
       document.getElementById("projects").getBoundingClientRect().top +
       window.pageYOffset -
-      headerHeight;
-    captions =
+      headerHeight);
+    setValuesHeight(
       document.getElementById("captions").getBoundingClientRect().top +
       window.pageYOffset -
-      headerHeight;
-    contact =
+      headerHeight);
+    setContactHeight(
       document.getElementById("contact").getBoundingClientRect().top +
       window.pageYOffset -
-      headerHeight;
+      headerHeight);
   }
 
   useEffect(() => {
     getHeights();
-  }, [darkMode]);
+  }, []);
 
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
@@ -50,15 +56,17 @@ export default function ContactMeHeader() {
         </Link>
       </Rotate>
       <div className="links">
-        <p onClick={() => scroll(0)} className='remove'>Top</p>
-        <p onClick={() => scroll(about)}>About</p>
-        <p onClick={() => scroll(project)}>Projects</p>
-        <p onClick={() => scroll(captions)}>Values</p>
-        <p onClick={() => scroll(contact)}>Contact</p>
+        <p onClick={() => scroll(0)} className="remove">
+          Top
+        </p>
+        <p onClick={() => scroll(aboutHeight)}>About</p>
+        <p onClick={() => scroll(projectsHeight)}>Projects</p>
+        <p onClick={() => scroll(valuesHeight)}>Values</p>
+        <p onClick={() => scroll(contactHeight)}>Contact</p>
       </div>
       <div onClick={setDarkMode} className="image">
         <img
-          src={darkMode ? bulbWhite : bulbYellow }
+          src={darkMode ? bulbWhite : bulbYellow}
           alt="mode"
           style={{ padding: "3px" }}
         />

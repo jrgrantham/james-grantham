@@ -16,14 +16,27 @@ import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
 
 export default function Landing(props) {
-  const { setContent, setSelected, showContactMe, setShowContactMe } = props;
+  const {
+    setContent,
+    setSelected,
+    showContactMe,
+    setShowContactMe,
+    aboutHeight,
+    setAboutHeight,
+    projectsHeight,
+    setProjectsHeight,
+    valuesHeight,
+    setValuesHeight,
+    contactHeight,
+    setContactHeight,
+  } = props;
 
   useEffect(() => {
     try {
       window.scroll({
         top: 0,
         left: 0,
-        behavior: "auto"
+        behavior: "auto",
       });
     } catch (error) {
       window.scrollTo(0, 0);
@@ -32,7 +45,16 @@ export default function Landing(props) {
 
   return (
     <>
-      <ContactMeHeader />
+      <ContactMeHeader
+        aboutHeight={aboutHeight}
+        setAboutHeight={setAboutHeight}
+        projectsHeight={projectsHeight}
+        setProjectsHeight={setProjectsHeight}
+        valuesHeight={valuesHeight}
+        setValuesHeight={setValuesHeight}
+        contactHeight={contactHeight}
+        setContactHeight={setContactHeight}
+      />
       <FullPage>
         <LandingInitialView />
         <Spacer />

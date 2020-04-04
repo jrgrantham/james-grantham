@@ -20,6 +20,10 @@ export default function App() {
   const [content, setContent] = useState(aboutMe);
   const [selected, setSelected] = useState("About me");
   const [showContactMe, setShowContactMe] = useState(false)
+  const [aboutHeight, setAboutHeight] = useState(0)
+  const [projectsHeight, setProjectsHeight] = useState(0)
+  const [valuesHeight, setValuesHeight] = useState(0)
+  const [contactHeight, setContactHeight] = useState(0)
 
   return (
     <StyledApp>
@@ -36,6 +40,14 @@ export default function App() {
               setSelected={setSelected}
               showContactMe={showContactMe}
               setShowContactMe={setShowContactMe}
+              aboutHeight={aboutHeight}
+              setAboutHeight={setAboutHeight}
+              projectsHeight={projectsHeight}
+              setProjectsHeight={setProjectsHeight}
+              valuesHeight={valuesHeight}
+              setValuesHeight={setValuesHeight}
+              contactHeight={contactHeight}
+              setContactHeight={setContactHeight}
             />
           )}
         />
