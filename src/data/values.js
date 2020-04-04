@@ -1,5 +1,5 @@
 export const title = 'Values'
-export const comment = 'I was once asked to think of values that define me. The ones I hope that are most applicable are listed below, in no particular order.'
+export const comment = 'I was once asked to think of values that define me. The ones I hope that apply most to me are listed below in no particular order.'
 
 export const values = [
   {

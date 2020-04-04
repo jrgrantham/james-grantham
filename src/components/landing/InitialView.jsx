@@ -20,7 +20,7 @@ export default function LandingInitialView() {
       document.getElementById("jobs").classList.remove("hide");
     }, 500);
 
-    document.getElementById("img").classList.remove("small");
+    document.getElementById("img").classList.remove("hide");
   }, []);
 
   return (
@@ -29,7 +29,7 @@ export default function LandingInitialView() {
         <div id="name" className="hide">
           <h1 className="toggle darkmode">James Grantham</h1>
         </div>
-        <div id="img" className="small img">
+        <div id="img" className="hide img">
           <img src={jamesPhoto} alt="James Grantham" />
         </div>
         <div id="jobs" className="hide">
@@ -153,7 +153,7 @@ const LandingContent = styled.div`
     opacity: 0;
   }
 
-  .small {
+  .hide {
     max-width: 0px;
   }
 `;
