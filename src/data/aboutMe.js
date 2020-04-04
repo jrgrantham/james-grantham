@@ -6,18 +6,23 @@ export const aboutMe = [
     contents: [
       'Originally from Hull, I moved to Aberdeen several years ago when my former boss asked if I\'d be interesting in moving to the "Oil and Gas Capital". I relocated, bought my first proprty and started a new chapter in my life.',
       "I'm still based in Aberdeen but would consider working in another city anywhere in the country. That said, I'm comfortable working from home. I have prior experience of managing remote teams (offshore) and recent experience working remotely, collaborating with teams in different time zones from around the world.",
-      "I have 3 awesome boys that I love spending time with, be it swimming, iceskating, bike rides, skimming stones or even turning the living room into a \"cinema\"!",
+      'I have 3 awesome boys that I love spending time with, be it swimming, iceskating, bike rides, skimming stones or even turning the living room into a "cinema"!',
     ],
-    display: false
+    display: false,
   },
   {
     title: "Software Development",
-    introduction:
-      "My experience of Lambda school is a mixed one. It is without doubt the hardest I have ever had to work for a sustained period of time. It was intense, difficult, frustrating and relentless its its endeavour to teach us. I have however made some good friends that I imagine I will remain in contact with.",
+    introduction: 'Working on the client side code is rewarding, with text and images rendering on sreen but I also love working server side and dealing with the network requests and return the relevant data.',
     contents: [
-      '****** coming soon ******',
+      "Fate, it seems, has a strange way of handing out life changing opportunites. It was said to me \"don't look at what you can't do, look at what you couldn't do 3 months ago\". I definitely understand my current limitations but I am loving this journey of learning.",
+      "My software development journey started back in 2017 when I supervised a project to convert the monthly powerpoint presention into an online web portal for the client. I became fascinated with how HTML and CSS link together to create web pages but also confused frustrated at how changing one thing would affect another in an unexpected way.",
+      "Not wanting to be defeated by something that at face value, seemed very straight forward, I began playing and experimenting with basic web pages. I was soon hooked. When the opportunity for an online boot camp presented itself, I jumped.",
+      "My experience of Lambda school is a mixed one. It is without doubt the hardest I have ever had to work for a sustained period of time. It was intense, difficult, frustrating and relentless its its endeavour to teach us. I have however made some good friends that I imagine I will remain in contact with.",
+      "I thought I was enjoying HTML and CSS until I was introduced to JavaScript, this is where the magic is! Functions calling functions? What do you mean \"state\", state of what?",
+      "So its time again to start a new chapter...",
+
     ],
-    display: false
+    display: false,
   },
   {
     title: "Career",
@@ -30,9 +35,9 @@ export const aboutMe = [
       "Due to BP restructuring, separating the onshore and offshore operations, I was offered the opportunity to relocated to Aberdeen and work at the head office with all the other teams. Why not, so I packed my bags and 4 weeks later I was living over 400 miles away.",
       "A loss of the BP contract later on resulted in a brief secondment to another department in LR where I acted as Independant Competent Person, but found this to be quite a lonely existence and wanted to be part of a team again.",
       "Back in integrity services, I spent some time supporting various teams before finding a home looking after the Triton FPSO, where I saw out the rest of my time with LR",
-      "My move to Oceaneering was less eventful. After a brief stint working for a department that was soon closed, I was back working Integrity Services at head office. For 6 years I worked on the EnQuest project looking afer the Kittiwake Oil Platform."
+      "My move to Oceaneering was less eventful. After a brief stint working for a department that was soon closed, I was back working Integrity Services at head office. For 6 years I worked on the EnQuest project looking afer the Kittiwake Oil Platform.",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Why change?",
@@ -40,12 +45,10 @@ export const aboutMe = [
       "To move from Engineering into tech seems like an unusual decision to my friends and famiy. However, this industry didn't really exist when I was younger, so it was never an option. I enjoy coding and find it rewarding solving problems when the results are rendered on screen, these short term wins were missing from my day job.",
     contents: [
       "The Oil industry can be an interesting and sometimes exciting place to work, with opportunities to work all over the world (although my children saw to it that I didn't take advantage of that!). Throughout my career, it provided me with a range of different roles and responsibilities and I was fortunate enough to experience a variety of engineering processes in remote and extreme environments.",
-      "One of my responsibilities was to manage the project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time.",
-      "I oversaw the construction of the site and enjoyed getting involved in writing code. We delivered a well presented product that contained all the data our client was hoping for. I found this particularly rewarding.",
-      "The logical and technical challenges faced during development were at times difficult, but this made completing the project even more satisfying.",
-      "It was time to adopt new challenges and turn my hand to web-development."
+      "One of my responsibilities was to manage the project to convert our Client's monthly powerpoint presentation into a dynamic website with live data, available in real time. I oversaw the construction of the site and enjoyed getting involved in writing code. We delivered a well presented product that contained all the data our client was hoping for. I found this particularly rewarding.",
+      "The logical and technical challenges faced during development were at times difficult, but this made completing the project even more satisfying, this was the driver for the change. It was time to adopt new challenges and turn my hand to web-development.",
     ],
-    display: false
+    display: false,
   },
   {
     title: "Hobbies and Interests",
@@ -56,8 +59,8 @@ export const aboutMe = [
       "RC Crawlers: Compared the toys that were available when I was a child, these things are incredible. We have a couple of vehicles that we take hillwalking and they are more capable than I am! Ollie has his own that he built himself from a kit, Sam and Ben might get one this year from Santa.",
       "Music: For as long as I can remember, I've loved listening to music and really enjoy my stereo. As much as I can sit down and enjoy watching a blockbuster movie, I can also sit for hours and listen to album after album.",
       "Motorbike: I loved it. Passing my bike test ranks as one of my best moments to date. Out of respect for my parents I did not get a bike while living at home but once I had my own place, a Ducati Monster was all mine. I loved this machine, brilliant fun. However, children came along so the bike went in order to preserve thier father.",
-      "Experiences: I have tried skydiving (15 solo jumps), scuba diving and bungee jumping. I've also been shooting (rifle range and shotgun), tried offroad driving, go-karting, archery and in my previous life, I've had flying lessons and done my own loop the loop!"
+      "Experiences: I have tried skydiving (15 solo jumps), scuba diving and bungee jumping. I've also been shooting (rifle range and shotgun), tried offroad driving, go-karting, archery and in my previous life, I've had flying lessons and done my own loop the loop!",
     ],
-    display: false
-  }
+    display: false,
+  },
 ];

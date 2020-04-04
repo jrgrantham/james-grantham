@@ -24,7 +24,7 @@ export const projects = [
       "",
     image: jamesPhoto,
     link: "https://jamesgrantham.me/",
-    repo: ""
+    repo: "https://github.com/jrgrantham/james-grantham"
   },
   {
     title: "Art Funder",

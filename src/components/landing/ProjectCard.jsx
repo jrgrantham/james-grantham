@@ -46,7 +46,7 @@ export default function ProjectCard(props) {
 const FlipCard = styled.div`
   background-color: transparent;
   width: 90%;
-  max-width: 400px;
+  max-width: 380px;
   height: 450px;
   perspective: 1000px;
   margin: 0 25px 50px 25px;
@@ -65,9 +65,23 @@ const FlipCard = styled.div`
     padding: 20px
   }
 
+  .buttons {
+    width: 100%;
+    display: flex;
+    min-height: 50px;
+    justify-content: space-evenly;
+    
+    @media (max-width: 330px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
   a {
-    display: inline-block;
-    min-width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40%;
     padding: 10px;
     border-radius: ${borderRad}
     background: ${buttonBlue};
@@ -146,14 +160,5 @@ const FlipCard = styled.div`
     transform: rotateY(180deg);
   }
 
-  .buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
 
-    @media (max-width: 330px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 `;
