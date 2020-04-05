@@ -1,19 +1,45 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { welcomeMessage, introduction } from "../../data/introduction";
-import { buttonOrange } from "../../views/styling";
 
-export default function Introduction() {
+import { buttonOrange, transition } from "../../views/styling";
+import { timeLine } from "../../data/timeLine";
+import { experience } from "../../data/experience";
+import { values } from "../../data/values";
+import { aboutMe } from "../../data/aboutMe";
+
+export default function Introduction(props) {
+  function setCategory(title) {
+    props.setSelected(title);
+
+    if (title === "Time line") {
+      props.setContent(timeLine);
+    } else if (title === "Experience") {
+      props.setContent(experience);
+    } else if (title === "Values") {
+      props.setContent(values);
+    } else if (title === "About me") {
+      props.setContent(aboutMe);
+    }
+  }
+
   return (
-    <Container id='about'>
-      {/* <SectionTitle title={welcomeMessage} /> */}
+    <Container id="about">
       <h4>{welcomeMessage}</h4>
-      <div className='contents'>
+      <div className="contents">
         {introduction.map((section, index) => (
-          <div className='section' key={index}>
+          <Link
+            className="section"
+            key={index}
+            to="/professional"
+            onClick={() => {
+              setCategory(section.section);
+            }}
+          >
             <h5>{section.title}</h5>
             <p>{section.content}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </Container>
@@ -33,33 +59,35 @@ const Container = styled.div`
     // color: ${buttonOrange}
   }
 
+  h5 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+  }
+
   .contents {
     // border: 1px solid red;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
 
   .section {
+    transition: color ${transition};
     width: 45%;
-    margin: 40px 2.5% 0px 2.5%;
+    margin: 70px 2.5% 0px 2.5%;
 
     @media (max-width: 800px) {
       width: 100%
+      margin: 40px 2.5% 0px 2.5%;
     }
-
-    h5 {
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      // border: 1px solid red;
-      // @media (min-width: 1000px) {
-      //   text-align: justify;
-      // }
+    
+    @media (pointer: fine) {
+      &:hover {
+        color: ${buttonOrange};
+      }
     }
   }
-
-  }
-
 `;

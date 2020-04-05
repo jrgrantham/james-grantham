@@ -36,9 +36,7 @@ export const experience = [
     title: "Coding",
     introduction:
       "Weekly exams, monthly build weeks and a 6 week 'Labs' project. We gained experience of working remotely, problem solving, pair programming and collaboration.",
-    contents: [
-      "****** coming soon ******",
-    ],
+    contents: ["****** coming soon ******"],
     display: false,
   },
   {

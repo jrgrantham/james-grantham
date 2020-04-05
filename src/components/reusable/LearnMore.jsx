@@ -7,7 +7,7 @@ import { LinkButton } from "./Buttons";
 export default function LearnMore() {
   return (
     <Container>
-      <p>{learnMoreIntro}</p>
+      {/* <p>{learnMoreIntro}</p> */}
       <LinkButton content={learnMoreButton} target="/professional" />
     </Container>
   );

@@ -12,6 +12,7 @@ import {
   buttonBlue,
   fontColourDarkMode
 } from "../../views/styling";
+import LearnMore from "../reusable/LearnMore";
 
 export default function LandingInitialView() {
   useEffect(() => {
@@ -88,7 +89,7 @@ const LandingContent = styled.div`
   img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: ${borderRad};
+    border-radius: 20%;
     // border: 1px solid ${fontColour};
   }
 

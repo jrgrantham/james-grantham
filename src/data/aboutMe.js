@@ -23,22 +23,22 @@ export const aboutMe = [
   },
   {
     title: "Software Development",
-    introduction: 'Working on the client side code is rewarding, with text and images rendering on sreen but I also love working server side and dealing with the network requests and return the relevant data.',
+    introduction:
+      "Working on the client side code is rewarding, with text and images rendering on screen but I also love working server side and dealing with the network requests and return the relevant data.",
     contents: [
       "Fate, it seems, has a strange way of handing out life changing opportunites. It was said to me \"don't look at what you can't do, look at what you couldn't do 3 months ago\". I definitely understand my current limitations but I am loving this journey of learning.",
       "My software development journey started back in 2017 when I supervised a project to convert the monthly powerpoint presention into an online web portal for the client. I became fascinated with how HTML and CSS link together to create web pages but also confused frustrated at how changing one thing would affect another in an unexpected way.",
       "Not wanting to be defeated by something that at face value, seemed very straight forward, I began playing and experimenting with basic web pages. I was soon hooked. When the opportunity for an online boot camp presented itself, I jumped.",
       "My experience of Lambda school is a mixed one. It is without doubt the hardest I have ever had to work for a sustained period of time. It was intense, difficult, frustrating and relentless its its endeavour to teach us. I have however made some good friends that I imagine I will remain in contact with.",
-      "I thought I was enjoying HTML and CSS until I was introduced to JavaScript, this is where the magic is! Functions calling functions? What do you mean \"state\", state of what?",
+      'I thought I was enjoying HTML and CSS until I was introduced to JavaScript, this is where the magic is! Functions calling functions? What do you mean "state", state of what?',
       "So its time again to start a new chapter...",
-
     ],
     display: false,
   },
   {
     title: "Career",
     introduction:
-      "After graduating from University I was fortunate enough to land a job working for Lloyds's Register, a prestigious company to which I remained faithful for nearly 10 years. Once temptation got the better of me, I resigned my position at LR to work for Oceaneering, another prestigious company, were I served for about 7 years.",
+      "After graduating from University I was fortunate enough to land a job working for Lloyd's Register, a prestigious company to which I remained faithful for almost 10 years. Once temptation got the better of me, I resigned my position at LR to work for Oceaneering, another prestigious company, were I served for about 7 years.",
     contents: [
       "I started work for LR Integrity Services (Oil and Gas) at BP's main gas terminal in Dimlington, Hull. Forming part of a small team at the BP offices overlooking the process plant, I got my first experience of engineering.",
       "Our team was responsible for the integrity management of the onshore terminal and the 18 or so platforms that fed into it. Most my time was split evenly so the majority of it was spent supporting offshore operations.",

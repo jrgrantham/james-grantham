@@ -51,7 +51,7 @@ const imageOffset = 550; // px use this for spacing
 const duration = 15; // seconds
 
 const Container = styled.div`
-  margin: 90px 0 60px 0;
+  margin: 110px 0 80px 0;
   position: relative;
   overflow: hidden;
   height: ${imageSize}px;

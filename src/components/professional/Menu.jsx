@@ -74,9 +74,9 @@ export default function ContentButtons(props) {
 
   return (
     <Container id="menu" className="toggle darkmode sticky">
-
       <CollapsingMenu>
         <div className="hamburgerButton" onClick={() => changeHidden()}>
+          {/* <MenuBurger style={{display: 'none'}} /> */}
           <h4>{hidden ? props.selected : "select..."}</h4>
           <MenuBurger hidden={hidden} />
         </div>
@@ -125,7 +125,6 @@ export default function ContentButtons(props) {
 }
 
 const Container = styled.div`
-
   width: 100%;
   padding-bottom: 10px;
 
