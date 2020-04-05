@@ -4,7 +4,6 @@ import styled, { keyframes } from "styled-components";
 import jamesPhoto from "../../../src/images/james.jpg";
 
 import {
-  borderRad,
   headerHeight,
   footerHeight,
   fontColour,
@@ -12,7 +11,6 @@ import {
   buttonBlue,
   fontColourDarkMode
 } from "../../views/styling";
-import LearnMore from "../reusable/LearnMore";
 
 export default function LandingInitialView() {
   useEffect(() => {

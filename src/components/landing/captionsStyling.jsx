@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../reusable/containerStyling";
-import { mediaBreak, landingCaptionBorder, landingCaption, transition, borderRad, fontColourDarkMode, landingCaptionDark, landingCaptionMaxWidth } from "../../views/styling";
+import { mediaBreak, landingCaptionBorder, landingCaption, transition, borderRad, fontColourDarkMode, landingCaptionDark, landingCaptionMaxWidth, buttonOrange } from "../../views/styling";
 
 export const Captions = styled(Container)`
   max-width: ${landingCaptionMaxWidth};
@@ -41,7 +41,7 @@ export const Captions = styled(Container)`
     border-radius: ${borderRad};
     // width: 85%;
     min-height: 70px;
-    transition: transform ${transition};
+    transition: all ${transition};
 
     @media (min-width: ${mediaBreak}) {
       // margin: 0 80px 40px 80px;
@@ -52,12 +52,14 @@ export const Captions = styled(Container)`
     @media (pointer: fine) {
       &:hover {
         transform: scale(1.1);
+        border-color: ${buttonOrange}
+        color: ${buttonOrange}
       }
     }
   }
 
   h5.darkmode {
     background-color: ${landingCaptionDark};
-    color: ${fontColourDarkMode}
+    // color: ${fontColourDarkMode}
   }
 `;

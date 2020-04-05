@@ -26,7 +26,9 @@ export default function Introduction(props) {
 
   return (
     <Container id="about">
-      <h4>{welcomeMessage}</h4>
+      <Link to='/professional' className='spacing'>
+        <h4>{welcomeMessage}</h4>
+      </Link>
       <div className="contents">
         {introduction.map((section, index) => (
           <Link
@@ -53,10 +55,20 @@ const Container = styled.div`
   align-items: center;
   width 90%;
 
+  .spacing {
+
+    margin: 60px 0 0px 0;
+  }
+
   h4 {
     font-weight: bold;
-    padding: 60px 0 0px 0;
-    // color: ${buttonOrange}
+    transition: color ${transition};
+
+    @media (pointer: fine) {
+      &:hover {
+        color: ${buttonOrange};
+      }
+    }
   }
 
   h5 {
