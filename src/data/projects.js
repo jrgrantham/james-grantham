@@ -18,37 +18,33 @@ export const projectsGitHub = "github";
 export const projects = [
   {
     title: "Portfolio",
-    description: "Personal Website",
-    uses: "React, Axios, Redux",
+    uses: "React, Node JS, Axios, Formik",
     comments:
-      "",
+      "Built from scratch using create react app, this site has taken many hours and truly evolved from what it once was.",
     image: jamesPhoto,
     link: "https://jamesgrantham.me/",
     repo: "https://github.com/jrgrantham/james-grantham"
   },
   {
     title: "Art Funder",
-    description: "Lambda School Labs",
-    uses: "React, Axios, Redux",
+    uses: "React, NodeJS, MongoDB",
     comments:
-      "",
+      "An ecommerce site to help under-funded schools sell student art to raise money. Also uses Redux, Axios and Firebase Cloud.",
     image: artFunder,
     link: "https://art-funder.com/",
     repo: "https://github.com/LABS-EU3/Student-Art-Collection-FRONTEND"
   },
   {
     title: "RoboMaze",
-    description: "Lambda School Build Week",
-    uses: "Python, React, Axios, Redux",
+    uses: "Python, React, Redux",
     comments:
-      "",
+      "Built during our computer science module, the server uses depth first traversal on a grid of speicifed dimensions to create a maze. The user can use the keyboard or mouse to navigate the robot to a randomly placed exit.",
     image: maze,
     link: "https://mud-2-frontend-nihkors8y.now.sh/",
     repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend"
   },
   {
     title: "Rick and Morty",
-    description: "Lambda School Sprint Challenge",
     uses: "React, Axios, Redux",
     comments:
       "Redux is populated using a public API. Chosen characters can be moved to and from a favourites section",
@@ -58,7 +54,6 @@ export const projects = [
   },
   {
     title: "Star Wars",
-    description: "Lambda school sprint challenge",
     uses: "React, Axios",
     comments: "Uses a StarWars public API to fetch a list of characters.",
     image: starwars,
@@ -67,7 +62,6 @@ export const projects = [
   },
   {
     title: "NASA Photo",
-    description: "Lambda School Project",
     uses: "React, Axios",
     comments:
       "The NASA API is used to fetch NASAs photo of the day along with some information",
@@ -77,7 +71,6 @@ export const projects = [
   },
   {
     title: "DarkMode",
-    description: "Lambda School Project",
     uses: "React, Local Storage, Hooks",
     comments: "",
     image: darkmode,
@@ -86,7 +79,6 @@ export const projects = [
   },
   {
     title: "Weather",
-    description: "Lambda School Project",
     uses: "React, Axios",
     comments: "",
     image: weather,
@@ -95,7 +87,6 @@ export const projects = [
   },
   {
     title: "Movies",
-    description: "Lambda School Project",
     uses: "React, Axios",
     comments: "",
     image: movie,

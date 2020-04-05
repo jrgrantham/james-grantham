@@ -135,8 +135,9 @@ export default function Contact(props) {
 
 const Position = styled.div`
   margin: 30px 0;
+  // padding: 30px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-height: 0px;
   overflow: hidden;
@@ -152,7 +153,7 @@ export const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 0 25px;
   width: 100%;
   max-width: 500px;
   overflow: auto;

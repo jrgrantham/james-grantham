@@ -26,8 +26,7 @@ export default function ProjectCard(props) {
           <div className="flip-card-back toggle darkmode">
             <div className="details">
               <h3>{props.project.title}</h3>
-              <h4>{props.project.uses}</h4>
-              <h5>{props.project.description}</h5>
+              <h5>{props.project.uses}</h5>
               <p>{props.project.comments}</p>
             </div>
             <div className="buttons">

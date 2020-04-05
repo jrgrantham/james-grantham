@@ -91,7 +91,6 @@ const StyledProfessional = styled.div`
 
   a {
     padding-top: 20px;
-    color: inherit;
   }
 
   .sticky {

@@ -1,15 +1,15 @@
 export const title = 'Values'
-export const comment = 'I was once asked to think of values that define me. The ones I hope that apply most to me are listed below in no particular order.'
+export const comment = 'I was once asked to think of 5 values that define me. The ones that I hope apply most to me are listed below, in no particular order.'
 
 export const values = [
-  {
-    title: "Dignity",
-    introduction: "The state or quality of being worthy of honour or respect, knowing and doing what is morally right.",
-    contents: [
-      "****** coming soon ******",
-    ],
-    display: false
-  },
+  // {
+  //   title: "Dignity",
+  //   introduction: "The state or quality of being worthy of honour or respect, knowing and doing what is morally right.",
+  //   contents: [
+  //     "****** coming soon ******",
+  //   ],
+  //   display: false
+  // },
   {
     title: "Humility",
     introduction: "The quality of having a modest or low view of one's importance.",
@@ -42,14 +42,14 @@ export const values = [
     ],
     display: false
   },
-  {
-    title: "Decisiveness",
-    introduction: "The ability to make decisions quickly and effectively.",
-    contents: [
-      "****** coming soon ******",
-    ],
-    display: false
-  },
+  // {
+  //   title: "Decisiveness",
+  //   introduction: "The ability to make decisions quickly and effectively.",
+  //   contents: [
+  //     "****** coming soon ******",
+  //   ],
+  //   display: false
+  // },
   {
     title: "Honesty",
     introduction: "The quality of being honest.",

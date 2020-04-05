@@ -57,8 +57,8 @@ export default function Landing(props) {
       />
       <FullPage>
         <LandingInitialView />
-        <Spacer />
-        <Introduction />
+        {/* <Spacer /> */}
+        <Introduction setContent={setContent} setSelected={setSelected} />
         <AnimatedLogos />
         {/* <AnimatedLogosOLD /> */}
         <LearnMore />
