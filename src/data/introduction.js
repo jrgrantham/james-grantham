@@ -2,7 +2,7 @@ export const welcomeMessage = "I'm James, a full stack web developer based in th
 export const introduction = [
   {
     title: "Engineering",
-    content: "A qualified and experienced mechanical engineer, I studied at the University of Loughborough. Having worked in the oil and gas industry, I've now turned my hand to software.",
+    content: "A qualified and experienced mechanical engineer, I studied at the University of Loughborough. Having solely worked in the oil and gas industry, I've now turned my hand to software.",
     section: 'Time line',
   },
   {
@@ -22,7 +22,7 @@ export const introduction = [
   },
   {
     title: "Teamwork",
-    content: "Sharing a project is much more fun than working alone and inevitably leads to a better product. I've worked remotely and across time zones with people around the world.",
+    content: "I've worked remotely and across time zones with people around the world. Sharing a project is much more fun than working alone and inevitably leads to a better product.",
     section: 'Experience',
   },
 ];
