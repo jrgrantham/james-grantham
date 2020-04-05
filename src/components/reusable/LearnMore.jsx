@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { learnMoreIntro, learnMoreButton } from "../../data/learnMore";
+import { learnMoreButton } from "../../data/learnMore";
 import { LinkButton } from "./Buttons";
 
 export default function LearnMore() {
