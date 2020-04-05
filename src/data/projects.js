@@ -7,6 +7,7 @@ import movie from "../images/movie.png";
 import maze from "../images/maze2.png";
 import jamesPhoto from "../images/james.jpg";
 import artFunder from "../images/artFunder.png";
+import message from "../images/message.png";
 
 export const projectsNumber = 5;
 
@@ -42,6 +43,15 @@ export const projects = [
     image: maze,
     link: "https://mud-2-frontend-nihkors8y.now.sh/",
     repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend"
+  },
+  {
+    title: "Message-Easy",
+    uses: "React, Redux",
+    comments:
+      "Built as a toy project for my children to be able to message me. All users are shown in a list on the left and can be transferred to the friends list on the right. Friend or not, messages can be sent.",
+    image: message,
+    link: "https://message-easy.netlify.com/",
+    repo: "https://github.com/jrgrantham/message-easy"
   },
   {
     title: "Rick and Morty",
