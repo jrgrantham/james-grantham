@@ -3,19 +3,14 @@ import styled from "styled-components";
 
 import { professionalColor } from "./styling";
 import useDarkMode from "../hooks/useDarkMode";
-import { Link } from "react-router-dom";
 
 import Menu from "../components/professional/Menu";
 import MainContent from "../components/professional/MainContent";
 import ContactMe from "../components/reusable/ContactMe";
 
-import {
-  transition,
-  professionalWidth,
-  professionalButtonHov,
-  mediaBreak,
-} from "../views/styling";
+import { professionalWidth, mediaBreak } from "../views/styling";
 import { LinkButton } from "../components/reusable/Buttons";
+import Name from "../components/professional/Name";
 
 export default function Professional(props) {
   const {
@@ -43,24 +38,20 @@ export default function Professional(props) {
 
   return (
     <StyledProfessional id="professional" className="toggle darkmode">
-      {/* <StyledProfessional > */}
-        <Link className="toggle darkmode" to="/">
-          <h2 className="toggle darkmode">James Grantham</h2>
-        </Link>
-        <Menu
-          setContent={setContent}
-          selected={selected}
-          setSelected={setSelected}
-        />
-        <MainContent content={content} setContent={setContent} />
-        <ContactMe
-          showContactMe={showContactMe}
-          setShowContactMe={setShowContactMe}
-        />
-        <LinkButton target='/' color={professionalColor} content='Home Page'/>
-        {/* div to push the page up over the fixed footer */}
-        <div style={{ height: "100px" }} />
-      {/* </StyledProfessional> */}
+      <Name />
+      <Menu
+        setContent={setContent}
+        selected={selected}
+        setSelected={setSelected}
+      />
+      <MainContent content={content} setContent={setContent} />
+      <ContactMe
+        showContactMe={showContactMe}
+        setShowContactMe={setShowContactMe}
+      />
+      <LinkButton target="/" color={professionalColor} content="Home Page" />
+      {/* div to push the page up over the fixed footer */}
+      <div style={{ height: "100px" }} />
     </StyledProfessional>
   );
 }
@@ -72,38 +63,10 @@ const StyledProfessional = styled.div`
   height: 100%;
   width: 100%;
   max-width: ${professionalWidth};
-  // background-color: inherit;
-
-
-  h2 {
-    font-weight: bold;
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    cursor: pointer;
-    transition: color ${transition};
-
-    @media (pointer: fine) {
-      &:hover {
-        color: ${professionalColor};
-      }
-    }
-  }
-
-  a {
-    padding-top: 20px;
-  }
-
-  .sticky {
-    position: sticky;
-  }
 
   .footer {
     @media (max-width: ${mediaBreak}) {
       display: none;
     }
-  }
-
-  .darkmode {
-    background-color: inherit;
   }
 `;

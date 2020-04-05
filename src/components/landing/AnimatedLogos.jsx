@@ -11,6 +11,7 @@ import nodejs from "../../images/nodejs.svg";
 import mysql from "../../images/mysql.svg";
 import postgress from "../../images/postgresql.svg";
 import redux from "../../images/redux.svg";
+import { transition } from "../../views/styling";
 
 const images = [
   lessD,
@@ -51,10 +52,11 @@ const imageOffset = 550; // px use this for spacing
 const duration = 15; // seconds
 
 const Container = styled.div`
-  margin: 110px 0 80px 0;
+  margin: 90px 0 60px 0;
+  padding: 20px 0;
   position: relative;
   overflow: hidden;
-  height: ${imageSize}px;
+  height: ${imageSize + 40}px;
   width: ${logosWidth}px;
   max-width: 70%;
   // border: 1px solid red;
@@ -83,6 +85,13 @@ const StyledAnimation = styled.div`
   position: absolute;
   width: ${imageSize * ratio}px;
   height: ${imageSize}px;
+  // transition: all ${transition};
+
+  // @media (pointer: fine) {
+  //   &:hover {
+  //     transform: scale(1.2);
+  //   }
+  // }
 
   left: -${imageSize}px; // hold the image outside the div;
   animation-name: ${move};

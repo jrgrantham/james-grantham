@@ -50,7 +50,7 @@ export default function ContactMe(props) {
 
       @media (pointer: fine) {
         &:hover {
-          transform: scale(1.6);
+          transform: scale(1.5);
         }
       }
     }
