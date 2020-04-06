@@ -117,9 +117,11 @@ export default function ContentButtons(props) {
           </div>
         ))}
       </HorizontalMenu>
-      <p>
-        Read the sections as they are or click to expand for further details
-      </p>
+      <div id='scrollheight'>
+        <p>
+          Read the sections as they are or click to expand for further details
+        </p>
+      </div>
     </Container>
   );
 }
@@ -127,6 +129,12 @@ export default function ContentButtons(props) {
 const Container = styled.div`
   width: 100%;
   padding-bottom: 10px;
+
+  #scrollheight {
+    max-height: 50px;
+    overflow: hidden;
+    transition: max-height ${transition}
+  }
 
   p {
     padding: 0 10px;
@@ -139,7 +147,7 @@ const Container = styled.div`
 
 const HorizontalMenu = styled.div`
   display: none;
-  padding: 20px;
+  padding: 8px 20px 20px 20px;
 
   .button.toggle {
     padding: 10px 0;
@@ -193,7 +201,7 @@ const CollapsingMenu = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: ${professionalInnerPad};
+    padding: 0 ${professionalInnerPad} ${professionalInnerPad} ${professionalInnerPad};
     cursor: pointer;
     overflow: hidden;
     img {

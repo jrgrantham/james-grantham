@@ -24,6 +24,7 @@ export default function App() {
   const [projectsHeight, setProjectsHeight] = useState(0)
   const [valuesHeight, setValuesHeight] = useState(0)
   const [contactHeight, setContactHeight] = useState(0)
+  const [profHeaderHeight, setProfHeaderHeight] = useState(0)
 
   return (
     <StyledApp>
@@ -62,6 +63,8 @@ export default function App() {
               setSelected={setSelected}
               showContactMe={showContactMe}
               setShowContactMe={setShowContactMe}
+              profHeaderHeight={profHeaderHeight}
+              setProfHeaderHeight={setProfHeaderHeight}
             />
           )}
         />

@@ -60,22 +60,3 @@ export function AnchorButton(props) {
     </AncButton>
   );
 }
-
-
-// create a component that will move everything we pass in
-const AnimatedLink = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: red;
-  border-radius: 35%;
-  padding: 10px;
-  transition: all ${transition};
-  animation-duration: ${2}s;
-
-  @media (pointer: fine) {
-    &:hover {
-      animation-name: ${move};
-    }
-  }
-`;

@@ -18,7 +18,7 @@ export default function Name() {
       {/* <div className="container arrow">
         <img src={arrow} alt="back" />
       </div> */}
-      <h2 className="toggle darkmode">James Grantham</h2>
+      <h2 id='scrollpadding' className="toggle darkmode">James Grantham</h2>
       <div className="container"></div>
     </StlyedLink>
   );
@@ -44,13 +44,9 @@ const StyledAnimation = styled.div`
   border-radius: 35%;
   padding: 10px;
   transition: all ${transition};
-
+  animation-timing-function: bounce;
   animation-duration: ${2}s;
   // animation-iteration-count: infinite;
-  // animation-timing-function: bounce;
-  // animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1)
-
-  // animation-name: ${move};
 
   @media (max-width: ${mediaBreak}) {
     display: none;
@@ -72,7 +68,7 @@ const StlyedLink = styled(Link)`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  padding: 20px 20px 0 20px;
+  padding: 0px 20px 0 20px;
   width: 100%;
 
   @media (max-width: ${mediaBreak}) {
@@ -80,10 +76,10 @@ const StlyedLink = styled(Link)`
   }
 
   h2 {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    margin: 15px 0px 5px 0px;
+    padding: 2rem 0 2rem 0; // this is removed on-scroll
     cursor: pointer;
-    transition: color ${transition};
+    transition: all ${transition};
 
     @media (pointer: fine) {
       &:hover {
@@ -100,27 +96,4 @@ const StlyedLink = styled(Link)`
       display: none;
     }
   }
-
-  // .arrow {
-  //   display: flex;
-  //   background: ${professionalColor};
-  //   border-radius: 35%;
-  //   padding: 10px;
-  //   transition: all ${transition};
-
-  //   @media (pointer: fine) {
-  //     &:hover {
-  //       transform: scale(1.3);
-  //     }
-  //   }
-
-  //   @media (max-width: ${mediaBreak}) {
-  //     display: none;
-  //   }
-
-  //   img {
-  //     width: 100%;
-  //     height: auto;
-  //   }
-  // }
 `;

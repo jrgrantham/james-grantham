@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { professionalColor } from "./styling";
+import { professionalColor, appColourDark, appColour } from "./styling";
 import useDarkMode from "../hooks/useDarkMode";
 
 import Menu from "../components/professional/Menu";
@@ -20,9 +20,11 @@ export default function Professional(props) {
     setSelected,
     showContactMe,
     setShowContactMe,
+    profHeaderHeight,
+    setProfHeaderHeight,
   } = props;
 
-  useDarkMode();
+  const [darkMode] = useDarkMode(true);
 
   useEffect(() => {
     try {
@@ -34,39 +36,70 @@ export default function Professional(props) {
     } catch (error) {
       window.scrollTo(0, 0);
     }
+    setProfHeaderHeight(document.getElementById("fixedHeader").offsetHeight);
   }, []);
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById("scrollpadding").style.padding = "0";
+      document.getElementById("scrollheight").style.maxHeight = "0";
+    } else {
+      document.getElementById("scrollpadding").style.padding = " 2rem 0 2rem 0";
+      document.getElementById("scrollheight").style.maxHeight = "50px";
+    }
+  }
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  // inside the function as needs access to dark mode to set the background
+  const StyledProfessional = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: ${professionalWidth};
+
+    .fixed {
+      width: 100%;
+      max-width: ${professionalWidth};
+      position: fixed;
+      background: ${darkMode ? appColourDark : appColour};
+    }
+
+    .footer {
+      @media (max-width: ${mediaBreak}) {
+        display: none;
+      }
+    }
+  `;
 
   return (
     <StyledProfessional id="professional" className="toggle darkmode">
-      <Name />
-      <Menu
+      <div id="fixedHeader" className="fixed toggle darkmode">
+        <Name />
+        <Menu
+          setContent={setContent}
+          selected={selected}
+          setSelected={setSelected}
+        />
+      </div>
+      <MainContent
+        content={content}
         setContent={setContent}
-        selected={selected}
-        setSelected={setSelected}
+        profHeaderHeight={profHeaderHeight}
       />
-      <MainContent content={content} setContent={setContent} />
       <ContactMe
         showContactMe={showContactMe}
         setShowContactMe={setShowContactMe}
       />
       <LinkButton target="/" color={professionalColor} content="Home Page" />
-      {/* div to push the page up over the fixed footer */}
       <div style={{ height: "100px" }} />
     </StyledProfessional>
   );
 }
-
-const StyledProfessional = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  max-width: ${professionalWidth};
-
-  .footer {
-    @media (max-width: ${mediaBreak}) {
-      display: none;
-    }
-  }
-`;
