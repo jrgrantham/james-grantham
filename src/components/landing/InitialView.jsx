@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
-import jamesPhoto from "../../../src/images/james.jpg";
+import jamesPhoto from "../../images/james.jpg";
 
 import {
   headerHeight,
@@ -34,7 +34,7 @@ export default function LandingInitialView() {
         <div id="jobs" className="hide">
           <h3>Mechanical Engineer</h3>
           <p>turned</p>
-          <h3>Product Engineer</h3>
+          <h3>Software Engineer</h3>
         </div>
       </LandingContent>
     </LandingContainer>
@@ -53,13 +53,24 @@ const LandingContainer = styled.div`
 `;
 
 const colours = keyframes`
-  from {
+  0% {
     background-position: 100%;
   }
-  to {
+  // 45%  { transform: scale(1,1) }
+  // 50%  { transform: scale(1.1,1.1) }
+  // 55%  { transform: scale(1,1) }
+  100% {
     background-position: 0%;
   }
 `;
+
+const swell = keyframes`
+
+  50% {
+    transform: scale: 1.2
+  }
+
+`
 
 const LandingContent = styled.div`
   width: 100%;
@@ -121,6 +132,7 @@ const LandingContent = styled.div`
     -webkit-background-clip: text;
     animation: ${colours} 8s linear infinite;
     background-size: 800%;
+    
   }
 
   h1.darkmode {

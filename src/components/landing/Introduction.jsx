@@ -56,7 +56,6 @@ const Container = styled.div`
   width 90%;
 
   .spacing {
-
     margin: 60px 0 0px 0;
   }
 

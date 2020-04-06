@@ -10,8 +10,6 @@ import {
   mediaBreak,
   professionalButtonDark,
   professionalButton,
-  // professionalBack,
-  // professionalBackDark,
   professionalColor
 } from "../../views/styling";
 
@@ -38,6 +36,8 @@ export default function MainContent(props) {
     );
   }
 
+  console.log(menuHeight);
+
   return (
     <Container style={{marginTop: menuHeight}} >
       {props.content.map((article, index) => (
@@ -47,7 +47,6 @@ export default function MainContent(props) {
               ? "article toggle darkmode selected"
               : "article toggle darkmode"
           }
-          // style={article.display ? selectedStyle : null}
           key={index}
           onClick={e => {
             isExpanded(article.title);
@@ -127,8 +126,3 @@ const StyledDetails = styled.div`
 const closedDetails = {
   maxHeight: "2000px"
 };
-
-// const selectedStyle = {
-//   // borderRadius: borderRad,
-//   backgroundColor: professionalButtonDark
-// };
