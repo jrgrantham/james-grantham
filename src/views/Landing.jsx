@@ -73,8 +73,8 @@ export default function Landing(props) {
         <LinkButton content={"Learn more"} target="/professional" />
         <Boys />
       </FullPage>
-      <s id="scrollheight">-</s>
-      <s id="scrollpadding">-</s>
+      <s id="scrollheight"></s>
+      <s id="scrollpadding"></s>
       <FooterBanner />
     </>
   );

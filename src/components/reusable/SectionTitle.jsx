@@ -14,6 +14,7 @@ const StyledTitle = styled.div`
   display: flex;
   flex-direction: column
   justify-content: center;
+  align-items: center;
   width: 100%;
 
   h3 {
@@ -25,5 +26,6 @@ const StyledTitle = styled.div`
     padding: 10px;
     text-align: center;
     margin-bottom: 40px;
+    width: 90%;
   }
 `;
