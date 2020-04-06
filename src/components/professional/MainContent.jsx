@@ -39,7 +39,7 @@ export default function MainContent(props) {
   console.log(menuHeight);
 
   return (
-    <Container style={{marginTop: menuHeight}} >
+    <Container style={{marginTop: '260px'}} >
       {props.content.map((article, index) => (
         <div
           className={
