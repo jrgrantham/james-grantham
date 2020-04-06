@@ -38,7 +38,7 @@ export const aboutMe = [
   {
     title: "Software Development",
     introduction:
-      "Working on client-side code is rewarding, with text and images rendering on screen but I also love working server-side and dealing with network requests, database queries, authentication etc.",
+      "Working on client-side code is rewarding, with text and images rendering on screen but I also love working server-side and dealing with the network requests and database queries.",
     contents: [
       "Fate, it seems, has a strange way of handing out life changing opportunities. It was said to me \"don't look at what you can't do, look at what you couldn't do 3 months ago\". I definitely understand my current limitations but I am loving this journey of learning.",
       "My software development journey started back in 2017 when I supervised a project to convert the monthly powerpoint presentation into an online web portal for the client. I became fascinated with how HTML and CSS link together to create web pages but also confused and frustrated at how changing one thing would affect another in an unexpected way.",

@@ -5,7 +5,7 @@ import useDarkMode from "../../hooks/useDarkMode";
 import { Link } from "react-router-dom";
 
 import arrow from "../../images/backArrow.png";
-import { buttonOrange, transition, mediaBreak, professionalColor } from "../../views/styling";
+import { transition, mediaBreak, professionalColor } from "../../views/styling";
 
 export default function Name() {
   useDarkMode();
@@ -47,6 +47,7 @@ const StlyedLink = styled(Link)`
 
   .container {
     width: 50px;
+    height: 50px;
 
     @media (max-width: ${mediaBreak}) {
       display: none;
@@ -55,7 +56,7 @@ const StlyedLink = styled(Link)`
 
   .arrow {
     display: flex;
-    background: ${buttonOrange};
+    background: ${professionalColor};
     border-radius: 35%;
     padding: 10px;
     transition: all ${transition};
