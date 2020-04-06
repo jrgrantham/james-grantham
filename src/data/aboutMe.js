@@ -12,7 +12,7 @@ export const aboutMe = [
   {
     title: "Career",
     introduction:
-      "After graduating from university I was fortunate enough to be offered employment by Lloyd's Register, a prestigious company to which I remained faithful for almost 10 years. I was then approached by Oceaneering, another prestigious company, who made me an offer I could not refuse. I resigned my position at Lloyd’s served Oceaneering for about 7 years.",
+      "After graduating from university I was fortunate enough to be offered employment by Lloyd's Register, a prestigious company to which I remained faithful for 10 years. I was then approached by Oceaneering, another prestigious company, who made me an offer I could not refuse. I resigned my position at Lloyd’s served Oceaneering for about 7 years.",
     contents: [
       "I started my career at Lloyd’s Register Integrity Services (Oil and Gas) at BP's main gas terminal in Dimlington, Hull. Forming part of a small team at the BP offices overlooking the process plant, I got my first experience of engineering.",
       "Our team was responsible for integrity management of the onshore terminal and the 18 platforms which fed into it. The majority of my time was spent supporting offshore operations.",

@@ -1,5 +1,7 @@
 import React from "react";
+import { transition } from "../../views/styling";
 import styled, { keyframes } from "styled-components";
+
 import lessD from "../../images/lessD.png";
 import styledC from "../../images/styled.png";
 import html from "../../images/html.png";
@@ -11,11 +13,12 @@ import nodejs from "../../images/nodejs.svg";
 import mysql from "../../images/mysql.svg";
 import postgress from "../../images/postgresql.svg";
 import redux from "../../images/redux.svg";
-import { transition } from "../../views/styling";
+import git from "../../images/git.png";
 
 const images = [
   lessD,
   styledC,
+  git,
   html,
   redux,
   python,
@@ -48,7 +51,7 @@ export default function AnimatedLogos() {
 const imageSize = 50; // px
 const ratio = 1.4 // ratio of width to height space for the images
 const logosWidth = 1000; // px visible area
-const imageOffset = 550; // px use this for spacing
+const imageOffset = 400; // px use this for spacing
 const duration = 15; // seconds
 
 const Container = styled.div`
