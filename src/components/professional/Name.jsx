@@ -18,7 +18,7 @@ export default function Name() {
       {/* <div className="container arrow">
         <img src={arrow} alt="back" />
       </div> */}
-      <h2 id='scrollpadding' className="toggle darkmode">James Grantham</h2>
+      <h2 id='professionalName' className="toggle darkmode">James Grantham</h2>
       <div className="container"></div>
     </StlyedLink>
   );

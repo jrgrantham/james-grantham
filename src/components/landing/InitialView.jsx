@@ -9,16 +9,16 @@ import {
   fontColour,
   buttonOrange,
   buttonBlue,
-  fontColourDarkMode
+  fontColourDarkMode,
 } from "../../views/styling";
 
 export default function LandingInitialView() {
   useEffect(() => {
-    setTimeout(function() {
-      document.getElementById("name").classList.remove("hide");
-      document.getElementById("jobs").classList.remove("hide");
-    }, 500);
     document.getElementById("img").classList.remove("hide");
+    // setTimeout(function() {
+    document.getElementById("name").classList.remove("hide");
+    document.getElementById("jobs").classList.remove("hide");
+    // }, 500);
   }, []);
 
   return (
@@ -66,7 +66,7 @@ const colours = keyframes`
 const LandingContent = styled.div`
   width: 100%;
   height: ${vh - headerHeight - footerHeight}px;
-  max-height: 1000px;
+  // max-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

@@ -88,7 +88,7 @@ const Container = styled.div`
   .section {
     transition: color ${transition};
     width: 45%;
-    margin: 70px 2.5% 0px 2.5%;
+    margin: 90px 2.5% 0px 2.5%;
 
     @media (max-width: 800px) {
       width: 100%

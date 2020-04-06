@@ -117,7 +117,7 @@ export default function ContentButtons(props) {
           </div>
         ))}
       </HorizontalMenu>
-      <div id='scrollheight'>
+      <div id='horizontalMenu'>
         <p>
           Read the sections as they are or click to expand for further details
         </p>
@@ -130,7 +130,7 @@ const Container = styled.div`
   width: 100%;
   padding-bottom: 10px;
 
-  #scrollheight {
+  #horizontalMenu {
     max-height: 50px;
     overflow: hidden;
     transition: max-height ${transition}

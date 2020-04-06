@@ -38,18 +38,18 @@ export default function Professional(props) {
     }
     setProfHeaderHeight(document.getElementById("fixedHeader").offsetHeight);
     console.log("Professional: useeffect ran");
-  }, []);
+  });
 
   function scrollFunction() {
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
     ) {
-      document.getElementById("scrollpadding").style.padding = "0";
-      document.getElementById("scrollheight").style.maxHeight = "0";
+      document.getElementById("professionalName").style.padding = "0";
+      document.getElementById("horizontalMenu").style.maxHeight = "0";
     } else {
-      document.getElementById("scrollpadding").style.padding = " 2rem 0 2rem 0";
-      document.getElementById("scrollheight").style.maxHeight = "50px";
+      document.getElementById("professionalName").style.padding = " 2rem 0 2rem 0";
+      document.getElementById("horizontalMenu").style.maxHeight = "50px";
     }
   }
 
