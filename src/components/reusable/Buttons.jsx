@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { Link } from "react-router-dom";
 
 import {
@@ -9,6 +9,13 @@ import {
   fontColourDarkMode,
 } from "../../views/styling";
 
+const move = keyframes`
+  0%   { transform: scale(1,1) }
+  20%  { transform: scale(0.9,1) }
+  70%  { transform: scale(1.1,1.1) }
+  100%  { transform: scale(1,1) }
+`;
+
 export function LinkButton(props) {
   const LinButton = styled(Link)`
     color: ${fontColourDarkMode};
@@ -17,10 +24,13 @@ export function LinkButton(props) {
     padding: 1rem 3.6rem;
     border-radius: ${borderRad};
     transition: opacity ${transition};
+    margin: ${props.margin ? props.margin : 0};
+    margin: 30px 0 60px 0;
+    animation-duration: ${2}s;
 
     @media (pointer: fine) {
       &:hover {
-        opacity: 0.75;
+        animation-name: ${move};
       }
     }
   `;
@@ -51,11 +61,21 @@ export function AnchorButton(props) {
   );
 }
 
-// export function SmallAnchorButton(props) {
-//   return <SmallAncButton href={props.target}>{props.content}</SmallAncButton>;
-// }
 
-// const SmallAncButton = styled(AncButton)`
-//   padding: 0.6rem 1.6rem;
-//   background: ${professionalButtonDark};
-// `;
+// create a component that will move everything we pass in
+const AnimatedLink = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  border-radius: 35%;
+  padding: 10px;
+  transition: all ${transition};
+  animation-duration: ${2}s;
+
+  @media (pointer: fine) {
+    &:hover {
+      animation-name: ${move};
+    }
+  }
+`;

@@ -56,6 +56,9 @@ const colours = keyframes`
   0% {
     background-position: 100%;
   }
+  // 45%  { transform: scale(1,1) }
+  // 50%  { transform: scale(1.1,1.1) }
+  // 55%  { transform: scale(1,1) }
   100% {
     background-position: 0%;
   }

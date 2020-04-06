@@ -14,6 +14,8 @@ import Spacer from "../components/reusable/Spacer";
 import LearnMore from "../components/reusable/LearnMore";
 import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
+import { LinkButton } from "../components/reusable/Buttons";
+import { learnMoreButton } from "../data/learnMore";
 
 export default function Landing(props) {
   const {
@@ -61,7 +63,8 @@ export default function Landing(props) {
         <Introduction setContent={setContent} setSelected={setSelected} />
         <AnimatedLogos />
         {/* <AnimatedLogosOLD /> */}
-        <LearnMore />
+        {/* <LearnMore /> */}
+        <LinkButton content={'Learn more'} target="/professional" />
         <Spacer />
         <Projects />
         <Spacer />
@@ -71,7 +74,8 @@ export default function Landing(props) {
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}
         />
-        <LearnMore />
+        <LinkButton content={'Learn more'} target="/professional" />
+        {/* <LearnMore /> */}
         <Boys />
       </FullPage>
       <FooterBanner />
