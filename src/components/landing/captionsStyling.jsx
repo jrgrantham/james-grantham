@@ -5,6 +5,7 @@ import { mediaBreak, landingCaptionBorder, landingCaption, transition, borderRad
 export const Captions = styled(Container)`
   max-width: ${landingCaptionMaxWidth};
   align-items: stretch;
+  margin-bottom: 60px;
 
   @media (min-width: ${mediaBreak}) {
     .left {

@@ -42,7 +42,8 @@ export default function ContactMeHeader(props) {
 
   useEffect(() => {
     getHeights();
-  }, []);
+    console.log('Header: useeffect ran');
+  });
 
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });

@@ -18,7 +18,6 @@ export default function LandingInitialView() {
       document.getElementById("name").classList.remove("hide");
       document.getElementById("jobs").classList.remove("hide");
     }, 500);
-
     document.getElementById("img").classList.remove("hide");
   }, []);
 

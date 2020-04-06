@@ -16,10 +16,6 @@ import {
 export default function MainContent(props) {
   useDarkMode();
 
-  
-  console.log(props.profHeaderHeight);
-  
-
   function isExpanded(receivedArticle) {
     props.setContent(
       props.content.map(article => {

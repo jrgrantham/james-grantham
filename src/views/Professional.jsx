@@ -37,6 +37,7 @@ export default function Professional(props) {
       window.scrollTo(0, 0);
     }
     setProfHeaderHeight(document.getElementById("fixedHeader").offsetHeight);
+    console.log("Professional: useeffect ran");
   }, []);
 
   function scrollFunction() {

@@ -37,7 +37,8 @@ export default function PhoneNumbers(props) {
 
   useEffect(() => {
     getNumbers();
-  }, []);
+    console.log("PhoneNumber: useeffect ran");
+  });
 
   function callNumber(number) {
     window.location = `tel:${number}`;

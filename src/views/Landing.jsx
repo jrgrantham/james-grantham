@@ -62,6 +62,7 @@ export default function Landing(props) {
         <LinkButton content={"Learn more"} target="/professional" />
         <Spacer />
         <Projects />
+        <LinkButton content="View all projects" target="projects" />
         <Spacer />
         <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
