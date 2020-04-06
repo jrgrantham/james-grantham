@@ -64,14 +64,6 @@ const colours = keyframes`
   }
 `;
 
-const swell = keyframes`
-
-  50% {
-    transform: scale: 1.2
-  }
-
-`
-
 const LandingContent = styled.div`
   width: 100%;
   height: ${vh - headerHeight - footerHeight}px;

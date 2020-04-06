@@ -13,9 +13,31 @@ import { LinkButton } from "../components/reusable/Buttons";
 import Name from "../components/professional/Name";
 
 export default function Professional(props) {
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  const {
+    content,
+    setContent,
+    selected,
+    setSelected,
+    showContactMe,
+    setShowContactMe,
+    profHeaderHeight,
+    setProfHeaderHeight,
+  } = props;
+
+  const [darkMode] = useDarkMode(true);
+
+  useEffect(() => {
+    try {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+    } catch (error) {
+      window.scrollTo(0, 0);
+    }
+    setProfHeaderHeight(document.getElementById("fixedHeader").offsetHeight);
+  }, []);
 
   function scrollFunction() {
     if (
@@ -30,29 +52,9 @@ export default function Professional(props) {
     }
   }
 
-  const {
-    content,
-    setContent,
-    selected,
-    setSelected,
-    showContactMe,
-    setShowContactMe,
-  } = props;
-
-  // useDarkMode();
-  const [darkMode] = useDarkMode(true);
-
-  useEffect(() => {
-    try {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: "auto",
-      });
-    } catch (error) {
-      window.scrollTo(0, 0);
-    }
-  }, []);
+  window.onscroll = function () {
+    scrollFunction();
+  };
 
   // inside the function as needs access to dark mode to set the background
   const StyledProfessional = styled.div`
@@ -79,7 +81,7 @@ export default function Professional(props) {
 
   return (
     <StyledProfessional id="professional" className="toggle darkmode">
-      <div className="fixed toggle darkmode">
+      <div id="fixedHeader" className="fixed toggle darkmode">
         <Name />
         <Menu
           setContent={setContent}
@@ -87,7 +89,11 @@ export default function Professional(props) {
           setSelected={setSelected}
         />
       </div>
-      <MainContent content={content} setContent={setContent} />
+      <MainContent
+        content={content}
+        setContent={setContent}
+        profHeaderHeight={profHeaderHeight}
+      />
       <ContactMe
         showContactMe={showContactMe}
         setShowContactMe={setShowContactMe}

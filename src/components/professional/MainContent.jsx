@@ -10,19 +10,16 @@ import {
   mediaBreak,
   professionalButtonDark,
   professionalButton,
-  professionalColor
+  professionalColor,
 } from "../../views/styling";
 
 export default function MainContent(props) {
   useDarkMode();
 
-  let menuHeight = 0
-
-  // useEffect(() => {
-  //   menuHeight = document.getElementById("menu").clientHeight;
-  // }, []);
-  // console.log(menuHeight);
   
+  console.log(props.profHeaderHeight);
+  
+
   function isExpanded(receivedArticle) {
     props.setContent(
       props.content.map(article => {
@@ -36,10 +33,8 @@ export default function MainContent(props) {
     );
   }
 
-  console.log(menuHeight);
-
   return (
-    <Container style={{marginTop: '260px'}} >
+    <Container style={{marginTop: `${props.profHeaderHeight + 10}px`}} >
       {props.content.map((article, index) => (
         <div
           className={
