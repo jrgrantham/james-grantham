@@ -1,17 +1,13 @@
 export const timeLine = [
   {
     title: "Lambda School",
-    introduction: "Joined Lambda School to learn how to be a full stack web developer.",
-    contents: [
-      "****** coming soon ******",
-      "",
-      "Weekly exams, monthly build weeks and a 6 week 'Labs' project. We gained experience of working remotely, problem solving, pair programming and collaboration."
-    ],
+    introduction: "There's not really much to say here, 16 weeks of web development, 6 weeks of labs, 8 weeks of computer science. It was a gruelling and tiring process but a lot was learned and practiced.",
+    contents: ["No futher information."],
     display: false
   },
   {
     title: "Oceaneering",
-    introduction: "Managed the day to day operations of the integrity contract for the Kittiwake Oil Platform.",
+    introduction: "Managed the day to day operations of the integrity contract for the Kittiwake Oil Platform. Worked onshore with a small team, providing support for the engineers offshore.",
     contents: [
       "Inspection Engineer, 2011 - 2019:",
       "Responsible for managing workloads, prioritising and scheduling inspection activities and completing the inspection scope on time and within budget. Anomaly reviews, repair recommendations, inspection summaries, team briefs, and budget tracking and forecasting.",
@@ -42,7 +38,7 @@ export const timeLine = [
   {
     title: "University of Loughborough",
     introduction: "Mechanical Engineering BEng.",
-    contents: ["No further information."],
+    contents: ["Having always had a practical mind and a capability of maths and physics, following on to engineering was a logical step. Loughborough was my first choice, I thoroughly enjoyed my time there and still keep in touch with some of the friends I made there."],
     display: false
   }
 ];

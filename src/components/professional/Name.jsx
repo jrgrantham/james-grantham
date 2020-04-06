@@ -56,13 +56,13 @@ const StlyedLink = styled(Link)`
   .arrow {
     display: flex;
     background: ${buttonOrange};
-    border-radius: 50%;
+    border-radius: 35%;
     padding: 10px;
     transition: all ${transition};
 
     @media (pointer: fine) {
       &:hover {
-        transform: scale(1.5);
+        transform: scale(1.3);
       }
     }
 
