@@ -64,6 +64,10 @@ const Container = styled.div`
   max-width: 70%;
   // border: 1px solid red;
 
+  @media (max-width: 800px) {
+    margin: 40px 0 10px 0;
+  }
+
   img {
     max-width: 100%;
     max-height: 100%;
