@@ -7,6 +7,8 @@ import {
   landingBoysButton,
   landingBoysFont,
   landingBoysMaxWidth,
+  buttonBlue,
+  transition,
 } from "../../views/styling";
 
 const content = "...and dedicated father to three awesome boys!";
@@ -24,6 +26,10 @@ export default function Boys() {
 const StyledBoys = styled.div`
   background-color: ${landingBoysBack};
   width: 100%;
+  
+  h5 {
+
+  }
 
   .link {
     display: flex;
@@ -32,12 +38,19 @@ const StyledBoys = styled.div`
   }
 
   .content {
-    width: 100%;
+    width: 80%;
     max-width: ${landingBoysMaxWidth};
     margin: 30px 30px;
     background-color: ${landingBoysButton};
     border-radius: 120px;
     color: ${landingBoysFont};
     padding: 20px 30px;
+
+    transition: all ${transition}s;
+    @media (pointer: fine) {
+      &:hover {
+        background: ${buttonBlue}
+      }
+    }
   }
 `;

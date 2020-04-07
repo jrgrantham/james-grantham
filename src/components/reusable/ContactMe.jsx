@@ -4,10 +4,12 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition, appColour } from "../../views/styling";
+import { transition, appColour, buttonOrange } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function ContactMe(props) {
+  const { showContactMe, setShowContactMe } = props;
+
   const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -16,7 +18,7 @@ export default function ContactMe(props) {
     width: 100%;
 
     h4 {
-      padding: 60px 0px 20px 0px;
+      padding: 60px 0px 35px 0px;
     }
   `;
 
@@ -29,7 +31,7 @@ export default function ContactMe(props) {
 
     img {
       display: flex;
-      width: 35px;
+      width: 45px;
       height: auto;
     }
 
@@ -40,23 +42,23 @@ export default function ContactMe(props) {
         }
       }
     }
-    
+
     .image {
       background-color: ${appColour};
-      padding: 20px;
-      transition: all ${transition};
+      padding: 15px;
+      transition: all ${transition}s;
       // border: 1px solid red;
-      border-radius: 100%;
+      border-radius: 50%;
 
       @media (pointer: fine) {
         &:hover {
-          transform: scale(1.5);
+          // border-radius: 30%
+          transform: scale(1.2);
+          // background: ${buttonOrange}
         }
       }
     }
   `;
-
-  const { showContactMe, setShowContactMe } = props;
 
   return (
     <Container id="contact" onClick={() => setShowContactMe(false)}>
@@ -65,19 +67,20 @@ export default function ContactMe(props) {
         <a href="https://github.com/jrgrantham" className="image">
           <img src={github} alt="" />
         </a>
-        <div className="image mail" onClick={(e) => {
-          e.stopPropagation()
-          setShowContactMe(!showContactMe)
-        }}>
+        <div
+          className="image mail"
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowContactMe(!showContactMe);
+          }}
+        >
           <img src={mail} alt="" />
         </div>
         <a href="https://www.linkedin.com/in/j-grantham/" className="image">
           <img src={linkedin} alt="" />
         </a>
       </Links>
-      <Contact
-        showContactMe={showContactMe}
-      />
+      <Contact showContactMe={showContactMe} />
     </Container>
   );
 }

@@ -38,7 +38,8 @@ export default function Professional(props) {
     }
     setProfHeaderHeight(document.getElementById("fixedHeader").offsetHeight);
     console.log("Professional: useeffect ran");
-  });
+    // needs to be empty array to prevent scroll
+  }, []);
 
   function scrollFunction() {
     if (
@@ -100,7 +101,7 @@ export default function Professional(props) {
         setShowContactMe={setShowContactMe}
       />
       <LinkButton target="/" color={professionalColor} content="Home Page" />
-      <div style={{ height: "100px" }} />
+      {/* <div style={{ height: "100px" }} /> */}
     </StyledProfessional>
   );
 }

@@ -51,7 +51,7 @@ const Links = styled.div`
 
   .image {
     padding: 20px;
-    transition: all ${transition};
+    transition: all ${transition}s;
 
     @media (pointer: fine) {
       &:hover {

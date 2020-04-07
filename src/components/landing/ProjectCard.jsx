@@ -82,11 +82,11 @@ const FlipCard = styled.div`
     align-items: center;
     min-width: 40%;
     padding: 10px;
-    border-radius: ${borderRad}
+    border-radius: ${borderRad}px
     background: ${buttonBlue};
     color: ${fontColourDarkMode};
     font-weight: bold;
-    transition: opacity ${transition};
+    transition: opacity ${transition}s;
 
     @media (max-width: 330px) {
       width: 90%;

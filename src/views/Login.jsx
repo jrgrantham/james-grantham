@@ -98,8 +98,8 @@ const Position = styled.div`
     font-weight: bold;
     background-color: ${buttonBlue};
     padding: 1rem 3.6rem;
-    border-radius: ${borderRad};
-    transition: opacity ${transition};
+    border-radius: ${borderRad}px;
+    transition: opacity ${transition}s;
     margin: 20px 0 70px 0;
 
     @media (pointer: fine) {

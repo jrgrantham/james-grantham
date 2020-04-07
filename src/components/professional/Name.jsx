@@ -43,7 +43,7 @@ const StyledAnimation = styled.div`
   background: ${professionalColor};
   border-radius: 35%;
   padding: 10px;
-  transition: all ${transition};
+  transition: all ${transition}s;
   animation-timing-function: bounce;
   animation-duration: ${2}s;
   // animation-iteration-count: infinite;
@@ -79,7 +79,7 @@ const StlyedLink = styled(Link)`
     margin: 15px 0px 5px 0px;
     padding: 2rem 0 2rem 0; // this is removed on-scroll
     cursor: pointer;
-    transition: all ${transition};
+    transition: all ${transition}s;
 
     @media (pointer: fine) {
       &:hover {

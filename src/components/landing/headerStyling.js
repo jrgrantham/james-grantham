@@ -70,7 +70,7 @@ export const Header = styled.div`
     padding: 0 10px;
     font-size: 1rem;
     font-weight: bold;
-    transition: all ${transition};
+    transition: all ${transition}s;
 
     @media (pointer: fine) {
       &:hover {

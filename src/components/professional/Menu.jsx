@@ -133,7 +133,7 @@ const Container = styled.div`
   #horizontalMenu {
     max-height: 50px;
     overflow: hidden;
-    transition: max-height ${transition}
+    transition: max-height ${transition}s
   }
 
   p {
@@ -152,8 +152,8 @@ const HorizontalMenu = styled.div`
   .button.toggle {
     padding: 10px 0;
     background-color: ${professionalButton};
-    transition: background-color ${transition};
-    border-radius: ${borderRad};
+    transition: background-color ${transition}s;
+    border-radius: ${borderRad}px;
     cursor: pointer;
     width: 85%;
 
@@ -211,7 +211,7 @@ const CollapsingMenu = styled.div`
     @media (pointer: fine) {
       &:hover {
         background-color: ${professionalButtonHov};
-        transition: background-color ${transition};
+        transition: background-color ${transition}s;
       }
     }
 
@@ -228,7 +228,7 @@ const CollapsingMenu = styled.div`
     align-items: center;
     height: 0px;
     width: 100%;
-    transition: height ${transition};
+    transition: height ${transition}s;
 
     @media (min-width: ${mediaBreak}) {
       display: none;
@@ -237,7 +237,7 @@ const CollapsingMenu = styled.div`
     .button.toggle {
       padding: 10px 0;
       background-color: ${professionalButton};
-      border-radius: ${borderRad};
+      border-radius: ${borderRad}px;
       cursor: pointer;
       width: 85%;
 
@@ -249,7 +249,7 @@ const CollapsingMenu = styled.div`
       @media (pointer: fine) {
         &:hover {
           background-color: ${professionalButtonHov};
-          transition: background-color ${transition};
+          transition: background-color ${transition}s;
         }
       }
     }
