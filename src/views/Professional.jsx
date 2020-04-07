@@ -37,8 +37,10 @@ export default function Professional(props) {
       window.scrollTo(0, 0);
     }
     setProfHeaderHeight(document.getElementById("fixedHeader").offsetHeight);
-    console.log("Professional: useeffect ran");
+    console.log("Landing Header: useeffect ran, HAS empty array");
     // needs to be empty array to prevent scroll
+    // changing state on selection of mail or content
+    // causes window scroll to run and move the page
   }, []);
 
   function scrollFunction() {
@@ -68,6 +70,7 @@ export default function Professional(props) {
     max-width: ${professionalWidth};
 
     .fixed {
+      z-index: ;
       width: 100%;
       max-width: ${professionalWidth};
       position: fixed;

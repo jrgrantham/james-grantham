@@ -52,7 +52,7 @@ export const Captions = styled(Container)`
     border-radius: ${borderRad}px;
     // width: 85%;
     min-height: 70px;
-    transition: transform ${transition}s, border-color ${transition}s, color ${transition}s;
+    transition: transform ${transition}s, border ${transition}s, color ${transition}s;
 
     @media (min-width: ${mediaBreak}) {
       // margin: 0 80px 40px 80px;
@@ -63,14 +63,14 @@ export const Captions = styled(Container)`
     @media (pointer: fine) {
       &:hover {
         transform: scale(1.05);
-        border-color: ${buttonOrange}
-        color: ${buttonOrange}
+        border: 2px solid ${buttonOrange};
+        color: ${buttonOrange};
       }
     }
   }
 
   h5.darkmode {
     background-color: ${landingCaptionDark};
-    // color: ${fontColourDarkMode}
+    // color: ${fontColourDarkMode};
   }
 `;

@@ -23,6 +23,7 @@ export default function Projects() {
     } catch (error) {
       window.scrollTo(0, 0);
     }
+    console.log('AllProjects: useeffect ran, HAS empty array');
   }, []);
 
   return (

@@ -42,7 +42,7 @@ export default function ContactMeHeader(props) {
 
   useEffect(() => {
     getHeights();
-    console.log('Header: useeffect ran');
+    console.log('Landing Header: useeffect ran, no empty array');
   });
 
   function scroll(selectedDiv) {

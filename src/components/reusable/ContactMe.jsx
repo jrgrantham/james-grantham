@@ -31,7 +31,7 @@ export default function ContactMe(props) {
 
     img {
       display: flex;
-      width: 45px;
+      width: 40px;
       height: auto;
     }
 
@@ -45,7 +45,7 @@ export default function ContactMe(props) {
 
     .image {
       background-color: ${appColour};
-      padding: 15px;
+      padding: 25px;
       transition: all ${transition}s;
       // border: 1px solid red;
       border-radius: 50%;

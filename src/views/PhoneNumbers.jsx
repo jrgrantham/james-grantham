@@ -37,7 +37,7 @@ export default function PhoneNumbers(props) {
 
   useEffect(() => {
     getNumbers();
-    console.log("PhoneNumber: useeffect ran");
+    console.log('PhoneNumbers: useeffect ran, no empty array');
   });
 
   function callNumber(number) {

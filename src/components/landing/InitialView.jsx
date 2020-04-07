@@ -19,6 +19,7 @@ export default function LandingInitialView() {
     document.getElementById("name").classList.remove("hide");
     document.getElementById("jobs").classList.remove("hide");
     // }, 500);
+    console.log('Landing InitialView: useeffect ran, HAS empty array');
   }, []);
 
   return (
