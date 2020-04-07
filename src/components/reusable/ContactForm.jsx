@@ -179,7 +179,7 @@ export const StyledForm = styled.form`
     padding: 10px;
     width: 90%;
     max-width: 400px;
-    border-radius: ${borderRad};
+    border-radius: ${borderRad}px;
     border: 1px solid ${landingCaptionBorder};
   }
 
@@ -189,8 +189,8 @@ export const StyledForm = styled.form`
     font-weight: bold;
     background-color: ${buttonBlue};
     padding: 1rem 3.6rem;
-    border-radius: ${borderRad};
-    transition: opacity ${transition};
+    border-radius: ${borderRad}px;
+    transition: opacity ${transition}s;
     margin: 30px 0 10px 0;
     border: none;
     font-size: 1.2rem;

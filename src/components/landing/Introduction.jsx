@@ -61,7 +61,7 @@ const Container = styled.div`
 
   h4 {
     font-weight: bold;
-    transition: color ${transition};
+    transition: color ${transition}s;
 
     @media (pointer: fine) {
       &:hover {
@@ -86,7 +86,7 @@ const Container = styled.div`
   }
 
   .section {
-    transition: color ${transition};
+    transition: color ${transition}s;
     width: 45%;
     margin: 90px 2.5% 0px 2.5%;
 

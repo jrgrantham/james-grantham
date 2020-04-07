@@ -2,8 +2,8 @@ export const appWidth = "1500px";
 export const professionalWidth = "1000px";
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";
-export const borderRad = "5px";
-export const transition = "0.3s";
+export const borderRad = 5;
+export const transition = 0.5;
 
 export const appColour = '#E8E8E8';
 export const appColourDark = '#202020';

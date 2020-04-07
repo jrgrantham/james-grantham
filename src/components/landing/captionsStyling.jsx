@@ -1,6 +1,16 @@
 import styled from "styled-components";
 import { Container } from "../reusable/containerStyling";
-import { mediaBreak, landingCaptionBorder, landingCaption, transition, borderRad, fontColourDarkMode, landingCaptionDark, landingCaptionMaxWidth, buttonOrange } from "../../views/styling";
+import {
+  mediaBreak,
+  landingCaptionBorder,
+  landingCaption,
+  transition,
+  borderRad,
+  fontColourDarkMode,
+  landingCaptionDark,
+  landingCaptionMaxWidth,
+  buttonOrange,
+} from "../../views/styling";
 
 export const Captions = styled(Container)`
   max-width: ${landingCaptionMaxWidth};
@@ -15,7 +25,7 @@ export const Captions = styled(Container)`
       justify-content: flex-end;
     }
   }
-  
+
   .caption {
     display: flex;
   }
@@ -39,10 +49,10 @@ export const Captions = styled(Container)`
     justify-content: center;
     align-items: center;
     border: 1px solid ${landingCaptionBorder};
-    border-radius: ${borderRad};
+    border-radius: ${borderRad}px;
     // width: 85%;
     min-height: 70px;
-    transition: all ${transition};
+    transition: transform ${transition}s, border-color ${transition}s, color ${transition}s;
 
     @media (min-width: ${mediaBreak}) {
       // margin: 0 80px 40px 80px;
@@ -52,7 +62,7 @@ export const Captions = styled(Container)`
 
     @media (pointer: fine) {
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         border-color: ${buttonOrange}
         color: ${buttonOrange}
       }

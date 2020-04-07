@@ -10,10 +10,13 @@ import {
 } from "../../views/styling";
 
 const move = keyframes`
-  0%   { transform: scale(1,1) }
-  20%  { transform: scale(0.9,1) }
-  70%  { transform: scale(1.1,1.1) }
-  100%  { transform: scale(1,1) }
+0%   { transform: scale(1,1)      translateY(0); }
+10%  { transform: scale(1.1,.9)   translateY(0); }
+30%  { transform: scale(.9,1.1)   translateY(5px); }
+50%  { transform: scale(1.05,.95) translateY(0); }
+57%  { transform: scale(1,1)      translateY(-1px); }
+64%  { transform: scale(1,1)      translateY(0); }
+100% { transform: scale(1,1)      translateY(0); }
 `;
 
 export function LinkButton(props) {
@@ -22,15 +25,16 @@ export function LinkButton(props) {
     font-weight: bold;
     background-color: ${props.color ? props.color : buttonOrange};
     padding: 1rem 3.6rem;
-    border-radius: ${borderRad};
-    transition: opacity ${transition};
+    border-radius: ${borderRad}px;
+    transition: all ${transition}s;
     margin: ${props.margin ? props.margin : 0};
     margin: 30px 0 60px 0;
     animation-duration: ${2}s;
-
+    
     @media (pointer: fine) {
       &:hover {
-        animation-name: ${move};
+        transform: scale(1.3);
+        border-radius: ${borderRad * 4}px
       }
     }
   `;
@@ -44,8 +48,8 @@ export function AnchorButton(props) {
     font-weight: bold;
     background-color: ${props.color ? props.color : buttonOrange};
     padding: 1rem 3.6rem;
-    border-radius: ${borderRad};
-    transition: opacity ${transition};
+    border-radius: ${borderRad}px;
+    transition: opacity ${transition}s;
     margin: ${props.margin ? props.margin : 0};
 
     @media (pointer: fine) {
@@ -54,6 +58,7 @@ export function AnchorButton(props) {
       }
     }
   `;
+
   return (
     <AncButton href={props.target} color={props.color}>
       {props.content}{" "}

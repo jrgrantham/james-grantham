@@ -67,7 +67,7 @@ const Container = styled.div`
     width: 100%;
     padding: ${professionalInnerPad};
     cursor: pointer;
-    transition: background-color ${transition};
+    transition: background-color ${transition}s;
 
     @media (min-width: ${mediaBreak}) {
       padding-left: 20px;
@@ -111,7 +111,7 @@ const Container = styled.div`
 const StyledDetails = styled.div`
   max-height: 0px;
   overflow: hidden;
-  transition: max-height ${transition};
+  transition: max-height ${transition}s;
 `;
 
 const closedDetails = {

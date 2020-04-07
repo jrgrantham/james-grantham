@@ -92,7 +92,7 @@ const NumberCard = styled.div`
   height: 100px
 
   border: 1px solid ${landingCaptionBorder};
-  border-radius: ${borderRad};
+  border-radius: ${borderRad}px;
 
   display: flex;
   flex-direction: column;

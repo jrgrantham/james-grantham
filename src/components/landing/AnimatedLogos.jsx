@@ -92,7 +92,7 @@ const StyledAnimation = styled.div`
   position: absolute;
   width: ${imageSize * ratio}px;
   height: ${imageSize}px;
-  // transition: all ${transition};
+  // transition: all ${transition}s;
 
   // @media (pointer: fine) {
   //   &:hover {

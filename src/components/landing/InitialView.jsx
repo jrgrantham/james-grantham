@@ -121,6 +121,9 @@ const LandingContent = styled.div`
     );
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
     animation: ${colours} 8s linear infinite;
     background-size: 800%;
     
@@ -147,6 +150,9 @@ const LandingContent = styled.div`
     );
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
     animation: ${colours} 8s linear infinite;
     background-size: 800%;
   }
