@@ -23,8 +23,8 @@ const rotate = keyframes`
 `;
 // create a component that will rotate everything we pass in
 export const Rotate = styled.div`
-  display: inline-block;
   animation: ${rotate} 8s ease-in-out infinite;
+  animation-delay: 7s;
 `;
 export const Header = styled.div`
   z-index: 1000;
