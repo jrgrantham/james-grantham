@@ -1,5 +1,5 @@
 import React from "react";
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 import {
@@ -7,21 +7,22 @@ import {
   borderRad,
   buttonOrange,
   fontColourDarkMode,
+  appColourDark,
 } from "../../views/styling";
 
-const move = keyframes`
-0%   { transform: scale(1,1)      translateY(0); }
-10%  { transform: scale(1.1,.9)   translateY(0); }
-30%  { transform: scale(.9,1.1)   translateY(5px); }
-50%  { transform: scale(1.05,.95) translateY(0); }
-57%  { transform: scale(1,1)      translateY(-1px); }
-64%  { transform: scale(1,1)      translateY(0); }
-100% { transform: scale(1,1)      translateY(0); }
-`;
+// const move = keyframes`
+// 0%   { transform: scale(1,1)      translateY(0); }
+// 10%  { transform: scale(1.1,.9)   translateY(0); }
+// 30%  { transform: scale(.9,1.1)   translateY(5px); }
+// 50%  { transform: scale(1.05,.95) translateY(0); }
+// 57%  { transform: scale(1,1)      translateY(-1px); }
+// 64%  { transform: scale(1,1)      translateY(0); }
+// 100% { transform: scale(1,1)      translateY(0); }
+// `;
 
 export function LinkButton(props) {
   const LinButton = styled(Link)`
-    color: ${fontColourDarkMode};
+    color: ${appColourDark};
     font-weight: bold;
     background-color: ${props.color ? props.color : buttonOrange};
     padding: 1rem 3.6rem;

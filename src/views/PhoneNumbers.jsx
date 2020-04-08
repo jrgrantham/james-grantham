@@ -37,7 +37,7 @@ export default function PhoneNumbers(props) {
 
   useEffect(() => {
     getNumbers();
-    console.log("PhoneNumber: useeffect ran");
+    console.log('PhoneNumbers: useeffect ran, no empty array');
   });
 
   function callNumber(number) {
@@ -61,6 +61,8 @@ export default function PhoneNumbers(props) {
             <h6>{number.phoneNumber}</h6>
           </NumberCard>
         ))}
+        <s id="horizontalMenu"></s>
+        <s id="professionalName"></s>
       </Container>
     );
   }

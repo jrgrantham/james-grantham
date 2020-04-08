@@ -156,7 +156,7 @@ export const StyledForm = styled.form`
   margin: 0 25px;
   width: 100%;
   max-width: 500px;
-  overflow: auto;
+  // overflow: auto;
   border-radius: 15px;
   padding: 20px;
   background: ${landingCaptionBorder}
@@ -190,14 +190,15 @@ export const StyledForm = styled.form`
     background-color: ${buttonBlue};
     padding: 1rem 3.6rem;
     border-radius: ${borderRad}px;
-    transition: opacity ${transition}s;
+    transition: transform ${transition}s,  border-radius ${transition}s;
     margin: 30px 0 10px 0;
     border: none;
     font-size: 1.2rem;
 
     @media (pointer: fine) {
       &:hover {
-        opacity: 0.75;
+        transform: scale(1.1);
+        border-radius: ${borderRad * 3}px
       }
     }
   }

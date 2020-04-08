@@ -31,6 +31,8 @@ export default function MainContent(props) {
 
   return (
     <Container style={{marginTop: `${props.profHeaderHeight + 10}px`}} >
+      {/* <div style={{ height: "100px" }} /> */}
+
       {props.content.map((article, index) => (
         <div
           className={

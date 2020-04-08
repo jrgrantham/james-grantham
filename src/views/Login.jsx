@@ -6,13 +6,18 @@ import url from "../helpers/url";
 
 import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
-import { LinkButton } from "../components/reusable/Buttons";
-import { fontColourDarkMode, buttonBlue, borderRad, transition } from "./styling";
+import { LinkButton, AnchorButton } from "../components/reusable/Buttons";
+import {
+  fontColourDarkMode,
+  buttonBlue,
+  borderRad,
+  transition,
+} from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
   username: "",
-  password: ""
+  password: "",
 };
 
 export default function LoginForm(props) {
@@ -25,13 +30,13 @@ export default function LoginForm(props) {
         onSubmit={(values, actions) => {
           const user = {
             username: values.username,
-            password: values.password
+            password: values.password,
           };
           props.setIsLoading(true);
           actions.setSubmitting(true);
           axios
             .post(loginApi, user)
-            .then(response => {
+            .then((response) => {
               actions.resetForm();
               actions.setSubmitting(false);
               props.setIsLoading(false);
@@ -39,7 +44,7 @@ export default function LoginForm(props) {
               props.setUser(response.data.user);
               props.history.push("/phonenumbers");
             })
-            .catch(error => {
+            .catch((error) => {
               console.log(error);
               actions.resetForm();
               actions.setSubmitting(false);
@@ -77,11 +82,11 @@ export default function LoginForm(props) {
               <button type="submit" disabled={isSubmitting}>
                 Submit
               </button>
-              <LinkButton className='home'
-                target="/"
-                content="Home"
-              />
+              <LinkButton target="/" content="Home" />
+              {/* <AnchorButton target="/" content="Home" /> */}
             </StyledForm>
+            <s id="horizontalMenu"></s>
+            <s id="professionalName"></s>
           </Position>
         )}
       </Formik>
@@ -92,6 +97,7 @@ export default function LoginForm(props) {
 const Position = styled.div`
   display: flex;
   flex-direction: column;
+  margin: auto;
 
   button {
     color: ${fontColourDarkMode};

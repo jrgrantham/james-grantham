@@ -5,10 +5,11 @@ import styled from "styled-components";
 import {
   landingBoysBack,
   landingBoysButton,
-  landingBoysFont,
   landingBoysMaxWidth,
   buttonBlue,
   transition,
+  appColourDark,
+  appColour,
 } from "../../views/styling";
 
 const content = "...and dedicated father to three awesome boys!";
@@ -43,13 +44,14 @@ const StyledBoys = styled.div`
     margin: 30px 30px;
     background-color: ${landingBoysButton};
     border-radius: 120px;
-    color: ${landingBoysFont};
+    color: ${appColourDark};
     padding: 20px 30px;
-
     transition: all ${transition}s;
+
     @media (pointer: fine) {
       &:hover {
         background: ${buttonBlue}
+        color: ${appColour}
       }
     }
   }

@@ -14,6 +14,7 @@ import {
   professionalSelectedButtonDark,
   professionalSelectedButton,
   professionalColor,
+  appColourDark,
 } from "../../views/styling";
 
 // --------- naming of sections to be sorted here ---------
@@ -170,6 +171,7 @@ const HorizontalMenu = styled.div`
 
   .button.selected {
     background-color: ${professionalColor};
+    color: ${appColourDark};
   }
 
   .button.darkmode {

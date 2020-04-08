@@ -41,6 +41,7 @@ export default function Landing(props) {
     } catch (error) {
       window.scrollTo(0, 0);
     }
+    console.log('Landing: useeffect ran, HAS empty array');
   }, []);
 
   return (
