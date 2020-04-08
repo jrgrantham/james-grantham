@@ -42,6 +42,7 @@ export const Header = styled.div`
 
   .image {
     position: relative;
+    transition: all ${transition}s;
     height: 25px;
     width: 25px;
 
@@ -49,8 +50,19 @@ export const Header = styled.div`
       cursor: pointer;
       max-height: 100%;
       width: auto;
-      transition: all 1s;
+      transition: all ${transition}s;
     }
+
+    @media (pointer: fine) {
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  .bulb {
+    height: 28px;
+    width: 28px;
   }
 
   .links {
@@ -75,7 +87,7 @@ export const Header = styled.div`
     @media (pointer: fine) {
       &:hover {
         color: ${buttonBlue};
-        transform: scale(1.2);
+        transform: scale(1.3);
       }
     }
 

@@ -18,7 +18,7 @@ export default function ContactMe(props) {
     width: 100%;
 
     h4 {
-      padding: 60px 0px 35px 0px;
+      padding: 60px 0px 0px 0px;
     }
   `;
 
@@ -36,11 +36,16 @@ export default function ContactMe(props) {
     }
 
     .mail {
+      margin-top: 30px;
       @media (pointer: fine) {
         &:hover {
           cursor: pointer;
         }
       }
+    }
+
+    .other {
+      margin-bottom: 30px;
     }
 
     .image {
@@ -64,7 +69,7 @@ export default function ContactMe(props) {
     <Container id="contact" onClick={() => setShowContactMe(false)}>
       <h4>Find me...</h4>
       <Links id="contact">
-        <a href="https://github.com/jrgrantham" className="image">
+        <a href="https://github.com/jrgrantham" className="image other">
           <img src={github} alt="" />
         </a>
         <div
@@ -76,7 +81,7 @@ export default function ContactMe(props) {
         >
           <img src={mail} alt="" />
         </div>
-        <a href="https://www.linkedin.com/in/j-grantham/" className="image">
+        <a href="https://www.linkedin.com/in/j-grantham/" className="image other">
           <img src={linkedin} alt="" />
         </a>
       </Links>

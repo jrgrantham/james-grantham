@@ -16,12 +16,12 @@ export const fontColourDarkMode = "#e5e1d8"; // floralwhite shade
 // https://www.cssmatic.com/noise-texture
 
 
-export const buttonOrange = "#ff8d1e";
-export const buttonBlue = "#1E90FF";
+export const buttonOrange = "#FFA500";
+export const buttonBlue = "#005aFF";
 
 export const landingHeaderFont = fontColourDarkMode;
 
-export const landingHeader = "#151515";
+export const landingHeader = "#000000";
 export const landingFooter = landingHeader;
 export const headerHeight = 50;
 export const footerHeight = 30;

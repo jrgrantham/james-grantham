@@ -7,6 +7,7 @@ import {
   borderRad,
   buttonOrange,
   fontColourDarkMode,
+  appColourDark,
 } from "../../views/styling";
 
 // const move = keyframes`
@@ -21,7 +22,7 @@ import {
 
 export function LinkButton(props) {
   const LinButton = styled(Link)`
-    color: ${fontColourDarkMode};
+    color: ${appColourDark};
     font-weight: bold;
     background-color: ${props.color ? props.color : buttonOrange};
     padding: 1rem 3.6rem;

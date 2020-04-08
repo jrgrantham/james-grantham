@@ -156,7 +156,7 @@ const StyledApp = styled.div`
 
   @media (max-width: 1000px) {
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
     h2 {
       font-size: 2.5rem;

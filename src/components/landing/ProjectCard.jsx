@@ -64,6 +64,11 @@ const FlipCard = styled.div`
     padding: 20px
   }
 
+  .details {
+    max-height: 80%;
+    overflow: hidden;
+  }
+
   .buttons {
     width: 100%;
     display: flex;
@@ -86,7 +91,7 @@ const FlipCard = styled.div`
     background: ${buttonBlue};
     color: ${fontColourDarkMode};
     font-weight: bold;
-    transition: opacity ${transition}s;
+    transition: transform ${transition}s,  border-radius ${transition}s;
 
     @media (max-width: 330px) {
       width: 90%;
@@ -96,7 +101,8 @@ const FlipCard = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        opacity: 0.75;
+        transform: scale(1.1);
+        border-radius: ${borderRad * 3}px
       }
     }
   }

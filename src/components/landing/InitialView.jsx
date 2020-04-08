@@ -10,6 +10,7 @@ import {
   buttonOrange,
   buttonBlue,
   fontColourDarkMode,
+  transition,
 } from "../../views/styling";
 
 export default function LandingInitialView() {
@@ -19,11 +20,10 @@ export default function LandingInitialView() {
     document.getElementById("name").classList.remove("hide");
     document.getElementById("jobs").classList.remove("hide");
     // }, 500);
-    console.log('Landing InitialView: useeffect ran, HAS empty array');
+    console.log("Landing InitialView: useeffect ran, HAS empty array");
   }, []);
 
   return (
-    <LandingContainer>
       <LandingContent>
         <div id="name" className="hide">
           <h1 className="toggle darkmode">James Grantham</h1>
@@ -32,33 +32,20 @@ export default function LandingInitialView() {
           <img src={jamesPhoto} alt="James Grantham" />
         </div>
         <div id="jobs" className="hide">
-          <h3>Mechanical Engineer</h3>
-          <p>turned</p>
-          <h3>Software Engineer</h3>
+          <h3 className="toggle darkmode">Mechanical Engineer</h3>
+          <p className="toggle darkmode">turned</p>
+          <h3 className="toggle darkmode">Software Engineer</h3>
         </div>
       </LandingContent>
-    </LandingContainer>
   );
 }
 
 let vh = Math.max(window.innerHeight, 630);
 
-const LandingContainer = styled.div`
-  height: ${vh - headerHeight - footerHeight}px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
 const colours = keyframes`
   0% {
     background-position: 100%;
   }
-  // 45%  { transform: scale(1,1) }
-  // 50%  { transform: scale(1.1,1.1) }
-  // 55%  { transform: scale(1,1) }
   100% {
     background-position: 0%;
   }
@@ -67,26 +54,27 @@ const colours = keyframes`
 const LandingContent = styled.div`
   width: 100%;
   height: ${vh - headerHeight - footerHeight}px;
-  // max-height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-
+  
   div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: opacity 2s;
+    transition: opacity ${transition * 5}s;
   }
 
+  .hide {
+    opacity: 0;
+    max-width: 0px;
+  }
+  
   .img {
     width: 90%;
     max-width: 800px;
     max-width: 90vh;
-    transition: max-width 1s;
+    transition: max-width 2s ease-in-out;
   }
-
+  
   img {
     max-width: 100%;
     max-height: 100%;
@@ -94,28 +82,26 @@ const LandingContent = styled.div`
     // border: 1px solid ${fontColour};
   }
 
-  h1,
-  h2,
-  h3,
   p {
+    text-align: center;
     font-weight: bold;
+    color: 	#BEBEBE;
   }
 
-  h1 {
+  p.darkmode {
+    color: ${fontColour};
+  3}
+
+  h1,
+  h2,
+  h3 {
     background-image: linear-gradient(
       to right,
       ${fontColour},
       ${fontColour},
       ${fontColour},
-      ${buttonBlue},
-      ${fontColour},
-      ${fontColour},
-      ${fontColour},
-      ${fontColour},
-      ${fontColour},
       ${buttonOrange},
-      ${fontColour},
-      ${fontColour},
+      ${buttonOrange},
       ${fontColour},
       ${fontColour},
       ${fontColour}
@@ -125,44 +111,24 @@ const LandingContent = styled.div`
     -moz-background-clip: text;
     -o-background-clip: text;
     -ms-background-clip: text;
-    animation: ${colours} 8s linear infinite;
-    background-size: 800%;
-    
+    animation: ${colours} 3s linear 1;
+    background-size: 500%;
+    animation-delay: 2s
   }
 
-  h1.darkmode {
+  h1.darkmode,
+  h2.darkmode,
+  h3.darkmode {
     background-image: linear-gradient(
       to right,
       ${fontColourDarkMode},
       ${fontColourDarkMode},
       ${fontColourDarkMode},
-      ${buttonBlue},
-      ${fontColourDarkMode},
-      ${fontColourDarkMode},
-      ${fontColourDarkMode},
-      ${fontColourDarkMode},
-      ${fontColourDarkMode},
       ${buttonOrange},
-      ${fontColourDarkMode},
-      ${fontColourDarkMode},
+      ${buttonOrange},
       ${fontColourDarkMode},
       ${fontColourDarkMode},
       ${fontColourDarkMode}
     );
-    color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
-    -ms-background-clip: text;
-    animation: ${colours} 8s linear infinite;
-    background-size: 800%;
-  }
-
-  .hide {
-    opacity: 0;
-  }
-
-  .hide {
-    max-width: 0px;
   }
 `;

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
-import useDarkMode from '../hooks/useDarkMode'
-
+import useDarkMode from "../hooks/useDarkMode";
 
 import SectionTitle from "../components/reusable/SectionTitle";
 import ProjectCard from "../components/landing/ProjectCard";
@@ -18,12 +17,12 @@ export default function Projects() {
       window.scroll({
         top: 0,
         left: 0,
-        behavior: "auto"
+        behavior: "auto",
       });
     } catch (error) {
       window.scrollTo(0, 0);
     }
-    console.log('AllProjects: useeffect ran, HAS empty array');
+    console.log("AllProjects: useeffect ran, HAS empty array");
   }, []);
 
   return (
@@ -35,6 +34,8 @@ export default function Projects() {
         })}
       </div>
       <LinkButton content="Return to home page" target="/" />
+      <s id="horizontalMenu"></s>
+      <s id="professionalName"></s>
     </Container>
   );
 }

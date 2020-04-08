@@ -65,7 +65,7 @@ export default function ContactMeHeader(props) {
         <p onClick={() => scroll(valuesHeight)}>Values</p>
         <p onClick={() => scroll(contactHeight)}>Contact</p>
       </div>
-      <div onClick={setDarkMode} className="image">
+      <div onClick={setDarkMode} className="image bulb">
         <img
           src={darkMode ? bulbWhite : bulbYellow}
           alt="mode"
