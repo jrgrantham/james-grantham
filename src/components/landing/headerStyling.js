@@ -24,7 +24,7 @@ const rotate = keyframes`
 // create a component that will rotate everything we pass in
 export const Rotate = styled.div`
   animation: ${rotate} 8s ease-in-out infinite;
-  animation-delay: 7s;
+  animation-delay: 5s;
 `;
 export const Header = styled.div`
   z-index: 1000;
@@ -58,11 +58,6 @@ export const Header = styled.div`
         transform: scale(1.5);
       }
     }
-  }
-
-  .bulb {
-    height: 28px;
-    width: 28px;
   }
 
   .links {
