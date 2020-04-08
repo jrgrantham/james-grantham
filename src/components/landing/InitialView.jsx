@@ -8,7 +8,6 @@ import {
   footerHeight,
   fontColour,
   buttonOrange,
-  buttonBlue,
   fontColourDarkMode,
   transition,
 } from "../../views/styling";
@@ -62,11 +61,6 @@ const LandingContent = styled.div`
   div {
     transition: opacity ${transition * 5}s;
   }
-
-  .hide {
-    opacity: 0;
-    max-width: 0px;
-  }
   
   .img {
     width: 90%;
@@ -79,7 +73,6 @@ const LandingContent = styled.div`
     max-width: 100%;
     max-height: 100%;
     border-radius: 20%;
-    // border: 1px solid ${fontColour};
   }
 
   p {
@@ -89,7 +82,7 @@ const LandingContent = styled.div`
   }
 
   p.darkmode {
-    color: ${fontColour};
+    color: #3e3e3e;
   3}
 
   h1,
@@ -112,7 +105,7 @@ const LandingContent = styled.div`
     -o-background-clip: text;
     -ms-background-clip: text;
     animation: ${colours} 3s linear 1;
-    background-size: 500%;
+    background-size: 300%;
     animation-delay: 2s
   }
 
@@ -130,5 +123,11 @@ const LandingContent = styled.div`
       ${fontColourDarkMode},
       ${fontColourDarkMode}
     );
+  }
+
+  // needs to be at the bottom so its applied last before its removed
+  .hide {
+    opacity: 0;
+    max-width: 0px;
   }
 `;
