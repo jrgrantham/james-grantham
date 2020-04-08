@@ -50,6 +50,14 @@ const colours = keyframes`
   }
 `;
 
+const swell = keyframes`
+  0% { color: ${fontColour} }
+  20% { color: ${buttonOrange} }
+  50% { transform: scale(1.03) }
+  70% { color: ${buttonOrange}}
+  100% { color: ${fontColour} }
+`
+
 const LandingContent = styled.div`
   width: 100%;
   height: ${vh - headerHeight - footerHeight}px;
@@ -59,7 +67,7 @@ const LandingContent = styled.div`
   align-items: center;
   
   div {
-    transition: opacity ${transition * 5}s;
+    transition: opacity ${transition * 10}s;
   }
   
   .img {
@@ -85,6 +93,14 @@ const LandingContent = styled.div`
     color: #3e3e3e;
   3}
 
+  // h1,
+  // h2,
+  // h3 {
+  //   animation: ${swell} 1s linear 1;
+  //   animation-delay: 3s;
+  // }
+
+
   h1,
   h2,
   h3 {
@@ -105,7 +121,7 @@ const LandingContent = styled.div`
     -o-background-clip: text;
     -ms-background-clip: text;
     animation: ${colours} 3s linear 1;
-    background-size: 300%;
+    background-size: 500%;
     animation-delay: 2s
   }
 
