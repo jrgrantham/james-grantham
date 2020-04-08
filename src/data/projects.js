@@ -9,7 +9,7 @@ import jamesPhoto from "../images/james.jpg";
 import artFunder from "../images/artFunder.png";
 import message from "../images/message.png";
 
-export const projectsNumber = 5;
+export const projectsNumber = 3;
 
 export const projectsTitle = "Projects";
 export const projectsDescription = "Here are some of the projects I have worked on";
