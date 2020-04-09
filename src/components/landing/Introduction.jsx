@@ -41,19 +41,6 @@ export default function Introduction(props) {
         <h4>{welcomeTitle}</h4>
         <p>{welcomeMessage}</p>
       </Link>
-      <p
-        className="button"
-        onClick={() => {
-          window.scrollTo({
-            left: 0,
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-          });
-        }}
-      >
-        {button}
-      </p>
-
       <div className="contents">
         {introduction.map((section, index) => (
           <Link
@@ -136,7 +123,7 @@ const Container = styled.div`
     padding: 1rem 3.6rem;
     border-radius: ${borderRad}px;
     transition: all ${transition}s;
-    margin: 90px 0 0 0;
+    margin: 0 0 40px 0;
     cursor: pointer;
     
     @media (pointer: fine) {

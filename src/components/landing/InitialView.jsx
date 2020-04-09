@@ -39,7 +39,7 @@ export default function LandingInitialView() {
   );
 }
 
-let vh = Math.max(window.innerHeight, 630);
+let vh = Math.max(window.innerHeight, 550);
 
 const colours = keyframes`
   0% {

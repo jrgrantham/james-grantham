@@ -13,6 +13,7 @@ import Projects from "../components/landing/Projects";
 import Spacer from "../components/reusable/Spacer";
 import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
+import HireMe from "../components/landing/HireMe";
 import { LinkButton } from "../components/reusable/Buttons";
 
 export default function Landing(props) {
@@ -41,7 +42,7 @@ export default function Landing(props) {
     } catch (error) {
       window.scrollTo(0, 0);
     }
-    console.log('Landing: useeffect ran, HAS empty array');
+    console.log("Landing: useeffect ran, HAS empty array");
   }, []);
 
   return (
@@ -58,6 +59,7 @@ export default function Landing(props) {
       />
       <FullPage>
         <LandingInitialView />
+        <HireMe />
         <Introduction setContent={setContent} setSelected={setSelected} />
         <AnimatedLogos />
         <LinkButton content={"Learn more"} target="/professional" />
@@ -94,5 +96,4 @@ const FullPage = styled.div`
   //   padding: 1px;
   //   max-height: 1px;
   // }
-
 `;

@@ -6,7 +6,6 @@ import {
   landingCaption,
   transition,
   borderRad,
-  fontColourDarkMode,
   landingCaptionDark,
   landingCaptionMaxWidth,
   buttonOrange,
@@ -14,10 +13,18 @@ import {
 
 export const Captions = styled(Container)`
   max-width: ${landingCaptionMaxWidth};
-  align-items: stretch;
   margin-bottom: 60px;
-
+  // padding: 0 50px;
+  
+  .caption {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
   @media (min-width: ${mediaBreak}) {
+    padding: 50px;
     .left {
       justify-content: flex-start;
     }
@@ -26,38 +33,21 @@ export const Captions = styled(Container)`
     }
   }
 
-  .caption {
-    display: flex;
-  }
-
   a {
-    color: inherit
-    margin: auto;
-    margin-bottom: 20px;
-    width: 85%;
-
-    @media (min-width: ${mediaBreak}) {
-      margin: 0 80px 40px 80px;
-      width: 450px;
-      // min-height: 80px;
-    }
-  }
-
-  h5 {
-    background-color: ${landingCaption};
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    min-height: 60px;
+    background-color: ${landingCaption};
     border: 1px solid ${landingCaptionBorder};
     border-radius: ${borderRad}px;
-    // width: 85%;
-    min-height: 70px;
     transition: transform ${transition}s, border ${transition}s, color ${transition}s;
 
     @media (min-width: ${mediaBreak}) {
-      // margin: 0 80px 40px 80px;
       width: 450px;
-      min-height: 80px;
+      min-height: 70px;
     }
 
     @media (pointer: fine) {
@@ -69,8 +59,7 @@ export const Captions = styled(Container)`
     }
   }
 
-  h5.darkmode {
+  a.darkmode {
     background-color: ${landingCaptionDark};
-    // color: ${fontColourDarkMode};
   }
 `;

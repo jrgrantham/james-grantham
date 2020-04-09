@@ -7,7 +7,7 @@ import { validationSchema } from "../../helpers/validationSchema";
 // import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import url from "../../helpers/url";
-import { borderRad, transition, buttonBlue, fontColourDarkMode, appColour, landingCaptionBorder } from "../../views/styling";
+import { borderRad, transition, landingCaptionBorder } from "../../views/styling";
 
 const sendmailApi = url() + "sendmail";
 
@@ -58,7 +58,7 @@ export default function Contact(props) {
             onClick={e => {
               e.stopPropagation();
             }}
-          ><h6>jamesrgrantham (at) gmail (dot) com</h6>
+          ><p className='email'>jamesrgrantham (at) gmail (dot) com</p>
           <p>or</p>
             <div data-testid="nameField" className="inputField">
               <input
