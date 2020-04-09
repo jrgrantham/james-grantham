@@ -1,4 +1,4 @@
-export const welcomeMessage = "I'm James, a full stack web developer based in the UK";
+export const welcomeMessage = "Full stack engineer based in the United Kingdom";
 export const introduction = [
   {
     title: "Engineering",
@@ -7,7 +7,7 @@ export const introduction = [
   },
   {
     title: "Interface",
-    content: "Apps should be simple to use, intuitive in their layout and design and easy to navigate. I've always believed that simple is better than complex and strive to achieve this.",
+    content: "Apps should be simple and intuitive to use, easy to navigate and fully responsive. I've always believed that simple is better than complex and strive to achieve this.",
     section: 'About me',
   },
   // {

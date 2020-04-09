@@ -12,7 +12,7 @@ import message from "../images/message.png";
 export const projectsNumber = 3;
 
 export const projectsTitle = "Projects";
-export const projectsDescription = "Here are some of the projects I have worked on";
+export const projectsDescription = "Here are some of my recent projects.";
 export const projectsLink = "Visit";
 export const projectsGitHub = "github";
 
