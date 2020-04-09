@@ -7,12 +7,6 @@ import url from "../helpers/url";
 import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
 import { LinkButton } from "../components/reusable/Buttons";
-import {
-  fontColourDarkMode,
-  buttonBlue,
-  borderRad,
-  transition,
-} from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
