@@ -1,4 +1,4 @@
-export const appWidth = "1500px";
+export const appWidth = 1500;
 export const professionalWidth = "1000px";
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";

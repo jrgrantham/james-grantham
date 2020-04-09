@@ -12,7 +12,7 @@ import message from "../images/message.png";
 export const projectsNumber = 3;
 
 export const projectsTitle = "Projects";
-export const projectsDescription = "Here are some of the projects I have worked on";
+export const projectsDescription = "Here are some of my recent projects.";
 export const projectsLink = "Visit";
 export const projectsGitHub = "github";
 
@@ -39,7 +39,7 @@ export const projects = [
     title: "RoboMaze",
     uses: "Python, React, Redux",
     comments:
-      "Built during our computer science module, the server uses depth first traversal on a grid of speicifed dimensions to create a maze. The user can use the keyboard or mouse to navigate the robot to a randomly placed exit.",
+      "Built during our computer science module, the server uses depth first traversal on a grid of specified dimensions to create a maze. The user can use the keyboard or mouse to navigate the robot to a randomly placed exit.",
     image: maze,
     link: "https://mud-2-frontend-nihkors8y.now.sh/",
     repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend"
