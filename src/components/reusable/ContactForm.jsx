@@ -58,7 +58,8 @@ export default function Contact(props) {
             onClick={e => {
               e.stopPropagation();
             }}
-          >
+          ><h6>jamesrgrantham (at) gmail (dot) com</h6>
+          <p>or</p>
             <div data-testid="nameField" className="inputField">
               <input
                 name="name"
@@ -160,6 +161,11 @@ export const StyledForm = styled.form`
   padding: 20px;
   // background: transparent;
   // border: 1px solid red;
+
+  h6, p {
+    color: ${landingCaptionBorder};
+    margin-bottom: 20px;
+  }
 
   .inputField {
     margin: 10px;
