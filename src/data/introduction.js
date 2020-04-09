@@ -1,4 +1,8 @@
-export const welcomeMessage = "Full stack engineer based in the United Kingdom";
+export const welcomeTitle = "Full stack engineer based in the United Kingdom";
+export const welcomeMessage = "April 2020 saw the conclusion of a nine-month online Computer Science and Software Engineering course. 2,000 hours of intensive, immersive, hands-on experience, working with people from around the world."
+
+export const button = "Hire me"
+
 export const introduction = [
   {
     title: "Engineering",
@@ -16,7 +20,7 @@ export const introduction = [
   // section: '',
   // },
   {
-    title: "Code",
+    title: "Knowledge",
     content: "Comfortable playing with React, vanilla JavaScript, Node JS and styled components, all the things used to build this portfolio. Familiar with Redux, Python, less, mySql and knex.",
     section: 'Experience',
   },

@@ -27,13 +27,13 @@ export default function Projects() {
 
   return (
     <Container>
-      <SectionTitle title={projectsTitle} description="coming soon..." />
+      <SectionTitle title={projectsTitle} description="****** coming soon ******" />
       {/* <div className="projects">
         {projects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;
         })}
       </div> */}
-      <LinkButton content="Return to home page" target="/" />
+      <LinkButton content="Home page" target="/" />
       <s id="horizontalMenu"></s>
       <s id="professionalName"></s>
     </Container>

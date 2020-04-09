@@ -117,7 +117,7 @@ const StyledApp = styled.div`
   justify-content: center;
   text-align: center;
   width: 100%;
-  max-width: ${appWidth};
+  max-width: ${appWidth}px;
   min-height: 100%;
   margin: auto;
   

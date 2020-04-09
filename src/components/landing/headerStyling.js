@@ -35,7 +35,7 @@ export const Header = styled.div`
   opacity: ${landingHeadFootOpacity};
   height: ${headerHeight}px;
   width: 100%;
-  max-width: ${appWidth};
+  max-width: ${appWidth}px;
   position: fixed;
   top: 0;
   padding: 0 10px;

@@ -1,9 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { welcomeMessage, introduction } from "../../data/introduction";
+import {
+  welcomeTitle,
+  welcomeMessage,
+  introduction,
+  button,
+} from "../../data/introduction";
 
-import { buttonOrange, transition } from "../../views/styling";
+import {
+  buttonOrange,
+  transition,
+  appColourDark,
+  borderRad,
+  appWidth,
+} from "../../views/styling";
 import { timeLine } from "../../data/timeLine";
 import { experience } from "../../data/experience";
 import { values } from "../../data/values";
@@ -26,9 +37,23 @@ export default function Introduction(props) {
 
   return (
     <Container id="about">
-      <Link to='/professional' className='spacing'>
-        <h4>{welcomeMessage}</h4>
+      <Link to="/professional" className="title">
+        <h4>{welcomeTitle}</h4>
+        <p>{welcomeMessage}</p>
       </Link>
+      <p
+        className="button"
+        onClick={() => {
+          window.scrollTo({
+            left: 0,
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+        }}
+      >
+        {button}
+      </p>
+
       <div className="contents">
         {introduction.map((section, index) => (
           <Link
@@ -55,19 +80,20 @@ const Container = styled.div`
   align-items: center;
   width 90%;
 
-  .spacing {
+  .title {
     margin: 60px 0 0px 0;
-  }
-
-  h4 {
-    font-weight: bold;
     transition: color ${transition}s;
-
+    
     @media (pointer: fine) {
       &:hover {
         color: ${buttonOrange};
       }
     }
+  }
+
+  h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
   }
 
   h5 {
@@ -76,6 +102,7 @@ const Container = styled.div`
 
   p {
     text-align: center;
+    max-width: ${appWidth * 0.7}px;
   }
 
   .contents {
@@ -98,6 +125,24 @@ const Container = styled.div`
     @media (pointer: fine) {
       &:hover {
         color: ${buttonOrange};
+      }
+    }
+  }
+
+  .button {
+    color: ${appColourDark};
+    font-weight: bold;
+    background-color: ${buttonOrange};
+    padding: 1rem 3.6rem;
+    border-radius: ${borderRad}px;
+    transition: all ${transition}s;
+    margin: 90px 0 0 0;
+    cursor: pointer;
+    
+    @media (pointer: fine) {
+      &:hover {
+        transform: scale(1.3);
+        border-radius: ${borderRad * 4}px
       }
     }
   }
