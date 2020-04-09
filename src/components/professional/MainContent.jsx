@@ -30,7 +30,7 @@ export default function MainContent(props) {
   }
 
   return (
-    <Container style={{marginTop: `${props.profHeaderHeight + 10}px`}} >
+    <Container style={{marginTop: `${props.profHeaderHeight + 13}px`}} >
       {/* <div style={{ height: "100px" }} /> */}
 
       {props.content.map((article, index) => (
