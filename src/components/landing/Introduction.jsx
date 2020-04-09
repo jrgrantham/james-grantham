@@ -141,8 +141,8 @@ const Container = styled.div`
     
     @media (pointer: fine) {
       &:hover {
-        transform: scale(1.3);
-        border-radius: ${borderRad * 4}px
+        transform: scale(1.1);
+        border-radius: ${borderRad * 3}px
       }
     }
   }
