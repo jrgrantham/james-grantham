@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { headerHeight } from "../../views/styling";
+import { headerHeight, startInDarkMode } from "../../views/styling";
 import logo192 from "../../images/logo192.png";
 import bulbWhite from "../../images/bulbWhite.png";
 import bulbYellow from "../../images/bulbYellow.png";
@@ -8,7 +8,7 @@ import { Header, Rotate } from "./headerStyling";
 import useDarkMode from "../../hooks/useDarkMode";
 
 export default function ContactMeHeader(props) {
-  const [darkMode, setDarkMode] = useDarkMode(true);
+  const [darkMode, setDarkMode] = useDarkMode(startInDarkMode);
   const {
     aboutHeight,
     setAboutHeight,
@@ -48,7 +48,7 @@ export default function ContactMeHeader(props) {
   function scroll(selectedDiv) {
     window.scroll({ top: selectedDiv, left: 0, behavior: "smooth" });
   }
-  // console.log(darkMode);
+
   return (
     <Header>
       <Rotate className="image">

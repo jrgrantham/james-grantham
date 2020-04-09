@@ -90,9 +90,9 @@ const FullPage = styled.div`
   justify-content: center;
   align-items: center;
 
-  s {
-    padding: 1px;
-    max-height: 1px;
-  }
+  // s {
+  //   padding: 1px;
+  //   max-height: 1px;
+  // }
 
 `;

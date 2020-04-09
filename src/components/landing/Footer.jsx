@@ -6,7 +6,7 @@ export default function FooterBanner(props) {
   return (
     <Footer>
       <p style={pstyle} >James Grantham</p>
-      <p style={pstyle} className='slogan'>built with blood, sweat and beer in 2020</p>
+      <p style={pstyle} className='slogan'>built with blood, sweat and beers in 2020</p>
     </Footer>
   );
 }
