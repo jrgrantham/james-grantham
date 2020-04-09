@@ -153,13 +153,12 @@ export const StyledForm = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 25px;
+
   width: 100%;
   max-width: 500px;
-  // overflow: auto;
   border-radius: 15px;
   padding: 20px;
-  background: ${landingCaptionBorder}
+  // background: transparent;
   // border: 1px solid red;
 
   .inputField {
@@ -171,32 +170,28 @@ export const StyledForm = styled.form`
   }
   
   input,
-  textarea {
-    background: ${appColour}
+  textarea, button {
+    background: transparent;
     min-height: 50px;
     font-size: 1rem;
     text-align: center;
     padding: 10px;
     width: 90%;
     max-width: 400px;
+    color: ${landingCaptionBorder};
     border-radius: ${borderRad}px;
     border: 1px solid ${landingCaptionBorder};
   }
 
   button {
-    display: block;
-    color: ${fontColourDarkMode};
     font-weight: bold;
-    background-color: ${buttonBlue};
-    padding: 1rem 3.6rem;
-    border-radius: ${borderRad}px;
     transition: transform ${transition}s,  border-radius ${transition}s;
     margin: 30px 0 10px 0;
-    border: none;
-    font-size: 1.2rem;
+    max-width: 200px;
 
     @media (pointer: fine) {
       &:hover {
+        cursor: pointer;
         transform: scale(1.1);
         border-radius: ${borderRad * 3}px
       }

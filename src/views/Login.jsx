@@ -6,7 +6,7 @@ import url from "../helpers/url";
 
 import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
-import { LinkButton, AnchorButton } from "../components/reusable/Buttons";
+import { LinkButton } from "../components/reusable/Buttons";
 import {
   fontColourDarkMode,
   buttonBlue,
@@ -82,8 +82,8 @@ export default function LoginForm(props) {
               <button type="submit" disabled={isSubmitting}>
                 Submit
               </button>
-              <LinkButton target="/" content="Home" />
               {/* <AnchorButton target="/" content="Home" /> */}
+              <LinkButton target="/" content="Home" />
             </StyledForm>
             <s id="horizontalMenu"></s>
             <s id="professionalName"></s>
@@ -97,21 +97,10 @@ export default function LoginForm(props) {
 const Position = styled.div`
   display: flex;
   flex-direction: column;
+  align-itmes: center;
   margin: auto;
 
-  button {
-    color: ${fontColourDarkMode};
-    font-weight: bold;
-    background-color: ${buttonBlue};
-    padding: 1rem 3.6rem;
-    border-radius: ${borderRad}px;
-    transition: opacity ${transition}s;
-    margin: 20px 0 70px 0;
-
-    @media (pointer: fine) {
-      &:hover {
-        opacity: 0.75;
-      }
-    }
+  a {
+    margin: 100px 0 0 0;
   }
 `;

@@ -30,7 +30,6 @@ export function LinkButton(props) {
     transition: all ${transition}s;
     margin: ${props.margin ? props.margin : 0};
     margin: 30px 0 60px 0;
-    animation-duration: ${2}s;
     
     @media (pointer: fine) {
       &:hover {

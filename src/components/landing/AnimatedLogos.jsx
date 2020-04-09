@@ -15,17 +15,24 @@ import postgress from "../../images/postgresql.svg";
 import redux from "../../images/redux.svg";
 import git from "../../images/git.png";
 
+import drill from "../../images/drill.png";
+import hat from "../../images/hat.png";
+import tools from "../../images/tools.png";
+
 const images = [
   lessD,
   styledC,
+  hat,
   git,
   html,
   redux,
   python,
+  drill,
   js,
   react,
   css,
   nodejs,
+  tools,
   mysql,
   postgress
 ];
@@ -51,7 +58,7 @@ export default function AnimatedLogos() {
 const imageSize = 50; // px
 const ratio = 1.4 // ratio of width to height space for the images
 const logosWidth = 1000; // px visible area
-const imageOffset = 400; // px use this for spacing
+const imageOffset = 600; // px use this for spacing
 const duration = 15; // seconds
 
 const Container = styled.div`
@@ -92,14 +99,6 @@ const StyledAnimation = styled.div`
   position: absolute;
   width: ${imageSize * ratio}px;
   height: ${imageSize}px;
-  // transition: all ${transition}s;
-
-  // @media (pointer: fine) {
-  //   &:hover {
-  //     transform: scale(1.2);
-  //   }
-  // }
-
   left: -${imageSize}px; // hold the image outside the div;
   animation-name: ${move};
   animation-duration: ${duration}s;
