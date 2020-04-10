@@ -1,5 +1,5 @@
 export const welcomeTitle = "Full stack engineer based in the United Kingdom";
-export const welcomeMessage = "April 2020 saw the conclusion of a nine-month online Computer Science and Software Engineering course. 2,000 hours of intensive, immersive, hands-on experience, working with people from around the world."
+export const welcomeMessage = "April 2020 saw the conclusion of a nine-month online Computer Science and Software Engineering course. 2,000 hours of intensive, hands-on experience, working with people from around the world."
 
 export const button = "Hire me"
 
