@@ -135,7 +135,7 @@ const FlipCard = styled.div`
     height: 100%;
     backface-visibility: hidden;
     border: 1px solid ${projectCardBorder};
-    border-radius: 15px;
+    border-radius: ${borderRad}px;
     
     display: flex;
     flex-direction: column;

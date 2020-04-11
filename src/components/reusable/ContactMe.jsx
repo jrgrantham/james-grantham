@@ -4,7 +4,7 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition, appColour, buttonOrange } from "../../views/styling";
+import { transition, appColour, buttonOrange, professionalWidth } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function ContactMe(props) {
@@ -16,9 +16,16 @@ export default function ContactMe(props) {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    padding-top: 40px;
 
+    h4, p {
+      text-align: center;
+      max-width: ${professionalWidth}px;
+      padding: 20px 20px 0px 20px;
+    }
+    
     h4 {
-      padding: 60px 0px 0px 0px;
+      padding-top: 60px;
     }
   `;
 
@@ -67,6 +74,8 @@ export default function ContactMe(props) {
 
   return (
     <Container id="contact" onClick={() => setShowContactMe(false)}>
+      <p>Previously employed by integrity services, I have experience of risk assessments, fitness for service, integrity reviews and anomaly assessments. I am also proficient with maintenance management and risk based inspection systems.</p>
+      <p>Looking for a developer with knowledge of pressure systems inspection? I may be a great fit for your team.</p>
       <h4>Find me...</h4>
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image other">

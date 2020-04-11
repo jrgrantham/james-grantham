@@ -67,12 +67,12 @@ export default function Professional(props) {
     align-items: center;
     height: 100%;
     width: 100%;
-    max-width: ${professionalWidth};
+    max-width: ${professionalWidth}px;
 
     .fixed {
       z-index: ;
       width: 100%;
-      max-width: ${professionalWidth};
+      max-width: ${professionalWidth}px;
       position: fixed;
       background: ${darkMode ? appColourDark : appColour};
     }

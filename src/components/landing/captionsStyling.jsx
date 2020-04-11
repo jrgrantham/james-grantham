@@ -13,8 +13,7 @@ import {
 
 export const Captions = styled(Container)`
   max-width: ${landingCaptionMaxWidth};
-  margin-bottom: 60px;
-  // padding: 0 50px;
+  margin-bottom: 40px;
   
   .caption {
     display: flex;
@@ -24,7 +23,7 @@ export const Captions = styled(Container)`
   }
   
   @media (min-width: ${mediaBreak}) {
-    padding: 50px;
+    padding: 0 50px;
     .left {
       justify-content: flex-start;
     }
