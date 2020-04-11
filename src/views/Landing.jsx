@@ -15,6 +15,7 @@ import Introduction from "../components/landing/Introduction";
 import AnimatedLogos from "../components/landing/AnimatedLogos";
 import HireMe from "../components/landing/HireMe";
 import { LinkButton } from "../components/reusable/Buttons";
+import Previously from "../components/landing/Previously";
 
 export default function Landing(props) {
   const {
@@ -69,6 +70,7 @@ export default function Landing(props) {
         <Spacer />
         <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
+        <Previously />
         <ContactMe
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}
