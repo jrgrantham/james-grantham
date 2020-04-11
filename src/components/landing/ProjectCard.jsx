@@ -72,7 +72,6 @@ const FlipCard = styled.div`
   .buttons {
     width: 100%;
     display: flex;
-    min-height: 50px;
     justify-content: space-evenly;
     
     @media (max-width: 330px) {
@@ -85,8 +84,8 @@ const FlipCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 40%;
-    padding: 10px;
+    min-width: 35%;
+    min-height: 40px;
     border-radius: ${borderRad}px
     background: ${buttonBlue};
     color: ${fontColourDarkMode};
