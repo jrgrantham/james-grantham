@@ -1,5 +1,5 @@
 export const appWidth = 1500;
-export const professionalWidth = "1000px";
+export const professionalWidth = 1000;
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";
 export const borderRad = 5;
@@ -16,7 +16,6 @@ export const fontColourDarkMode = "#e5e1d8"; // floralwhite shade
 // favicon font - Merriweather
 
 // https://www.cssmatic.com/noise-texture
-
 
 export const buttonOrange = "#FFA500";
 export const buttonBlue = "#005aFF";

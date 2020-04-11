@@ -8,8 +8,9 @@ import maze from "../images/maze2.png";
 import jamesPhoto from "../images/james.jpg";
 import artFunder from "../images/artFunder.png";
 import message from "../images/message.png";
+import friendFinder from "../images/friendFinder.png";
 
-export const projectsNumber = 3;
+export const projectsNumber = 4;
 
 export const projectsTitle = "Projects";
 export const projectsDescription = "Here are some of my recent projects.";
@@ -46,12 +47,12 @@ export const projects = [
   },
   {
     title: "Friend-Finder",
-    uses: "Python, React, Redux",
+    uses: "bcryptjs, jsonwebtoken, sqlite3, supertest",
     comments:
-      "Built during our computer science module, the server uses depth first traversal on a grid of specified dimensions to create a maze. The user can use the keyboard or mouse to navigate the robot to a randomly placed exit.",
-    image: maze,
-    link: "https://mud-2-frontend-nihkors8y.now.sh/",
-    repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend"
+      "Users are asked questions and the database returns likely friend matches based on the provided answers.",
+    image: friendFinder,
+    link: "https://compassionate-goldberg-c5c1d2.netlify.com/",
+    repo: "https://github.com/friend-finder-bw-project"
   },
   {
     title: "Message-Easy",
@@ -81,12 +82,12 @@ export const projects = [
   },
   {
     title: "NASA Photo",
-    uses: "React, Axios",
+    uses: "React, axios",
     comments:
-      "The NASA API is used to fetch NASAs photo of the day along with some information",
+      "A project early on in my learning, fetching a photo nad information from a NASA's public API.",
     image: nasa,
-    link: "",
-    repo: ""
+    link: "https://nasa-photo.netlify.com/",
+    repo: "https://github.com/jrgrantham/nasa-photo-of-the-day"
   },
   {
     title: "DarkMode",

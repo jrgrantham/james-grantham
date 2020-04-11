@@ -13,7 +13,7 @@ import {
 
 export const Captions = styled(Container)`
   max-width: ${landingCaptionMaxWidth};
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   
   .caption {
     display: flex;
