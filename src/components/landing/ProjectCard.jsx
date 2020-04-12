@@ -70,9 +70,9 @@ const FlipCard = styled.div`
   }
 
   .buttons {
-    width: 100%;
+    width: 85%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     
     @media (max-width: 330px) {
       flex-direction: column;
@@ -84,8 +84,8 @@ const FlipCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 35%;
-    min-height: 40px;
+    min-width: 45%;
+    min-height: 35px;
     border-radius: ${borderRad}px
     background: ${buttonBlue};
     color: ${fontColourDarkMode};
@@ -135,14 +135,14 @@ const FlipCard = styled.div`
     backface-visibility: hidden;
     border: 1px solid ${projectCardBorder};
     border-radius: ${borderRad}px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0;
     background-color: ${projectCardBack};
     align-items: center;
-    
+
     .imageDiv {
       width: 100%;
       height: 100%;
@@ -152,17 +152,15 @@ const FlipCard = styled.div`
       // border: 1px solid red;
     }
   }
-  
+
   .darkmode {
     background: ${projectCardBackDark};
   }
-  
+
   .flip-card-front {
   }
 
   .flip-card-back {
     transform: rotateY(180deg);
   }
-
-
 `;

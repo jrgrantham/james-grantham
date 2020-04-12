@@ -20,18 +20,18 @@ import hat from "../../images/hat.png";
 import tools from "../../images/tools.png";
 
 const images = [
-  lessD,
   styledC,
+  lessD,
   hat,
   git,
-  html,
   redux,
+  html,
   python,
   drill,
   js,
   react,
-  css,
   nodejs,
+  css,
   tools,
   mysql,
   postgress

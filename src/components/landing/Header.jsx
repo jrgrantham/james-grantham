@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { headerHeight, startInDarkMode } from "../../views/styling";
-import logo192 from "../../images/logo192.png";
+import g192 from "../../images/g192.png";
 import bulbWhite from "../../images/bulbWhite.png";
 import bulbYellow from "../../images/bulbYellow.png";
 import { Header, Rotate } from "./headerStyling";
@@ -53,7 +53,7 @@ export default function ContactMeHeader(props) {
     <Header>
       <Rotate className="image">
         <Link to="/phonenumbers" className="image">
-          <img src={logo192} alt="logo" id="logo" />
+          <img src={g192} alt="logo" id="logo" />
         </Link>
       </Rotate>
       <div className="links">
