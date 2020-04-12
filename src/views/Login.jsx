@@ -8,6 +8,10 @@ import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
 import { LinkButton } from "../components/reusable/Buttons";
 
+import ben from '../images/b192.png'
+import sam from '../images/s192.png'
+import ollie from '../images/o192.png'
+
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
   username: "",
@@ -77,7 +81,12 @@ export default function LoginForm(props) {
                 Submit
               </button>
               {/* <AnchorButton target="/" content="Home" /> */}
-              <LinkButton target="/" content="Home" />
+              <LinkButton target="/" content="Home" className='home' />
+              <div className='boys'>
+                <a href="/"><img src={ollie} alt='ollie' /></a>
+                <a href="https://samgrantham.netlify.com/"><img src={sam} alt='sam' /></a>
+                <a href="https://bengrantham.netlify.com/"><img src={ben} alt='ben' /></a>
+              </div>
             </StyledForm>
             <s id="horizontalMenu"></s>
             <s id="professionalName"></s>
@@ -94,7 +103,20 @@ const Position = styled.div`
   align-itmes: center;
   margin: auto;
 
-  a {
-    margin: 100px 0 0 0;
+  .home {
+    margin: 50px 0 0 0;
+  }
+
+  .boys {
+    // margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+
+    img {
+      max-width: 50px;
+      height: auto;
+    }
   }
 `;
