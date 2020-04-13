@@ -11,6 +11,7 @@ import { LinkButton } from "../components/reusable/Buttons";
 import ben from '../images/b192.png'
 import sam from '../images/s192.png'
 import ollie from '../images/o192.png'
+import { borderRad, landingCaptionBorder } from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -81,11 +82,11 @@ export default function LoginForm(props) {
                 Submit
               </button>
               {/* <AnchorButton target="/" content="Home" /> */}
-              <LinkButton target="/" content="Home" className='home' />
+              <LinkButton target="/" content="Home" className='home' margin='60px 0 70px 0'/>
               <div className='boys'>
-                <a href="/"><img src={ollie} alt='ollie' /></a>
-                <a href="https://samgrantham.netlify.com/"><img src={sam} alt='sam' /></a>
-                <a href="https://bengrantham.netlify.com/"><img src={ben} alt='ben' /></a>
+                <a href="/">O</a>
+                <a href="https://samgrantham.netlify.com/">S</a>
+                <a href="https://bengrantham.netlify.com/">B</a>
               </div>
             </StyledForm>
             <s id="horizontalMenu"></s>
@@ -104,19 +105,21 @@ const Position = styled.div`
   margin: auto;
 
   .home {
-    margin: 50px 0 0 0;
+    // margin: 70px 0 0 0;
   }
 
   .boys {
-    // margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
-    width: 200px;
-    height: 50px;
-
-    img {
-      max-width: 50px;
-      height: auto;
+    width: 180px;
+    
+    a {
+      color: ${landingCaptionBorder};
+      border: 1px solid ${landingCaptionBorder};
+      padding: 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: ${borderRad}px;
     }
   }
 `;
