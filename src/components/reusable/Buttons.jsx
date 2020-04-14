@@ -28,8 +28,7 @@ export function LinkButton(props) {
     padding: 1rem 3.6rem;
     border-radius: ${borderRad}px;
     transition: all ${transition}s;
-    margin: ${props.margin ? props.margin : 0};
-    margin: 30px 0 60px 0;
+    margin: ${props.margin ? props.margin : '30px 0 60px 0'};
     
     @media (pointer: fine) {
       &:hover {

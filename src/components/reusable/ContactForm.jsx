@@ -192,7 +192,7 @@ export const StyledForm = styled.form`
   button {
     font-weight: bold;
     transition: transform ${transition}s,  border-radius ${transition}s;
-    margin: 30px 0 10px 0;
+    margin: 10px 0 10px 0;
     max-width: 200px;
 
     @media (pointer: fine) {

@@ -80,7 +80,7 @@ const LandingContent = styled.div`
   img {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 50px;
+    border-radius: 10px;
   }
 
   p {
