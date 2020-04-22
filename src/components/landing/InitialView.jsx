@@ -90,7 +90,7 @@ const LandingContent = styled.div`
   }
 
   p.darkmode {
-    color: #3e3e3e;
+    color: #606060;
   3}
 
   // h1,

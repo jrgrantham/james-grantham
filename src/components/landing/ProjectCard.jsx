@@ -1,8 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark, projectCardBorder, fontColourDarkMode } from "../../views/styling";
-import { projectsLink, projectsGitHub } from "../../data/projects";
+import {
+  borderRad,
+  transition,
+  buttonBlue,
+  projectCardBack,
+  projectCardBackDark,
+  projectCardBorder,
+  fontColourDarkMode,
+  buttonOrange,
+} from "../../views/styling";
+import web from "../../images/web.png";
+import github from "../../images/github.svg";
+import youtube from "../../images/youTube.png";
 
 export default function ProjectCard(props) {
   return (
@@ -11,16 +22,30 @@ export default function ProjectCard(props) {
         <div className="flip-card-inner">
           <div className="flip-card-front toggle darkmode">
             <div className="imageDiv">
-              <img
-                src={props.project.image}
-                alt={props.project.title}
-              />
+              <img src={props.project.image} alt={props.project.title} />
+            </div>
+            <div>
+              <h4>{props.project.title}</h4>
+              <p>{props.project.uses}</p>
             </div>
             <div className="buttons">
-              {props.project.link === "" ? null : (
-                <a href={props.project.link}>{projectsLink}</a>
-              )}
-              <a href={props.project.repo}>{projectsGitHub}</a>
+              <a href={props.project.link}>
+                <div className="button">
+                  <img src={web} alt="web" />
+                </div>
+              </a>
+              {props.project.presentation ? (
+                <a href={props.project.presentation}>
+                  <div className="button">
+                    <img src={youtube} alt="youtube" />
+                  </div>
+                </a>
+              ) : null}
+              <a href={props.project.repo}>
+                <div className="button">
+                  <img src={github} alt="web" />
+                </div>
+              </a>
             </div>
           </div>
           <div className="flip-card-back toggle darkmode">
@@ -30,10 +55,23 @@ export default function ProjectCard(props) {
               <p>{props.project.comments}</p>
             </div>
             <div className="buttons">
-              {props.project.link === "" ? null : (
-                <a href={props.project.link}>{projectsLink}</a>
-              )}
-              <a href={props.project.repo}>{projectsGitHub}</a>
+              <a href={props.project.link}>
+                <div className="button">
+                  <img src={web} alt="web" />
+                </div>
+              </a>
+              {props.project.presentation ? (
+                <a href={props.project.presentation}>
+                  <div className="button">
+                    <img src={youtube} alt="youtube" />
+                  </div>
+                </a>
+              ) : null}
+              <a href={props.project.repo}>
+                <div className="button">
+                  <img src={github} alt="web" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -48,7 +86,7 @@ const FlipCard = styled.div`
   max-width: 380px;
   height: 450px;
   perspective: 1000px;
-  margin: 0 25px 50px 25px;
+  margin: 0 30px 60px 30px;
 
   @media (max-width: 500px) {
     width: 320px;
@@ -56,62 +94,45 @@ const FlipCard = styled.div`
     margin-bottom: 40px;
   }
 
-  h3, h4, h5 {
-    margin-bottom: 7px
-  }
-
-  P {
-    padding: 20px
-  }
-
   .details {
     max-height: 80%;
+    padding: 20px;
     overflow: hidden;
+    text-align: center;
+
+    h3 {
+      padding-top: 20px;
+    }
+    h5 {
+      padding: 20px 0;
+
+    }
   }
 
   .buttons {
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    
-    @media (max-width: 330px) {
-      flex-direction: column;
-      align-items: center;
-    }
   }
-  
-  a {
+
+  .button {
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 45%;
-    min-height: 35px;
     border-radius: ${borderRad}px
-    background: ${buttonBlue};
-    color: ${fontColourDarkMode};
-    font-weight: bold;
-    transition: transform ${transition}s,  border-radius ${transition}s;
+    background: ${projectCardBack};
+    // color: ${fontColourDarkMode};
+    width: 50px;
+    height: 50px;
+    padding: 5px;
 
-    @media (max-width: 330px) {
-      width: 90%;
-      margin: 5px;
-      padding: 5px;
-    }
-
-    @media (pointer: fine) {
-      &:hover {
-        transform: scale(1.1);
-        border-radius: ${borderRad * 3}px
-      }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
-
-  img {
-    width: 85%;
-    max-width: 350px;
-    max-height: 350px;
-  }
-
+  
   @media (pointer: fine) {
     &:hover .flip-card-inner {
       transform: rotateY(180deg);
@@ -133,23 +154,33 @@ const FlipCard = styled.div`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border: 1px solid ${projectCardBorder};
+    // border: 1px solid ${projectCardBorder};
     border-radius: ${borderRad}px;
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 0;
+    // padding: 20px 0;
     background-color: ${projectCardBack};
     align-items: center;
 
     .imageDiv {
       width: 100%;
-      height: 100%;
+      height: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       // border: 1px solid red;
+      // overflow: hidden
+      
+      img {
+        object-fit: cover;
+        // max-width: 100%;
+        // max-width: 380px;
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 
