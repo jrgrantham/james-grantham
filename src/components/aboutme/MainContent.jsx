@@ -41,7 +41,7 @@ export default function MainContent(props) {
               : "article toggle darkmode"
           }
           key={index}
-          onClick={e => {
+          onClick={() => {
             isExpanded(article.title);
           }}
         >

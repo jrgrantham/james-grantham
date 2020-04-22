@@ -23,8 +23,8 @@ export default function Previously() {
 
   return (
     <Container>
-      {previously.map(para => {
-        return <p>{para}</p>
+      {previously.map((para, index) => {
+        return <p key={index}>{para}</p>
       })}
     </Container>
   );

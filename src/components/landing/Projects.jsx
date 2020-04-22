@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  projects,
   projectsTitle,
   projectsDescription,
-  projectsNumber,
+  selectedProjects,
 } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "../reusable/SectionTitle";
@@ -27,7 +26,7 @@ export default function Projects() {
     <ProjectsContainer id="projects">
       <SectionTitle title={projectsTitle} description={projectsDescription} />
       <div className="projects">
-        {projects.slice(0, projectsNumber).map((project, index) => {
+        {selectedProjects.map((project, index) => {
           return <ProjectCard key={index} project={project} />;
         })}
       </div>

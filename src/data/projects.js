@@ -11,10 +11,10 @@ import message from "../images/message.png";
 import friendFinder from "../images/friendFinder.png";
 import tetris from "../images/tetris.jpg";
 
-export const projectsNumber = 4;
-
 export const projectsTitle = "Projects";
 export const projectsDescription = "Here are some of my recent projects.";
+
+export const projectsNumber = 4;
 
 export const projects = [
   {
@@ -123,3 +123,5 @@ export const projects = [
     repo: ""
   }
 ];
+
+export const selectedProjects = projects.slice(0, projectsNumber)

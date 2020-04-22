@@ -77,7 +77,6 @@ export default function ContentButtons(props) {
     <Container id="menu" className="toggle darkmode sticky">
       <CollapsingMenu>
         <div className="hamburgerButton" onClick={() => changeHidden()}>
-          {/* <MenuBurger style={{display: 'none'}} /> */}
           <h4>{hidden ? props.selected : "select..."}</h4>
           <MenuBurger hidden={hidden} />
         </div>
