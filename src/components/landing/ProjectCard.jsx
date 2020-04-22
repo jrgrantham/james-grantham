@@ -4,12 +4,8 @@ import styled from "styled-components";
 import {
   borderRad,
   transition,
-  buttonBlue,
   projectCardBack,
   projectCardBackDark,
-  projectCardBorder,
-  fontColourDarkMode,
-  buttonOrange,
 } from "../../views/styling";
 import web from "../../images/web.png";
 import github from "../../images/github.svg";
@@ -132,7 +128,6 @@ const FlipCard = styled.div`
     align-items: center;
     border-radius: ${borderRad}px
     background: ${projectCardBack};
-    // color: ${fontColourDarkMode};
     width: 50px;
     height: 50px;
     padding: 5px;
@@ -154,7 +149,7 @@ const FlipCard = styled.div`
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform ${transition}s;
     transform-style: preserve-3d;
   }
 
@@ -164,14 +159,12 @@ const FlipCard = styled.div`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    // border: 1px solid ${projectCardBorder};
     border-radius: ${borderRad}px;
     overflow: hidden;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // padding: 20px 0;
     background-color: ${projectCardBack};
     align-items: center;
 
@@ -181,13 +174,9 @@ const FlipCard = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      // border: 1px solid red;
-      // overflow: hidden
       
       img {
         object-fit: cover;
-        // max-width: 100%;
-        // max-width: 380px;
         height: 100%;
         width: 100%;
       }
