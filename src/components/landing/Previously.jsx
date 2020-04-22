@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { professionalWidth } from "../../views/styling";
+import { aboutmeWidth } from "../../views/styling";
 import { previously } from '../../data/previously'
 
 export default function Previously() {
@@ -16,7 +16,7 @@ export default function Previously() {
 
     p {
       text-align: center;
-      max-width: ${professionalWidth}px;
+      max-width: ${aboutmeWidth}px;
       padding: 20px 20px 0px 20px;
     }
   `

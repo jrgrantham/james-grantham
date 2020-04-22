@@ -11,7 +11,7 @@ import { LinkButton } from "../components/reusable/Buttons";
 import ben from '../images/b192.png'
 import sam from '../images/s192.png'
 import ollie from '../images/o192.png'
-import { borderRad, landingCaptionBorder } from "./styling";
+import { borderRad, landingCaptionBorder, transition } from "./styling";
 
 const loginApi = url() + "api/auth/login";
 const initialLoginForm = {
@@ -90,7 +90,7 @@ export default function LoginForm(props) {
               </div>
             </StyledForm>
             <s id="horizontalMenu"></s>
-            <s id="professionalName"></s>
+            <s id="aboutmeName"></s>
           </Position>
         )}
       </Formik>
@@ -120,6 +120,14 @@ const Position = styled.div`
       height: 50px;
       width: 50px;
       border-radius: ${borderRad}px;
+      transition: all ${transition}s;
+
+      @media (pointer: fine) {
+        &:hover {
+          transform: scale(1.2);
+          border-radius: ${borderRad * 3}px
+        }
+      }
     }
   }
 `;

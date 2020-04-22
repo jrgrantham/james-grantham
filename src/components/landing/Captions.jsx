@@ -18,7 +18,7 @@ export default function LandingCaptions(props) {
           className={index % 2 === 0 ? "left caption" : "right caption"}
         >
           <Link
-            to="/professional"
+            to="/aboutme"
             onClick={() => {
               props.setContent(values);
               props.setSelected("Values");

@@ -1,18 +1,18 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { professionalColor, appColourDark, appColour } from "./styling";
+import { aboutmeColor, appColourDark, appColour } from "./styling";
 import useDarkMode from "../hooks/useDarkMode";
 
-import Menu from "../components/professional/Menu";
-import MainContent from "../components/professional/MainContent";
+import Menu from "../components/aboutme/Menu";
+import MainContent from "../components/aboutme/MainContent";
 import ContactMe from "../components/reusable/ContactMe";
 
-import { professionalWidth, mediaBreak } from "../views/styling";
+import { aboutmeWidth, mediaBreak } from "./styling";
 import { LinkButton } from "../components/reusable/Buttons";
-import Name from "../components/professional/Name";
+import Name from "../components/aboutme/Name";
 
-export default function Professional(props) {
+export default function AboutMe(props) {
   const {
     content,
     setContent,
@@ -48,10 +48,10 @@ export default function Professional(props) {
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
     ) {
-      document.getElementById("professionalName").style.padding = "0";
+      document.getElementById("aboutmeName").style.padding = "0";
       document.getElementById("horizontalMenu").style.maxHeight = "0";
     } else {
-      document.getElementById("professionalName").style.padding = " 2rem 0 2rem 0";
+      document.getElementById("aboutmeName").style.padding = " 2rem 0 2rem 0";
       document.getElementById("horizontalMenu").style.maxHeight = "50px";
     }
   }
@@ -61,18 +61,18 @@ export default function Professional(props) {
   };
 
   // inside the function as needs access to dark mode to set the background
-  const StyledProfessional = styled.div`
+  const Styledaboutme = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 100%;
-    max-width: ${professionalWidth}px;
+    max-width: ${aboutmeWidth}px;
 
     .fixed {
       z-index: ;
       width: 100%;
-      max-width: ${professionalWidth}px;
+      max-width: ${aboutmeWidth}px;
       position: fixed;
       background: ${darkMode ? appColourDark : appColour};
     }
@@ -85,7 +85,7 @@ export default function Professional(props) {
   `;
 
   return (
-    <StyledProfessional id="professional" className="toggle darkmode">
+    <Styledaboutme id="aboutme" className="toggle darkmode">
       <div id="fixedHeader" className="fixed toggle darkmode">
         <Name />
         <Menu
@@ -103,8 +103,8 @@ export default function Professional(props) {
         showContactMe={showContactMe}
         setShowContactMe={setShowContactMe}
       />
-      <LinkButton target="/" color={professionalColor} content="Home Page" />
+      <LinkButton target="/" color={aboutmeColor} content="Home Page" />
       {/* <div style={{ height: "100px" }} /> */}
-    </StyledProfessional>
+    </Styledaboutme>
   );
 }

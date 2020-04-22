@@ -55,7 +55,7 @@ export default function PhoneNumbers(props) {
           </NumberCard>
         ))}
         <s id="horizontalMenu"></s>
-        <s id="professionalName"></s>
+        <s id="aboutmeName"></s>
       </Container>
     );
   }

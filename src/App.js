@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Route } from "react-router-dom";
 import styled from "styled-components";
 import Landing from "./views/Landing";
-import Professional from "./views/Professional";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from "./components/reusable/ContactForm";
 import Projects from "./views/AllProjects";
 import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark } from "./views/styling";
 import { aboutMe } from "./data/aboutMe";
+import AboutMe from "./views/AboutMe";
 
 
 export default function App() {
@@ -53,9 +53,9 @@ export default function App() {
           )}
         />
         <Route
-          path="/professional"
+          path="/aboutme"
           render={props => (
-            <Professional
+            <AboutMe
               {...props}
               content={content}
               setContent={setContent}

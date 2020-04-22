@@ -5,12 +5,12 @@ import useDarkMode from "../../hooks/useDarkMode";
 import { MenuArrow } from "./buttonStyles";
 import {
   transition,
-  professionalInnerPad,
-  professionalButtonHov,
+  aboutmeInnerPad,
+  aboutmeButtonHov,
   mediaBreak,
-  professionalButtonDark,
-  professionalButton,
-  professionalColor,
+  aboutmeButtonDark,
+  aboutmeButton,
+  aboutmeColor,
 } from "../../views/styling";
 
 export default function MainContent(props) {
@@ -67,7 +67,7 @@ const Container = styled.div`
 
   .article {
     width: 100%;
-    padding: ${professionalInnerPad};
+    padding: ${aboutmeInnerPad};
     cursor: pointer;
     transition: background-color ${transition}s;
 
@@ -79,7 +79,7 @@ const Container = styled.div`
     h5 {
       text-align: left;
       padding-bottom: 0.5rem;
-      color: ${professionalColor}
+      color: ${aboutmeColor}
       width: 100%;
     }
     
@@ -96,17 +96,17 @@ const Container = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        background-color: ${professionalButtonHov};
+        background-color: ${aboutmeButtonHov};
       }
     }
   }
 
   .article.selected {
-    background-color: ${professionalButton};
+    background-color: ${aboutmeButton};
   }
 
   .article.selected.darkmode {
-    background-color: ${professionalButtonDark};
+    background-color: ${aboutmeButtonDark};
   }
 `;
 

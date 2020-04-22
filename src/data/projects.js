@@ -9,6 +9,7 @@ import jamesPhoto from "../images/james.jpg";
 import artFunder from "../images/artFunder.png";
 import message from "../images/message.png";
 import friendFinder from "../images/friendFinder.png";
+import tetris from "../images/tetris.jpg";
 
 export const projectsNumber = 4;
 
@@ -29,7 +30,7 @@ export const projects = [
     title: "Art Funder",
     uses: "React, NodeJS, MongoDB",
     comments:
-      "An ecommerce site to help under-funded schools sell student art to raise money. Also uses Redux, Axios and Firebase Cloud.",
+      "Team build: An ecommerce site to help under-funded schools sell student art to raise money.",
     image: artFunder,
     link: "https://art-funder.com/",
     repo: "https://github.com/LABS-EU3/Student-Art-Collection-FRONTEND"
@@ -38,11 +39,20 @@ export const projects = [
     title: "RoboMaze",
     uses: "Python, React, Redux",
     comments:
-      "Built during our computer science module, the server uses depth first traversal on a grid of specified dimensions to create a maze.",
+      "Team build: Computer science module. The server uses depth first traversal on a grid of specified dimensions to create a maze.",
     image: maze,
     link: "https://mud-2-frontend-nihkors8y.now.sh/",
     repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend",
     presentation: 'https://www.youtube.com/watch?v=q8JEtPo6v1w&feature=youtu.be'
+  },
+  {
+    title: "Tetris",
+    uses: "JavaScript",
+    comments:
+      "Built using only JavaScript.",
+    image: tetris,
+    link: "https://jg-tetris.netlify.app/",
+    repo: "https://github.com/jrgrantham/tetris",
   },
   {
     title: "Friend-Finder",
