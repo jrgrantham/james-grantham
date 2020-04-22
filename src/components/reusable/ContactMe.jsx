@@ -4,7 +4,7 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition, appColour, professionalWidth } from "../../views/styling";
+import { transition, appColour, aboutmeWidth } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function ContactMe(props) {
@@ -20,7 +20,7 @@ export default function ContactMe(props) {
 
     h4, p {
       text-align: center;
-      max-width: ${professionalWidth}px;
+      max-width: ${aboutmeWidth}px;
       padding: 20px 20px 0px 20px;
     }
     

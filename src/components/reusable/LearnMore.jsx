@@ -8,7 +8,7 @@
 //   return (
 //     <Container>
 //       {/* <p>{learnMoreIntro}</p> */}
-//       <LinkButton content={learnMoreButton} target="/professional" />
+//       <LinkButton content={learnMoreButton} target="/aboutme" />
 //     </Container>
 //   );
 // }

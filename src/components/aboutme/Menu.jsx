@@ -4,16 +4,16 @@ import styled from "styled-components";
 import { MenuBurger } from "./buttonStyles";
 import useDarkMode from "../../hooks/useDarkMode";
 import {
-  professionalButton,
-  professionalButtonDark,
-  professionalButtonHov,
+  aboutmeButton,
+  aboutmeButtonDark,
+  aboutmeButtonHov,
   transition,
   mediaBreak,
   borderRad,
-  professionalInnerPad,
-  professionalSelectedButtonDark,
-  professionalSelectedButton,
-  professionalColor,
+  aboutmeInnerPad,
+  aboutmeSelectedButtonDark,
+  aboutmeSelectedButton,
+  aboutmeColor,
   appColourDark,
 } from "../../views/styling";
 
@@ -57,16 +57,16 @@ export default function ContentButtons(props) {
   // const selectedHorizontal = {
   //   width: `${100 / categoryButtons.length - 1}%`,
   //   backgroundColor: darkMode
-  //     ? professionalSelectedButtonDark
-  //     : professionalSelectedButton
+  //     ? aboutmeSelectedButtonDark
+  //     : aboutmeSelectedButton
   //   // border: "none"
   // };
 
   // const selectedVertical = {
   //   backgroundColor: darkMode
-  //     ? professionalSelectedButtonDark
-  //     : professionalSelectedButton
-  //   // border: `2px solid ${professionalButton}`
+  //     ? aboutmeSelectedButtonDark
+  //     : aboutmeSelectedButton
+  //   // border: `2px solid ${aboutmeButton}`
   // };
 
   function changeHidden() {
@@ -152,7 +152,7 @@ const HorizontalMenu = styled.div`
 
   .button.toggle {
     padding: 10px 0;
-    background-color: ${professionalButton};
+    background-color: ${aboutmeButton};
     transition: background-color ${transition}s;
     border-radius: ${borderRad}px;
     cursor: pointer;
@@ -164,25 +164,25 @@ const HorizontalMenu = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        background-color: ${professionalButtonHov};
+        background-color: ${aboutmeButtonHov};
       }
     }
   }
 
   .button.selected {
-    background-color: ${professionalColor};
+    background-color: ${aboutmeColor};
     color: ${appColourDark};
   }
 
   .button.darkmode {
-    background-color: ${professionalButtonDark};
+    background-color: ${aboutmeButtonDark};
   }
 
   .button.darkmode.selected {
-    background-color: ${professionalColor};
+    background-color: ${aboutmeColor};
     @media (pointer: fine) {
       &:hover {
-        background-color: ${professionalButtonHov};
+        background-color: ${aboutmeButtonHov};
       }
     }
   }
@@ -195,7 +195,7 @@ const HorizontalMenu = styled.div`
 
 const CollapsingMenu = styled.div`
   h4 {
-    color: ${professionalColor};
+    color: ${aboutmeColor};
   }
 
   .hamburgerButton {
@@ -203,7 +203,7 @@ const CollapsingMenu = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 ${professionalInnerPad} ${professionalInnerPad} ${professionalInnerPad};
+    padding: 0 ${aboutmeInnerPad} ${aboutmeInnerPad} ${aboutmeInnerPad};
     cursor: pointer;
     overflow: hidden;
     img {
@@ -212,7 +212,7 @@ const CollapsingMenu = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        background-color: ${professionalButtonHov};
+        background-color: ${aboutmeButtonHov};
         transition: background-color ${transition}s;
       }
     }
@@ -238,33 +238,33 @@ const CollapsingMenu = styled.div`
 
     .button.toggle {
       padding: 10px 0;
-      background-color: ${professionalButton};
+      background-color: ${aboutmeButton};
       border-radius: ${borderRad}px;
       cursor: pointer;
       width: 85%;
 
       @media (min-width: ${mediaBreak}) {
         width: 24%;
-        background-color: ${professionalButton};
+        background-color: ${aboutmeButton};
       }
 
       @media (pointer: fine) {
         &:hover {
-          background-color: ${professionalButtonHov};
+          background-color: ${aboutmeButtonHov};
           transition: background-color ${transition}s;
         }
       }
     }
     .toggle.darkmode {
-      background-color: ${professionalButtonDark};
+      background-color: ${aboutmeButtonDark};
     }
 
     .button.selected {
-      background-color: ${professionalSelectedButton};
+      background-color: ${aboutmeSelectedButton};
     }
 
     .button.darkmode.selected {
-      background-color: ${professionalSelectedButtonDark};
+      background-color: ${aboutmeSelectedButtonDark};
     }
   }
 `;

@@ -5,7 +5,7 @@ import useDarkMode from "../../hooks/useDarkMode";
 import { Link } from "react-router-dom";
 
 import arrow from "../../images/backArrow.png";
-import { transition, mediaBreak, professionalColor } from "../../views/styling";
+import { transition, mediaBreak, aboutmeColor } from "../../views/styling";
 
 export default function Name() {
   useDarkMode();
@@ -18,7 +18,7 @@ export default function Name() {
       {/* <div className="container arrow">
         <img src={arrow} alt="back" />
       </div> */}
-      <h2 id='professionalName' className="toggle darkmode">James Grantham</h2>
+      <h2 id='aboutmeName' className="toggle darkmode">James Grantham</h2>
       <div className="container"></div>
     </StlyedLink>
   );
@@ -40,7 +40,7 @@ const StyledAnimation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${professionalColor};
+  background: ${aboutmeColor};
   border-radius: 35%;
   padding: 10px;
   transition: all ${transition}s;
@@ -83,7 +83,7 @@ const StlyedLink = styled(Link)`
 
     @media (pointer: fine) {
       &:hover {
-      color: ${professionalColor};
+      color: ${aboutmeColor};
       }
     }
   }

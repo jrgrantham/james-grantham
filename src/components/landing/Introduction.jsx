@@ -36,7 +36,7 @@ export default function Introduction(props) {
 
   return (
     <Container id="about">
-      <Link to="/professional" className="title">
+      <Link to="/aboutme" className="title">
         <h4>{welcomeTitle}</h4>
         <p>{welcomeMessage}</p>
       </Link>
@@ -45,7 +45,7 @@ export default function Introduction(props) {
           <Link
             className="section"
             key={index}
-            to="/professional"
+            to="/aboutme"
             onClick={() => {
               setCategory(section.section);
             }}

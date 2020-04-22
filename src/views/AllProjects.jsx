@@ -35,7 +35,7 @@ export default function Projects() {
       </div> */}
       <LinkButton content="Home page" target="/" />
       <s id="horizontalMenu"></s>
-      <s id="professionalName"></s>
+      <s id="aboutmeName"></s>
     </Container>
   );
 }

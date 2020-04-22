@@ -5,7 +5,6 @@ import {
   landingHeadFootOpacity,
   landingHeaderFont,
   transition,
-  buttonBlue,
   appWidth
 } from "../../views/styling";
 
@@ -55,7 +54,7 @@ export const Header = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        transform: scale(1.5);
+        transform: scale(1.3);
       }
     }
   }

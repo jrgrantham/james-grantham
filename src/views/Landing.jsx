@@ -63,7 +63,7 @@ export default function Landing(props) {
         <HireMe />
         <Introduction setContent={setContent} setSelected={setSelected} />
         <AnimatedLogos />
-        <LinkButton content={"Learn more"} target="/professional" />
+        <LinkButton content={"Learn more"} target="/aboutme" />
         <Spacer />
         <Projects />
         <LinkButton content="View all projects" target="projects" />
@@ -75,11 +75,11 @@ export default function Landing(props) {
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}
         />
-        <LinkButton content={"Learn more"} target="/professional" />
+        <LinkButton content={"Learn more"} target="/aboutme" />
         <Boys />
       </FullPage>
       <s id="horizontalMenu"></s>
-      <s id="professionalName"></s>
+      <s id="aboutmeName"></s>
       <FooterBanner />
     </>
   );
