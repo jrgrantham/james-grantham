@@ -7,8 +7,8 @@ export const transition = 0.5;
 
 export const startInDarkMode = true;
 
-export const appColour = '#E8E8E8';
-export const appColourDark = '#202020';
+export const appColour = '#e0e0e0';
+export const appColourDark = '#303030';
 export const fontColour = "#3e3e3e";
 export const fontColourDarkMode = "#e5e1d8"; // floralwhite shade
 

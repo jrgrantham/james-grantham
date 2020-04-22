@@ -73,7 +73,7 @@ export const Header = styled.div`
   p {
     text-align: center;
     cursor: pointer;
-    color: ${landingHeaderFont};
+    color: #707070;
     padding: 0 10px;
     font-size: 1rem;
     font-weight: bold;
@@ -81,8 +81,8 @@ export const Header = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        color: ${buttonBlue};
-        transform: scale(1.3);
+        color: ${landingHeaderFont};
+        // transform: scale(1.1);
       }
     }
 

@@ -14,8 +14,6 @@ export const projectsNumber = 4;
 
 export const projectsTitle = "Projects";
 export const projectsDescription = "Here are some of my recent projects.";
-export const projectsLink = "Visit";
-export const projectsGitHub = "github";
 
 export const projects = [
   {
@@ -48,7 +46,7 @@ export const projects = [
   },
   {
     title: "Friend-Finder",
-    uses: "bcryptjs, jsonwebtoken, sqlite3, supertest",
+    uses: "bcryptjs, sqlite3, supertest",
     comments:
       "Users are asked questions and the database returns likely friend matches based on the provided answers.",
     image: friendFinder,
