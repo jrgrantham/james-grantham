@@ -127,7 +127,7 @@ const FlipCard = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: ${borderRad}px
+    border-radius: ${borderRad}px;
     background: ${projectCardBack};
     width: 35px;
     height: 35px;
