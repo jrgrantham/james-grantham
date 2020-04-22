@@ -6,6 +6,7 @@ import {
   transition,
   projectCardBack,
   projectCardBackDark,
+  fontColourDarkMode,
 } from "../../views/styling";
 import web from "../../images/web.png";
 import github from "../../images/github.svg";
@@ -26,19 +27,19 @@ export default function ProjectCard(props) {
             </div>
             <div className="buttons">
               <a href={props.project.link}>
-                <div className="button">
+                <div className="button toggle darkmode">
                   <img src={web} alt="web" />
                 </div>
               </a>
               {props.project.presentation ? (
                 <a href={props.project.presentation}>
-                  <div className="button">
+                  <div className="button toggle darkmode">
                     <img src={youtube} alt="youtube" />
                   </div>
                 </a>
               ) : null}
               <a href={props.project.repo}>
-                <div className="button">
+                <div className="button toggle darkmode">
                   <img src={github} alt="web" />
                 </div>
               </a>
@@ -52,19 +53,19 @@ export default function ProjectCard(props) {
             </div>
             <div className="buttons">
               <a href={props.project.link}>
-                <div className="button">
+                <div className="button toggle darkmode">
                   <img src={web} alt="web" />
                 </div>
               </a>
               {props.project.presentation ? (
                 <a href={props.project.presentation}>
-                  <div className="button">
+                  <div className="button toggle darkmode">
                     <img src={youtube} alt="youtube" />
                   </div>
                 </a>
               ) : null}
               <a href={props.project.repo}>
-                <div className="button">
+                <div className="button toggle darkmode">
                   <img src={github} alt="web" />
                 </div>
               </a>
@@ -112,7 +113,7 @@ const FlipCard = styled.div`
   }
 
   a {
-    margin: 20px;
+    margin: 0px 25px 25px 25px;
     transition: transform ${transition}s;
 
     @media (pointer: fine) {
@@ -128,14 +129,18 @@ const FlipCard = styled.div`
     align-items: center;
     border-radius: ${borderRad}px
     background: ${projectCardBack};
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     padding: 5px;
 
     img {
       width: 100%;
       height: auto;
     }
+  }
+
+  .button.darkmode {
+    background: ${fontColourDarkMode};
   }
   
   @media (pointer: fine) {
@@ -160,6 +165,7 @@ const FlipCard = styled.div`
     height: 100%;
     backface-visibility: hidden;
     border-radius: ${borderRad}px;
+    border: 1px solid ${projectCardBackDark};
     overflow: hidden;
 
     display: flex;
