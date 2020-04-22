@@ -21,7 +21,7 @@ export const introduction = [
   // },
   {
     title: "Knowledge",
-    content: "Comfortable playing with React, vanilla JavaScript, Node JS and styled components, all the things used to build this portfolio. Familiar with Redux, Python, less, mySql and knex.",
+    content: "Comfortable with React, vanilla JavaScript, Node JS and styled components, all the things used to build this portfolio. Familiar with Redux, Python, less, mySql and knex.",
     section: 'Experience',
   },
   {

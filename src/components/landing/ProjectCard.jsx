@@ -1,8 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-import { borderRad, transition, buttonBlue, projectCardBack, projectCardBackDark, projectCardBorder, fontColourDarkMode } from "../../views/styling";
+import {
+  borderRad,
+  transition,
+  buttonBlue,
+  projectCardBack,
+  projectCardBackDark,
+  projectCardBorder,
+  fontColourDarkMode,
+} from "../../views/styling";
 import { projectsLink, projectsGitHub } from "../../data/projects";
+import web from "../../images/web.png";
+import github from "../../images/github.svg";
 
 export default function ProjectCard(props) {
   return (
@@ -11,16 +21,22 @@ export default function ProjectCard(props) {
         <div className="flip-card-inner">
           <div className="flip-card-front toggle darkmode">
             <div className="imageDiv">
-              <img
-                src={props.project.image}
-                alt={props.project.title}
-              />
+              <img src={props.project.image} alt={props.project.title} />
             </div>
             <div className="buttons">
-              {props.project.link === "" ? null : (
+              <div className='button'>
+                <img src={web} alt="web" />
+              </div>
+              <div className='button'>
+                <img src={web} alt="web" />
+              </div>
+              <div className='button'>
+                <img src={github} alt="web" />
+              </div>
+              {/* {props.project.link === "" ? null : (
                 <a href={props.project.link}>{projectsLink}</a>
               )}
-              <a href={props.project.repo}>{projectsGitHub}</a>
+              <a href={props.project.repo}>{projectsGitHub}</a> */}
             </div>
           </div>
           <div className="flip-card-back toggle darkmode">
@@ -30,6 +46,9 @@ export default function ProjectCard(props) {
               <p>{props.project.comments}</p>
             </div>
             <div className="buttons">
+              {/* {props.project.presentation ? (
+                <a href={props.project.presentation}>Presentation</a>
+              ) : null} */}
               {props.project.link === "" ? null : (
                 <a href={props.project.link}>{projectsLink}</a>
               )}
@@ -67,6 +86,7 @@ const FlipCard = styled.div`
   .details {
     max-height: 80%;
     overflow: hidden;
+    text-align: center;
   }
 
   .buttons {
@@ -79,6 +99,20 @@ const FlipCard = styled.div`
       align-items: center;
     }
   }
+
+  .button {
+    display: flex;
+    border-radius: ${borderRad}px
+    background: ${buttonBlue};
+    color: ${fontColourDarkMode};
+    width: 50px
+    padding: 5px
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
   
   a {
     display: flex;
@@ -86,11 +120,12 @@ const FlipCard = styled.div`
     align-items: center;
     min-width: 45%;
     min-height: 35px;
-    border-radius: ${borderRad}px
+    border-radius: ${borderRad}px;
     background: ${buttonBlue};
     color: ${fontColourDarkMode};
     font-weight: bold;
     transition: transform ${transition}s,  border-radius ${transition}s;
+    max-width: 50px;
 
     @media (max-width: 330px) {
       width: 90%;

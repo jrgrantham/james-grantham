@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { professionalWidth } from "../../views/styling";
+import { previously } from '../../data/previously'
 
 export default function Previously() {
 
@@ -22,8 +23,9 @@ export default function Previously() {
 
   return (
     <Container>
-      <p>Previously employed by integrity services, I have experience of risk assessments, fitness for service, integrity reviews and anomaly assessments. I am also proficient with maintenance management and risk based inspection systems.</p>
-      <p>Looking for a developer with knowledge of pressure systems inspection? I may be a great fit for your team.</p>
+      {previously.map(para => {
+        return <p>{para}</p>
+      })}
     </Container>
   );
 }

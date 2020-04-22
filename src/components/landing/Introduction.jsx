@@ -5,7 +5,6 @@ import {
   welcomeTitle,
   welcomeMessage,
   introduction,
-  button,
 } from "../../data/introduction";
 
 import {

@@ -40,10 +40,11 @@ export const projects = [
     title: "RoboMaze",
     uses: "Python, React, Redux",
     comments:
-      "Built during our computer science module, the server uses depth first traversal on a grid of specified dimensions to create a maze. The user can use the keyboard or mouse to navigate the robot to a randomly placed exit.",
+      "Built during our computer science module, the server uses depth first traversal on a grid of specified dimensions to create a maze.",
     image: maze,
     link: "https://mud-2-frontend-nihkors8y.now.sh/",
-    repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend"
+    repo: "https://github.com/CSEU3-MUDGAME/MUD2_Backend",
+    presentation: 'https://www.youtube.com/watch?v=q8JEtPo6v1w&feature=youtu.be'
   },
   {
     title: "Friend-Finder",
