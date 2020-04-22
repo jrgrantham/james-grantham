@@ -115,8 +115,18 @@ const FlipCard = styled.div`
     justify-content: space-between;
   }
 
-  .button {
+  a {
     margin: 20px;
+    transition: transform ${transition}s;
+
+    @media (pointer: fine) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .button {
     display: flex;
     justify-content: center;
     align-items: center;
