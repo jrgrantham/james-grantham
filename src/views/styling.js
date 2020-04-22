@@ -5,7 +5,7 @@ export const projectMediaBreak = "750px";
 export const borderRad = 5;
 export const transition = 0.5;
 
-export const startInDarkMode = true;
+export const startInDarkMode = false;
 
 export const appColour = '#E8E8E8';
 export const appColourDark = '#303030';
