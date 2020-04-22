@@ -4,7 +4,7 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition, appColour, buttonOrange, professionalWidth } from "../../views/styling";
+import { transition, appColour, professionalWidth } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function ContactMe(props) {
@@ -59,14 +59,11 @@ export default function ContactMe(props) {
       background-color: ${appColour};
       padding: 25px;
       transition: all ${transition}s;
-      // border: 1px solid red;
       border-radius: 50%;
 
       @media (pointer: fine) {
         &:hover {
-          // border-radius: 30%
           transform: scale(1.2);
-          // background: ${buttonOrange}
         }
       }
     }
