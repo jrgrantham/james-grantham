@@ -94,18 +94,19 @@ const FlipCard = styled.div`
     margin-bottom: 40px;
   }
 
-  h3, h4, h5 {
-    // margin-bottom: 7px
-  }
-
-  P {
-    // padding: 20px
-  }
-
   .details {
     max-height: 80%;
+    padding: 20px;
     overflow: hidden;
     text-align: center;
+
+    h3 {
+      padding-top: 20px;
+    }
+    h5 {
+      padding: 20px 0;
+
+    }
   }
 
   .buttons {
