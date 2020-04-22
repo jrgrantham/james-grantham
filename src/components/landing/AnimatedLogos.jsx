@@ -1,5 +1,4 @@
 import React from "react";
-import { transition } from "../../views/styling";
 import styled, { keyframes } from "styled-components";
 
 import lessD from "../../images/lessD.png";

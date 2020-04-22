@@ -8,9 +8,6 @@ import { StyledForm } from "../components/reusable/ContactForm";
 import Spinner from "../components/reusable/Spinner";
 import { LinkButton } from "../components/reusable/Buttons";
 
-import ben from '../images/b192.png'
-import sam from '../images/s192.png'
-import ollie from '../images/o192.png'
 import { borderRad, landingCaptionBorder, transition } from "./styling";
 
 const loginApi = url() + "api/auth/login";
@@ -99,14 +96,7 @@ export default function LoginForm(props) {
 }
 
 const Position = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-itmes: center;
   margin: auto;
-
-  .home {
-    // margin: 70px 0 0 0;
-  }
 
   .boys {
     display: flex;
@@ -125,7 +115,7 @@ const Position = styled.div`
       @media (pointer: fine) {
         &:hover {
           transform: scale(1.2);
-          border-radius: ${borderRad * 3}px
+          border-radius: ${borderRad * 2}px
         }
       }
     }
