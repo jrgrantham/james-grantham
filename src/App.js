@@ -6,7 +6,7 @@ import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from "./components/reusable/ContactForm";
 import Projects from "./views/AllProjects";
-import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark } from "./views/styling";
+import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark, midGrey } from "./views/styling";
 import { aboutMe } from "./data/aboutMe";
 import AboutMe from "./views/AboutMe";
 

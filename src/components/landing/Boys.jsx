@@ -27,10 +27,7 @@ export default function Boys() {
 const StyledBoys = styled.div`
   background-color: ${landingBoysBack};
   width: 100%;
-  
-  h5 {
-
-  }
+  margin-top: 50px;
 
   .link {
     display: flex;
@@ -50,8 +47,8 @@ const StyledBoys = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        background: ${buttonBlue}
-        color: ${appColour}
+        background: ${buttonBlue};
+        /* color: ${appColour} */
       }
     }
   }

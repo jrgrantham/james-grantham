@@ -64,7 +64,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width 90%;
+  width: 90%;
 
   .title {
     margin: 60px 0 0px 0;
@@ -92,7 +92,7 @@ const Container = styled.div`
   }
 
   .contents {
-    // border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -104,7 +104,7 @@ const Container = styled.div`
     margin: 90px 2.5% 0px 2.5%;
 
     @media (max-width: 800px) {
-      width: 100%
+      width: 100%;
       margin: 40px 2.5% 0px 2.5%;
     }
     

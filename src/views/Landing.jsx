@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import ContactMeHeader from "../components/landing/Header";
 
-import { headerHeight, footerHeight } from "./styling";
+import { headerHeight, footerHeight, midGrey } from "./styling";
 import FooterBanner from "../components/landing/Footer";
 import LandingInitialView from "../components/landing/InitialView";
 import Captions from "../components/landing/Captions";
@@ -93,6 +93,10 @@ const FullPage = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  p {
+    color: ${midGrey};
+  }
 
   // s {
   //   padding: 1px;

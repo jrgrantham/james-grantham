@@ -38,7 +38,7 @@ export default function Contact(props) {
             setShowContactMe(false);
             actions.setSubmitting(false);
           })
-          .catch(err => {
+          .catch(() => {
             actions.setSubmitting(false);
           });
       }}
@@ -59,7 +59,7 @@ export default function Contact(props) {
               e.stopPropagation();
             }}
           ><p className='email'>jamesrgrantham (at) gmail (dot) com</p>
-          <p>or</p>
+          <p className='email'>or</p>
             <div data-testid="nameField" className="inputField">
               <input
                 name="name"
@@ -136,7 +136,7 @@ export default function Contact(props) {
 
 const Position = styled.div`
   margin: 10px 0;
-  // padding: 30px 0;
+  /* padding: 30px 0; */
   display: flex;
   justify-content: center;
   width: 100%;
@@ -159,12 +159,14 @@ export const StyledForm = styled.form`
   max-width: 500px;
   border-radius: 15px;
   padding: 20px;
-  // background: transparent;
-  // border: 1px solid red;
 
-  h6, p {
+  h6 {
     color: ${landingCaptionBorder};
     margin-bottom: 20px;
+  }
+
+  p.email {
+    padding: 0 0 10px 0;
   }
 
   .inputField {
