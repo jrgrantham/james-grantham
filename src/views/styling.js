@@ -3,7 +3,7 @@ export const aboutmeWidth = 1000;
 export const mediaBreak = "650px";
 export const projectMediaBreak = "750px";
 export const borderRad = 5;
-export const transition = 0.5;
+export const transition = 0.3;
 
 export const startInDarkMode = false;
 
