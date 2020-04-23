@@ -4,7 +4,7 @@ import styled from "styled-components";
 import github from "../../images/github.svg";
 import linkedin from "../../images/linkedin.png";
 import mail from "../../images/mailNew.png";
-import { transition, appColour, aboutmeWidth } from "../../views/styling";
+import { transition, appColour, aboutmeWidth, fontColourDarkMode, mediaBreak } from "../../views/styling";
 import Contact from "./ContactForm";
 
 export default function ContactMe(props) {
@@ -38,7 +38,7 @@ export default function ContactMe(props) {
 
     img {
       display: flex;
-      width: 40px;
+      width: 30px;
       height: auto;
     }
 
@@ -53,13 +53,16 @@ export default function ContactMe(props) {
 
     .other {
       margin-bottom: 30px;
+      @media (max-width: ${mediaBreak}) {
+        margin: 30px 0 0 0;
+      }
     }
 
     .image {
       background-color: ${appColour};
-      padding: 25px;
-      transition: all ${transition}s;
-      border-radius: 50%;
+      padding: 10px;
+      transition: transform ${transition}s;
+      border-radius: 30%;
 
       @media (pointer: fine) {
         &:hover {
@@ -67,17 +70,21 @@ export default function ContactMe(props) {
         }
       }
     }
+
+    .image.darkmode {
+      background-color: ${fontColourDarkMode};
+    }
   `;
 
   return (
     <Container id="contact" onClick={() => setShowContactMe(false)}>
       <h4>Find me...</h4>
       <Links id="contact">
-        <a href="https://github.com/jrgrantham" className="image other">
+        <a href="https://github.com/jrgrantham" className="image other toggle darkmode">
           <img src={github} alt="" />
         </a>
         <div
-          className="image mail"
+          className="image mail toggle darkmode"
           onClick={(e) => {
             e.stopPropagation();
             setShowContactMe(!showContactMe);
@@ -85,7 +92,7 @@ export default function ContactMe(props) {
         >
           <img src={mail} alt="" />
         </div>
-        <a href="https://www.linkedin.com/in/j-grantham/" className="image other">
+        <a href="https://www.linkedin.com/in/j-grantham/" className="image other toggle darkmode">
           <img src={linkedin} alt="" />
         </a>
       </Links>
