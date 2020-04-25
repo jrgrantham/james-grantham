@@ -8,7 +8,7 @@ export const transition = 0.3;
 export const startInDarkMode = false;
 
 export const appColour = '#E8E8E8';
-export const appColourDark = '#303030';
+export const appColourDark = '#252525';
 export const fontColour = "#3e3e3e";
 export const fontColourDarkMode = "#e5e1d8"; // floralwhite shade
 
@@ -19,7 +19,7 @@ export const fontColourDarkMode = "#e5e1d8"; // floralwhite shade
 
 export const buttonOrange = "#FFA500";
 export const buttonBlue = "#005aFF";
-export const midGrey = "#707070";
+export const midGrey = "#808080";
 
 export const landingHeaderFont = fontColourDarkMode;
 

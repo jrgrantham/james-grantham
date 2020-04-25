@@ -78,17 +78,17 @@ export default function ProjectCard(props) {
 }
 
 const FlipCard = styled.div`
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 90%;
   max-width: 380px;
   height: 450px;
-  perspective: 2000px;
+  perspective: 3000px;
   margin: 0 30px 60px 30px;
 
   @media (max-width: 500px) {
-    width: 320px;
-    height: 380px;
-    margin-bottom: 40px;
+    /* width: 320px; */
+    height: 400px;
+    margin: 0 0px 25px 0px;
   }
 
   .details {
@@ -154,7 +154,7 @@ const FlipCard = styled.div`
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform ${transition}s;
+    transition: transform ${transition * 2}s;
     transform-style: preserve-3d;
   }
 

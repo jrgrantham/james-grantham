@@ -13,7 +13,7 @@ export default function HireMe() {
   return (
     <Container>
       <p
-        className=""
+        className="test"
         onClick={() => {
           window.scrollTo({
             left: 0,
@@ -29,21 +29,22 @@ export default function HireMe() {
 }
 
 const Container = styled.div`
+  font-weight: bold;
+  background-color: ${buttonOrange};
+  padding: 1rem 3.6rem;
+  border-radius: ${borderRad}px;
+  transition: all ${transition}s;
+  margin: 50px 0;
+  cursor: pointer;
 
+  .test {
     color: ${appColourDark};
-    font-weight: bold;
-    background-color: ${buttonOrange};
-    padding: 1rem 3.6rem;
-    border-radius: ${borderRad}px;
-    transition: all ${transition}s;
-    margin: 50px 0;
-    cursor: pointer;
-    
-    @media (pointer: fine) {
-      &:hover {
-        transform: scale(1.1);
-        border-radius: ${borderRad * 3}px
-      }
+  }
+
+  @media (pointer: fine) {
+    &:hover {
+      transform: scale(1.1);
+      border-radius: ${borderRad * 3}px;
     }
-  
+  }
 `;

@@ -16,7 +16,7 @@ export default function ContactMe(props) {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    // padding-top: 40px;
+    /* padding-top: 40px; */
 
     h4, p {
       text-align: center;
@@ -44,6 +44,7 @@ export default function ContactMe(props) {
 
     .mail {
       margin-top: 30px;
+
       @media (pointer: fine) {
         &:hover {
           cursor: pointer;
@@ -53,9 +54,6 @@ export default function ContactMe(props) {
 
     .other {
       margin-bottom: 30px;
-      @media (max-width: ${mediaBreak}) {
-        margin: 30px 0 0 0;
-      }
     }
 
     .image {
@@ -63,7 +61,9 @@ export default function ContactMe(props) {
       padding: 10px;
       transition: transform ${transition}s;
       border-radius: 30%;
-
+      @media (max-width: ${mediaBreak}) {
+        margin: 0;
+      }
       @media (pointer: fine) {
         &:hover {
           transform: scale(1.2);
