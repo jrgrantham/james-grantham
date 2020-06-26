@@ -33,6 +33,10 @@ export const contact = [
     type: 'LinkedIn',
     value: 'linkedin.com/in/j-grantham'
   },
+  {
+    type: 'GitHub',
+    value: 'https://github.com/jrgrantham'
+  },
 ]
 
 export const skills = [
@@ -58,7 +62,7 @@ export const software = [
 ];
 
 export const statement =
-  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience, newly trained in javascript. Strives to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hoping to work in a friendly and engaging team.";
+  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience, newly trained in web development. Strive to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hoping to work in a friendly and engaging team.";
 
 export const history = [
   {

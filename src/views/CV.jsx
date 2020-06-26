@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import html2pdf from "html2pdf.js";
 import styled from "styled-components";
 import * as cv from "../data/cv";
-import { borderRad } from "./styling";
-import { useEffect } from "react";
 
-function Print() {
+function CV() {
   function generatePDF() {
     const element = document.getElementById("pdf");
     const filename = `James Grantham CV`;
@@ -21,8 +19,17 @@ function Print() {
   }
 
   useEffect(() => {
+    try {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+    } catch (error) {
+      window.scrollTo(0, 0);
+    }
     setTimeout(() => {
-      // generatePDF();
+      generatePDF();
     }, 2000);
     return () => {};
   }, []);
@@ -32,8 +39,10 @@ function Print() {
     <Container>
       <PDF id="pdf">
         <div className="top">
-          <h1 className="name">James Grantham</h1>
-          <h2 className="bold space">{cv.profession}</h2>
+          <div className="header">
+            <h1 className="name">James Grantham</h1>
+            <h2 className="bold space">{cv.profession}</h2>
+          </div>
           <p>{cv.statement}</p>
         </div>
 
@@ -201,7 +210,7 @@ const PDF = styled.div`
   .top {
     color: white;
     background-color: #303040;
-    padding: 10px 30px 15px 30px;
+    padding: 15px 30px 20px 30px;
 
     h1 {
       font-size: 30px;
@@ -209,6 +218,15 @@ const PDF = styled.div`
     h2 {
       font-size: 18px;
     }
+    p {
+      text-align: justify;
+    }
+  }
+  .header {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
   .bottom {
@@ -229,4 +247,4 @@ const PDF = styled.div`
     padding: 20px 20px 20px 30px;
   }
 `;
-export default Print;
+export default CV;
