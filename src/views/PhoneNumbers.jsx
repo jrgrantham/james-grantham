@@ -4,7 +4,7 @@ import axiosWithAuth from "../authentication/axiosWithAuth";
 import url from "../helpers/url";
 
 import Spinner from "../components/reusable/Spinner";
-import {  borderRad, landingCaptionBorder } from "./styling";
+import { borderRad, landingCaptionBorder } from "./styling";
 
 const numberApi = `${url()}api/users/numbers`;
 
@@ -15,27 +15,27 @@ export default function PhoneNumbers(props) {
     props.setIsLoading(true);
     axiosWithAuth(props.token)
       .get(numberApi)
-      .then(res => {
+      .then((res) => {
         setNumbers(res.data);
         props.setIsLoading(false);
       })
-      .catch(err => {
+      .catch((err) => {
         props.setIsLoading(false);
         props.history.push("/login");
-      })
-      // .finally(() => {
-      //   props.setToken('');
-      // });
+      });
+    // .finally(() => {
+    //   props.setToken('');
+    // });
   };
 
   useEffect(() => {
     getNumbers();
-    console.log('PhoneNumbers: useeffect ran, HAS empty array');
+    console.log("PhoneNumbers: useeffect ran, HAS empty array");
   }, []);
 
   function callNumber(number) {
     window.location = `tel:${number}`;
-    props.history.push("/")
+    props.history.push("/");
   }
 
   if (props.isLoading) {
@@ -45,7 +45,7 @@ export default function PhoneNumbers(props) {
       <Container>
         <h3>Hi {props.user}!</h3>
         <h4>Here are your numbers...</h4>
-        {numbers.map(number => (
+        {numbers.map((number) => (
           <NumberCard
             onClick={() => callNumber(number.phoneNumber)}
             key={number.id}
@@ -68,11 +68,11 @@ const Container = styled.div`
   margin-bottom: 50px;
 
   h3 {
-    margin-top: 40px
+    margin-top: 40px;
   }
   h4 {
-    margin-top: 20px
-    margin-bottom: 10px
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   @media (min-height: 850px) {
@@ -81,10 +81,10 @@ const Container = styled.div`
 `;
 
 const NumberCard = styled.div`
-  margin-top: 25px
+  margin-top: 25px;
   padding: 15px;
-  width: 300px
-  height: 100px
+  width: 300px;
+  height: 100px;
 
   border: 1px solid ${landingCaptionBorder};
   border-radius: ${borderRad}px;

@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import Landing from "./views/Landing";
 import Login from "./views/Login";
 import PhoneNumbers from "./views/PhoneNumbers";
 import ContactForm from "./components/reusable/ContactForm";
 import Projects from "./views/AllProjects";
-import { fontColour, fontColourDarkMode, appWidth, appColour, appColourDark, midGrey } from "./views/styling";
+import {
+  fontColour,
+  fontColourDarkMode,
+  appWidth,
+  appColour,
+  appColourDark,
+} from "./views/styling";
 import { aboutMe } from "./data/aboutMe";
 import AboutMe from "./views/AboutMe";
-
+import CV from "./views/CV";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -19,95 +25,122 @@ export default function App() {
   const [token, setToken] = useState("");
   const [content, setContent] = useState(aboutMe);
   const [selected, setSelected] = useState("About me");
-  const [showContactMe, setShowContactMe] = useState(false)
-  const [aboutHeight, setAboutHeight] = useState(0)
-  const [projectsHeight, setProjectsHeight] = useState(0)
-  const [valuesHeight, setValuesHeight] = useState(0)
-  const [contactHeight, setContactHeight] = useState(0)
-  const [profHeaderHeight, setProfHeaderHeight] = useState(0)
+  const [showContactMe, setShowContactMe] = useState(false);
+  const [aboutHeight, setAboutHeight] = useState(0);
+  const [projectsHeight, setProjectsHeight] = useState(0);
+  const [valuesHeight, setValuesHeight] = useState(0);
+  const [contactHeight, setContactHeight] = useState(0);
+  const [profHeaderHeight, setProfHeaderHeight] = useState(0);
 
   return (
     <StyledApp>
-      <div className="app toggle darkmode">
-        {/* <Route exact path="/" component={Landing} /> */}
-        <Route
-          exact path="/"
-          render={props => (
-            <Landing
-              {...props}
-              content={content}
-              setContent={setContent}
-              selected={selected}
-              setSelected={setSelected}
-              showContactMe={showContactMe}
-              setShowContactMe={setShowContactMe}
-              aboutHeight={aboutHeight}
-              setAboutHeight={setAboutHeight}
-              projectsHeight={projectsHeight}
-              setProjectsHeight={setProjectsHeight}
-              valuesHeight={valuesHeight}
-              setValuesHeight={setValuesHeight}
-              contactHeight={contactHeight}
-              setContactHeight={setContactHeight}
+      {/* <BrowserRouter> */}
+        {/* <Switch> */}
+          <div className="app toggle darkmode">
+            {/* <Route exact path="/" component={Landing} /> */}
+            <Route
+              exact
+              path="/"
+              render={(props) => (
+                <Landing
+                  {...props}
+                  content={content}
+                  setContent={setContent}
+                  selected={selected}
+                  setSelected={setSelected}
+                  showContactMe={showContactMe}
+                  setShowContactMe={setShowContactMe}
+                  aboutHeight={aboutHeight}
+                  setAboutHeight={setAboutHeight}
+                  projectsHeight={projectsHeight}
+                  setProjectsHeight={setProjectsHeight}
+                  valuesHeight={valuesHeight}
+                  setValuesHeight={setValuesHeight}
+                  contactHeight={contactHeight}
+                  setContactHeight={setContactHeight}
+                />
+              )}
             />
-          )}
-        />
-        <Route
-          path="/aboutme"
-          render={props => (
-            <AboutMe
-              {...props}
-              content={content}
-              setContent={setContent}
-              selected={selected}
-              setSelected={setSelected}
-              showContactMe={showContactMe}
-              setShowContactMe={setShowContactMe}
-              profHeaderHeight={profHeaderHeight}
-              setProfHeaderHeight={setProfHeaderHeight}
+            <Route
+              path="/aboutme"
+              render={(props) => (
+                <AboutMe
+                  {...props}
+                  content={content}
+                  setContent={setContent}
+                  selected={selected}
+                  setSelected={setSelected}
+                  showContactMe={showContactMe}
+                  setShowContactMe={setShowContactMe}
+                  profHeaderHeight={profHeaderHeight}
+                  setProfHeaderHeight={setProfHeaderHeight}
+                />
+              )}
             />
-          )}
-        />
-        <Route path="/projects" component={Projects} />
-        <Route
-          path="/login"
-          render={props => (
-            <Login
-              {...props}
-              setIsLoading={setIsLoading}
-              isLoading={isLoading}
-              setToken={setToken}
-              setUser={setUser}
+            <Route path="/projects" component={Projects} />
+            <Route
+              path="/login"
+              render={(props) => (
+                <Login
+                  {...props}
+                  setIsLoading={setIsLoading}
+                  isLoading={isLoading}
+                  setToken={setToken}
+                  setUser={setUser}
+                />
+              )}
             />
-          )}
-        />
-        <Route
-          path="/phonenumbers"
-          render={props => (
-            <PhoneNumbers
-              {...props}
-              setIsLoading={setIsLoading}
-              isLoading={isLoading}
-              user={user}
-              token={token}
-              setToken={setToken}
+            <Route
+              path="/phonenumbers"
+              render={(props) => (
+                <PhoneNumbers
+                  {...props}
+                  setIsLoading={setIsLoading}
+                  isLoading={isLoading}
+                  user={user}
+                  token={token}
+                  setToken={setToken}
+                />
+              )}
             />
-          )}
-        />
-        <Route
-          path="/contact"
-          render={props => (
-            <ContactForm
-              {...props}
-              setIsLoading={setIsLoading}
-              isLoading={isLoading}
-              user={user}
-              token={token}
-              setToken={setToken}
+            <Route
+              path="/contact"
+              render={(props) => (
+                <ContactForm
+                  {...props}
+                  setIsLoading={setIsLoading}
+                  isLoading={isLoading}
+                  user={user}
+                  token={token}
+                  setToken={setToken}
+                />
+              )}
             />
-          )}
-        />
-      </div>
+            <Route path="/cv" render={(props) => <CV />} />
+            {/* <Route
+              render={(props) => (
+                <Landing
+                  {...props}
+                  content={content}
+                  setContent={setContent}
+                  selected={selected}
+                  setSelected={setSelected}
+                  showContactMe={showContactMe}
+                  setShowContactMe={setShowContactMe}
+                  aboutHeight={aboutHeight}
+                  setAboutHeight={setAboutHeight}
+                  projectsHeight={projectsHeight}
+                  setProjectsHeight={setProjectsHeight}
+                  valuesHeight={valuesHeight}
+                  setValuesHeight={setValuesHeight}
+                  contactHeight={contactHeight}
+                  setContactHeight={setContactHeight}
+                />
+              )}
+            /> */}
+          </div>
+        {/* </Switch> */}
+      {/* </BrowserRouter> */}
     </StyledApp>
   );
 }
@@ -118,9 +151,10 @@ const StyledApp = styled.div`
   text-align: center;
   width: 100%;
   max-width: ${appWidth}px;
+  max-width: ${appWidth}px;
   min-height: 100%;
   margin: auto;
-  
+
   .app {
     display: flex;
     justify-content: center;
@@ -149,7 +183,8 @@ const StyledApp = styled.div`
     h4 {
       font-size: 2rem;
     }
-    h5, h6 {
+    h5,
+    h6 {
       font-size: 1.5rem;
     }
   }
@@ -167,7 +202,8 @@ const StyledApp = styled.div`
     h4 {
       font-size: 1.8rem;
     }
-    h5, h6 {
+    h5,
+    h6 {
       font-size: 1.5rem;
     }
   }
@@ -185,7 +221,8 @@ const StyledApp = styled.div`
     h4 {
       font-size: 1.5rem;
     }
-    h5, h6 {
+    h5,
+    h6 {
       font-size: 1.2rem;
     }
   }

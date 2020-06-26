@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "dom": "0.0.3",
     "formik": "^2.1.4",
+    "html2pdf.js": "^0.9.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
