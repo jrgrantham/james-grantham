@@ -1,8 +1,9 @@
 import React from "react";
 import html2pdf from "html2pdf.js";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import * as cv from "../data/cv";
+import { borderRad } from "./styling";
+import { useEffect } from "react";
 
 function Print() {
   function generatePDF() {
@@ -17,20 +18,22 @@ function Print() {
       jsPDF: { unit: "in", format: "A4", orientation: "portrait" },
     };
     html2pdf().set(options).from(element).save();
-    // setTimeout(() => {
-    // props.history.push("/");
-    // }, 5000);
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      // generatePDF();
+    }, 2000);
+    return () => {};
+  }, []);
 
   return (
     // <Container id="pdf" fontSize={props.user.fontSize}>
     <Container>
-      <Link>Home</Link>
-      <h6 onClick={generatePDF}>download</h6>
       <PDF id="pdf">
         <div className="top">
           <h1 className="name">James Grantham</h1>
-          <p className="bold section">{cv.profession}</p>
+          <h2 className="bold space">{cv.profession}</h2>
           <p>{cv.statement}</p>
         </div>
 
@@ -131,7 +134,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 0;
   background-color: #656565;
   width: 100%;
 `;
@@ -148,7 +151,7 @@ const PDF = styled.div`
   overflow: hidden;
 
   div {
-    /* border: 1px solid red */
+    /* border: 1px solid red; */
   }
 
   p,
@@ -203,6 +206,9 @@ const PDF = styled.div`
     h1 {
       font-size: 30px;
     }
+    h2 {
+      font-size: 18px;
+    }
   }
 
   .bottom {
@@ -215,7 +221,7 @@ const PDF = styled.div`
 
   .information {
     width: 29%;
-    padding: 20px;
+    padding: 20px 15px;
     background-color: #e5e5e5;
   }
   .professional {

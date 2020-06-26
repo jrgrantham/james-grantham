@@ -36,29 +36,29 @@ export const contact = [
 ]
 
 export const skills = [
-  "react",
-  "javascript",
-  "css",
-  "python",
-  "nodejs",
-  "styled components",
-  "redux",
+  "Communication",
+  "Problem-Solving",
+  "Organisation",
+  "Leadership",
+  "Interpersonal Skills",
+  "Teamwork",
+  "Adaptability",
 ];
 
 export const software = [
-  "git & git workflow",
-  "react",
-  "javascript",
-  "css",
-  "python",
-  "nodejs",
-  "styled components",
-  "redux",
+  "Git & Git workflow",
+  "React",
+  "Javascript",
+  "CSS",
+  "Python",
+  "Node js",
+  "Styled Components",
+  "Redux",
   "mySQL",
 ];
 
 export const statement =
-  "A qualified and enthusiastic engineer with nearly 20 years industry experience. Strive to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hoping to work in a friendly and engaging team.";
+  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience, newly trained in javascript. Strives to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hoping to work in a friendly and engaging team.";
 
 export const history = [
   {
@@ -121,7 +121,7 @@ export const interests = [
   {
     title: "Crawling and trail running",
     info:
-      "Building, maintaining and using remote control replica rock crawers. Assemble from kits, paint, then install electronics and accessories, just an excuse to get outside.",
+      "Building, maintaining and using remote control replica rock crawers. Assemble from kits, paint, then install electronics and accessories, just an excuse to get outside with my children.",
   },
   {
     title: "Mountain Biking",
