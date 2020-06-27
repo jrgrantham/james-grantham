@@ -47,7 +47,7 @@ export const software = [
 ];
 
 export const statement =
-  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience. Newly trained in web development, strive to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hope to work in a friendly and engaging team to learn from and contribute to.";
+  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience. Newly trained in web development and striving to achieve simple and intuitive interfaces. Enjoy pair programming, solving problems and hope to work in a friendly and engaging team to learn from and contribute to.";
 
 export const history = [
   {
@@ -88,7 +88,7 @@ export const history = [
     role: "Graduate Engineer",
     company: "Lloyd's Register, BP's Gas Terminal, Dimlingtion (Hull)",
     info: [
-      "Introduced to Risk Management and the world of integrity services.",
+      "Introduced to Risk Management and the world of Integrity Services.",
     ],
   },
 ];
@@ -118,6 +118,6 @@ export const interests = [
   {
     title: "Crawling and Trail Running",
     info:
-      "Building, maintaining and modifying remote control rock crawlers with my three children. These are assembled from kits and customsied to our liking, we enjoy soldering and getting them running, another excuse to get outside.",
+      "Building, maintaining and modifying remote control rock crawlers with my three children. These are assembled from kits and customsied to our liking, we enjoy soldering and getting them running. Another excuse to get outside.",
   },
 ];
