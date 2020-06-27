@@ -1,3 +1,5 @@
+// only edit brown text
+
 export const profession = "Full Stack Web Developer";
 
 export const address = [
@@ -32,7 +34,7 @@ export const skills = [
 ];
 
 export const software = [
-  "Git & Git workflow",
+  "Git & git workflow",
   "React",
   "Javascript",
   "CSS",
@@ -56,10 +58,10 @@ export const history = [
       "Git and git workflow, pull requests, merging commits, managing conflicts.",
       // "Client side: JavaScript, Python, React, Redux, CSS, testing.",
       // "Server side: Node JS, knex, mySQL, authentication, testing.",
-      "Collaborated on projects and worked remotely with people around the world to pre-defined specifications and presented the applications to an audience.",
+      "Collaborated on projects and worked remotely with people from around the world to pre-defined specifications and presented to an audience.",
       "Wrote a depth-first-traversal algorithm in python to create a maze. This was tested live and sucsesfully returned a navigateble grid with a million 'rooms'.",
       "Used create react app to build a fully responsive portfolio website.",
-      "Developed a risk management application for a London based consultancy, for mulitple users. Administrators can create accounts with varying permissions for their clients.",
+      "Developed a risk management app for a London based consultancy firm, for mulitple users. Selecting from relevant templates (if account type permits) users complete the form and export customised data and documents.",
     ],
   },
   {
@@ -109,13 +111,13 @@ export const education = [
 
 export const interests = [
   {
-    title: "Crawling and trail running",
-    info:
-      "Building and maintaining remote control rock crawers with my three boys. Assemble from kits, then install electronics and accessories, an excuse to get outside.",
-  },
-  {
     title: "Mountain Biking",
     info:
-      "A sport from years ago that is being relived due to energetic children.",
+      "This was my all time favourite activity as a teenager and all three of my boys enjoy it now too, especially if it's wet and muddy!",
+  },
+  {
+    title: "Crawling and Trail Running",
+    info:
+      "Building, maintaining and modifying remote control rock crawlers with my three children. These are assembled from kits and customsied to our liking, we enjoy soldering and getting them running, another excuse to get outside.",
   },
 ];
