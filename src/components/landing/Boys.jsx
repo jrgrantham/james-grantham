@@ -10,6 +10,7 @@ import {
   transition,
   appColourDark,
   appColour,
+  buttonOrange,
 } from "../../views/styling";
 
 const content = "...and dedicated father to three awesome boys!";
@@ -47,7 +48,8 @@ const StyledBoys = styled.div`
 
     @media (pointer: fine) {
       &:hover {
-        background: ${buttonBlue};
+        background: ${buttonOrange};
+        transform: scale(1.05);
         /* color: ${appColour} */
       }
     }

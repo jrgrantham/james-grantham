@@ -19,7 +19,7 @@ export const contact = [
  { type: "eMail", value: "james.r.grantham@gmail.com" },
  { type: "Portfolio", value: "jamesgrantham.me" },
  { type: "LinkedIn", value: "linkedin.com/in/j-grantham" },
- { type: "GitHub", value: "https://github.com/jrgrantham" },
+ { type: "GitHub", value: "github.com/jrgrantham" },
 ];
  
 export const skills = [
