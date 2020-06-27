@@ -28,9 +28,9 @@ function CV() {
     } catch (error) {
       window.scrollTo(0, 0);
     }
-    setTimeout(() => {
+    // setTimeout(() => {
       generatePDF();
-    }, 2000);
+    // }, 2000);
     return () => {};
   }, []);
 
@@ -116,9 +116,18 @@ function CV() {
               <h2 className="title">Skills</h2>
               {cv.skills.map((skill, index) => {
                 return (
-                  <p key={index} className="list">
-                    {skill}
-                  </p>
+                  <div key={index} className="info">
+                    <p className="list">{skill.description}</p>
+                    <div className="rating">
+                      {skill.rating.map((rate, index) => {
+                        if (rate) {
+                          return <div key={index} className="rate full"></div>;
+                        } else {
+                          return <div key={index} className="rate"></div>;
+                        }
+                      })}
+                    </div>
+                  </div>
                 );
               })}
             </div>
@@ -198,6 +207,20 @@ const PDF = styled.div`
     justify-content: space-between;
     /* flex-direction: column; */
     /* width: 85%; */
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    .rate {
+      border-radius: 50%;
+      border: 1px solid #303040;
+      width: 8px;
+      height: 8px;
+      margin: 1px;
+    }
+    .full {
+      background-color: #303040;
+    }
   }
 
   .title {

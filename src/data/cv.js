@@ -18,35 +18,37 @@ export const contact = [
   //   value: '+44 7534 551759'
   // },
   {
-    type: 'Phone',
-    value: '+44 7534 551759'
+    type: "Phone",
+    value: "+44 7534 551759",
   },
   {
-    type: 'eMail',
-    value: "james.r.grantham@gmail.com"
+    type: "eMail",
+    value: "james.r.grantham@gmail.com",
   },
   {
-    type: 'Portfolio',
-    value: 'jamesgrantham.me'
+    type: "Portfolio",
+    value: "jamesgrantham.me",
   },
   {
-    type: 'LinkedIn',
-    value: 'linkedin.com/in/j-grantham'
+    type: "LinkedIn",
+    value: "linkedin.com/in/j-grantham",
   },
   {
-    type: 'GitHub',
-    value: 'https://github.com/jrgrantham'
+    type: "GitHub",
+    value: "https://github.com/jrgrantham",
   },
-]
+];
 
 export const skills = [
-  "Communication",
-  "Problem-Solving",
-  "Organisation",
-  "Leadership",
-  "Interpersonal Skills",
-  "Teamwork",
-  "Adaptability",
+  { description: "Communication", rating: [1,1,1,1,1] },
+  { description: "Problem-Solving", rating: [1,1,1,1,1] },
+  { description: "Organisation", rating: [1,1,1,0,0] },
+  { description: "Leadership", rating: [1,1,1,1,0] },
+  { description: "Teamwork", rating: [1,1,1,1,0] },
+  { description: "Adaptability", rating: [1,1,1,1,1] },
+  { description: "Creativity", rating: [1,1,1,1,0] },
+  { description: "Interpersonal", rating: [1,1,1,1,0] },
+  // { description: "Customer Service", rating: [1,1,1,1,0] },
 ];
 
 export const software = [
@@ -82,7 +84,7 @@ export const history = [
     role: "Project Engineer",
     company: "Lloyd's Register, Head Office, Aberdeen",
     info: [
-      "Onshore: Undertook risk assessments, integrity reviews, anomaly ranking and categorisation, repair recommendations and fitness for service calculations.", 
+      "Onshore: Undertook risk assessments, integrity reviews, anomaly ranking and categorisation, repair recommendations and fitness for service calculations.",
       "Onshore: Reviewed inspection history, integrity status, operating conditions and built inspection workpacks.",
       "Offshore: 7-month corrosion under insulation project.",
     ],
@@ -117,7 +119,7 @@ export const education = [
     date: "06/2019 - 06/2020",
     title: "Bachelor of Mechanical Engineering",
     school: "University of Loughborough",
-    info: ""
+    info: "",
   },
 ];
 
@@ -129,7 +131,8 @@ export const interests = [
   },
   {
     title: "Mountain Biking",
-    info: "An interest from years ago that is being relived due to energetic children."
+    info:
+      "An interest from years ago that is being relived due to energetic children.",
   },
   // {
   //   title: "Music",
