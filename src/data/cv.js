@@ -13,42 +13,22 @@ export const portfolio = "jamesgrantham.me";
 export const linkedIn = "linkedin.com/in/j-grantham";
 
 export const contact = [
-  // {
-  //   type: 'Location',
-  //   value: '+44 7534 551759'
-  // },
-  {
-    type: "Phone",
-    value: "+44 7534 551759",
-  },
-  {
-    type: "eMail",
-    value: "james.r.grantham@gmail.com",
-  },
-  {
-    type: "Portfolio",
-    value: "jamesgrantham.me",
-  },
-  {
-    type: "LinkedIn",
-    value: "linkedin.com/in/j-grantham",
-  },
-  {
-    type: "GitHub",
-    value: "https://github.com/jrgrantham",
-  },
+  { type: "Phone", value: "+44 7534 551759" },
+  { type: "eMail", value: "james.r.grantham@gmail.com" },
+  { type: "Portfolio", value: "jamesgrantham.me" },
+  { type: "LinkedIn", value: "linkedin.com/in/j-grantham" },
+  { type: "GitHub", value: "https://github.com/jrgrantham" },
 ];
 
 export const skills = [
-  { description: "Communication", rating: [1,1,1,1,1] },
-  { description: "Problem-Solving", rating: [1,1,1,1,1] },
-  { description: "Organisation", rating: [1,1,1,0,0] },
-  { description: "Leadership", rating: [1,1,1,1,0] },
-  { description: "Teamwork", rating: [1,1,1,1,0] },
-  { description: "Adaptability", rating: [1,1,1,1,1] },
-  { description: "Creativity", rating: [1,1,1,1,0] },
-  { description: "Interpersonal", rating: [1,1,1,1,0] },
-  // { description: "Customer Service", rating: [1,1,1,1,0] },
+  { description: "Communication", rating: [1, 1, 1, 1, 1] },
+  { description: "Problem-Solving", rating: [1, 1, 1, 1, 1] },
+  { description: "Organisation", rating: [1, 1, 1, 0, 0] },
+  { description: "Leadership", rating: [1, 1, 1, 1, 0] },
+  { description: "Teamwork", rating: [1, 1, 1, 1, 0] },
+  { description: "Adaptability", rating: [1, 1, 1, 1, 1] },
+  { description: "Creativity", rating: [1, 1, 1, 1, 0] },
+  { description: "Interpersonal", rating: [1, 1, 1, 1, 0] },
 ];
 
 export const software = [
@@ -64,19 +44,31 @@ export const software = [
 ];
 
 export const statement =
-  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience, newly trained in web development. Strive to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hoping to work in a friendly and engaging team.";
+  "A qualified and enthusiastic engineer with nearly 20 years oil and gas industry experience. Newly trained in web development, strive to achieve simple, well presented and intuitive interfaces. Enjoy pair programming, solving problems and hope to work in a friendly and engaging team to learn from and contribute to.";
 
 export const history = [
   {
+    date: "07/2019 - Current",
+    role: "Web Developer",
+    company: "Lambda School / subsequent projects, Aberdeen",
+    info: [
+      "Git and git workflow, pull requests, merging commits, managing conflicts.",
+      "Client side: JavaScript, Python, React, Redux, CSS, testing.",
+      "Server side: Node JS, knex, mySQL, authentication, testing.",
+      "Collaborated and worked remotely with people around the world to defined specifications, presented the applications to an audience.",
+      "Developed a risk management application for mulitple users. Administrators can create accounts with varying permissions for their clients.",
+    ],
+  },
+  {
     date: "12/2012 - 06/2019",
     role: "Inspection Engineer",
-    company: "Oceaneering International Services, Head Office, Aberdeen",
+    company: "Oceaneering, Head Office, Aberdeen",
     info: [
-      "Managed day to day operations of the integrity contract (£1.3m) for the Kittiwake Oil Platform.",
-      "Supervised and coordianted both local and remote teams.",
-      "Prioritised and scheduled inspection activities and completed the annual inspection scope on time and within budget.",
+      "Managed day to day operations of the integrity contract (£1.3m) for the Kittiwake Oil Platform, supervised both local and remote teams.",
+      "Completed the annual inspection scope on time and within budget.",
       "Developed new tracking systems and reporting processes, increasing project transparency and efficiency onshore by 30%.",
-      "Managed a company project to convert the monthly presentation into a website accessible by client.",
+      "Received award for highest known score on API570 exam (97%).",
+      // "Managed a company project to convert the monthly presentation into a website accessible by client.",
     ],
   },
   {
@@ -84,8 +76,7 @@ export const history = [
     role: "Project Engineer",
     company: "Lloyd's Register, Head Office, Aberdeen",
     info: [
-      "Onshore: Undertook risk assessments, integrity reviews, anomaly ranking and categorisation, repair recommendations and fitness for service calculations.",
-      "Onshore: Reviewed inspection history, integrity status, operating conditions and built inspection workpacks.",
+      "Risk assessments, integrity reviews, repair recommendations fitness for service calculations, anomaly ranking and categorisation, inspection workpacks.",
       "Offshore: 7-month corrosion under insulation project.",
     ],
   },
@@ -97,26 +88,18 @@ export const history = [
       "Introduced to Risk Management, onshore and offshore Pressure Systems inspection, and the world of integrity services.",
     ],
   },
-  // {
-  //   date: "12/2001 - 12/2012",
-  //   role: "Independent Competant Person",
-  //   company: "Lloyd's Register, Aberdeen",
-  //   info: [
-  //     "Safety Case verification work for selected Talisman offshore installations.",
-  //   ],
-  // },
 ];
 
 export const education = [
+  // {
+  //   date: "07/2019 - 04/2020",
+  //   title: "Full Stack Web Development",
+  //   school: "Lambda School",
+  //   info:
+  //     "A nine-month online Computer and Software Engineering course. 2,000 hours of intensive, hands-on experience, working with people from around the world.",
+  // },
   {
-    date: "07/2019 - 04/2020",
-    title: "Full Stack Web Development",
-    school: "Lambda School",
-    info:
-      "A nine-month online Computer and Software Engineering course. 2,000 hours of intensive, hands-on experience, working with people from around the world.",
-  },
-  {
-    date: "06/2019 - 06/2020",
+    date: "08/1997 - 06/2001",
     title: "Bachelor of Mechanical Engineering",
     school: "University of Loughborough",
     info: "",
@@ -127,15 +110,11 @@ export const interests = [
   {
     title: "Crawling and trail running",
     info:
-      "Building, maintaining and using remote control replica rock crawers. Assemble from kits, paint, then install electronics and accessories, just an excuse to get outside with my children.",
+      "Building, maintaining and using remote control rock crawers. Assemble from kits, paint, then install electronics and accessories, an excuse to get outside.",
   },
   {
     title: "Mountain Biking",
     info:
-      "An interest from years ago that is being relived due to energetic children.",
+      "A sport from years ago that is being relived due to energetic children.",
   },
-  // {
-  //   title: "Music",
-  //   info: ""
-  // },
 ];

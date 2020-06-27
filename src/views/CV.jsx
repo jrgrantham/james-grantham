@@ -28,7 +28,7 @@ function CV() {
     } catch (error) {
       window.scrollTo(0, 0);
     }
-      generatePDF();
+      // generatePDF();
     return () => {};
   }, []);
 
@@ -209,6 +209,7 @@ const PDF = styled.div`
   .rating {
     display: flex;
     align-items: center;
+    /* margin-right: 5px; */
     .rate {
       border-radius: 50%;
       border: 1px solid #303040;
@@ -231,7 +232,7 @@ const PDF = styled.div`
   .top {
     color: white;
     background-color: #303040;
-    padding: 15px 30px 20px 30px;
+    padding: 15px 25px 20px 25px;
 
     h1 {
       font-size: 30px;
@@ -260,12 +261,12 @@ const PDF = styled.div`
 
   .information {
     width: 29%;
-    padding: 20px 15px;
+    padding: 20px 20px 20px 15px;
     background-color: #e5e5e5;
   }
   .professional {
     width: 71%;
-    padding: 20px 20px 20px 30px;
+    padding: 20px 20px 20px 25px;
   }
 `;
 export default CV;
