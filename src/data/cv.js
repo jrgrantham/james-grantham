@@ -25,21 +25,21 @@ export const contact = [
 export const skills = [
  { description: "Communication", rating: [1, 1, 1, 1, 1] },
  { description: "Problem-Solving", rating: [1, 1, 1, 1, 1] },
- { description: "Organisation", rating: [1, 1, 1, 0, 0] },
- { description: "Leadership", rating: [1, 1, 1, 1, 0] },
- { description: "Teamwork", rating: [1, 1, 1, 1, 0] },
  { description: "Adaptability", rating: [1, 1, 1, 1, 1] },
- { description: "Creativity", rating: [1, 1, 1, 1, 0] },
  { description: "Interpersonal", rating: [1, 1, 1, 1, 0] },
+ { description: "Teamwork", rating: [1, 1, 1, 1, 0] },
+ { description: "Creativity", rating: [1, 1, 1, 1, 0] },
+ { description: "Leadership", rating: [1, 1, 1, 1, 0] },
+ { description: "Organisation", rating: [1, 1, 1, 0, 0] },
 ];
  
 export const software = [
  "Git & git workflow",
  "React",
- "Javascript",
+ "JavaScript",
  "CSS",
  "Python",
- "Node js",
+ "Node JS",
  "Styled Components",
  "Redux",
  "mySQL",

@@ -34,7 +34,6 @@ function CV() {
   }, []);
 
   return (
-    // <Container id="pdf" fontSize={props.user.fontSize}>
     <Container>
       <div className='buttons'>
         <Link to="/">home page</Link>
@@ -121,7 +120,7 @@ function CV() {
                 return (
                   <div key={index} className="info">
                     <p className="list">{skill.description}</p>
-                    <div className="rating">
+                    {/* <div className="rating">
                       {skill.rating.map((rate, index) => {
                         if (rate) {
                           return <div key={index} className="rate full"></div>;
@@ -129,7 +128,7 @@ function CV() {
                           return <div key={index} className="rate"></div>;
                         }
                       })}
-                    </div>
+                    </div> */}
                   </div>
                 );
               })}
