@@ -58,6 +58,7 @@ export const history = [
       // "Server side: Node JS, knex, mySQL, authentication, testing.",
       "Collaborated on projects and worked remotely with people around the world to pre-defined specifications and presented the applications to an audience.",
       "Wrote a depth-first-traversal algorithm in python to create a maze. This was tested live and sucsesfully returned a navigateble grid with a million 'rooms'.",
+      "Used create react app to build a fully responsive portfolio website.",
       "Developed a risk management application for a London based consultancy, for mulitple users. Administrators can create accounts with varying permissions for their clients.",
     ],
   },
