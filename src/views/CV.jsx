@@ -28,9 +28,7 @@ function CV() {
     } catch (error) {
       window.scrollTo(0, 0);
     }
-    // setTimeout(() => {
       generatePDF();
-    // }, 2000);
     return () => {};
   }, []);
 
