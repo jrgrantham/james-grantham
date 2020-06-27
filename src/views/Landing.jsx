@@ -73,7 +73,7 @@ export default function Landing(props) {
         <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
         <Previously />
-        <LinkButton content={"Download CV"} target="/cv" margin='60px 0 0 0'/>
+        <LinkButton content={"View CV"} target="/cv" margin='60px 0 0 0'/>
         <ContactMe
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}

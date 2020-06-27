@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import html2pdf from "html2pdf.js";
 import styled from "styled-components";
 import * as cv from "../data/cv";
+import { Link } from "react-router-dom";
 
 function CV() {
   function generatePDF() {
@@ -28,13 +29,16 @@ function CV() {
     } catch (error) {
       window.scrollTo(0, 0);
     }
-      generatePDF();
+    // generatePDF();
     return () => {};
   }, []);
 
   return (
-    // <Container id="pdf" fontSize={props.user.fontSize}>
     <Container>
+      <div className='buttons'>
+        <Link to="/">home page</Link>
+        <p onClick={generatePDF} className='download'>download pdf</p>
+      </div>
       <PDF id="pdf">
         <div className="top">
           <div className="header">
@@ -116,7 +120,7 @@ function CV() {
                 return (
                   <div key={index} className="info">
                     <p className="list">{skill.description}</p>
-                    <div className="rating">
+                    {/* <div className="rating">
                       {skill.rating.map((rate, index) => {
                         if (rate) {
                           return <div key={index} className="rate full"></div>;
@@ -124,7 +128,7 @@ function CV() {
                           return <div key={index} className="rate"></div>;
                         }
                       })}
-                    </div>
+                    </div> */}
                   </div>
                 );
               })}
@@ -153,6 +157,20 @@ const Container = styled.div`
   padding: 30px 0;
   background-color: #656565;
   width: 100%;
+  text-decoration: none;
+  color: white;
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 778px;
+    margin-bottom: 20px;
+  }
+  .download {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 const PDF = styled.div`
