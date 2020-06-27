@@ -41,6 +41,7 @@ export const software = [
   "Styled Components",
   "Redux",
   "mySQL",
+  "Testing",
 ];
 
 export const statement =
@@ -50,13 +51,14 @@ export const history = [
   {
     date: "07/2019 - Current",
     role: "Web Developer",
-    company: "Lambda School / subsequent projects, Aberdeen",
+    company: "Lambda School / Development Experience, Aberdeen",
     info: [
       "Git and git workflow, pull requests, merging commits, managing conflicts.",
-      "Client side: JavaScript, Python, React, Redux, CSS, testing.",
-      "Server side: Node JS, knex, mySQL, authentication, testing.",
-      "Collaborated and worked remotely with people around the world to defined specifications, presented the applications to an audience.",
-      "Developed a risk management application for mulitple users. Administrators can create accounts with varying permissions for their clients.",
+      // "Client side: JavaScript, Python, React, Redux, CSS, testing.",
+      // "Server side: Node JS, knex, mySQL, authentication, testing.",
+      "Collaborated on projects and worked remotely with people around the world to pre-defined specifications and presented the applications to an audience.",
+      "Wrote a depth-first-traversal algorithm in python to create a maze. This was tested live and sucsesfully returned a navigateble grid with a million 'rooms'.",
+      "Developed a risk management application for a London based consultancy, for mulitple users. Administrators can create accounts with varying permissions for their clients.",
     ],
   },
   {
@@ -65,7 +67,6 @@ export const history = [
     company: "Oceaneering, Head Office, Aberdeen",
     info: [
       "Managed day to day operations of the integrity contract (£1.3m) for the Kittiwake Oil Platform, supervised both local and remote teams.",
-      "Completed the annual inspection scope on time and within budget.",
       "Developed new tracking systems and reporting processes, increasing project transparency and efficiency onshore by 30%.",
       "Received award for highest known score on API570 exam (97%).",
       // "Managed a company project to convert the monthly presentation into a website accessible by client.",
@@ -76,8 +77,7 @@ export const history = [
     role: "Project Engineer",
     company: "Lloyd's Register, Head Office, Aberdeen",
     info: [
-      "Risk assessments, integrity reviews, repair recommendations fitness for service calculations, anomaly ranking and categorisation, inspection workpacks.",
-      "Offshore: 7-month corrosion under insulation project.",
+      "Risk assessments, integrity reviews, repair recommendations fitness for service calculations, anomaly ranking and categorisation, inspection workpacks and a seven-month corrosion under insulation project offshore.",
     ],
   },
   {
@@ -85,7 +85,7 @@ export const history = [
     role: "Graduate Engineer",
     company: "Lloyd's Register, BP's Gas Terminal, Dimlingtion (Hull)",
     info: [
-      "Introduced to Risk Management, onshore and offshore Pressure Systems inspection, and the world of integrity services.",
+      "Introduced to Risk Management and the world of integrity services.",
     ],
   },
 ];
@@ -110,7 +110,7 @@ export const interests = [
   {
     title: "Crawling and trail running",
     info:
-      "Building, maintaining and using remote control rock crawers. Assemble from kits, paint, then install electronics and accessories, an excuse to get outside.",
+      "Building and maintaining remote control rock crawers with my three boys. Assemble from kits, then install electronics and accessories, an excuse to get outside.",
   },
   {
     title: "Mountain Biking",
