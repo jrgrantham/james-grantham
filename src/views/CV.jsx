@@ -28,7 +28,7 @@ function CV() {
     } catch (error) {
       window.scrollTo(0, 0);
     }
-      // generatePDF();
+      generatePDF();
     return () => {};
   }, []);
 
@@ -232,7 +232,7 @@ const PDF = styled.div`
   .top {
     color: white;
     background-color: #303040;
-    padding: 15px 25px 20px 25px;
+    padding: 10px 25px 15px 25px;
 
     h1 {
       font-size: 30px;
@@ -245,7 +245,7 @@ const PDF = styled.div`
     }
   }
   .header {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
