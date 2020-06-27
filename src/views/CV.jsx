@@ -35,9 +35,14 @@ function CV() {
 
   return (
     <Container>
-      <div className='buttons'>
+      <div className="message">
+        <p>You need a minimum screen width of approx 850 pixels to view this document effectively</p>
+      </div>
+      <div className="buttons">
         <Link to="/">home page</Link>
-        <p onClick={generatePDF} className='download'>download pdf</p>
+        <p onClick={generatePDF} className="download">
+          download pdf
+        </p>
       </div>
       <PDF id="pdf">
         <div className="top">
@@ -159,11 +164,12 @@ const Container = styled.div`
   width: 100%;
   text-decoration: none;
   color: white;
-
+  /* border: 5px solid red; */
   .buttons {
     display: flex;
     justify-content: space-between;
-    width: 778px;
+    width: 100%;
+    max-width: 778px;
     margin-bottom: 20px;
   }
   .download {
@@ -171,6 +177,21 @@ const Container = styled.div`
       cursor: pointer;
     }
   }
+  .message {
+    display: none;
+    p {
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+  }
+  @media (max-width: 800px) {
+      padding: 30px;
+    }
 `;
 
 const PDF = styled.div`
