@@ -26,6 +26,25 @@ export default function AboutMe(props) {
 
   const [darkMode] = useDarkMode(true);
 
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById("aboutmeName").style.padding = "0";
+      document.getElementById("horizontalMenu").style.maxHeight = "0";
+    } else {
+      document.getElementById("aboutmeName").style.padding = " 2rem 0 2rem 0";
+      document.getElementById("horizontalMenu").style.maxHeight = "50px";
+    }
+  }
+
+  window.onscroll = function () {
+    if (document.getElementById("aboutmeName") && document.getElementById("horizontalMenu")) {
+      scrollFunction();
+    }
+  };
+
   useEffect(() => {
     try {
       window.scroll({
@@ -41,24 +60,8 @@ export default function AboutMe(props) {
     // needs to be empty array to prevent scroll
     // changing state on selection of mail or content
     // causes window scroll to run and move the page
+    return () => {};
   }, []);
-
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      document.getElementById("aboutmeName").style.padding = "0";
-      document.getElementById("horizontalMenu").style.maxHeight = "0";
-    } else {
-      document.getElementById("aboutmeName").style.padding = " 2rem 0 2rem 0";
-      document.getElementById("horizontalMenu").style.maxHeight = "50px";
-    }
-  }
-
-  window.onscroll = function () {
-    scrollFunction();
-  };
 
   // inside the function as needs access to dark mode to set the background
   const Styledaboutme = styled.div`
@@ -70,7 +73,7 @@ export default function AboutMe(props) {
     max-width: ${aboutmeWidth}px;
 
     .fixed {
-      z-index: ;
+      /* z-index: ; */
       width: 100%;
       max-width: ${aboutmeWidth}px;
       position: fixed;

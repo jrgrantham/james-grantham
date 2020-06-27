@@ -16,6 +16,7 @@ import AnimatedLogos from "../components/landing/AnimatedLogos";
 import HireMe from "../components/landing/HireMe";
 import { LinkButton } from "../components/reusable/Buttons";
 import Previously from "../components/landing/Previously";
+import Cover from "../components/landing/Cover";
 
 export default function Landing(props) {
   const {
@@ -59,6 +60,7 @@ export default function Landing(props) {
         setContactHeight={setContactHeight}
       />
       <FullPage>
+        {/* <Cover /> */}
         <LandingInitialView />
         <HireMe />
         <Introduction setContent={setContent} setSelected={setSelected} />
@@ -71,6 +73,7 @@ export default function Landing(props) {
         <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
         <Previously />
+        <LinkButton content={"Download CV"} target="/cv" margin='60px 0 0 0'/>
         <ContactMe
           showContactMe={showContactMe}
           setShowContactMe={setShowContactMe}

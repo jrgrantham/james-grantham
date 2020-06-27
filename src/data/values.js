@@ -11,8 +11,8 @@ export const values = [
   //   display: false
   // },
   {
-    title: "Humility",
-    introduction: "The quality of having a modest or low view of one's importance.",
+    title: "Adaptability",
+    introduction: "Willing and able to quickly adapt to situations.",
     contents: [
       "****** coming soon ******",
     ],
