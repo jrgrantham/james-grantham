@@ -64,7 +64,7 @@ function CV() {
                       <p className="bold">{job.role}</p>
                       <p>{job.date}</p>
                     </div>
-                    <p className="space">{job.company}</p>
+                <p className="space">{job.company}, {job.location}</p>
                     <ul>
                       {job.info.map((item, index) => {
                         return <li key={index}>{item}</li>;
