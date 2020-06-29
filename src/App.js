@@ -16,6 +16,7 @@ import {
 import { aboutMe } from "./data/aboutMe";
 import AboutMe from "./views/AboutMe";
 import CV from "./views/CV";
+import CV2 from "./views/CV2";
 
 export default function App() {
   document.getElementById("root").style.height = "100%";
@@ -116,28 +117,8 @@ export default function App() {
                 />
               )}
             />
-            <Route path="/cv" render={(props) => <CV />} />
-            {/* <Route
-              render={(props) => (
-                <Landing
-                  {...props}
-                  content={content}
-                  setContent={setContent}
-                  selected={selected}
-                  setSelected={setSelected}
-                  showContactMe={showContactMe}
-                  setShowContactMe={setShowContactMe}
-                  aboutHeight={aboutHeight}
-                  setAboutHeight={setAboutHeight}
-                  projectsHeight={projectsHeight}
-                  setProjectsHeight={setProjectsHeight}
-                  valuesHeight={valuesHeight}
-                  setValuesHeight={setValuesHeight}
-                  contactHeight={contactHeight}
-                  setContactHeight={setContactHeight}
-                />
-              )}
-            /> */}
+            <Route path="/cv" render={() => <CV2 />} />
+            <Route path="/cv2" render={() => <CV />} />
           </div>
         {/* </Switch> */}
       {/* </BrowserRouter> */}
