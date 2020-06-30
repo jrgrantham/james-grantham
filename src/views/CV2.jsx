@@ -68,24 +68,44 @@ function CV() {
             })}
           </div>
           <div className="section">
-            <h3 className="title">Summary</h3>
+            <h2 className="title">Summary</h2>
             <p>{cv.statement}</p>
             {/* {cv.statement.map((item, index) => {
               return <p key={index}>{item}</p>
             })} */}
           </div>
-          <div className="section">
-            <h3 className="title">Key Skills</h3>
-            {cv.skills.map((skill, index) => {
+          {/* <div className="section"> */}
+          {/* <h2 className="title">Key Skills</h2> */}
+          {/* {cv.skills.map((skill, index) => {
               return <p key={index}>{skill.description}</p>;
+            })} */}
+          {/* </div> */}
+          <div className="section">
+            <h2 className="title">Management and Leadership</h2>
+            {cv.leadership.map((example, index) => {
+              return (
+                <div key={index}>
+                  <p>{example}</p>
+                </div>
+              );
             })}
           </div>
           <div className="section">
-            <h3 className="title">Hobbies and Interests</h3>
+            <h2 className="title">Achievements</h2>
+            {cv.achievements.map((achievement, index) => {
+              return (
+                <ul key={index}>
+                  <li>{achievement}</li>
+                </ul>
+              );
+            })}
+          </div>
+          <div className="section">
+            <h2 className="title">Hobbies and Interests</h2>
             {cv.interests.map((hobby, index) => {
               return (
                 <div key={index}>
-                  <p className="bold space">{hobby.title}</p>
+                  <h3 className="bold ">{hobby.title}</h3>
                   <p>{hobby.info}</p>
                 </div>
               );
@@ -97,16 +117,16 @@ function CV() {
 
         <div className="professional">
           <div>
-            <h3 className="title">Professional Experience</h3>
+            <h2 className="title">Professional Experience</h2>
             {cv.history.map((employer, index) => {
               return (
                 <div key={index} className="section">
                   <div className="info">
-                    <h2 className="bold color">{employer.company}</h2>
+                    <h2 className="color gap">{employer.company}</h2>
                     <p className="bold color">{employer.date}</p>
                   </div>
-                  <p className="space">{employer.description}</p>
-                  <p className="bold space">{employer.role}</p>
+                  <p className="">{employer.description}</p>
+                  <h3>{employer.role}</h3>
                   <ul>
                     {employer.info.map((item, index) => {
                       return <li key={index}>{item}</li>;
@@ -114,11 +134,9 @@ function CV() {
                   </ul>
                   {employer.role2 ? (
                     <div>
-                      <p className="bold space">{employer.role2}</p>
+                      <h3 className="bold ">{employer.role2}</h3>
                       <ul>
-
-                          <li key={index}>{employer.info2}</li>
-
+                        <li key={index}>{employer.info2}</li>
                       </ul>
                     </div>
                   ) : null}
@@ -127,7 +145,7 @@ function CV() {
             })}
           </div>
           <div className="">
-            <h3 className="title">Education</h3>
+            <h2 className="title top">Education</h2>
             {cv.education.map((edu, index) => {
               return (
                 <div key={index} className="section">
@@ -135,7 +153,7 @@ function CV() {
                     <p className="bold">{edu.title}</p>
                     <p>{edu.date}</p>
                   </div>
-                  <p className="space">{edu.school}</p>
+                  <p className="">{edu.school}</p>
                 </div>
               );
             })}
@@ -210,16 +228,20 @@ const PDF = styled.div`
       font-size: 28px;
       /* text-align: center; */
     }
+    h2 {
+      font-size: 16px;
+    }
     h3 {
-      font-size: 15px;
-      /* text-align: center; */
+      margin-top: 6px;
+      font-size: 14px;
+      margin-bottom: 3px;
     }
     .name {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       margin-top: 10px;
     }
     .contact {
@@ -239,11 +261,18 @@ const PDF = styled.div`
     }
   }
   .professional {
-    margin-top: 5px;
+    /* margin-top: 5px; */
     width: 65%;
     padding: 20px;
     h2 {
-      font-size: 15px;
+      font-size: 16px;
+    }
+    h2.gap {
+      margin-bottom: 5px;
+    }
+    h3 {
+      margin-top: 6px;
+      font-size: 14px;
     }
     .section {
       display: flex;
@@ -257,6 +286,10 @@ const PDF = styled.div`
     padding-bottom: 5px;
     border-bottom: 1px solid;
     margin-bottom: 10px;
+    margin-top: 5px;
+  }
+  .top {
+    margin-top: 20px;
   }
 
   div {
@@ -270,16 +303,13 @@ const PDF = styled.div`
   li {
     list-style-type: disc;
     margin-left: 16px;
-    margin-top: 5px;
+    margin-top: 3px;
     /* list-style-position: inside; */
   }
   .bold {
     font-weight: 600;
   }
 
-  .space {
-    margin: 5px 0 5px 0;
-  }
   .info {
     display: flex;
     justify-content: space-between;

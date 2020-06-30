@@ -53,14 +53,25 @@ export const software = [
   "Testing",
 ];
 
+export const leadership = [
+  'Influenced senior management and guided a team of 11 to make project changes and improvements.',
+  'Guided and developed junior staff.',
+]
+
+export const achievements = [
+  'Increased project efficiency by 30%.',
+  'Received award for highest known API570 exam result (97%).',
+  'Improved project KPIs.'
+]  
+
 export const statement = [
   "20 years experienced, dynamic and adaptable, with a track record of innovation and client focus. ",
   "Highly skilled in project management, improving workflow systems and data management, consistently improving KPI's on all projects. ",
-  "Continuous self improvement, received award for highest known API570 exam result (97%). ",
+  // "Continuous self improvement, received award for highest known API570 exam result (97%). ",
   "Newly trained in web development and striving to achieve efficient, simple and intuitive interfaces.",
 ]
   ;
-// Enjoy pair programming, solving problems and hope to work in a friendly and engaging team to learn from and contribute to.
+// Enjoys pair programming, problem solving and hopes to work in a friendly and engaging team to learn from and contribute to.
 // quality driven
 // api score
 //Dynamic and detail-oriented Web Developer with a knack for conceptualizing and delivering elegant, user-friendly solutions effectively and efficiently. Possesses a track record of developing an e-commerce mobile app, a CRM online portal and a fully-functional website for a nonprofit working with underprivileged children. Armed with an extensive understanding of end-to-end SDLC and cloud computing. Regular participant and organizer of local hackathons and web developer meetups.
@@ -72,16 +83,14 @@ export const history = [
     role: "Full Stack Web Developer",
     company: "Lambda School / Web Development",
     description:
-      "A full-time, online immersive computer science academy that trains people to become software engineers and data scientists.",
+      "A nine-month online computer science academy for aspiring software engineers and data scientists.",
     location: "Aberdeen, UK",
     info: [
-      //  "Git and git workflow, pull requests, merging commits, managing conflicts.",
-      // "Client side: JavaScript, Python, React, Redux, CSS, testing.",
-      // "Server side: Node JS, knex, mySQL, authentication, testing.",
-      "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and user accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
-      // "Wrote a depth-first-traversal algorithm in python to create a maze. This was tested live and returned a traversable grid with a million 'rooms'.",
-      // "Used create react app to build a fully responsive portfolio website.",
-      "Developed a risk management app and server for a London based consultancy firm. Selecting from relevant templates (if account type permits) users complete the form and can export data and customised documents.",
+      "Developed a risk management app and server for a London based consultancy firm. Users can customise views, select from filtered templates (if account type permits), populate with their data and can download the raw data and/or formatted and customised documents.",
+      "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and buyer accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
+      "Collaborated in a python build week to build an online MUD game, writing an algorithm to create a maze. Presented the code and the game to an audience and when tested, successfully returned a traversable grid with a million 'rooms'.",
+      "Built a portfolio website.",
+      'Created a Ricky and Morty Fan Club Site. Using axios to fetch data into redux, users can select favourite characters, to view further information.',
     ],
   },
   {
@@ -94,8 +103,6 @@ export const history = [
     info: [
       "Managed day to day operations of the integrity contract (£1.3m) for the Kittiwake Oil Platform, supervised both local and remote teams, delivered the annual scope on time and witin budget.",
       "Developed new tracking systems and reporting processes, increasing project transparency and efficiency onshore by ~30%.",
-      // "Studied for API570, received award for highest exam result (97%).",
-      // "Managed a company project to convert the monthly presentation into a website accessible by client.",
     ],
   },
   {
@@ -111,16 +118,6 @@ export const history = [
     role2: "Graduate Engineer",
     info2: "Introduced to Risk Management and the world of Integrity Services.",
   },
-  // {
-  //   date: "12/2001 - 12/2004",
-  //   role: "Graduate Engineer",
-  //   company: "Lloyd's Register, BP's Gas Terminal",
-  //   description: "",
-  //   location: "Hull, UK",
-  //   info: [
-  //     "Introduced to Risk Management and the world of Integrity Services.",
-  //   ],
-  // },
 ];
 
 export const education = [
@@ -143,7 +140,7 @@ export const interests = [
   {
     title: "Mountain Biking",
     info:
-      "This was my all time favourite activity as a teenager and all three of my boys enjoy it now too, especially if it's wet and muddy!",
+      "A long term favourite activity, now all three of my boys enjoy it now too, especially if it's wet and muddy!",
   },
   {
     title: "Crawling and Trail Running",
