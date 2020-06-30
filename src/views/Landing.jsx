@@ -65,10 +65,10 @@ export default function Landing(props) {
         <HireMe />
         <Introduction setContent={setContent} setSelected={setSelected} />
         <AnimatedLogos />
-        <LinkButton content={"Learn more"} target="/aboutme" />
+        <LinkButton content={"Curriculum Vitae"} target="/cv" />
         <Spacer />
         <Projects />
-        <LinkButton content="View all projects" target="projects" />
+        {/* <LinkButton content="View all projects" target="projects" /> */}
         <Spacer />
         <Captions setContent={setContent} setSelected={setSelected} />
         <Spacer />
