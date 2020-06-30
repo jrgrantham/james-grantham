@@ -85,7 +85,7 @@ export const history = [
       "A nine-month online computer science academy for aspiring software engineers and data scientists.",
     location: "Aberdeen, UK",
     info: [
-      "Developed a risk management app and server for a London based consultancy firm. Utilising React, redux, bcryptjs and nodejs, users can customise views, select from filtered templates (if account type permits), populate with their data and can download the raw data and/or formatted and customised documents.",
+      "Independently developed a risk management app and server for a London based consultancy firm. Utilising React, redux, bcryptjs and nodejs, users can customise views, select from filtered templates (if account type permits), populate with their data and can download the raw data and/or formatted and customised documents.",
       "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and buyer accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
       "Collaborated in a python build week to build an online MUD game, writing an algorithm to create a maze. Presented the code and the game to an audience and when tested, successfully returned a traversable grid with a million 'rooms'.",
       "Built a portfolio website.",
