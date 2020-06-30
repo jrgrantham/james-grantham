@@ -74,10 +74,30 @@ function CV() {
               return <p key={index}>{item}</p>
             })} */}
           </div>
-          <div className="section">
-            <h2 className="title">Key Skills</h2>
-            {cv.skills.map((skill, index) => {
+          {/* <div className="section"> */}
+          {/* <h2 className="title">Key Skills</h2> */}
+          {/* {cv.skills.map((skill, index) => {
               return <p key={index}>{skill.description}</p>;
+            })} */}
+          {/* </div> */}
+          <div className="section">
+            <h2 className="title">Management and Leadership</h2>
+            {cv.leadership.map((example, index) => {
+              return (
+                <div key={index}>
+                  <p>{example}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="section">
+            <h2 className="title">Achievements</h2>
+            {cv.achievements.map((achievement, index) => {
+              return (
+                <ul key={index}>
+                  <li>{achievement}</li>
+                </ul>
+              );
             })}
           </div>
           <div className="section">
@@ -102,7 +122,7 @@ function CV() {
               return (
                 <div key={index} className="section">
                   <div className="info">
-                    <h2 className="bold color">{employer.company}</h2>
+                    <h2 className="color gap">{employer.company}</h2>
                     <p className="bold color">{employer.date}</p>
                   </div>
                   <p className="">{employer.description}</p>
@@ -116,9 +136,7 @@ function CV() {
                     <div>
                       <h3 className="bold ">{employer.role2}</h3>
                       <ul>
-
-                          <li key={index}>{employer.info2}</li>
-
+                        <li key={index}>{employer.info2}</li>
                       </ul>
                     </div>
                   ) : null}
@@ -248,6 +266,9 @@ const PDF = styled.div`
     padding: 20px;
     h2 {
       font-size: 16px;
+    }
+    h2.gap {
+      margin-bottom: 5px;
     }
     h3 {
       margin-top: 6px;
