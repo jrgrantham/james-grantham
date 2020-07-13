@@ -139,7 +139,7 @@ export const interests = [
   {
     title: "Mountain Biking",
     info:
-      "A long term favourite activity, now all three of my boys enjoy it now too, especially if it's wet and muddy!",
+      "A long term favourite activity, now all three of my boys enjoy it too, especially if it's wet and muddy!",
   },
   {
     title: "Crawling and Trail Running",
