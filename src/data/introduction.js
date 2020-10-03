@@ -10,23 +10,23 @@ export const introduction = [
     section: 'Time line',
   },
   {
-    title: "Interface",
-    content: "Apps should be simple and intuitive to use, easy to navigate and fully responsive. I've always believed that simple is better than complex and strive to achieve this.",
-    section: 'About me',
-  },
-  // {
-  //   title: "Development",
-  //   content: "Learning something new or mastering an existing skill, I'm happy increasing my knowledge. Coding has been an interesting journey so far and I've enjoyed just about all of it.",
-  // section: '',
-  // },
-  {
     title: "Skills",
-    content: "Comfortable with React, vanilla JavaScript, Node JS and styled components, all the things used to build this portfolio. Familiar with Redux, Python, less, mySql and knex.",
+    content: "Computer literate. Experienced with maintenance management and risk management systems. Proficient with the MS Office suite including Word and Excel.",
     section: 'Experience',
   },
   {
     title: "Teamwork",
-    content: "I've worked remotely and across time zones with people around the world. Sharing a project is much more fun than working alone and inevitably leads to a better product.",
+    content: "Worked remotely and across time zones with people around the world. Sharing a project is much more fun than working alone and inevitably leads to a better product.",
     section: 'Experience',
+  },
+  {
+    title: "Coding",
+    content: "Comfortable with React, vanilla JavaScript, Node JS and styled components, all the things used to build this portfolio. Familiar with Redux, Python, less, mySql and knex.",
+    section: 'Experience',
+  },
+  {
+    title: "Interface",
+    content: "Apps should be simple and intuitive to use, easy to navigate and fully responsive. I've always believed that simple is better than complex and strive to achieve this.",
+    section: 'About me',
   },
 ];

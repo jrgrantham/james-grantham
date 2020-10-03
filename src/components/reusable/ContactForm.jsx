@@ -179,6 +179,7 @@ export const StyledForm = styled.form`
   
   input,
   textarea, button {
+    font: inherit;
     background: transparent;
     min-height: 50px;
     font-size: 1rem;

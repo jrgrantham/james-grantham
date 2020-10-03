@@ -15,7 +15,7 @@ export const address = [
 ];
 
 export const contact = [
-  { icon: home, type: "Location", value: "Aberdeen / London, UK" },
+  { icon: home, type: "Location", value: "Aberdeen / Hull / London" },
   { icon: phone, type: "Phone", value: "+44 7534 551759" },
   { icon: mail, type: "eMail", value: "james.r.grantham@gmail.com" },
   { icon: web, type: "Portfolio", value: "jamesgrantham.me" },
@@ -88,8 +88,8 @@ export const history = [
       "Independently developed a risk management app and server for a London based consultancy firm. Utilising React, redux, bcryptjs and nodejs, users can customise views, select from filtered templates (if account type permits), populate with their data and can download the raw data and/or formatted and customised documents.",
       "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and buyer accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
       "Collaborated in a python build week to build an online MUD game, writing an algorithm to create a maze. Presented the code and the game to an audience and when tested, successfully returned a traversable grid with a million 'rooms'.",
-      "Built a portfolio website.",
-      "Created a Ricky and Morty Fan Club Site. Using axios to fetch data into redux, users can select favourite characters, to view further information.",
+      // "Built a portfolio website.",
+      // "Created a Ricky and Morty Fan Club Site. Using axios to fetch data into redux, users can select favourite characters, to view further information.",
     ],
   },
   {
@@ -102,6 +102,8 @@ export const history = [
     info: [
       "Managed day to day operations of the integrity contract (£1.3m) for the Kittiwake Oil Platform, supervised both local and remote teams, delivered the annual inspection scope on time and witin budget.",
       "Developed new tracking systems and reporting processes, increasing project transparency and efficiency onshore by ~30%.",
+      "Managed the development of an internal company project to convert the monthly presentation into a website accessible by client, supplying live data available any time.",
+      "Reviewed inspection reports, categorised anomalies, generated anomaly reports and raised repair recommendations.",
     ],
   },
   {
@@ -139,7 +141,7 @@ export const interests = [
   {
     title: "Mountain Biking",
     info:
-      "A long term favourite activity, now all three of my boys enjoy it now too, especially if it's wet and muddy!",
+      "A long term favourite activity, now all three of my boys enjoy it too, especially if it's wet and muddy!",
   },
   {
     title: "Crawling and Trail Running",
