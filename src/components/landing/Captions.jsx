@@ -6,7 +6,7 @@ import SectionTitle from "../reusable/SectionTitle";
 import { title, comment, values } from "../../data/values";
 import { Captions } from "./captionsStyling";
 
-export default function LandingCaptions(props) {
+export default function  LandingCaptions(props) {
   return (
     // id is used to find scroll height
     <Captions id="captions">

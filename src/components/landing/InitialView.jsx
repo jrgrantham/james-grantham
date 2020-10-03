@@ -23,19 +23,19 @@ export default function LandingInitialView() {
   }, []);
 
   return (
-      <LandingContent>
-        <div id="name" className="hide">
-          <h1 className="toggle darkmode">James Grantham</h1>
-        </div>
-        <div id="img" className="hide img">
-          <img src={jamesPhoto} alt="James Grantham" />
-        </div>
-        <div id="jobs" className="hide">
-          <h3 className="toggle darkmode">Mechanical Engineer</h3>
-          <p className="toggle darkmode">turned</p>
-          <h3 className="toggle darkmode">Software Engineer</h3>
-        </div>
-      </LandingContent>
+    <LandingContent>
+      <div id="name" className="hide">
+        <h1 className="toggle darkmode">James Grantham</h1>
+      </div>
+      <div id="img" className="hide img">
+        <img src={jamesPhoto} alt="James Grantham" />
+      </div>
+      <div id="jobs" className="hide">
+        <h3 className="toggle darkmode">Mechanical Engineer</h3>
+        {/* <p className="toggle darkmode">turned</p> */}
+        <h3 className="toggle darkmode">Software Engineer</h3>
+      </div>
+    </LandingContent>
   );
 }
 
@@ -56,7 +56,7 @@ const swell = keyframes`
   50% { transform: scale(1.03) }
   70% { color: ${buttonOrange}}
   100% { color: ${fontColour} }
-`
+`;
 
 const LandingContent = styled.div`
   width: 100%;
@@ -65,6 +65,15 @@ const LandingContent = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background: linear-gradient(
+    45 deg,
+    rgba(125,125,125,0.5),
+    rgba(125,125,125,0.5),
+    rgba(125,125,125,0.5),
+    rgba(125,125,125,0.5),
+    rgba(125,125,125,0.5),
+    rgba(255,165,0,1)
+  );
   
   div {
     transition: opacity ${transition * 10}s;
@@ -91,7 +100,7 @@ const LandingContent = styled.div`
 
   p.darkmode {
     color: #606060;
-  3}
+  }
 
   // h1,
   // h2,
