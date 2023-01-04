@@ -55,7 +55,7 @@ function CV() {
           <div className="name">
             {/* <h1 className='color'>James Grantham</h1> */}
             <h1>James Grantham</h1>
-            <h3>Engineer</h3>
+            <h3>Mechanical Engineer</h3>
           </div>
           <div className="section">
             {cv.contact.map((method, index) => {
