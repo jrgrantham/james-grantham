@@ -16,7 +16,8 @@ export const address = [
 
 export const contact = [
   { icon: home, type: "Location", value: "Aberdeen / London / Kuwait" },
-  { icon: phone, type: "Phone", value: "+44 7534 551759" },
+  { icon: phone, type: "Phone", value: "+44 7534 551759 (WhatsApp)" },
+  { icon: phone, type: "Phone", value: "+965 9988 6921" },
   { icon: mail, type: "eMail", value: "james.r.grantham@gmail.com" },
   { icon: web, type: "Portfolio", value: "jamesgrantham.me" },
   //  { type: "LinkedIn", value: "linkedin.com/in/j-grantham" },
@@ -81,15 +82,10 @@ export const history = [
     date: "10/2020 - Current",
     role: "Full Stack Web Developer",
     company: "Intangible Engineering",
-    description:
-      "Start up - Building bespoke platforms to client specifications.",
+    description: "Building bespoke platforms to client specifications.",
     location: "London, UK",
     info: [
-      "Developed a risk and project management application and server for a London based consultancy firm. Data collection for multiple project planning, staffing, costing with report generation and data download.",
-      // "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and buyer accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
-      // "Collaborated in a python build week to build an online MUD game, writing an algorithm to create a maze. Presented the code and the game to an audience and when tested, successfully returned a traversable grid with a million 'rooms'.",
-      // "Built a portfolio website.",
-      // "Created a Ricky and Morty Fan Club Site. Using axios to fetch data into redux, users can select favourite characters, to view further information.",
+      "Developed a project management and costing platform for a London based consultancy firm: Data collection for multiple projects, managing risks, scheduling tasks and assigning staffing levels.",
     ],
   },
   {
@@ -158,9 +154,19 @@ export const interests = [
     info:
       "A long term favourite activity, now all three of my boys enjoy it too, especially if it's wet and muddy!",
   },
+  // {
+  //   title: "Music",
+  //   info:
+  //     "J",
+  // },
   {
-    title: "Crawling and Trail Running",
+    title: "Aquarium",
     info:
-      "Building, maintaining and modifying remote control rock crawlers with my three children. These are assembled from kits and customised to our liking, we enjoy soldering and getting them running. Another excuse to get outside.",
+      "A long awaited dream to own and manage a home aquarium. Now settled in Kuwait I have set up a 450 litre fresh-water aquarium for turtles and fish.",
   },
+  // {
+  //   title: "Crawling and Trail Running",
+  //   info:
+  //     "Building, maintaining and modifying remote control rock crawlers with my three children. These are assembled from kits and customised to our liking, we enjoy soldering and getting them running. Another excuse to get outside.",
+  // },
 ];

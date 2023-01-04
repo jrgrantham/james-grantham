@@ -233,7 +233,7 @@ const PDF = styled.div`
     }
     h3 {
       margin-top: 6px;
-      font-size: 18px;
+      font-size: 15px;
       /* margin-bottom: 3px; */
     }
     .name {
