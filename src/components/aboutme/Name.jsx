@@ -11,7 +11,7 @@ export default function Name() {
   useDarkMode();
 
   return (
-    <StlyedLink className="toggle darkmode name" to="/">
+    <StyledLink className="toggle darkmode name" to="/">
       <StyledAnimation className="container">
         <img src={arrow} alt="back" />
       </StyledAnimation>
@@ -20,19 +20,19 @@ export default function Name() {
       </div> */}
       <h2 id='aboutmeName' className="toggle darkmode">James Grantham</h2>
       <div className="container"></div>
-    </StlyedLink>
+    </StyledLink>
   );
 }
 
 // Create the keyframes
 const move = keyframes`
-  0%   { transform: scale(1,1)      translateX(0); }
+  0%   { transform: scale(1,1)       translateX(0); }
   10%  { transform: scale(0.9,1.1)   translateX(0); }
   30%  { transform: scale(1.1,0.9)   translateX(50px); }
   50%  { transform: scale(0.95,1.05) translateX(0); }
-  57%  { transform: scale(1,1)      translateX(5px); }
-  64%  { transform: scale(1,1)      translateX(0); }
-  100% { transform: scale(1,1)      translateX(0); }
+  57%  { transform: scale(1,1)       translateX(5px); }
+  64%  { transform: scale(1,1)       translateX(0); }
+  100% { transform: scale(1,1)       translateX(0); }
 `;
 
 // create a component that will move everything we pass in
@@ -64,7 +64,7 @@ const StyledAnimation = styled.div`
   }
 `;
 
-const StlyedLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: flex;
   align-items: baseline;
   justify-content: space-between;

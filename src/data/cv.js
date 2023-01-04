@@ -7,15 +7,15 @@ import mail from "../images/mailWhite.png";
 export const profession = "Full Stack Web Developer";
 
 export const address = [
-  "22 Knightsbridge",
-  "High Street",
-  "Inverurie",
-  "Aberdeenshire",
-  "AB51 3TL",
+  // "22 Knightsbridge",
+  // "High Street",
+  // "Inverurie",
+  // "Aberdeenshire",
+  // "AB51 3TL",
 ];
 
 export const contact = [
-  { icon: home, type: "Location", value: "Aberdeen / Hull / London" },
+  { icon: home, type: "Location", value: "Aberdeen / London / Kuwait" },
   { icon: phone, type: "Phone", value: "+44 7534 551759" },
   { icon: mail, type: "eMail", value: "james.r.grantham@gmail.com" },
   { icon: web, type: "Portfolio", value: "jamesgrantham.me" },
@@ -78,16 +78,31 @@ export const statement = [
 
 export const history = [
   {
-    date: "07/2019 - Current",
+    date: "10/2020 - Current",
     role: "Full Stack Web Developer",
-    company: "Lambda School / Web Development",
+    company: "Intangible Engineering",
+    description:
+      "Start up - Building bespoke platforms to client specifications.",
+    location: "London, UK",
+    info: [
+      "Developed a risk and project management application and server for a London based consultancy firm. Data collection for multiple project planning, staffing, costing with report generation and data download.",
+      // "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and buyer accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
+      // "Collaborated in a python build week to build an online MUD game, writing an algorithm to create a maze. Presented the code and the game to an audience and when tested, successfully returned a traversable grid with a million 'rooms'.",
+      // "Built a portfolio website.",
+      // "Created a Ricky and Morty Fan Club Site. Using axios to fetch data into redux, users can select favourite characters, to view further information.",
+    ],
+  },
+  {
+    date: "07/2019 - 02/2020",
+    role: "Full Stack Web Developer",
+    company: "Lambda School",
     description:
       "A nine-month online computer science academy for aspiring software engineers and data scientists.",
     location: "Aberdeen, UK",
     info: [
-      "Independently developed a risk management app and server for a London based consultancy firm. Utilising React, redux, bcryptjs and nodejs, users can customise views, select from filtered templates (if account type permits), populate with their data and can download the raw data and/or formatted and customised documents.",
+      // "Independently developed a risk management app and server for a London based consultancy firm. Utilising React, redux, bcryptjs and nodejs, users can customise views, select from filtered templates (if account type permits), populate with their data and can download the raw data and/or formatted and customised documents.",
       "Collaborated in a six-man team on an e-commerce app to support underfunded schools. Seller and buyer accounts, version controlled with git, deployed utilising continuous integration and testing, a fully functioning app with payment processing.",
-      "Collaborated in a python build week to build an online MUD game, writing an algorithm to create a maze. Presented the code and the game to an audience and when tested, successfully returned a traversable grid with a million 'rooms'.",
+      "Python build week - online MUD game. Wrote an algorithm to create a maze returning a traversable grid with a million 'rooms'.",
       // "Built a portfolio website.",
       // "Created a Ricky and Morty Fan Club Site. Using axios to fetch data into redux, users can select favourite characters, to view further information.",
     ],

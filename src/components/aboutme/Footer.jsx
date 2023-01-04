@@ -9,7 +9,7 @@ import { transition } from "../../views/styling";
 
 export default function Footer() {
   return (
-    <Container className='footer'>
+    <Container className="footer">
       {/* <SmallAnchorButton content="Home" target="/" /> */}
       <Links id="contact">
         <a href="https://github.com/jrgrantham" className="image">
@@ -31,7 +31,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: inherit;
-  width: 100%
+  width: 100%;
   max-width: 1000px;
   position: fixed;
   bottom: 0;

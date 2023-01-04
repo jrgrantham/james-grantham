@@ -50,13 +50,13 @@ const colours = keyframes`
   }
 `;
 
-const swell = keyframes`
-  0% { color: ${fontColour} }
-  20% { color: ${buttonOrange} }
-  50% { transform: scale(1.03) }
-  70% { color: ${buttonOrange}}
-  100% { color: ${fontColour} }
-`;
+// const swell = keyframes`
+//   0% { color: ${fontColour} }
+//   20% { color: ${buttonOrange} }
+//   50% { transform: scale(1.03) }
+//   70% { color: ${buttonOrange}}
+//   100% { color: ${fontColour} }
+// `;
 
 const LandingContent = styled.div`
   width: 100%;
@@ -101,14 +101,6 @@ const LandingContent = styled.div`
   p.darkmode {
     color: #606060;
   }
-
-  // h1,
-  // h2,
-  // h3 {
-  //   animation: ${swell} 1s linear 1;
-  //   animation-delay: 3s;
-  // }
-
 
   h1,
   h2,
