@@ -41,15 +41,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
 .jg-interests>span { color:var(--accent); }
 .jg-contact { scroll-margin-top:24px; display:grid; grid-template-columns: .9fr 2fr; gap:22px; background:var(--panel); padding:22px; margin:26px -12px 0; border-radius:14px; }
 .jg-contact h2 { font-size:27px; }
-.jg-contact label { display:block; color:var(--ink); font-size:14px; }
-.jg-fields { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:12px; }
-.jg-contact input,.jg-contact textarea { display:block; width:100%; min-height:40px; background:var(--paper); color:#17202c; border:1px solid #aac8bb; border-radius:8px; padding:9px 11px; font-size:16px; }
-.jg-contact textarea { resize:vertical; min-height:90px; }
-.jg-send { display:block; margin:12px 0 0 auto; color:white; background:#175b2c; border:0; border-radius:8px; min-height:44px; padding:10px 24px; font-weight:600!important; }
-.jg-send:hover { background:#104320; }
-.jg-send:disabled { opacity:.65; cursor:wait; }
-.jg-feedback { font-size:14px; margin-top:10px!important; }
-.jg-feedback:empty { display:none; }
+.jg-page .jg-email { align-self:center; color:var(--ink); text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
 .jg-notice { display:flex; justify-content:space-between; align-items:center; gap:16px; background:var(--panel); color:var(--ink); padding:12px; margin-top:20px; border-radius:8px; }
 .jg-notice button { border:0; background:none; color:inherit; font-size:24px; min-width:44px; min-height:44px; }
 .jg-footer { padding:18px 0 24px; color:var(--ink); font-size:14px; }
@@ -76,9 +68,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
  .jg-tool strong { font-size:18px; margin-bottom:5px; } .jg-tool span span { font-size:14px; }
  .jg-stories { margin-top:23px; } .jg-interests { margin-top:16px!important; }
  .jg-contact { display:block; margin:20px -6px 0; padding:16px; } .jg-contact h2 { font-size:23px; margin-bottom:12px; }
- .jg-fields { display:block; margin-bottom:10px; } .jg-fields label+label { margin-top:10px; }
- .jg-contact label { font-size:14px; } .jg-contact input { min-height:42px; }
- .jg-send { width:100%; } .jg-footer { font-size:13px; padding:16px 0 22px; }
+ .jg-footer { font-size:13px; padding:16px 0 22px; }
 }
 @media(max-width:350px) { .jg-page { padding:0 16px; } .jg-brand { gap:9px; } .jg-page h1 { font-size:30px; } .jg-tagline { font-size:17px; } .jg-header { margin:0 -16px; padding:0 16px; font-size:12px; } }
 @media(prefers-reduced-motion:reduce) { .jg-project-grid img { transition:none; } }

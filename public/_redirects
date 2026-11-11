@@ -1,1 +1,3 @@
-/*    /index.html    200
+# Existing static files (including /index.html at /) take precedence.
+# Every old or unknown page URL permanently redirects to the homepage.
+/*    /    301

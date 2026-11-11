@@ -31,17 +31,23 @@ The committed `netlify.toml` supplies the build configuration below. Keep the si
 | npm | `11.20.0` |
 | `NPM_FLAGS` | `--include=dev --no-audit --no-fund` |
 
-Remove old Node 10/npm 6 overrides, any Yarn selection (`NETLIFY_USE_YARN`, Yarn package-manager settings), old incompatible `NPM_FLAGS`, and any global `NODE_OPTIONS` override. Leave `NODE_ENV` unset during dependency installation. The build creates production assets itself. Preserve contact environment settings; no contact service is changed here. Ensure the selected Netlify build image can install the pinned Node release; the old deploy's runtime is not reused. Clear the old dependency cache for the first release build.
+Remove old Node 10/npm 6 overrides, any Yarn selection (`NETLIFY_USE_YARN`, Yarn package-manager settings), old incompatible `NPM_FLAGS`, and any global `NODE_OPTIONS` override. Leave `NODE_ENV` unset during dependency installation. The build creates production assets itself. The homepage now uses an email link; the former REACT_APP_CONTACT_ENDPOINT override is unused and may be removed from Netlify separately. No backend or mail service is required by the homepage. Ensure the selected Netlify build image can install the pinned Node release; the old deploy's runtime is not reused. Clear the old dependency cache for the first release build.
 
 Netlify normally runs an automatic `npm install` when no alternative lockfile exists. The explicit `npm ci` in the build command then replaces that tree from the authoritative lock, including build dependencies, before compilation. This deliberately costs an extra install to avoid relying on a stale cached tree. Configuration precedence and dependency selection are documented in [Netlify's dependency guide](https://docs.netlify.com/build/configure-builds/manage-dependencies/).
 
-`CI=''` is scoped to the compilation step because the legacy application has existing lint warnings; tests still use `CI=true`. The existing `public/_redirects` SPA fallback is retained for old routes. Neither React source, application dependencies, contact behaviour nor approved artwork changed.
+`CI=''` remains scoped to compilation; tests use `CI=true`. The legacy application has been removed. `public/_redirects` now redirects old/unknown URLs home with HTTP 301, while existing static files take precedence. On preview hosts using an SPA fallback, App also replaces non-root browser paths with `/` and renders only the approved homepage. Approved artwork and dependency versions are unchanged.
 
 ## Validation and remaining release checks
 
-An isolated source export with no existing `node_modules` passed `npm ci`, both existing homepage tests and the production build on the exact pinned versions, with `NODE_OPTIONS` unset. The tested package/runtime inputs exactly match this checkout. Chrome screenshots of the isolated build were byte-for-byte identical to the approved screenshots at 320px, 393px and 1440px. Compilation retains the known legacy lint and Browserslist warnings. The unrelated original `App.test.js` assertion is not part of the homepage check.
+The Node LTS setup was validated with an isolated clean install. The release cleanup passes the focused homepage and old-route tests (16 tests) and production build. The only current build warning is stale Browserslist data; dependency upgrades are outside this task.
 
-The unavailable default Heroku contact endpoint remains a release blocker unless a working hosting override is verified. This task does not fix dependency advisories, backend authorisation, or legacy personal-information exposure. The first Netlify build, actual iPhone layout/Home Screen icon and successful contact delivery still require release acceptance. No merge or deployment was performed.
+Legacy About/CV/login/phone-number/family/project pages, their data, components and image assets are removed from the checkout and production bundle. No removed source paths remain in source maps. A build scan against 265 collected legacy-content markers found no matches; the old Heroku endpoint is absent. Original personal-data values are never printed by the scan. Obsolete root-level public icons/logos are removed; the approved `/home/` artwork and manifest remain.
+
+The contact section now links to the existing intended recipient with `mailto:`. There are no form fields, submission code or backend requests. Opening the link requires the visitor's email application; no message delivery is claimed by the website.
+
+Local HTTP preview tests emulate Netlify's committed static-file precedence and redirect rule; old page and removed-asset URLs redirect to `/` and show only the homepage. The homepage's above-contact appearance is compared with approved screenshots at 320px, 393px and 1440px, including the zero mobile specialisms top margin from commit 38a4718. Contact rendering and sticky-header behaviour are checked at the same widths.
+
+Remaining acceptance: verify the first Netlify build and real hosted redirects, actual iPhone/Home Screen appearance and that the email link opens the intended email application. This removes content from the next deployment; it does not erase Git history, cached pages or previous Netlify deploys. There has been no merge or deployment. Dependency advisories and broader build-tool maintenance remain separate work.
 
 ## Available scripts
 

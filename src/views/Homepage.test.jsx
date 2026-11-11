@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, waitForElement } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import Homepage from './Homepage';
 
 test('links Kitchen and explains unconnected projects without a dead link', () => {
@@ -9,15 +9,8 @@ test('links Kitchen and explains unconnected projects without a dead link', () =
   expect(getByText('RC Garage: a destination has not been connected yet.')).toBeInTheDocument();
 });
 
-test('failed delivery preserves the message and reports failure', async () => {
-  global.fetch = jest.fn().mockResolvedValue({ ok: false });
-  const { getByLabelText, getByText } = render(<Homepage />);
-  fireEvent.change(getByLabelText('Name'), { target: { value: 'Test' } });
-  fireEvent.change(getByLabelText('Email'), { target: { value: 'test@example.com' } });
-  fireEvent.change(getByLabelText('Message'), { target: { value: 'Keep this draft' } });
-  fireEvent.submit(getByText('Send message').closest('form'));
-  await waitForElement(() => getByText(/Your message could not be sent/));
-  expect(getByLabelText('Message').value).toBe('Keep this draft');
-  expect(global.fetch).toHaveBeenCalledTimes(1);
-  delete global.fetch;
+test('offers the established email recipient instead of a submission form', () => {
+  const { getByText, container } = render(<Homepage />);
+  expect(getByText('jamesrgrantham@gmail.com').getAttribute('href')).toBe('mailto:jamesrgrantham@gmail.com');
+  expect(container.querySelector('form, input, textarea, button[type="submit"]')).toBeNull();
 });
