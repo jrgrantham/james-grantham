@@ -41,9 +41,9 @@ export default function Homepage() {
         <section className="jg-intro" aria-labelledby="intro-title">
           <div className="jg-hero">
             <div>
+              <p className="jg-eyebrow"><span>Risk management<span className="jg-separator"> · </span></span><span>Asset integrity<span className="jg-separator"> · </span></span><span>Project engineering</span></p>
               <h1 id="intro-title">James Grantham</h1>
               <p className="jg-tagline">Engineer. Practical thinker. Maker.</p>
-              <p className="jg-eyebrow"><span>Risk management<span className="jg-separator"> · </span></span><span>Asset integrity<span className="jg-separator"> · </span></span><span>Project engineering</span></p>
               <p className="jg-introduction">A British engineer based in Kuwait, with a background in oil and gas and a curiosity for making things work better.</p>
             </div>
             <img className="jg-workbench" src={assets + 'workbench.png'} alt="Engineering notebook, pencil and vernier caliper on a workbench" width="279" height="250" />
