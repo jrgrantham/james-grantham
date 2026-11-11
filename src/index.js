@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Homepage from './views/Homepage';
+
+
 import { BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
+const isHomepage = window.location.pathname === '/';
+if (isHomepage) document.body.classList.add('jg-body');
+
 const app = (
   <Router>
-    <App />
+    {isHomepage ? <Homepage /> : <App />}
   </Router>
 )
 ReactDOM.render(app, document.getElementById('root'));

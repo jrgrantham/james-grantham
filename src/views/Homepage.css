@@ -1,0 +1,75 @@
+body.jg-body, html:has(body.jg-body) { background: #f1eee7; background-image: none; height: auto; }
+.jg-page { --ink:#123c24; --paper:#fcf9f1; --accent:#a9470b; --panel:#edf2dc; color:#17202c; background:var(--paper); max-width:1120px; min-height:100vh; margin:0 auto; padding:0 44px; font-family:Arial,Helvetica,sans-serif; line-height:1.48; text-align:left; }
+.jg-page * { box-sizing:border-box; }
+.jg-page h1,.jg-page h2,.jg-page p { margin:0; padding:0; }
+.jg-page a,.jg-page button,.jg-page input,.jg-page textarea { font:inherit; }
+.jg-page a { color:var(--ink); text-decoration:none; }
+.jg-page button { cursor:pointer; }
+.jg-page :focus-visible { outline:3px solid #a9470b; outline-offset:5px; }
+.jg-page h1,.jg-page h2,.jg-tagline { color:var(--ink); letter-spacing:-.035em; }
+.jg-header { display:flex; align-items:center; justify-content:space-between; min-height:90px; gap:20px; color:var(--ink); font-size:16px; font-weight:600; }
+.jg-brand { display:flex; align-items:center; gap:22px; }
+.jg-monogram { font-size:32px; line-height:1; font-weight:700; letter-spacing:-2px; padding-right:22px; border-right:1px solid #a8c5b9; }
+.jg-skip { position:absolute; top:-100px; padding:10px; background:var(--paper); z-index:10; }
+.jg-skip:focus { top:8px; }
+.jg-eyebrow { color:var(--accent); font-size:16px; margin-top:27px!important; margin-bottom:34px!important; }
+.jg-hero { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(240px,1fr); gap:36px; align-items:center; }
+.jg-page h1 { font-size:clamp(32px,4.5vw,52px); line-height:1.08; font-weight:750; }
+.jg-tagline { font-size:clamp(20px,2.3vw,28px); font-weight:700; margin-top:10px!important; line-height:1.25; }
+.jg-introduction { font-size:21px; line-height:1.48; margin-top:28px!important; max-width:560px; }
+.jg-workbench { width:100%; height:auto; aspect-ratio:1.25; object-fit:cover; border-radius:14px; }
+.jg-projects { margin-top:32px; }
+.jg-projects h2 { font-size:22px!important; }
+.jg-project-grid { display:flex; gap:30px; margin-top:20px; }
+.jg-project-grid a,.jg-project-grid button { display:flex; flex-direction:column; align-items:center; gap:9px; min-width:92px; color:var(--ink); background:none; border:0; padding:0; font-size:17px; }
+.jg-project-grid img { width:76px; height:68px; border-radius:15px; object-fit:fill; transition:transform .15s; }
+.jg-project-grid a:hover img,.jg-project-grid button:hover img { transform:translateY(-3px); }
+.jg-page h2 { font-size:31px; line-height:1.16; font-weight:700; }
+.jg-background { margin-top:48px; }
+.jg-background p,.jg-stories p { font-size:18px; margin-top:17px; }
+.jg-tool { width:100%; display:flex; align-items:center; gap:24px; margin-top:28px; padding:22px 26px; background:var(--panel); border:0; border-radius:14px; text-align:left; color:var(--ink); }
+.jg-tool img { width:88px; height:88px; border-radius:16px; }
+.jg-tool strong { display:block; font-size:29px; letter-spacing:-.025em; line-height:1.2; margin-bottom:8px; }
+.jg-tool span span { display:block; color:#17202c; font-size:17px; line-height:1.4; }
+.jg-stories { margin-top:32px; }
+.jg-interests { margin-top:25px!important; }
+.jg-interests>span { color:var(--accent); }
+.jg-contact { scroll-margin-top:24px; display:grid; grid-template-columns: .9fr 2fr; gap:26px; background:var(--panel); padding:26px; margin:32px -12px 0; border-radius:14px; }
+.jg-contact h2 { font-size:30px; }
+.jg-contact label { display:block; color:var(--ink); font-size:14px; }
+.jg-fields { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:12px; }
+.jg-contact input,.jg-contact textarea { display:block; width:100%; min-height:40px; background:var(--paper); color:#17202c; border:1px solid #aac8bb; border-radius:8px; padding:9px 11px; font-size:16px; }
+.jg-contact textarea { resize:vertical; min-height:90px; }
+.jg-send { display:block; margin:12px 0 0 auto; color:white; background:#175b2c; border:0; border-radius:8px; min-height:44px; padding:10px 24px; font-weight:600!important; }
+.jg-send:hover { background:#104320; }
+.jg-send:disabled { opacity:.65; cursor:wait; }
+.jg-feedback { font-size:14px; margin-top:10px!important; }
+.jg-feedback:empty { display:none; }
+.jg-notice { display:flex; justify-content:space-between; align-items:center; gap:16px; background:var(--panel); color:var(--ink); padding:12px; margin-top:20px; border-radius:8px; }
+.jg-notice button { border:0; background:none; color:inherit; font-size:24px; min-width:44px; min-height:44px; }
+.jg-footer { padding:18px 0 24px; color:var(--ink); font-size:14px; }
+@media(min-width:900px) { .jg-projects { margin-top:-4px; max-width:55%; } .jg-page { padding-bottom:4px; } }
+@media(max-width:700px) {
+ .jg-page { padding:0 22px; } .jg-header { min-height:72px; font-size:14px; gap:12px; }
+ .jg-brand { gap:12px; } .jg-monogram { font-size:27px; padding-right:12px; }
+ .jg-eyebrow { font-size:14px; line-height:1.4; margin-top:16px!important; margin-bottom:16px!important; max-width:340px; }
+ .jg-hero { display:block; } .jg-workbench { display:none; }
+ .jg-page h1 { font-size:34px; } .jg-tagline { font-size:19px; margin-top:6px!important; letter-spacing:-.035em; }
+ .jg-introduction { font-size:17px; margin-top:16px!important; line-height:1.45; }
+ .jg-projects { margin-top:23px; } .jg-projects h2 { font-size:19px!important; }
+ .jg-project-grid { justify-content:space-between; gap:10px; margin-top:13px; }
+ .jg-project-grid a,.jg-project-grid button { min-width:0; font-size:12px; gap:7px; min-height:76px; }
+ .jg-project-grid img { width:53px; height:49px; border-radius:11px; }
+ .jg-background { margin-top:29px; } .jg-page h2 { font-size:25px; line-height:1.14; }
+ .jg-background p,.jg-stories p { font-size:16px; margin-top:13px; line-height:1.45; }
+ .jg-tool { gap:14px; padding:14px; margin-top:18px; border-radius:12px; }
+ .jg-tool img { width:62px; height:62px; border-radius:12px; }
+ .jg-tool strong { font-size:18px; margin-bottom:5px; } .jg-tool span span { font-size:14px; }
+ .jg-stories { margin-top:23px; } .jg-interests { margin-top:16px!important; }
+ .jg-contact { display:block; margin:24px -6px 0; padding:17px; } .jg-contact h2 { font-size:26px; margin-bottom:15px; }
+ .jg-fields { display:block; margin-bottom:10px; } .jg-fields label+label { margin-top:10px; }
+ .jg-contact label { font-size:14px; } .jg-contact input { min-height:42px; }
+ .jg-send { width:100%; } .jg-footer { font-size:13px; padding:16px 0 22px; }
+}
+@media(max-width:350px) { .jg-page { padding:0 16px; } .jg-brand { gap:9px; } .jg-monogram { padding-right:9px; } .jg-page h1 { font-size:30px; } .jg-tagline { font-size:17px; } .jg-header { font-size:12px; } }
+@media(prefers-reduced-motion:reduce) { .jg-project-grid img { transition:none; } }
