@@ -34,12 +34,12 @@ export default function Homepage() {
     <div className="jg-page">
       <a className="jg-skip" href="#main">Skip to content</a>
       <header className="jg-header">
-        <a className="jg-brand" href="#"><span className="jg-monogram" aria-hidden="true">JG</span><span>James Grantham</span></a>
+        <a className="jg-brand" href="#main" aria-label="James Grantham home"><span className="jg-monogram">JG</span></a>
         <a href="#contact">Contact</a>
       </header>
       <main id="main">
         <section className="jg-intro" aria-labelledby="intro-title">
-          <p className="jg-eyebrow">Risk management · Asset integrity · Project engineering</p>
+          <p className="jg-eyebrow"><span>Risk Management<span className="jg-separator"> · </span></span><span>Asset Integrity<span className="jg-separator"> · </span></span><span>Project Engineering</span></p>
           <div className="jg-hero">
             <div>
               <h1 id="intro-title">James Grantham</h1>
@@ -61,7 +61,7 @@ export default function Homepage() {
           {notice && <div className="jg-notice" role="status"><span>{notice}: a destination has not been connected yet.</span><button type="button" onClick={() => setNotice('')} aria-label="Close project information">×</button></div>}
         </section>
         <section className="jg-background" aria-labelledby="experience-title">
-          <h2 id="experience-title">Practical experience. Better ways of thinking.</h2>
+          <h2 id="experience-title"><span>Practical experience.</span>{' '}<span>Better ways of thinking.</span></h2>
           <p>My background is in hands-on oil and gas inspection, asset integrity and project engineering, including roles with Oceaneering and Lloyd’s Register. Offshore assignments have taken me to more than twenty North Sea platforms, from day visits to stays of two or three weeks.</p>
           <p>I identify the problem, define the requirements and design how the work and information should flow. I then build and test the software using AI-assisted development. My project engineering tool brings risk assessments, cost estimates and project records together, reducing repeated data entry and making decisions, expenditure and outstanding work easier to track.</p>
           <button className="jg-tool" type="button" onClick={() => setNotice('Project engineering tool')}>
