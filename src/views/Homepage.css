@@ -59,7 +59,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
  .jg-page { padding:0 22px; } .jg-header { margin:0 -22px; padding:0 22px; min-height:72px; font-size:14px; gap:12px; }
  .jg-brand { gap:12px; } .jg-monogram { font-size:27px; }
  /* Optical gaps include the fonts’ ascenders, descenders and line-box space. */
- .jg-eyebrow { flex-direction:column; align-items:flex-start; font-size:16px; line-height:1.35; margin-top:16px!important; margin-bottom:13px!important; max-width:340px; }
+ .jg-eyebrow { flex-direction:column; align-items:flex-start; font-size:16px; line-height:1.35; margin-top:0!important; margin-bottom:13px!important; max-width:340px; }
  .jg-eyebrow .jg-separator { display:none; }
  .jg-hero { display:block; } .jg-workbench { display:block; height:150px; aspect-ratio:auto; margin-top:16px; object-position:50% 42%; }
  .jg-page h1 { font-size:34px; } .jg-tagline { font-size:19px; margin-top:4px!important; letter-spacing:-.035em; }
