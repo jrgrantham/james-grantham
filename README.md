@@ -1,68 +1,51 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Reproducible build
 
-In the project directory, you can run:
+Use Node **26.13.0 (LTS)** and npm **11.20.0**. `.nvmrc`, `package.json` and `netlify.toml` pin the tested versions. Node 26 is an LTS line according to the [Node release schedule](https://nodejs.org/en/about/previous-releases).
 
-### `yarn start`
+```sh
+nvm install
+nvm use
+npm --version # must be 11.20.0; install that exact npm version if necessary
+npm ci --include=dev --no-audit --no-fund
+CI=true npm test -- --watchAll=false --runInBand src/views/Homepage.test.jsx
+CI='' npm run build
+```
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`package-lock.json` is the only authoritative lockfile. Use `npm ci` for clean builds; use npm when intentionally changing dependencies. Do not recreate `yarn.lock`. Existing local edits to both lockfiles were preserved in `.local-backups/lockfiles-before-node-lts/` (ignored by Git) before npm metadata was synchronised and Yarn's lockfile removed. Existing resolved versions were retained; npm added its missing TypeScript peer dependency to make the lockfile complete.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The smallest compatibility change is explicit OpenSSL legacy-provider arguments in the `start` and `build` scripts. React Scripts 3.4.0/Webpack 4 and Babel Loader 8.0.6 still use MD4 hashing. This is a temporary build-tool workaround, not a dependency security upgrade or a browser/runtime setting. No global `NODE_OPTIONS` is required. See [Node's explanation](https://nodejs.org/en/blog/release/v17.0.0). Retire the workaround when the build toolchain is upgraded in a separate task.
 
-### `yarn test`
+## Netlify settings
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The committed `netlify.toml` supplies the build configuration below. Keep the site's production branch as **master**; no production setting has been changed through this repository task.
 
-### `yarn build`
+| Setting | Required value |
+| --- | --- |
+| Production branch (Netlify UI) | `master` |
+| Base directory | repository root (`/` in the confirmed UI, `.` in TOML) |
+| Build command | `npm ci --include=dev --no-audit --no-fund && CI='' npm run build` |
+| Publish directory | `build/` |
+| Node | `26.13.0` |
+| npm | `11.20.0` |
+| `NPM_FLAGS` | `--include=dev --no-audit --no-fund` |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Remove old Node 10/npm 6 overrides, any Yarn selection (`NETLIFY_USE_YARN`, Yarn package-manager settings), old incompatible `NPM_FLAGS`, and any global `NODE_OPTIONS` override. Leave `NODE_ENV` unset during dependency installation. The build creates production assets itself. Preserve contact environment settings; no contact service is changed here. Ensure the selected Netlify build image can install the pinned Node release; the old deploy's runtime is not reused. Clear the old dependency cache for the first release build.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Netlify normally runs an automatic `npm install` when no alternative lockfile exists. The explicit `npm ci` in the build command then replaces that tree from the authoritative lock, including build dependencies, before compilation. This deliberately costs an extra install to avoid relying on a stale cached tree. Configuration precedence and dependency selection are documented in [Netlify's dependency guide](https://docs.netlify.com/build/configure-builds/manage-dependencies/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`CI=''` is scoped to the compilation step because the legacy application has existing lint warnings; tests still use `CI=true`. The existing `public/_redirects` SPA fallback is retained for old routes. Neither React source, application dependencies, contact behaviour nor approved artwork changed.
 
-### `yarn eject`
+## Validation and remaining release checks
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+An isolated source export with no existing `node_modules` passed `npm ci`, both existing homepage tests and the production build on the exact pinned versions, with `NODE_OPTIONS` unset. The tested package/runtime inputs exactly match this checkout. Chrome screenshots of the isolated build were byte-for-byte identical to the approved screenshots at 320px, 393px and 1440px. Compilation retains the known legacy lint and Browserslist warnings. The unrelated original `App.test.js` assertion is not part of the homepage check.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The unavailable default Heroku contact endpoint remains a release blocker unless a working hosting override is verified. This task does not fix dependency advisories, backend authorisation, or legacy personal-information exposure. The first Netlify build, actual iPhone layout/Home Screen icon and successful contact delivery still require release acceptance. No merge or deployment was performed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Available scripts
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- `npm start`: development server on http://localhost:3000.
+- `npm test`: interactive tests.
+- `npm run build`: production output in `build/`.
+- `npm run eject`: irreversible Create React App ejection; not needed for this setup.

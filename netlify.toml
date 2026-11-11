@@ -1,0 +1,9 @@
+[build]
+  base = "."
+  command = "npm ci --include=dev --no-audit --no-fund && CI='' npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "26.13.0"
+  NPM_VERSION = "11.20.0"
+  NPM_FLAGS = "--include=dev --no-audit --no-fund"

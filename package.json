@@ -19,8 +19,8 @@
     "yup": "^0.28.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,5 +42,10 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0"
-  }
+  },
+  "engines": {
+    "node": "26.13.0",
+    "npm": "11.20.0"
+  },
+  "packageManager": "npm@11.20.0"
 }
