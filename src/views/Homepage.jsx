@@ -42,9 +42,9 @@ export default function Homepage() {
           {notice && <div className="jg-notice" role="status"><span>{notice}: a destination has not been connected yet.</span><button type="button" onClick={() => setNotice('')} aria-label="Close project information">×</button></div>}
         </section>
         <section className="jg-background" aria-labelledby="experience-title">
-          <h2 id="experience-title"><span>Practical experience.</span>{' '}<span>Better ways of thinking.</span></h2>
+          <h2 id="experience-title"><span>Practical experience</span>{' '}<span>Better ways of thinking</span></h2>
           <p>My background is in hands-on oil and gas inspection, asset integrity and project engineering, including roles with Oceaneering and Lloyd’s Register. Offshore assignments have taken me to more than twenty North Sea platforms, from day visits to stays of two or three weeks.</p>
-          <p>I identify the problem, define the requirements and design how the work and information should flow. I then build and test the software using AI-assisted development. My project engineering tool brings risk assessments, cost estimates and project records together, reducing repeated data entry and making decisions, expenditure and outstanding work easier to track.</p>
+          <p>Identify the problem, define the requirements and design how the work and information should flow. Then build and test the software using AI-assisted development. My project engineering tool brings risk assessments, cost estimates and project records together, reducing repeated data entry and making decisions, expenditure and outstanding work easier to track.</p>
           <button className="jg-tool" type="button" onClick={() => setNotice('Project engineering tool')}>
             <img src={assets + 'engineering.png'} alt="" width="96" height="96" />
             <span><strong>Project engineering tool</strong><span>Risk, costing and project information brought together in one practical workspace.</span></span>
@@ -53,7 +53,7 @@ export default function Homepage() {
         <section className="jg-stories" aria-labelledby="stories-title">
           <h2 id="stories-title">Offshore recollections</h2>
           <p>Some trips began in Shetland, heading for installations closer to Norway than Scotland. I carried my passport in case a diversion took us to Norway instead of home.</p>
-          <p>One visit was to a shut-down platform with no electrical power, equipped with radios and a satellite phone. The return helicopter flight brought a thunderstorm, gale-force winds and a low flight over the sea. It remains one of my more vivid memories of working offshore.</p>
+          <p>One visit was to a shut-down platform with no electrical power, equipped with radios and a satellite phone. The return helicopter flight brought a thunderstorm, gale-force winds and a low flight over rough seas. It remains one of my more vivid memories of working offshore.</p>
           <p>Other work happened before an installation ever reached the sea. In Hartlepool, I inspected the Minerva platform’s helideck while it was still being fabricated.</p>
           <p className="jg-interests"><span>Outside work:</span> music, cooking, aquariums and making things.</p>
         </section>

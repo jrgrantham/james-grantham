@@ -50,6 +50,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
 @media(min-width:900px) { .jg-projects { margin-top:-4px; max-width:55%; } .jg-page { padding-bottom:4px; } }
 @media(max-width:700px) {
  html:has(body.jg-body) { scroll-padding-top:72px; }
+ .jg-intro { padding-top:16px; }
  .jg-page { padding:0 22px; } .jg-header { margin:0 -22px; padding:0 22px; min-height:72px; font-size:14px; gap:12px; }
  .jg-brand { gap:12px; } .jg-monogram { font-size:27px; }
  /* Optical gaps include the fonts’ ascenders, descenders and line-box space. */
