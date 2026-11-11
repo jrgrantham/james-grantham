@@ -25,13 +25,13 @@ body.jg-body, html:has(body.jg-body) { background: #f1eee7; background-image: no
 .jg-projects h2 { font-size:22px!important; }
 .jg-project-grid { display:flex; gap:30px; margin-top:20px; }
 .jg-project-grid a,.jg-project-grid button { display:flex; flex-direction:column; align-items:center; gap:9px; min-width:92px; color:var(--ink); background:none; border:0; padding:0; font-size:17px; }
-.jg-project-grid img { width:76px; height:68px; border-radius:15px; object-fit:contain; transition:transform .15s; }
+.jg-project-grid img { width:76px; height:76px; mix-blend-mode:multiply; object-fit:contain; transition:transform .15s; }
 .jg-project-grid a:hover img,.jg-project-grid button:hover img { transform:translateY(-3px); }
 .jg-page h2 { font-size:31px; line-height:1.16; font-weight:700; }
 .jg-background { margin-top:48px; }
 .jg-background p,.jg-stories p { font-size:18px; margin-top:17px; }
 .jg-tool { width:100%; display:flex; align-items:center; gap:24px; margin-top:28px; padding:22px 26px; background:var(--panel); border:0; border-radius:14px; text-align:left; color:var(--ink); }
-.jg-tool img { width:88px; height:88px; flex-shrink:0; object-fit:contain; border-radius:16px; }
+.jg-tool img { width:88px; height:88px; flex-shrink:0; object-fit:contain; mix-blend-mode:multiply; }
 .jg-tool strong { display:block; font-size:29px; letter-spacing:-.025em; line-height:1.2; margin-bottom:8px; }
 .jg-tool span span { display:block; color:#17202c; font-size:17px; line-height:1.4; }
 .jg-stories { margin-top:32px; }
@@ -62,12 +62,12 @@ body.jg-body, html:has(body.jg-body) { background: #f1eee7; background-image: no
  .jg-projects { margin-top:23px; } .jg-projects h2 { font-size:19px!important; }
  .jg-project-grid { justify-content:space-between; gap:10px; margin-top:13px; }
  .jg-project-grid a,.jg-project-grid button { min-width:0; font-size:12px; gap:7px; min-height:76px; }
- .jg-project-grid img { width:53px; height:49px; border-radius:11px; }
+ .jg-project-grid img { width:53px; height:53px; }
  #experience-title { font-size:clamp(22px,6.3vw,25px); }
  .jg-background { margin-top:29px; } .jg-page h2 { font-size:25px; line-height:1.14; }
  .jg-background p,.jg-stories p { font-size:16px; margin-top:13px; line-height:1.45; }
  .jg-tool { gap:14px; padding:14px; margin-top:18px; border-radius:12px; }
- .jg-tool img { width:62px; height:62px; border-radius:12px; }
+ .jg-tool img { width:62px; height:62px; }
  .jg-tool strong { font-size:18px; margin-bottom:5px; } .jg-tool span span { font-size:14px; }
  .jg-stories { margin-top:23px; } .jg-interests { margin-top:16px!important; }
  .jg-contact { display:block; margin:20px -6px 0; padding:16px; } .jg-contact h2 { font-size:23px; margin-bottom:12px; }

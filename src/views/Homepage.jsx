@@ -53,7 +53,7 @@ export default function Homepage() {
           <h2 id="projects-title">Personal projects</h2>
           <div className="jg-project-grid">
             {projects.map(project => {
-              const content = <><img src={assets + project.icon + '.png'} alt="" width="76" height="68" /><span>{project.name}</span></>;
+              const content = <><img src={assets + project.icon + '.png'} alt="" width="76" height="76" /><span>{project.name}</span></>;
               return project.href ? <a key={project.name} href={project.href} title={project.description}>{content}</a> :
                 <button key={project.name} type="button" onClick={() => setNotice(project.name)} aria-label={project.name + ' — project information'}>{content}</button>;
             })}
