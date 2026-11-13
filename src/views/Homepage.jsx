@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Homepage.css';
 
 const assets = '/home/';
 const projects = [
   { name: 'Kitchen', icon: 'kitchen', href: 'https://kitchen.jamesgrantham.me', description: 'Recipes, shopping and Ferments' },
-  { name: 'RC Garage', icon: 'garage' },
-  { name: 'Music', icon: 'music' },
-  { name: 'Aquarium', icon: 'aquarium' },
+  { name: 'RC Garage', icon: 'garage', href: 'https://garage.jamesgrantham.me' },
+  { name: 'Music', icon: 'music', href: 'https://music.jamesgrantham.me' },
+  { name: 'Aquarium', icon: 'aquarium', href: 'https://aquarium.jamesgrantham.me' },
 ];
 
 export default function Homepage() {
-  const [notice, setNotice] = useState('');
-  const [toolNotice, setToolNotice] = useState(false);
   return (
     <div className="jg-page">
       <a className="jg-skip" href="#main">Skip to content</a>
       <header className="jg-header">
-        <p className="jg-specialisms"><span>Risk Management<span className="jg-separator"> · </span></span><span>Asset Integrity<span className="jg-separator"> · </span></span><span>Project Engineering</span></p>
+        <p className="jg-specialisms"><span>Change Management<span className="jg-separator"> · </span></span><span>Asset Integrity<span className="jg-separator"> · </span></span><span>Project Engineering</span></p>
         <a className="jg-contact-link" href="#contact">Contact</a>
       </header>
       <main id="main">
@@ -36,11 +34,9 @@ export default function Homepage() {
           <div className="jg-project-grid">
             {projects.map(project => {
               const content = <><img src={assets + project.icon + '.png'} alt="" width="76" height="76" /><span>{project.name}</span></>;
-              return project.href ? <a key={project.name} href={project.href} title={project.description}>{content}</a> :
-                <button key={project.name} type="button" onClick={() => setNotice(project.name)} aria-label={project.name + ' — project information'}>{content}</button>;
+              return <a key={project.name} href={project.href} title={project.description}>{content}</a>;
             })}
           </div>
-          {notice && <div className="jg-notice" role="status"><span>{notice}: a destination has not been connected yet.</span><button type="button" onClick={() => setNotice('')} aria-label="Close project information">×</button></div>}
         </section>
         <section className="jg-background" aria-labelledby="experience-title">
           <h2 id="experience-title"><span>Practical experience</span>{' '}<span>Better ways of thinking</span></h2>
@@ -52,11 +48,10 @@ export default function Homepage() {
           <p className="jg-section-subtitle"><strong>Engineering experience turned into practical software.</strong></p>
           <p>Managing engineering projects involves a constant flow of estimates, risk assessments, decisions and outstanding work. Too often, the same information is entered repeatedly into disconnected documents and spreadsheets.</p>
           <p>I began developing a project management application to bring those activities into one place, making information easier to maintain, progress easier to follow and decisions easier to make.</p>
-          <button className="jg-tool" type="button" onClick={() => setToolNotice(true)}>
+          <a className="jg-tool" href="https://projects.jamesgrantham.me">
             <img src={assets + 'engineering.png'} alt="" width="96" height="96" />
             <span><strong>Project management tool</strong></span>
-          </button>
-          {toolNotice && <div className="jg-notice" role="status"><span>Project management tool: a destination has not been connected yet.</span><button type="button" onClick={() => setToolNotice(false)} aria-label="Close tool information">×</button></div>}
+          </a>
         </section>
         <section className="jg-stories" aria-labelledby="stories-title">
           <h2 id="stories-title">Offshore recollections</h2>

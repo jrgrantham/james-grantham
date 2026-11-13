@@ -1,6 +1,6 @@
 # Approved homepage — chatgpt branch
 
-The homepage uses ivory, forest green and ochre, with introduction, personal-project shortcuts, engineering background/tool banner, offshore recollections and contact. Kitchen links to its confirmed URL; RC Garage, Music, Aquarium and the engineering tool retain their existing project-information behaviour.
+The homepage uses ivory, forest green and ochre, with introduction, personal-project shortcuts, engineering background/tool banner, offshore recollections and contact. The project icons link to their HTTPS subdomains under jamesgrantham.me: kitchen, garage, music, aquarium and projects (the project management tool).
 
 The JG/Contact header remains sticky with an opaque page-coloured background. The introduction keeps this order: specialisms, full name, tagline, paragraph and photograph (alongside the text on desktop). Specialisms remain green with three deliberate mobile lines. The zero mobile top margin from commit 38a4718 and the approved gaps/typography are preserved. The existing notebook/calipers crop is 150px tall on mobile. Five supplied original icon assets retain their artwork and framing; see public/home/ASSETS.md.
 
