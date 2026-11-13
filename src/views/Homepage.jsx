@@ -25,13 +25,14 @@ export default function Homepage() {
             <div>
               <h1 id="intro-title">James Grantham</h1>
               <p className="jg-tagline">Engineer. Practical thinker. Maker.</p>
-              <p className="jg-introduction">A British engineer based in Kuwait, with a background in oil and gas and a curiosity for making things work better.</p>
+              <p className="jg-introduction">Twenty years in engineering taught me how to solve problems in the real world. These days, I also build software to solve them.</p>
             </div>
             <img className="jg-workbench" src={assets + 'workbench.png'} alt="Engineering notebook, pencil and vernier caliper on a workbench" width="279" height="250" />
           </div>
         </section>
         <section className="jg-projects" aria-labelledby="projects-title">
           <h2 id="projects-title">Personal projects</h2>
+          <p className="jg-project-description">From personal schedules to RC car maintenance, these are small applications built to make everyday activities simpler. Each is an opportunity to explore an idea, test an approach and create something genuinely useful.</p>
           <div className="jg-project-grid">
             {projects.map(project => {
               const content = <><img src={assets + project.icon + '.png'} alt="" width="76" height="76" /><span>{project.name}</span></>;
@@ -43,20 +44,26 @@ export default function Homepage() {
         </section>
         <section className="jg-background" aria-labelledby="experience-title">
           <h2 id="experience-title"><span>Practical experience</span>{' '}<span>Better ways of thinking</span></h2>
-          <p>My background is in hands-on oil and gas inspection, asset integrity and project engineering, including roles with Oceaneering and Lloyd’s Register. Offshore assignments have taken me to more than twenty North Sea platforms, from day visits to stays of two or three weeks.</p>
-          <p>Identify the problem, define the requirements and design how the work and information should flow. Then build and test the software using AI-assisted development. My project engineering tool brings risk assessments, cost estimates and project records together, reducing repeated data entry and making decisions, expenditure and outstanding work easier to track.</p>
+          <p>My career has taken me from engineering offices and fabrication yards to more than twenty offshore installations in the North Sea. Working with Oceaneering and Lloyd's Register, I specialised in inspection, asset integrity and project engineering, where sound decisions depend on understanding risk, managing information and getting the details right.</p>
+          <p>That experience now shapes how I approach software. Rather than starting with technology, I start with the problem: what needs to happen, what information matters and how the process could work better.</p>
+        </section>
+        <section className="jg-background" aria-labelledby="tool-title">
+          <h2 id="tool-title">Project management tool</h2>
+          <p className="jg-section-subtitle"><strong>Engineering experience turned into practical software.</strong></p>
+          <p>Managing engineering projects involves a constant flow of estimates, risk assessments, decisions and outstanding work. Too often, the same information is entered repeatedly into disconnected documents and spreadsheets.</p>
+          <p>I began developing a project management application to bring those activities into one place, making information easier to maintain, progress easier to follow and decisions easier to make.</p>
           <button className="jg-tool" type="button" onClick={() => setToolNotice(true)}>
             <img src={assets + 'engineering.png'} alt="" width="96" height="96" />
-            <span><strong>Project engineering tool</strong><span>Risk, costing and project information brought together in one practical workspace.</span></span>
+            <span><strong>Project management tool</strong></span>
           </button>
-          {toolNotice && <div className="jg-notice" role="status"><span>Project engineering tool: a destination has not been connected yet.</span><button type="button" onClick={() => setToolNotice(false)} aria-label="Close tool information">×</button></div>}
+          {toolNotice && <div className="jg-notice" role="status"><span>Project management tool: a destination has not been connected yet.</span><button type="button" onClick={() => setToolNotice(false)} aria-label="Close tool information">×</button></div>}
         </section>
         <section className="jg-stories" aria-labelledby="stories-title">
           <h2 id="stories-title">Offshore recollections</h2>
-          <p>Some trips began in Shetland, heading for installations closer to Norway than Scotland. I carried my passport in case a diversion took us to Norway instead of home.</p>
-          <p>One visit was to a shut-down platform with no electrical power, equipped with radios and a satellite phone. The return helicopter flight brought a thunderstorm, gale-force winds and a low flight over rough seas. It remains one of my more vivid memories of working offshore.</p>
-          <p>Other work happened before an installation ever reached the sea. In Hartlepool, I inspected the Minerva platform’s helideck while it was still being fabricated.</p>
-          <p className="jg-interests"><span>Outside work:</span> music, cooking, aquariums and making things.</p>
+          <p className="jg-section-subtitle"><strong>Twenty platforms. Plenty of stories.</strong></p>
+          <p>Flights from Shetland sometimes took us closer to Norway than Scotland, with a passport carried in case the weather sent us somewhere other than home.</p>
+          <p>One assignment took me to a shut-down platform without electrical power, relying on radios and a satellite phone. The return helicopter flight, through thunderstorms and gale-force winds, ended with a low flight over rough seas.</p>
+          <p>Not every assignment involved helicopters. In Hartlepool, I inspected the Minerva platform's helideck while it was still being fabricated, long before the platform went offshore.</p>
         </section>
         <section className="jg-contact" id="contact" aria-labelledby="contact-title">
           <h2 id="contact-title">Get in touch</h2>

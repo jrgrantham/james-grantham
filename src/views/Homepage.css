@@ -25,6 +25,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
 .jg-introduction { font-size:21px; line-height:1.48; margin-top:28px!important; max-width:560px; }
 .jg-workbench { width:100%; height:auto; aspect-ratio:1.25; object-fit:cover; border-radius:14px; }
 .jg-projects { margin-top:32px; }
+.jg-project-description { font-size:18px; margin-top:17px!important; }
 .jg-projects h2 { font-size:22px!important; }
 .jg-project-grid { display:flex; gap:30px; margin-top:20px; }
 .jg-project-grid a,.jg-project-grid button { display:flex; flex-direction:column; align-items:center; gap:9px; min-width:92px; color:var(--ink); background:none; border:0; padding:0; font-size:17px; }
@@ -33,6 +34,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
 .jg-page h2 { font-size:31px; line-height:1.16; font-weight:700; }
 .jg-background { margin-top:48px; }
 .jg-background p,.jg-stories p { font-size:18px; margin-top:17px; }
+.jg-page .jg-section-subtitle { margin-top:6px; }
 .jg-tool { width:100%; display:flex; align-items:center; gap:24px; margin-top:28px; padding:22px 26px; background:var(--panel); border:0; border-radius:14px; text-align:left; color:var(--ink); }
 .jg-tool img { width:88px; height:88px; flex-shrink:0; object-fit:contain; mix-blend-mode:multiply; }
 .jg-tool strong { display:block; font-size:29px; letter-spacing:-.025em; line-height:1.2; margin-bottom:8px; }
@@ -55,6 +57,7 @@ html:has(body.jg-body) { scroll-padding-top:90px; }
  .jg-hero { display:block; } .jg-workbench { display:block; height:150px; aspect-ratio:auto; margin-top:16px; object-position:50% 42%; }
  .jg-page h1 { font-size:34px; } .jg-tagline { font-size:19px; margin-top:4px!important; letter-spacing:-.035em; }
  .jg-introduction { font-size:17px; margin-top:14px!important; line-height:1.45; }
+ .jg-project-description { font-size:16px; margin-top:13px!important; }
  .jg-projects { margin-top:23px; } .jg-projects h2 { font-size:19px!important; }
  .jg-project-grid { justify-content:space-between; gap:10px; margin-top:13px; }
  .jg-project-grid a,.jg-project-grid button { min-width:0; font-size:12px; gap:7px; min-height:76px; }

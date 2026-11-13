@@ -23,7 +23,7 @@ test('shows and dismisses tool information beneath the tool without changing pro
   fireEvent.click(tool);
   const toolNotice = tool.nextElementSibling;
   expect(toolNotice).toHaveAttribute('role', 'status');
-  expect(within(toolNotice).getByText('Project engineering tool: a destination has not been connected yet.')).toBeInTheDocument();
+  expect(within(toolNotice).getByText('Project management tool: a destination has not been connected yet.')).toBeInTheDocument();
   expect(within(projects).getByText('RC Garage: a destination has not been connected yet.')).toBeInTheDocument();
   fireEvent.click(within(toolNotice).getByLabelText('Close tool information'));
   expect(tool.nextElementSibling).toBeNull();
