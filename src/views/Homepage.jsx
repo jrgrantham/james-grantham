@@ -11,6 +11,7 @@ const projects = [
 
 export default function Homepage() {
   const [notice, setNotice] = useState('');
+  const [toolNotice, setToolNotice] = useState(false);
   return (
     <div className="jg-page">
       <a className="jg-skip" href="#main">Skip to content</a>
@@ -44,10 +45,11 @@ export default function Homepage() {
           <h2 id="experience-title"><span>Practical experience</span>{' '}<span>Better ways of thinking</span></h2>
           <p>My background is in hands-on oil and gas inspection, asset integrity and project engineering, including roles with Oceaneering and Lloyd’s Register. Offshore assignments have taken me to more than twenty North Sea platforms, from day visits to stays of two or three weeks.</p>
           <p>Identify the problem, define the requirements and design how the work and information should flow. Then build and test the software using AI-assisted development. My project engineering tool brings risk assessments, cost estimates and project records together, reducing repeated data entry and making decisions, expenditure and outstanding work easier to track.</p>
-          <button className="jg-tool" type="button" onClick={() => setNotice('Project engineering tool')}>
+          <button className="jg-tool" type="button" onClick={() => setToolNotice(true)}>
             <img src={assets + 'engineering.png'} alt="" width="96" height="96" />
             <span><strong>Project engineering tool</strong><span>Risk, costing and project information brought together in one practical workspace.</span></span>
           </button>
+          {toolNotice && <div className="jg-notice" role="status"><span>Project engineering tool: a destination has not been connected yet.</span><button type="button" onClick={() => setToolNotice(false)} aria-label="Close tool information">×</button></div>}
         </section>
         <section className="jg-stories" aria-labelledby="stories-title">
           <h2 id="stories-title">Offshore recollections</h2>
@@ -61,7 +63,6 @@ export default function Homepage() {
           <a className="jg-email" href="mailto:jamesrgrantham@gmail.com">jamesrgrantham@gmail.com</a>
         </section>
       </main>
-      <footer className="jg-footer">jamesgrantham.me</footer>
     </div>
   );
 }
