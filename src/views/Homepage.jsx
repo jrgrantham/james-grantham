@@ -15,14 +15,13 @@ export default function Homepage() {
     <div className="jg-page">
       <a className="jg-skip" href="#main">Skip to content</a>
       <header className="jg-header">
-        <a className="jg-brand" href="#main" aria-label="James Grantham home"><span className="jg-monogram">JG</span></a>
-        <a href="#contact">Contact</a>
+        <p className="jg-specialisms"><span>Risk Management<span className="jg-separator"> · </span></span><span>Asset Integrity<span className="jg-separator"> · </span></span><span>Project Engineering</span></p>
+        <a className="jg-contact-link" href="#contact">Contact</a>
       </header>
       <main id="main">
         <section className="jg-intro" aria-labelledby="intro-title">
           <div className="jg-hero">
             <div>
-              <p className="jg-eyebrow"><span>Risk management<span className="jg-separator"> · </span></span><span>Asset integrity<span className="jg-separator"> · </span></span><span>Project engineering</span></p>
               <h1 id="intro-title">James Grantham</h1>
               <p className="jg-tagline">Engineer. Practical thinker. Maker.</p>
               <p className="jg-introduction">A British engineer based in Kuwait, with a background in oil and gas and a curiosity for making things work better.</p>
